@@ -1,0 +1,1250 @@
+{
+  "fetchedAt": "2026-08-08T23:10:38.097Z",
+  "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
+  "preferredPm": {
+    "polls": [
+      {
+        "date": "2023-11-06",
+        "dateLabel": "1–6 Nov 2023",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/nztu_poll_23_11_09_curia_nov_2023",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 33,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 6.3,
+          "David Seymour": 4,
+          "Winston Peters": 5
+        }
+      },
+      {
+        "date": "2023-12-05",
+        "dateLabel": "3–5 Dec 2023",
+        "pollster": "Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/honeymoon-over-christopher-luxon-takes-a-dive-nz-first-overtakes-act-in-new-poll/NTXYYSEQBNCN7MJD3THKJXGRVA/",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 30,
+          "Chris Hipkins": 22
+        }
+      },
+      {
+        "date": "2024-01-10",
+        "dateLabel": "8–10 Jan 2024",
+        "pollster": "Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/national-soars-in-new-poll-as-voters-agree-country-is-on-track-chris-hipkins-crashes-record-low/TNS4GGJHIFDTZNGMKPQLNJOGJA/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 31,
+          "Chris Hipkins": 13
+        }
+      },
+      {
+        "date": "2024-02-07",
+        "dateLabel": "1–7 Feb 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/nztucuria2402poll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 29,
+          "Chris Hipkins": 19,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 10,
+          "Winston Peters": 6
+        }
+      },
+      {
+        "date": "2024-02-10",
+        "dateLabel": "1–10 Feb 2024",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/national-extends-lead-in-latest-poll-chris-hipkins-falls/FEFRB553ZZC37PSDUO7HQQB7EA/",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 27,
+          "Chris Hipkins": 23
+        }
+      },
+      {
+        "date": "2024-02-14",
+        "dateLabel": "10–14 Feb 2024",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/706701545/10-14Feb-2024-1-NEWS-Verian-Poll-Report-Short-Report/",
+        "sampleSize": 1002,
+        "results": {
+          "Christopher Luxon": 25,
+          "Chris Hipkins": 15,
+          "Chlöe Swarbrick": 4,
+          "David Seymour": 4,
+          "Winston Peters": 6
+        }
+      },
+      {
+        "date": "2024-03-10",
+        "dateLabel": "1–10 Mar 2024",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://businessdesk.co.nz/article/politics/christopher-luxon-struggling-to-connect-leaked-poll",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 24,
+          "Chris Hipkins": 23
+        }
+      },
+      {
+        "date": "2024-04-24",
+        "dateLabel": "20–24 Apr 2024",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.1news.co.nz/2024/04/29/poll-labour-could-return-to-power-if-election-held-today/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 23,
+          "Chris Hipkins": 16,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 5,
+          "Winston Peters": 4
+        }
+      },
+      {
+        "date": "2024-05-10",
+        "dateLabel": "1–10 May 2024",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/350281697/public-dismayed-about-economy-government-struggles-poll",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 25,
+          "Chris Hipkins": 25
+        }
+      },
+      {
+        "date": "2024-06-06",
+        "dateLabel": "4–6 Jun 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/nztu_curia_poll_2407",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 25.4,
+          "Chris Hipkins": 20.2,
+          "Chlöe Swarbrick": 8.6,
+          "David Seymour": 5,
+          "Winston Peters": 3.8
+        }
+      },
+      {
+        "date": "2024-06-19",
+        "dateLabel": "15–19 Jun 2024",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/745142232/15-19-Jun-2024-1-NEWS-Verian-Poll-Report-Short-Report?secret_password=fUV0qiPSdWnmeblTBKmt",
+        "sampleSize": 1002,
+        "results": {
+          "Christopher Luxon": 23,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 4,
+          "Winston Peters": 4
+        }
+      },
+      {
+        "date": "2024-07-08",
+        "dateLabel": "4–8 Jul 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/nztu_curia_poll_2407",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 34.5,
+          "Chris Hipkins": 18.7,
+          "Chlöe Swarbrick": 10.9,
+          "David Seymour": 5.6,
+          "Winston Peters": 5.6
+        }
+      },
+      {
+        "date": "2024-08-14",
+        "dateLabel": "10–14 Aug 2024",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/760275508/10-14Aug-2024-1-NEWS-Verian-Poll-Report-Short-Report?secret_password=h40G0FbN0NhwWzFYNdld",
+        "sampleSize": 1001,
+        "results": {
+          "Christopher Luxon": 28,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 7,
+          "David Seymour": 4,
+          "Winston Peters": 5
+        }
+      },
+      {
+        "date": "2024-09-10",
+        "dateLabel": "8–10 Sep 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/poll_sept2024",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 32.7,
+          "Chris Hipkins": 12.6,
+          "Chlöe Swarbrick": 7.2,
+          "David Seymour": 5.2,
+          "Winston Peters": 6.7
+        }
+      },
+      {
+        "date": "2024-09-10",
+        "dateLabel": "1–10 Sep 2024",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/new-poll-results-show-closer-fight-between-chris-hipkins-christopher-luxon-for-preferred-prime-minister/NSG6OIVZWFBORAPPGLXAVHY2DE/",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 26,
+          "Chris Hipkins": 22
+        }
+      },
+      {
+        "date": "2024-10-07",
+        "dateLabel": "3–7 Oct 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/oct2024_polling",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 27.7,
+          "Chris Hipkins": 16.9,
+          "Chlöe Swarbrick": 9.9,
+          "David Seymour": 7.4,
+          "Winston Peters": 8.4
+        }
+      },
+      {
+        "date": "2024-10-09",
+        "dateLabel": "5–9 Oct 2024",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/779677361/5-9-Oct-2024-1-NEWS-Verian-Poll-Report-Short-Report?secret_password=gKuXTjvqiaosgIZHNhQY",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 25,
+          "Chris Hipkins": 15,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 4,
+          "Winston Peters": 6
+        }
+      },
+      {
+        "date": "2024-11-10",
+        "dateLabel": "6–10 Nov 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/poll_nov2024_cutunz",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 26.5,
+          "Chris Hipkins": 15.5,
+          "Chlöe Swarbrick": 5.2,
+          "David Seymour": 7.4,
+          "Winston Peters": 6.3
+        }
+      },
+      {
+        "date": "2024-11-10",
+        "dateLabel": "1–10 Nov 2024",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/hikois-influence-will-be-felt-for-years-but-treaty-bill-still-popular-thomas-couglan/ZGRV4ECOE5CJJAUZNHRDFFM4YA/",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 25,
+          "Chris Hipkins": 23
+        }
+      },
+      {
+        "date": "2024-11-27",
+        "dateLabel": "26–27 Nov 2024",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.stuff.co.nz/nz-news/360507840/new-poll-delivers-hung-parliament-bad-news-christopher-luxon-preferred-pm",
+        "sampleSize": 1150,
+        "results": {
+          "Christopher Luxon": 41,
+          "Chris Hipkins": 42
+        }
+      },
+      {
+        "date": "2024-11-28",
+        "dateLabel": "22–28 Nov 2024",
+        "pollster": "Labour–Talbot Mills",
+        "sourceUrl": "https://www.stuff.co.nz/politics/360505907/labour-leader-chris-hipkins-starts-his-pitch-tax-reform",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 22.1,
+          "Chris Hipkins": 22.7
+        }
+      },
+      {
+        "date": "2024-12-03",
+        "dateLabel": "1–3 Dec 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/final_poll_dec2024",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 27.1,
+          "Chris Hipkins": 19.9,
+          "Chlöe Swarbrick": 4.5,
+          "David Seymour": 5.8,
+          "Winston Peters": 5.8
+        }
+      },
+      {
+        "date": "2024-12-04",
+        "dateLabel": "30 Nov – 4 Dec 2024",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.1news.co.nz/2024/12/09/poll-record-high-for-te-pati-maori-coalition-still-in-driving-seat/",
+        "sampleSize": 1006,
+        "results": {
+          "Christopher Luxon": 24,
+          "Chris Hipkins": 15,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 6,
+          "Winston Peters": 5
+        }
+      },
+      {
+        "date": "2025-01-13",
+        "dateLabel": "9–13 Jan 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/25jan_tuc_poll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 24.5,
+          "Chris Hipkins": 15.3,
+          "Chlöe Swarbrick": 8.5,
+          "David Seymour": 6.3,
+          "Winston Peters": 8.8
+        }
+      },
+      {
+        "date": "2025-01-27",
+        "dateLabel": "7–27 Jan 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360568711/another-poll-puts-labour-support-ahead-national",
+        "sampleSize": 1049,
+        "results": {
+          "Christopher Luxon": 24,
+          "Chris Hipkins": 25
+        }
+      },
+      {
+        "date": "2025-02-04",
+        "dateLabel": "2–4 Feb 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/poll_feb_25_basjfgas",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20.7,
+          "Chris Hipkins": 17.6,
+          "Chlöe Swarbrick": 8.9,
+          "David Seymour": 6.4,
+          "Winston Peters": 8
+        }
+      },
+      {
+        "date": "2025-02-07",
+        "dateLabel": "3–7 Feb 2025",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/826079900/3-7-Feb-2025-1-NEWS-Verian-Poll-Report?secret_password=MBl28mhMYWzI9ffKIOFU",
+        "sampleSize": 1002,
+        "results": {
+          "Christopher Luxon": 22,
+          "Chris Hipkins": 17,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 6,
+          "Winston Peters": 5
+        }
+      },
+      {
+        "date": "2025-03-04",
+        "dateLabel": "2–4 Mar 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/march25_nztupollsuhg",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20.3,
+          "Chris Hipkins": 20.7,
+          "Chlöe Swarbrick": 4.8,
+          "David Seymour": 5,
+          "Winston Peters": 8.6
+        }
+      },
+      {
+        "date": "2025-03-10",
+        "dateLabel": "1–10 Mar 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepress.co.nz/politics/360615599/new-poll-support-dips-national-chris-hipkins-leads-preferred-pm",
+        "sampleSize": 1003,
+        "results": {
+          "Christopher Luxon": 21,
+          "Chris Hipkins": 24
+        }
+      },
+      {
+        "date": "2025-03-27",
+        "dateLabel": "21–27 Mar 2025",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/poll/556774/rnz-reid-research-poll-view-all-results-and-charts",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 21.9,
+          "Chris Hipkins": 20.9,
+          "Chlöe Swarbrick": 6.1,
+          "David Seymour": 6.8,
+          "Winston Peters": 7.9
+        }
+      },
+      {
+        "date": "2025-04-01",
+        "dateLabel": "29 Mar – 1 Apr 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.rnz.co.nz/news/national/557194/labour-te-pati-maori-lose-ground-april-taxpayers-union-curia-poll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 21.9,
+          "Chris Hipkins": 18.9,
+          "Chlöe Swarbrick": 4.2,
+          "David Seymour": 8,
+          "Winston Peters": 12.8
+        }
+      },
+      {
+        "date": "2025-04-02",
+        "dateLabel": "29 Mar – 2 Apr 2025",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/846941432/29Mar-2Apr-2025-1-NEWS-Verian-Poll-First-Report?secret_password=EijSkHOb7Wmhl9Oxkk19",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 23,
+          "Chris Hipkins": 20,
+          "Chlöe Swarbrick": 4,
+          "David Seymour": 3,
+          "Winston Peters": 7
+        }
+      },
+      {
+        "date": "2025-05-04",
+        "dateLabel": "30 Apr – 4 May 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/polling_may07_2025tucur",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 24.5,
+          "Chris Hipkins": 20,
+          "Chlöe Swarbrick": 5,
+          "David Seymour": 6.7,
+          "Winston Peters": 8.1
+        }
+      },
+      {
+        "date": "2025-05-28",
+        "dateLabel": "24–28 May 2025",
+        "pollster": "1 News-Verian",
+        "sourceUrl": "https://www.scribd.com/document/871022558/24-28-May-2025-1News-Verian-Poll-Report?secret_password=ci42gaG8SMdwNUKesTw6",
+        "sampleSize": 1002,
+        "results": {
+          "Christopher Luxon": 23,
+          "Chris Hipkins": 19,
+          "Chlöe Swarbrick": 5,
+          "David Seymour": 4,
+          "Winston Peters": 6
+        }
+      },
+      {
+        "date": "2025-05-30",
+        "dateLabel": "23–30 May 2025",
+        "pollster": "RNZ-Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/political/563006/left-bloc-would-have-enough-support-to-turf-coalition-government-out-of-power-poll",
+        "sampleSize": 1008,
+        "results": {
+          "Christopher Luxon": 18.8,
+          "Chris Hipkins": 23.2,
+          "Chlöe Swarbrick": 6.9,
+          "David Seymour": 6.4,
+          "Winston Peters": 8.9
+        }
+      },
+      {
+        "date": "2025-06-09",
+        "dateLabel": "7–9 Jun 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/2025ju_polldatanztu",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20.3,
+          "Chris Hipkins": 18.5,
+          "Chlöe Swarbrick": 5.6,
+          "David Seymour": 6,
+          "Winston Peters": 8
+        }
+      },
+      {
+        "date": "2025-06-15",
+        "dateLabel": "12–15 Jun 2025",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.stuff.co.nz/politics/360728540/post-freshwater-strategy-poll-labour-pulls-ahead-national",
+        "sampleSize": 1150,
+        "results": {
+          "Christopher Luxon": 37,
+          "Chris Hipkins": 43
+        }
+      },
+      {
+        "date": "2025-07-06",
+        "dateLabel": "2–6 Jul 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/pollnztu_20250710",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.7,
+          "Chris Hipkins": 19.6,
+          "Chlöe Swarbrick": 7,
+          "David Seymour": 5.7,
+          "Winston Peters": 9.3
+        }
+      },
+      {
+        "date": "2025-07-10",
+        "dateLabel": "1–10 Jul 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360765524/poll-suggests-national-headed-one-term-government",
+        "sampleSize": 1090,
+        "results": {
+          "Christopher Luxon": 24,
+          "Chris Hipkins": 24
+        }
+      },
+      {
+        "date": "2025-08-05",
+        "dateLabel": "3–5 Aug 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/augpoll2025_250808",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20.2,
+          "Chris Hipkins": 20.2,
+          "Chlöe Swarbrick": 8,
+          "David Seymour": 6.2,
+          "Winston Peters": 8.2
+        }
+      },
+      {
+        "date": "2025-08-06",
+        "dateLabel": "2–6 Aug 2025",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/899969344/2-6-Aug-2025-1News-Verian-Poll-Report?secret_password=bUx4gQvyCfXWbwgvufsx",
+        "sampleSize": 1002,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 19,
+          "Chlöe Swarbrick": 4,
+          "David Seymour": 4,
+          "Winston Peters": 7
+        }
+      },
+      {
+        "date": "2025-08-10",
+        "dateLabel": "1–10 Aug 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360828447/weaker-expected-economy-political-polls-turn-pm",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 21,
+          "Chris Hipkins": 26
+        }
+      },
+      {
+        "date": "2025-09-02",
+        "dateLabel": "31 Aug – 2 Sep 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/sept2025_nztucurpoll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 21.7,
+          "Chris Hipkins": 17.7,
+          "Chlöe Swarbrick": 8.8,
+          "David Seymour": 3.7,
+          "Winston Peters": 10.9
+        }
+      },
+      {
+        "date": "2025-09-10",
+        "dateLabel": "1–10 Sep 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360828447/weaker-expected-economy-political-polls-turn-pm",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 25
+        }
+      },
+      {
+        "date": "2025-09-12",
+        "dateLabel": "4–12 Sep 2025",
+        "pollster": "RNZ-Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/political/573163/rnz-reid-research-political-poll-points-to-deadlocked-parliament",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.6,
+          "Chris Hipkins": 23,
+          "Chlöe Swarbrick": 6.5,
+          "David Seymour": 5.8,
+          "Winston Peters": 8.9
+        }
+      },
+      {
+        "date": "2025-10-05",
+        "dateLabel": "1–5 Oct 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/new-poll-national-dives-into-the-20s-nz-first-climbs-into-double-digits-centre-left-bloc-can-govern/D5AHWPF36FDMTHO7BJDNPB4RKE/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.8,
+          "Chris Hipkins": 20.9,
+          "Chlöe Swarbrick": 6.3,
+          "David Seymour": 4,
+          "Winston Peters": 9.9
+        }
+      },
+      {
+        "date": "2025-10-08",
+        "dateLabel": "4–8 Oct 2025",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/932137523/October-2025-1News-Verian-Poll-Report?secret_password=FF3tm28WHXxIwHVkQIVH",
+        "sampleSize": 1014,
+        "results": {
+          "Christopher Luxon": 21,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 5,
+          "Winston Peters": 8
+        }
+      },
+      {
+        "date": "2025-10-08",
+        "dateLabel": "3–8 Oct 2025",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360853311/big-names-risk-labour-pulls-ahead-and-christopher-luxon-loses-ground",
+        "sampleSize": 1050,
+        "results": {
+          "Christopher Luxon": 36,
+          "Chris Hipkins": 45
+        }
+      },
+      {
+        "date": "2025-10-10",
+        "dateLabel": "1–10 Oct 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360855811/national-dips-below-30-second-poll",
+        "sampleSize": 1097,
+        "results": {
+          "Christopher Luxon": 21,
+          "Chris Hipkins": 24
+        }
+      },
+      {
+        "date": "2025-11-06",
+        "dateLabel": "2–6 Nov 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/tucurpoll_nov2025",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20.8,
+          "Chris Hipkins": 20.6,
+          "Chlöe Swarbrick": 4.1,
+          "David Seymour": 7.7,
+          "Winston Peters": 8.5
+        }
+      },
+      {
+        "date": "2025-11-10",
+        "dateLabel": "1–10 Nov 2025",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360885129/labour-surges-38-new-poll-still-needs-te-pati-maori",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 22,
+          "Chris Hipkins": 26
+        }
+      },
+      {
+        "date": "2025-12-03",
+        "dateLabel": "29 Nov – 3 Dec 2025",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/962599976/29-Nov-3-Dec-2025-1-NEWS-Verian-Poll-Report?secret_password=mTSJG82rhPxTLXSfT7AN",
+        "sampleSize": 1007,
+        "results": {
+          "Christopher Luxon": 23,
+          "Chris Hipkins": 21,
+          "Chlöe Swarbrick": 5,
+          "David Seymour": 5,
+          "Winston Peters": 9
+        }
+      },
+      {
+        "date": "2025-12-07",
+        "dateLabel": "3–7 Dec 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/25dec_polltucur",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.7,
+          "Chris Hipkins": 17.8,
+          "Chlöe Swarbrick": 7.6,
+          "David Seymour": 6,
+          "Winston Peters": 8.5
+        }
+      },
+      {
+        "date": "2025-12-10",
+        "dateLabel": "5–10 Dec 2025",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.stuff.co.nz/politics/360915794/new-poll-puts-labour-well-ahead-national-and-box-seat-form-government",
+        "sampleSize": 1031,
+        "results": {
+          "Christopher Luxon": 39,
+          "Chris Hipkins": 45
+        }
+      },
+      {
+        "date": "2026-01-18",
+        "dateLabel": "14–18 Jan 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/jan26poll_nztucuria",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.5,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 5.5,
+          "David Seymour": 7.1,
+          "Winston Peters": 9.7
+        }
+      },
+      {
+        "date": "2026-01-22",
+        "dateLabel": "15–22 Jan 2026",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/poll/556774/rnz-reid-research-poll-view-all-results-and-charts",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.4,
+          "Chris Hipkins": 21.1,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 6.7,
+          "Winston Peters": 12.6
+        }
+      },
+      {
+        "date": "2026-02-03",
+        "dateLabel": "1–3 Feb 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/0226_polltu",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 22,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 6.7,
+          "David Seymour": 4.8,
+          "Winston Peters": 12.5
+        }
+      },
+      {
+        "date": "2026-02-11",
+        "dateLabel": "7–11 Feb 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/998545712/7-11-Feb-2026-1-NEWS-Verian-Poll-Report?secret_password=EXlfqxw24XeRGhqBC25v",
+        "sampleSize": 1003,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 20,
+          "Chlöe Swarbrick": 5,
+          "David Seymour": 4,
+          "Winston Peters": 10
+        }
+      },
+      {
+        "date": "2026-02-12",
+        "dateLabel": "6–12 Feb 2026",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360950478/national-struggles-traction-nz-first-gains-ground",
+        "sampleSize": 1039,
+        "results": {
+          "Christopher Luxon": 34,
+          "Chris Hipkins": 46
+        }
+      },
+      {
+        "date": "2026-03-03",
+        "dateLabel": "1–3 Mar 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/tucur_mar2026poll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 21,
+          "Chris Hipkins": 22.7,
+          "Chlöe Swarbrick": 4.6,
+          "David Seymour": 5.2,
+          "Winston Peters": 10.4
+        }
+      },
+      {
+        "date": "2026-03-12",
+        "dateLabel": "2–12 Mar 2026",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://thespinoff.co.nz/politics/18-03-2026/new-poll-offers-solace-for-luxon-but-election-hangs-by-a-thread",
+        "sampleSize": 1059,
+        "results": {
+          "Christopher Luxon": 22,
+          "Chris Hipkins": 26,
+          "Chlöe Swarbrick": 8,
+          "David Seymour": 6,
+          "Winston Peters": 13
+        }
+      },
+      {
+        "date": "2026-03-20",
+        "dateLabel": "12–20 Mar 2026",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/political/590347/rnz-reid-research-poll-labour-extends-lead-over-national",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 17.3,
+          "Chris Hipkins": 20.7,
+          "Chlöe Swarbrick": 6.8,
+          "David Seymour": 6.8,
+          "Winston Peters": 13.1
+        }
+      },
+      {
+        "date": "2026-04-02",
+        "dateLabel": "1–2 Apr 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/easter_26_poll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20.5,
+          "Chris Hipkins": 21.7,
+          "Chlöe Swarbrick": 7.4,
+          "David Seymour": 4.6,
+          "Winston Peters": 12.1
+        }
+      },
+      {
+        "date": "2026-04-15",
+        "dateLabel": "11–15 Apr 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/1028300076/11-15-April-2026-1-NEWS-Verian-Poll-Report?secret_password=uSEdjxGxZpEOLgPn0lSr1",
+        "sampleSize": 1010,
+        "results": {
+          "Christopher Luxon": 16,
+          "Chris Hipkins": 19,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 4,
+          "Winston Peters": 12
+        }
+      },
+      {
+        "date": "2026-04-16",
+        "dateLabel": "16 Apr 2026",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.stuff.co.nz/politics/360965723/new-zealand-first-soars-greens-plummet-new-poll-national-20s-again",
+        "sampleSize": 1082,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 23,
+          "Chlöe Swarbrick": 9,
+          "David Seymour": 7,
+          "Winston Peters": 15
+        }
+      },
+      {
+        "date": "2026-05-07",
+        "dateLabel": "3–7 May 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/maypoll_2026tucur",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 21.5,
+          "Chris Hipkins": 19,
+          "Chlöe Swarbrick": 5.4,
+          "David Seymour": 3.9,
+          "Winston Peters": 11.6
+        }
+      },
+      {
+        "date": "2026-05-10",
+        "dateLabel": "1–10 May 2026",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/new-poll-keeps-national-in-the-20s-labour-retains-biggest-share-of-support/ECSCZV3ZQZETTDDOIRAEEW476A/",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 23,
+          "Chlöe Swarbrick": 10,
+          "David Seymour": 7,
+          "Winston Peters": 17
+        }
+      },
+      {
+        "date": "2026-06-08",
+        "dateLabel": "4–8 Jun 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/pollnztu_june2026",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 18.8,
+          "Chris Hipkins": 17.1,
+          "Chlöe Swarbrick": 8.1,
+          "David Seymour": 6.3,
+          "Winston Peters": 12.8
+        }
+      },
+      {
+        "date": "2026-06-10",
+        "dateLabel": "1–10 Jun 2026",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.stuff.co.nz/politics/360993853/greens-surge-lifts-left-bloc-projected-majority-latest-political-poll",
+        "sampleSize": 1021,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 21,
+          "Chlöe Swarbrick": 10,
+          "David Seymour": 6,
+          "Winston Peters": 14
+        }
+      },
+      {
+        "date": "2026-06-11",
+        "dateLabel": "5–11 Jun 2026",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.rnz.co.nz/news/political/598196/national-slides-below-30-percent-in-latest-poll-act-and-nz-first-gain",
+        "sampleSize": 1038,
+        "results": {
+          "Christopher Luxon": 37,
+          "Chris Hipkins": 44
+        }
+      },
+      {
+        "date": "2026-06-17",
+        "dateLabel": "13–17 Jun 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.scribd.com/document/1054188547/13-17-June-2026-1-NEWS-Verian-Poll-Report?secret_password=oeKr2nNLrt3WFqTQNXzr",
+        "sampleSize": 1001,
+        "results": {
+          "Christopher Luxon": 18,
+          "Chris Hipkins": 16,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 4,
+          "Winston Peters": 10
+        }
+      },
+      {
+        "date": "2026-07-05",
+        "dateLabel": "1–5 Jul 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/july26_pollnztu",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.1,
+          "Chris Hipkins": 19.2,
+          "Chlöe Swarbrick": 4.6,
+          "David Seymour": 5.1,
+          "Winston Peters": 11.8
+        }
+      },
+      {
+        "date": "2026-07-09",
+        "dateLabel": "2–9 Jul 2026",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/politics/713431/rnz-poll-national-hits-new-low-under-luxon-opportunity-nears-parliament",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 23.9,
+          "Chlöe Swarbrick": 8.2,
+          "David Seymour": 6.9,
+          "Winston Peters": 13.2
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "dateLabel": "1–4 Aug 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/aug2026_nztucurghs17668",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 23.2,
+          "Chris Hipkins": 19.8,
+          "Chlöe Swarbrick": 4.8,
+          "David Seymour": 3.8,
+          "Winston Peters": 10.5
+        }
+      }
+    ],
+    "leaders": [
+      {
+        "key": "Christopher Luxon",
+        "shortName": "Luxon"
+      },
+      {
+        "key": "Chris Hipkins",
+        "shortName": "Hipkins"
+      },
+      {
+        "key": "Chlöe Swarbrick",
+        "shortName": "Swarbrick"
+      },
+      {
+        "key": "David Seymour",
+        "shortName": "Seymour"
+      },
+      {
+        "key": "Winston Peters",
+        "shortName": "Peters"
+      }
+    ],
+    "skipped": 2
+  },
+  "leadershipApproval": {
+    "polls": [
+      {
+        "date": "2023-12-05",
+        "dateLabel": "3–5 Dec 2023",
+        "pollster": "Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/honeymoon-over-christopher-luxon-takes-a-dive-nz-first-overtakes-act-in-new-poll/NTXYYSEQBNCN7MJD3THKJXGRVA/",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": -1,
+          "Chris Hipkins": 9
+        }
+      },
+      {
+        "date": "2024-01-10",
+        "dateLabel": "8–10 Jan 2024",
+        "pollster": "Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/national-soars-in-new-poll-as-voters-agree-country-is-on-track-chris-hipkins-crashes-record-low/TNS4GGJHIFDTZNGMKPQLNJOGJA/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 5,
+          "Chris Hipkins": 3
+        }
+      },
+      {
+        "date": "2024-02-07",
+        "dateLabel": "1–7 Feb 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/nztucuria2402poll",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 11,
+          "Chris Hipkins": 4
+        }
+      },
+      {
+        "date": "2024-03-05",
+        "dateLabel": "3–5 Mar 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/taxpayers_union_curia_poll_march_2024",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": -5,
+          "Chris Hipkins": 2
+        }
+      },
+      {
+        "date": "2024-04-04",
+        "dateLabel": "2–4 Apr 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/poll_april_2024",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": -7,
+          "Chris Hipkins": -6
+        }
+      },
+      {
+        "date": "2024-05-07",
+        "dateLabel": "5–7 May 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/taxpayers_union_curia_poll_may_2024",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 8,
+          "Chris Hipkins": -1
+        }
+      },
+      {
+        "date": "2024-06-06",
+        "dateLabel": "4–6 Jun 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/nztu_curia_poll_2407",
+        "sampleSize": 1000,
+        "results": {
+          "Chris Hipkins": 3
+        }
+      },
+      {
+        "date": "2024-09-10",
+        "dateLabel": "8–10 Sep 2024",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/poll-coalition-maintains-lead-as-labour-leader-chris-hipkins-favourability-crashes/FLZSDJMX6FBNBASRDN4EEDRDDQ/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 7
+        }
+      },
+      {
+        "date": "2024-11-27",
+        "dateLabel": "26–27 Nov 2024",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.stuff.co.nz/nz-news/360507840/new-poll-delivers-hung-parliament-bad-news-christopher-luxon-preferred-pm",
+        "sampleSize": 1150,
+        "results": {}
+      },
+      {
+        "date": "2025-03-04",
+        "dateLabel": "2–4 Mar 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/march25_nztupollsuhg",
+        "sampleSize": 1000,
+        "results": {
+          "Chris Hipkins": 4
+        }
+      },
+      {
+        "date": "2025-04-01",
+        "dateLabel": "29 Mar – 1 Apr 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/tucur_04_aprpoll2025",
+        "sampleSize": 1000,
+        "results": {
+          "Chris Hipkins": 2
+        }
+      },
+      {
+        "date": "2025-06-09",
+        "dateLabel": "7–9 Jun 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/nz/politics/labour-overtakes-national-in-post-budget-poll-economy-top-issue-for-new-zealanders/576QBNWHEFBCXEYIG6YWRY6EGY/",
+        "sampleSize": 1000,
+        "results": {
+          "Chris Hipkins": 3.2,
+          "Winston Peters": 1
+        }
+      },
+      {
+        "date": "2025-06-15",
+        "dateLabel": "12–15 Jun 2025",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.stuff.co.nz/politics/360729230/jacinda-ardern-remains-most-popular-politician-luxon-slumps-new-poll",
+        "sampleSize": 1150,
+        "results": {
+          "Chris Hipkins": 4
+        }
+      },
+      {
+        "date": "2025-10-08",
+        "dateLabel": "3–8 Oct 2025",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360853311/big-names-risk-labour-pulls-ahead-and-christopher-luxon-loses-ground",
+        "sampleSize": 1050,
+        "results": {}
+      },
+      {
+        "date": "2025-11-06",
+        "dateLabel": "2–6 Nov 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/tucurpoll_nov2025",
+        "sampleSize": 1000,
+        "results": {
+          "Winston Peters": 2
+        }
+      },
+      {
+        "date": "2025-12-07",
+        "dateLabel": "3–7 Dec 2025",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/25dec_polltucur",
+        "sampleSize": 1000,
+        "results": {}
+      },
+      {
+        "date": "2025-12-10",
+        "dateLabel": "5–10 Dec 2025",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360921984/jacinda-ardern-remains-poll-favourite-which-struggling-leaders-are-rise",
+        "sampleSize": 1031,
+        "results": {
+          "Chris Hipkins": 7
+        }
+      },
+      {
+        "date": "2026-01-18",
+        "dateLabel": "14–18 Jan 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.thepost.co.nz/politics/360938265/christopher-luxon-hits-lowest-popularity-past-year-leaked-poll-reveals-souring-public-mood",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": -17,
+          "Chris Hipkins": -4,
+          "David Seymour": -24,
+          "Winston Peters": -6
+        }
+      },
+      {
+        "date": "2026-02-03",
+        "dateLabel": "1–3 Feb 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.nzherald.co.nz/business/companies/energy/luxon-has-done-a-poor-job-of-selling-1b-lng-terminal-and-india-trade-deal-matthew-hooton/premium/IZUIJLIR2FHAHJZ2TAFVEMIHBE/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": -16,
+          "Chris Hipkins": -8,
+          "David Seymour": -28,
+          "Winston Peters": -7
+        }
+      },
+      {
+        "date": "2026-06-08",
+        "dateLabel": "4–8 Jun 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/pollnztu_june2026",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": -19,
+          "Chris Hipkins": -7,
+          "David Seymour": -18,
+          "Winston Peters": -5
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "dateLabel": "1–4 Aug 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.thepost.co.nz/politics/361058988/erica-stanford-rules-out-run-national-leadership-talk-returns",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": -19,
+          "Chris Hipkins": -7,
+          "David Seymour": -24,
+          "Winston Peters": -16
+        }
+      }
+    ],
+    "leaders": [
+      {
+        "key": "Christopher Luxon",
+        "shortName": "Luxon"
+      },
+      {
+        "key": "Chris Hipkins",
+        "shortName": "Hipkins"
+      },
+      {
+        "key": "David Seymour",
+        "shortName": "Seymour"
+      },
+      {
+        "key": "Winston Peters",
+        "shortName": "Peters"
+      }
+    ],
+    "skipped": 7
+  }
+}

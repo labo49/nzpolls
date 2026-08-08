@@ -11,11 +11,11 @@ const HEADER_TO_CODE: Record<string, string> = Object.fromEntries(
 );
 HEADER_TO_CODE["OTHERS"] = "OTH";
 
-function stripFootnotes(text: string): string {
+export function stripFootnotes(text: string): string {
   return text.replace(/\[[a-z0-9]+\]/gi, "").trim();
 }
 
-function parseNumber(raw: string): number | null {
+export function parseNumber(raw: string): number | null {
   const cleaned = stripFootnotes(raw).replace(/,/g, "").trim();
   if (!cleaned || cleaned === "–" || cleaned === "-" || /^n\/a$/i.test(cleaned)) {
     return null;
@@ -34,7 +34,7 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
  * result" row template default that wasn't updated) -- the visible label is
  * the ground truth a reader would see, so trust it first.
  */
-function parseDateLabelToISO(label: string): string | null {
+export function parseDateLabelToISO(label: string): string | null {
   const cleaned = stripFootnotes(label);
   const pattern = /(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{4})/g;
   const matches = [...cleaned.matchAll(pattern)];

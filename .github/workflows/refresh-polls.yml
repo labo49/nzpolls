@@ -26,6 +26,8 @@ jobs:
 
       - run: npm run fetch-polls
 
+      - run: npm run fetch-approval
+
       - id: diff
         run: echo "changed=$(git status --porcelain data/ | wc -l)" >> "$GITHUB_OUTPUT"
 

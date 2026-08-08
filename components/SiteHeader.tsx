@@ -6,6 +6,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/", label: "Poll of Polls" },
+  { href: "/approval", label: "Approval Ratings" },
   { href: "/electorates", label: "Electorates" },
 ];
 

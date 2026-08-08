@@ -10,6 +10,7 @@
     "fetch-polls": "tsx scripts/fetch-polls.ts",
     "fetch-pollster-accuracy": "tsx scripts/fetch-pollster-accuracy.ts",
     "fetch-electorates": "tsx scripts/fetch-electorates.ts",
+    "fetch-approval": "tsx scripts/fetch-approval.ts",
     "post-social": "tsx scripts/post-social.ts"
   },
   "dependencies": {
