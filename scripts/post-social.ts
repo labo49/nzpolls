@@ -13,7 +13,8 @@ import type { Poll } from "../lib/types";
 
 const NEW_POLLS_PATH = new URL("../data/newPolls.json", import.meta.url);
 const SITE_URL = "https://nzpolls.vercel.app";
-const HASHTAGS = "#NZPoll #NZ2026 #NZElections";
+const LINK_LABEL = "See all polls here";
+const HASHTAGS = "#NZPoll #NZ2026 #NZElections #NZPol";
 const BLUESKY_MAX_LENGTH = 300;
 
 function formatPartyLine(poll: Poll): string {
@@ -33,13 +34,13 @@ function messageBody(newPolls: Poll[]): string {
 }
 
 function buildMessage(newPolls: Poll[]): string {
-  return `${messageBody(newPolls)}\n${SITE_URL}\n${HASHTAGS}`;
+  return `${messageBody(newPolls)}\n${LINK_LABEL}\n${SITE_URL}\n${HASHTAGS}`;
 }
 
-// The URL and hashtags are the part every post must keep -- only the poll
-// details in between get trimmed to fit Bluesky's 300-char cap.
+// The link line and hashtags are the part every post must keep -- only the
+// poll details in between get trimmed to fit Bluesky's 300-char cap.
 function truncateForBluesky(newPolls: Poll[]): string {
-  const tail = `\n${SITE_URL}\n${HASHTAGS}`;
+  const tail = `\n${LINK_LABEL}\n${SITE_URL}\n${HASHTAGS}`;
   const body = messageBody(newPolls);
   if ((body + tail).length <= BLUESKY_MAX_LENGTH) return body + tail;
   const budget = BLUESKY_MAX_LENGTH - tail.length - 1; // 1 char for the ellipsis
