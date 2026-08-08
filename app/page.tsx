@@ -1,0 +1,80 @@
+import LatestSnapshot from "@/components/LatestSnapshot";
+import PollChart from "@/components/PollChart";
+import PollsTable from "@/components/PollsTable";
+import { actualPolls, computePollOfPolls } from "@/lib/pollOfPolls";
+import polls from "@/data/polls.json";
+import meta from "@/data/meta.json";
+import type { Poll } from "@/lib/types";
+
+export default function Home() {
+  const typedPolls = polls as Poll[];
+  const series = computePollOfPolls(typedPolls);
+  const latest = series[series.length - 1];
+  const surveyCount = actualPolls(typedPolls).length;
+
+  const fetchedAt = new Date(meta.fetchedAt).toLocaleString("en-NZ", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
+  return (
+    <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">
+      <header className="mb-8">
+        <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
+          NZ Poll of Polls
+        </h1>
+        <p className="mt-1.5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          A rolling average of published opinion polls ahead of the 2026 New Zealand
+          general election, built from {surveyCount} surveys since the 2023 election.
+        </p>
+      </header>
+
+      {latest && (
+        <section className="mb-8">
+          <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+            Current poll of polls
+          </h2>
+          <LatestSnapshot point={latest} />
+          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+            Average of the most recent poll from each pollster active in the last 60 days
+            ({latest.pollCount} pollster{latest.pollCount === 1 ? "" : "s"}).
+          </p>
+        </section>
+      )}
+
+      <section className="mb-10">
+        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+          Trend
+        </h2>
+        <PollChart series={series} />
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+          All polls
+        </h2>
+        <PollsTable polls={typedPolls} />
+      </section>
+
+      <footer className="border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-500">
+        <p>
+          Source data:{" "}
+          <a
+            href={meta.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:decoration-neutral-600"
+          >
+            Wikipedia &mdash; Opinion polling for the 2026 New Zealand general election
+          </a>
+          . Last refreshed {fetchedAt}. Run{" "}
+          <code className="rounded bg-black/5 px-1 py-0.5 dark:bg-white/10">npm run fetch-polls</code>{" "}
+          to update.
+        </p>
+      </footer>
+    </main>
+  );
+}

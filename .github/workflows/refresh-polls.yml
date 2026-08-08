@@ -1,0 +1,39 @@
+name: Refresh poll data
+
+on:
+  schedule:
+    # Daily at 06:00 UTC (~6pm NZDT / 5pm NZST) -- after most NZ pollsters
+    # publish, before the next morning's news cycle.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run fetch-polls
+
+      - id: diff
+        run: echo "changed=$(git status --porcelain data/ | wc -l)" >> "$GITHUB_OUTPUT"
+
+      - if: steps.diff.outputs.changed != '0'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh poll data"
+          title: "chore: refresh poll data"
+          body: Automated poll data refresh from the Wikipedia opinion-polling table.
+          branch: automated/refresh-polls
+          add-paths: data/
