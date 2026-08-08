@@ -64,6 +64,43 @@ async function postToTelegram(message: string): Promise<void> {
   console.log("Posted to Telegram.");
 }
 
+interface BlueskyFacet {
+  index: { byteStart: number; byteEnd: number };
+  features: Array<{ $type: string; uri?: string; tag?: string }>;
+}
+
+function utf8Length(text: string): number {
+  return new TextEncoder().encode(text).length;
+}
+
+// Bluesky doesn't auto-linkify plain text the way Telegram does -- URLs and
+// hashtags only render as clickable rich text if the post record explicitly
+// marks them up as "facets", indexed by UTF-8 *byte* offset (not JS string
+// index, which would be wrong as soon as the text has a multi-byte
+// character like the en dash in a poll's date range).
+function buildFacets(text: string): BlueskyFacet[] {
+  const facets: BlueskyFacet[] = [];
+
+  const urlIndex = text.indexOf(SITE_URL);
+  if (urlIndex !== -1) {
+    const byteStart = utf8Length(text.slice(0, urlIndex));
+    facets.push({
+      index: { byteStart, byteEnd: byteStart + utf8Length(SITE_URL) },
+      features: [{ $type: "app.bsky.richtext.facet#link", uri: SITE_URL }],
+    });
+  }
+
+  for (const match of text.matchAll(/#\w+/g)) {
+    const byteStart = utf8Length(text.slice(0, match.index));
+    facets.push({
+      index: { byteStart, byteEnd: byteStart + utf8Length(match[0]) },
+      features: [{ $type: "app.bsky.richtext.facet#tag", tag: match[0].slice(1) }],
+    });
+  }
+
+  return facets;
+}
+
 async function postToBluesky(message: string): Promise<void> {
   const identifier = process.env.BLUESKY_IDENTIFIER;
   const password = process.env.BLUESKY_APP_PASSWORD;
@@ -95,6 +132,7 @@ async function postToBluesky(message: string): Promise<void> {
         $type: "app.bsky.feed.post",
         text: message,
         createdAt: new Date().toISOString(),
+        facets: buildFacets(message),
       },
     }),
   });
