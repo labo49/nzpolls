@@ -1,11 +1,12 @@
 /**
  * Posts a short summary of this run's newly-scraped polls (data/newPolls.json,
- * written by fetch-polls.ts) to Telegram and Bluesky. Skips whichever
+ * written by fetch-polls.ts) to Telegram, Bluesky, and X. Skips whichever
  * platform is missing its credentials, and does nothing at all if there are
  * no new polls this run.
  *
  * Run with: npm run post-social
  */
+import { createHmac, randomBytes } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { installDevProxyIfPresent } from "../lib/wikiPollScraper";
 import { PARTIES } from "../lib/parties";
@@ -16,6 +17,7 @@ const SITE_URL = "https://nzpolls.vercel.app";
 const LINK_LABEL = "See all polls here";
 const HASHTAGS = "#NZPoll #NZ2026 #NZElections #NZPol";
 const BLUESKY_MAX_LENGTH = 300;
+const X_MAX_LENGTH = 280;
 
 function formatPartyLine(poll: Poll): string {
   return PARTIES.filter((p) => p.code !== "OTH")
@@ -38,12 +40,13 @@ function buildMessage(newPolls: Poll[]): string {
 }
 
 // The link line and hashtags are the part every post must keep -- only the
-// poll details in between get trimmed to fit Bluesky's 300-char cap.
-function truncateForBluesky(newPolls: Poll[]): string {
+// poll details in between get trimmed to fit a platform's char cap (300 for
+// Bluesky, 280 for X).
+function truncateMessage(newPolls: Poll[], maxLength: number): string {
   const tail = `\n${LINK_LABEL}\n${SITE_URL}\n${HASHTAGS}`;
   const body = messageBody(newPolls);
-  if ((body + tail).length <= BLUESKY_MAX_LENGTH) return body + tail;
-  const budget = BLUESKY_MAX_LENGTH - tail.length - 1; // 1 char for the ellipsis
+  if ((body + tail).length <= maxLength) return body + tail;
+  const budget = maxLength - tail.length - 1; // 1 char for the ellipsis
   return `${body.slice(0, budget)}…${tail}`;
 }
 
@@ -143,6 +146,75 @@ async function postToBluesky(message: string): Promise<void> {
   console.log("Posted to Bluesky.");
 }
 
+// RFC 3986 percent-encoding: encodeURIComponent leaves !*'() unescaped,
+// which OAuth 1.0a's signature spec requires escaped too.
+function oauthEncode(value: string): string {
+  return encodeURIComponent(value).replace(/[!*'()]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`);
+}
+
+// X's free API tier only allows posting via OAuth 1.0a user-context (not
+// OAuth 2.0 app-only, which is read-only) -- signed by hand here rather than
+// pulling in an OAuth client library for four lines of HMAC-SHA1.
+function buildXAuthHeader(
+  method: string,
+  url: string,
+  consumerKey: string,
+  consumerSecret: string,
+  accessToken: string,
+  accessTokenSecret: string
+): string {
+  const oauthParams: Record<string, string> = {
+    oauth_consumer_key: consumerKey,
+    oauth_nonce: randomBytes(16).toString("hex"),
+    oauth_signature_method: "HMAC-SHA1",
+    oauth_timestamp: String(Math.floor(Date.now() / 1000)),
+    oauth_token: accessToken,
+    oauth_version: "1.0",
+  };
+
+  // Only the OAuth params are signed (this is a JSON body, not form-encoded,
+  // so it isn't included in the signature base string) -- sorted for a
+  // deterministic base string, per the OAuth 1.0a spec.
+  const paramString = Object.keys(oauthParams)
+    .sort()
+    .map((key) => `${oauthEncode(key)}=${oauthEncode(oauthParams[key])}`)
+    .join("&");
+  const baseString = `${method.toUpperCase()}&${oauthEncode(url)}&${oauthEncode(paramString)}`;
+  const signingKey = `${oauthEncode(consumerSecret)}&${oauthEncode(accessTokenSecret)}`;
+  const signature = createHmac("sha1", signingKey).update(baseString).digest("base64");
+
+  const headerParams: Record<string, string> = { ...oauthParams, oauth_signature: signature };
+  return `OAuth ${Object.keys(headerParams)
+    .sort()
+    .map((key) => `${oauthEncode(key)}="${oauthEncode(headerParams[key])}"`)
+    .join(", ")}`;
+}
+
+async function postToX(message: string): Promise<void> {
+  const consumerKey = process.env.X_API_KEY;
+  const consumerSecret = process.env.X_API_SECRET;
+  const accessToken = process.env.X_ACCESS_TOKEN;
+  const accessTokenSecret = process.env.X_ACCESS_TOKEN_SECRET;
+  if (!consumerKey || !consumerSecret || !accessToken || !accessTokenSecret) {
+    console.log("Skipping X post: X_API_KEY / X_API_SECRET / X_ACCESS_TOKEN / X_ACCESS_TOKEN_SECRET not set.");
+    return;
+  }
+
+  const url = "https://api.twitter.com/2/tweets";
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: buildXAuthHeader("POST", url, consumerKey, consumerSecret, accessToken, accessTokenSecret),
+    },
+    body: JSON.stringify({ text: message }),
+  });
+  if (!res.ok) {
+    throw new Error(`X post failed: ${res.status} ${await res.text()}`);
+  }
+  console.log("Posted to X.");
+}
+
 async function main() {
   await installDevProxyIfPresent();
 
@@ -154,7 +226,8 @@ async function main() {
   }
 
   await postToTelegram(buildMessage(newPolls));
-  await postToBluesky(truncateForBluesky(newPolls));
+  await postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH));
+  await postToX(truncateMessage(newPolls, X_MAX_LENGTH));
 }
 
 main().catch((err) => {
