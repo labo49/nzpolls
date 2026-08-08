@@ -158,12 +158,14 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
           </div>
           <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
             Modified Sainte-Laguë allocation (New Zealand&apos;s actual MMP method) over today&apos;s poll of
-            polls. A party needs 5% party vote or an electorate seat to qualify. Electorate seats
-            (&ldquo;Edit electorate assumptions&rdquo; above) are a manually-set assumption, not derived
-            from polling, since there is no electorate-level polling to scrape &mdash; the built-in default
-            is ACT holding Epsom and Te Pāti Māori holding 6 of 7 Māori electorates, after Mariameno
-            Kapa-Kingi&apos;s May 2026 departure. * marks an overhang seat. Treat as indicative, not an
-            official projection.
+            polls. A party needs 5% party vote or an electorate seat to qualify. There are 71 electorates
+            in total; the built-in default only itemizes ACT holding Epsom and Te Pāti Māori holding 6 of
+            7 Māori electorates (after Mariameno Kapa-Kingi&apos;s May 2026 departure) &mdash; the
+            remaining electorates sit with National and Labour in reality but aren&apos;t itemized, since
+            there&apos;s no electorate-level polling to derive that from (&ldquo;Edit electorate
+            assumptions&rdquo; above shows exactly how many of the 71 are currently accounted for, and
+            lets you fill in the rest). * marks an overhang seat. Treat as indicative, not an official
+            projection.
           </p>
         </section>
       )}

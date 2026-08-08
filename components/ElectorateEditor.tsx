@@ -4,9 +4,36 @@ import { useState } from "react";
 import ActionButton from "@/components/ActionButton";
 import PartyDot from "@/components/PartyDot";
 import { PARTIES } from "@/lib/parties";
+import { TOTAL_ELECTORATE_SEATS, totalAllocatedElectorateSeats } from "@/lib/electorates";
 import type { ElectorateSeatMap } from "@/lib/electorates";
 
 const EDITABLE_PARTIES = PARTIES.filter((p) => p.code !== "OTH");
+
+function CompletenessNote({ map }: { map: ElectorateSeatMap }) {
+  const allocated = totalAllocatedElectorateSeats(map);
+  const complete = allocated === TOTAL_ELECTORATE_SEATS;
+  return (
+    <p
+      className={`text-xs ${
+        complete
+          ? "text-neutral-500 dark:text-neutral-500"
+          : "font-medium text-amber-700 dark:text-amber-500"
+      }`}
+    >
+      {complete ? (
+        <>
+          &#10003; All {TOTAL_ELECTORATE_SEATS} electorates accounted for.
+        </>
+      ) : (
+        <>
+          &#9888; Only {allocated} of {TOTAL_ELECTORATE_SEATS} electorate seats specified &mdash;{" "}
+          {TOTAL_ELECTORATE_SEATS - allocated} unaccounted for (their held-by party isn&apos;t set, so
+          they default to that party&apos;s list-only entitlement).
+        </>
+      )}
+    </p>
+  );
+}
 
 export default function ElectorateEditor({
   current,
@@ -39,19 +66,24 @@ export default function ElectorateEditor({
 
   if (!open) {
     return (
-      <div className="flex flex-wrap items-center gap-2">
-        <ActionButton active={isOverride} onClick={openEditor}>
-          {isOverride ? "Using your electorate override" : "Edit electorate assumptions"}
-        </ActionButton>
-        {isOverride && (
-          <button
-            type="button"
-            onClick={onReset}
-            className="text-xs font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-400 dark:decoration-neutral-600"
-          >
-            Reset to default
-          </button>
-        )}
+      <div>
+        <div className="flex flex-wrap items-center gap-2">
+          <ActionButton active={isOverride} onClick={openEditor}>
+            {isOverride ? "Using your electorate override" : "Edit electorate assumptions"}
+          </ActionButton>
+          {isOverride && (
+            <button
+              type="button"
+              onClick={onReset}
+              className="text-xs font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-400 dark:decoration-neutral-600"
+            >
+              Reset to default
+            </button>
+          )}
+        </div>
+        <div className="mt-1.5">
+          <CompletenessNote map={current} />
+        </div>
       </div>
     );
   }
@@ -73,7 +105,7 @@ export default function ElectorateEditor({
               type="number"
               inputMode="numeric"
               min={0}
-              max={30}
+              max={71}
               value={draft[party.code] ?? 0}
               onChange={(e) =>
                 setDraft((d) => ({ ...d, [party.code]: Math.max(0, Number(e.target.value) || 0) }))
@@ -83,7 +115,10 @@ export default function ElectorateEditor({
           </label>
         ))}
       </div>
-      <div className="mt-4 flex items-center gap-2">
+      <div className="mt-3">
+        <CompletenessNote map={draft} />
+      </div>
+      <div className="mt-3 flex items-center gap-2">
         <button
           type="button"
           onClick={submit}
