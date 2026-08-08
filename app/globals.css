@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Dark mode is toggled explicitly (see ThemeProvider), not only by OS
+   preference -- `dark:` utilities now key off a `.dark` class on <html>
+   rather than the `prefers-color-scheme` media query. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -12,11 +17,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {

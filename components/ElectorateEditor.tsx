@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ActionButton from "@/components/ActionButton";
 import PartyDot from "@/components/PartyDot";
 import { PARTIES } from "@/lib/parties";
 import type { ElectorateSeatMap } from "@/lib/electorates";
@@ -38,26 +39,18 @@ export default function ElectorateEditor({
 
   if (!open) {
     return (
-      <div className="flex items-center gap-2 text-xs">
-        <button
-          type="button"
-          onClick={openEditor}
-          className="font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-300 dark:decoration-neutral-600"
-        >
-          Edit electorate assumptions
-        </button>
+      <div className="flex flex-wrap items-center gap-2">
+        <ActionButton active={isOverride} onClick={openEditor}>
+          {isOverride ? "Using your electorate override" : "Edit electorate assumptions"}
+        </ActionButton>
         {isOverride && (
-          <>
-            <span className="text-neutral-400 dark:text-neutral-600">&middot;</span>
-            <span className="text-neutral-500 dark:text-neutral-400">using your override</span>
-            <button
-              type="button"
-              onClick={onReset}
-              className="font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-300 dark:decoration-neutral-600"
-            >
-              reset to default
-            </button>
-          </>
+          <button
+            type="button"
+            onClick={onReset}
+            className="text-xs font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-400 dark:decoration-neutral-600"
+          >
+            Reset to default
+          </button>
         )}
       </div>
     );

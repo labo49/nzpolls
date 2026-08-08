@@ -1,21 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { useIsDark } from "@/components/ThemeProvider";
 import { BLOCS } from "@/lib/blocs";
 import type { BlocKey } from "@/lib/blocs";
-
-function useIsDark(): boolean {
-  const [isDark, setIsDark] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const update = () => setIsDark(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-  return isDark;
-}
 
 interface SliceLabelProps {
   cx?: number;

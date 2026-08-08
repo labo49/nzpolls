@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import {
   CartesianGrid,
   Line,
@@ -10,6 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { useIsDark } from "@/components/ThemeProvider";
 import { BLOCS } from "@/lib/blocs";
 import type { BlocPoint } from "@/lib/blocs";
 
@@ -17,18 +17,6 @@ interface ChartRow {
   date: string;
   label: string;
   [blocKey: string]: string | number | undefined;
-}
-
-function useIsDark(): boolean {
-  const [isDark, setIsDark] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const update = () => setIsDark(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-  return isDark;
 }
 
 function formatDate(iso: string): string {
