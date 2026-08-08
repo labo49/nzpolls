@@ -13,6 +13,7 @@ import type { Poll } from "../lib/types";
 
 const NEW_POLLS_PATH = new URL("../data/newPolls.json", import.meta.url);
 const SITE_URL = "https://nzpolls.vercel.app";
+const HASHTAGS = "#NZPoll #NZ2026 #NZElections";
 const BLUESKY_MAX_LENGTH = 300;
 
 function formatPartyLine(poll: Poll): string {
@@ -22,20 +23,27 @@ function formatPartyLine(poll: Poll): string {
     .join(", ");
 }
 
-function buildMessage(newPolls: Poll[]): string {
+function messageBody(newPolls: Poll[]): string {
   if (newPolls.length === 1) {
     const p = newPolls[0];
-    return `New NZ poll: ${p.pollster} (${p.dateLabel})\n${formatPartyLine(p)}\n${SITE_URL}`;
+    return `New NZ poll: ${p.pollster} (${p.dateLabel})\n${formatPartyLine(p)}`;
   }
   const names = newPolls.map((p) => `${p.pollster} (${p.dateLabel})`).join(", ");
-  return `${newPolls.length} new NZ polls added: ${names}\n${SITE_URL}`;
+  return `${newPolls.length} new NZ polls added: ${names}`;
 }
 
-function truncateForBluesky(message: string): string {
-  if (message.length <= BLUESKY_MAX_LENGTH) return message;
-  const urlLine = `\n${SITE_URL}`;
-  const budget = BLUESKY_MAX_LENGTH - urlLine.length - 1; // 1 char for the ellipsis
-  return `${message.slice(0, budget)}…${urlLine}`;
+function buildMessage(newPolls: Poll[]): string {
+  return `${messageBody(newPolls)}\n${SITE_URL}\n${HASHTAGS}`;
+}
+
+// The URL and hashtags are the part every post must keep -- only the poll
+// details in between get trimmed to fit Bluesky's 300-char cap.
+function truncateForBluesky(newPolls: Poll[]): string {
+  const tail = `\n${SITE_URL}\n${HASHTAGS}`;
+  const body = messageBody(newPolls);
+  if ((body + tail).length <= BLUESKY_MAX_LENGTH) return body + tail;
+  const budget = BLUESKY_MAX_LENGTH - tail.length - 1; // 1 char for the ellipsis
+  return `${body.slice(0, budget)}…${tail}`;
 }
 
 async function postToTelegram(message: string): Promise<void> {
@@ -106,9 +114,8 @@ async function main() {
     return;
   }
 
-  const message = buildMessage(newPolls);
-  await postToTelegram(message);
-  await postToBluesky(truncateForBluesky(message));
+  await postToTelegram(buildMessage(newPolls));
+  await postToBluesky(truncateForBluesky(newPolls));
 }
 
 main().catch((err) => {
