@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { parseDateLabelToISO, parseNumber, stripFootnotes } from "./wikiPollScraper";
+import { normalizePollsterName, parseDateLabelToISO, parseNumber, stripFootnotes } from "./wikiPollScraper";
 
 export interface LeaderColumn {
   /** Full name from the header link's title attribute, e.g. "Christopher Luxon" -- stable identity even if the table's short display text changes. */
@@ -102,7 +102,7 @@ export function scrapeLeaderTable(html: string, headingId: string): ScrapeLeader
 
     const pollsterIdx = columnKinds.indexOf("pollster");
     const pollsterTd = tds.eq(pollsterIdx);
-    const pollster = stripFootnotes(pollsterTd.text());
+    const pollster = normalizePollsterName(stripFootnotes(pollsterTd.text()));
     const link = pollsterTd.find("a").first();
     const href = link.attr("href") ?? null;
     const sourceUrl = href && !href.startsWith("./") && !href.startsWith("#")
@@ -184,7 +184,7 @@ export function scrapeLeadershipApprovalTable(html: string, headingId: string): 
     }
 
     const pollsterTd = tds.eq(1);
-    const pollster = stripFootnotes(pollsterTd.text());
+    const pollster = normalizePollsterName(stripFootnotes(pollsterTd.text()));
     if (!pollster) {
       skipped++;
       return;

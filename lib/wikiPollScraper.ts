@@ -15,6 +15,16 @@ export function stripFootnotes(text: string): string {
   return text.replace(/\[[a-z0-9]+\]/gi, "").trim();
 }
 
+/** Collapses plain hyphens to en-dashes in a pollster name, e.g. "1
+ * News-Verian" -> "1 News–Verian". Wikipedia's own tables aren't internally
+ * consistent about this -- the same house appears with both a hyphen and an
+ * en-dash across different rows on at least one table -- which would
+ * otherwise silently split one pollster into two entries in every
+ * pollster-filter UI on the site. */
+export function normalizePollsterName(name: string): string {
+  return name.replace(/-/g, "–");
+}
+
 export function parseNumber(raw: string): number | null {
   const cleaned = stripFootnotes(raw).replace(/,/g, "").trim();
   if (!cleaned || cleaned === "–" || cleaned === "-" || /^n\/a$/i.test(cleaned)) {
@@ -110,7 +120,7 @@ export function scrapeWikiPollTable(html: string, headingId: string): ScrapeResu
     }
 
     const pollsterTd = tds.eq(columnCodes.indexOf("POLLSTER"));
-    const pollster = stripFootnotes(pollsterTd.text());
+    const pollster = normalizePollsterName(stripFootnotes(pollsterTd.text()));
     const link = pollsterTd.find("a").first();
     const href = link.attr("href") ?? null;
     const sourceUrl = href && !href.startsWith("./") && !href.startsWith("#")

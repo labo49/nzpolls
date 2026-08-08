@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-08T23:10:38.097Z",
+  "fetchedAt": "2026-08-08T23:40:00.616Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -435,7 +435,7 @@
       {
         "date": "2025-05-28",
         "dateLabel": "24–28 May 2025",
-        "pollster": "1 News-Verian",
+        "pollster": "1 News–Verian",
         "sourceUrl": "https://www.scribd.com/document/871022558/24-28-May-2025-1News-Verian-Poll-Report?secret_password=ci42gaG8SMdwNUKesTw6",
         "sampleSize": 1002,
         "results": {
@@ -449,7 +449,7 @@
       {
         "date": "2025-05-30",
         "dateLabel": "23–30 May 2025",
-        "pollster": "RNZ-Reid Research",
+        "pollster": "RNZ–Reid Research",
         "sourceUrl": "https://www.rnz.co.nz/news/political/563006/left-bloc-would-have-enough-support-to-turf-coalition-government-out-of-power-poll",
         "sampleSize": 1008,
         "results": {
@@ -577,7 +577,7 @@
       {
         "date": "2025-09-12",
         "dateLabel": "4–12 Sep 2025",
-        "pollster": "RNZ-Reid Research",
+        "pollster": "RNZ–Reid Research",
         "sourceUrl": "https://www.rnz.co.nz/news/political/573163/rnz-reid-research-political-poll-points-to-deadlocked-parliament",
         "sampleSize": 1000,
         "results": {

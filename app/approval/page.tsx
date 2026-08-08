@@ -1,7 +1,5 @@
+import ApprovalDashboard from "@/components/ApprovalDashboard";
 import CreatedByLine from "@/components/CreatedByLine";
-import LeaderPollsTable from "@/components/LeaderPollsTable";
-import LeaderSnapshot from "@/components/LeaderSnapshot";
-import LeaderTrendChart from "@/components/LeaderTrendChart";
 import approvalData from "@/data/approval.json";
 import type { ApprovalData } from "@/lib/approvalTypes";
 
@@ -20,11 +18,6 @@ export default function ApprovalPage() {
     minute: "2-digit",
   });
 
-  const pmPolls = data.preferredPm.polls;
-  const latestPm = pmPolls[pmPolls.length - 1];
-  const approvalPolls = data.leadershipApproval.polls;
-  const latestApproval = approvalPolls[approvalPolls.length - 1];
-
   return (
     <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">
       <header className="mb-8">
@@ -37,69 +30,7 @@ export default function ApprovalPage() {
         </p>
       </header>
 
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          Preferred prime minister
-        </h2>
-        {latestPm ? (
-          <>
-            <LeaderSnapshot leaders={data.preferredPm.leaders} values={latestPm.results} />
-            <p className="mt-2 mb-4 text-xs text-neutral-500 dark:text-neutral-500">
-              Most recent poll: {latestPm.pollster} ({latestPm.dateLabel}).
-            </p>
-            <LeaderTrendChart leaders={data.preferredPm.leaders} polls={pmPolls} />
-          </>
-        ) : (
-          <div className="rounded-lg border border-black/10 px-4 py-16 text-center text-sm text-neutral-500 dark:border-white/10 dark:text-neutral-400">
-            No preferred prime minister polls available.
-          </div>
-        )}
-      </section>
-
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          Leadership approval rating
-        </h2>
-        {latestApproval ? (
-          <>
-            <LeaderSnapshot
-              leaders={data.leadershipApproval.leaders}
-              values={latestApproval.results}
-              suffix="pp"
-              signed
-            />
-            <p className="mt-2 mb-4 text-xs text-neutral-500 dark:text-neutral-500">
-              Net approval (approve minus disapprove). Most recent poll: {latestApproval.pollster} (
-              {latestApproval.dateLabel}).
-            </p>
-            <LeaderTrendChart
-              leaders={data.leadershipApproval.leaders}
-              polls={approvalPolls}
-              suffix="pp"
-              signed
-              showZeroLine
-            />
-          </>
-        ) : (
-          <div className="rounded-lg border border-black/10 px-4 py-16 text-center text-sm text-neutral-500 dark:border-white/10 dark:text-neutral-400">
-            No leadership approval polls available.
-          </div>
-        )}
-      </section>
-
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          Preferred PM polls ({pmPolls.length})
-        </h2>
-        <LeaderPollsTable leaders={data.preferredPm.leaders} polls={pmPolls} />
-      </section>
-
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          Leadership approval polls ({approvalPolls.length})
-        </h2>
-        <LeaderPollsTable leaders={data.leadershipApproval.leaders} polls={approvalPolls} signed />
-      </section>
+      <ApprovalDashboard data={data} />
 
       <footer className="border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-500">
         <p>
