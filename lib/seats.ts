@@ -1,5 +1,10 @@
 import { PARTIES, type PartyCode } from "./parties";
-import { ELECTORATE_SEATS, NOMINAL_TOTAL_SEATS, PARTY_VOTE_THRESHOLD } from "./electorates";
+import {
+  ELECTORATE_SEATS,
+  NOMINAL_TOTAL_SEATS,
+  PARTY_VOTE_THRESHOLD,
+  type ElectorateSeatMap,
+} from "./electorates";
 import type { PollOfPollsPoint } from "./types";
 
 export interface SeatResult {
@@ -54,11 +59,14 @@ function sainteLague(votes: Record<string, number>, seats: number): Record<strin
  * "Others" (OTH) is an aggregate of several small parties, not a real party
  * that can hold seats, so it's excluded from the allocation.
  */
-export function computeSeats(point: PollOfPollsPoint): SeatResult[] {
+export function computeSeats(
+  point: PollOfPollsPoint,
+  electorateSeats: ElectorateSeatMap = ELECTORATE_SEATS
+): SeatResult[] {
   const qualifying = PARTIES.filter((p) => {
     if (p.code === "OTH") return false;
     const pct = point.results[p.code] ?? 0;
-    const holdsElectorate = (ELECTORATE_SEATS[p.code] ?? 0) > 0;
+    const holdsElectorate = (electorateSeats[p.code] ?? 0) > 0;
     return pct >= PARTY_VOTE_THRESHOLD || holdsElectorate;
   });
 
@@ -71,15 +79,15 @@ export function computeSeats(point: PollOfPollsPoint): SeatResult[] {
 
   return qualifying
     .map((p) => {
-      const electorateSeats = ELECTORATE_SEATS[p.code] ?? 0;
+      const partyElectorateSeats = electorateSeats[p.code] ?? 0;
       const baseEntitlement = entitlement[p.code] ?? 0;
-      const overhang = electorateSeats > baseEntitlement;
-      const totalSeats = overhang ? electorateSeats : baseEntitlement;
+      const overhang = partyElectorateSeats > baseEntitlement;
+      const totalSeats = overhang ? partyElectorateSeats : baseEntitlement;
       return {
         code: p.code,
         votePct: point.results[p.code] ?? 0,
-        electorateSeats,
-        listSeats: Math.max(0, totalSeats - electorateSeats),
+        electorateSeats: partyElectorateSeats,
+        listSeats: Math.max(0, totalSeats - partyElectorateSeats),
         totalSeats,
         overhang,
       };

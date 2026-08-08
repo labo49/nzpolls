@@ -1,5 +1,7 @@
 import type { PartyCode } from "./parties";
 
+export type ElectorateSeatMap = Partial<Record<PartyCode, number>>;
+
 /**
  * Static, manually-maintained electorate-seat assumptions -- there is no
  * electorate-level polling to derive this from. Used only to (a) let a party
@@ -21,7 +23,7 @@ import type { PartyCode } from "./parties";
  * This is a snapshot assumption, not a live feed -- needs a manual refresh
  * after any further by-election, defection, or the 2026 election itself.
  */
-export const ELECTORATE_SEATS: Partial<Record<PartyCode, number>> = {
+export const ELECTORATE_SEATS: ElectorateSeatMap = {
   TPM: 6,
   ACT: 1, // Epsom
 };

@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import BlocChart from "@/components/BlocChart";
+import ElectorateEditor from "@/components/ElectorateEditor";
 import LatestSnapshot from "@/components/LatestSnapshot";
 import PollChart from "@/components/PollChart";
 import PollsTable from "@/components/PollsTable";
@@ -10,6 +11,12 @@ import RecencyFilter, { type RecencyLimit } from "@/components/RecencyFilter";
 import SeatsChart from "@/components/SeatsChart";
 import SeatsTable from "@/components/SeatsTable";
 import { computeBlocs, computeBlocSeats } from "@/lib/blocs";
+import { ELECTORATE_SEATS, type ElectorateSeatMap } from "@/lib/electorates";
+import {
+  clearElectorateOverride,
+  loadElectorateOverride,
+  saveElectorateOverride,
+} from "@/lib/electorateOverride";
 import { actualPolls, computePollOfPolls, isElectionResult } from "@/lib/pollOfPolls";
 import { getReliability } from "@/lib/reliability";
 import { computeSeats, houseSize, majorityThreshold } from "@/lib/seats";
@@ -47,7 +54,21 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
   const latest = series[series.length - 1];
   const blocPoints = useMemo(() => computeBlocs(series), [series]);
 
-  const seatResults = useMemo(() => (latest ? computeSeats(latest) : []), [latest]);
+  const [electorateOverride, setElectorateOverride] = useState<ElectorateSeatMap | null>(null);
+  useEffect(() => {
+    // Deliberately deferred to after mount, not a lazy useState initializer:
+    // localStorage doesn't exist during SSR, so reading it during the initial
+    // render would make the server-rendered HTML and the client's first
+    // render disagree (a hydration mismatch) on every seat number.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setElectorateOverride(loadElectorateOverride());
+  }, []);
+  const effectiveElectorateSeats = electorateOverride ?? ELECTORATE_SEATS;
+
+  const seatResults = useMemo(
+    () => (latest ? computeSeats(latest, effectiveElectorateSeats) : []),
+    [latest, effectiveElectorateSeats]
+  );
   const blocSeats = useMemo(() => computeBlocSeats(seatResults), [seatResults]);
   const house = houseSize(seatResults);
   const majority = majorityThreshold(seatResults);
@@ -117,17 +138,32 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
           <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
             Seats
           </h2>
+          <div className="mb-4">
+            <ElectorateEditor
+              current={effectiveElectorateSeats}
+              isOverride={electorateOverride !== null}
+              onSave={(next) => {
+                saveElectorateOverride(next);
+                setElectorateOverride(next);
+              }}
+              onReset={() => {
+                clearElectorateOverride();
+                setElectorateOverride(null);
+              }}
+            />
+          </div>
           <SeatsChart blocSeats={blocSeats} houseSize={house} majority={majority} />
           <div className="mt-4">
             <SeatsTable seats={seatResults} />
           </div>
           <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
             Modified Sainte-Laguë allocation (New Zealand&apos;s actual MMP method) over today&apos;s poll of
-            polls. A party needs 5% party vote or an electorate seat to qualify. Electorate seats are a
-            static, manually-set assumption (ACT: Epsom; Te Pāti Māori: 6 of 7 Māori electorates, after
-            Mariameno Kapa-Kingi&apos;s May 2026 departure) &mdash; not derived from polling, since there
-            is no electorate-level polling to scrape. * marks an overhang seat. Treat as indicative, not
-            an official projection.
+            polls. A party needs 5% party vote or an electorate seat to qualify. Electorate seats
+            (&ldquo;Edit electorate assumptions&rdquo; above) are a manually-set assumption, not derived
+            from polling, since there is no electorate-level polling to scrape &mdash; the built-in default
+            is ACT holding Epsom and Te Pāti Māori holding 6 of 7 Māori electorates, after Mariameno
+            Kapa-Kingi&apos;s May 2026 departure. * marks an overhang seat. Treat as indicative, not an
+            official projection.
           </p>
         </section>
       )}
