@@ -1,0 +1,2708 @@
+{
+  "fetchedAt": "2026-08-08T11:59:32.422Z",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
+    "https://en.wikipedia.org/wiki/Results_of_the_2020_New_Zealand_general_election",
+    "https://en.wikipedia.org/wiki/Results_of_the_2017_New_Zealand_general_election",
+    "https://en.wikipedia.org/wiki/2024_Port_Waikato_by-election"
+  ],
+  "electorates": [
+    {
+      "name": "Auckland Central",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Chlöe Swarbrick",
+        "party": "GRN",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Chlöe Swarbrick",
+          "winnerParty": "GRN",
+          "majority": 3896,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Chlöe Swarbrick",
+          "winnerParty": "GRN",
+          "majority": 1068,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Nikki Kaye",
+          "winnerParty": "NAT",
+          "majority": 1581,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "GRN",
+      "trendNote": "GRN has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 3,896 votes -- leaning GRN, not safe."
+    },
+    {
+      "name": "Banks Peninsula",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Vanessa Weenink",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Vanessa Weenink",
+          "winnerParty": "NAT",
+          "majority": 396,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Tracey McLellan",
+          "winnerParty": "LAB",
+          "majority": 13156,
+          "runnerUpParty": "NAT",
+          "notional": true
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). No party has won a majority of the 2 elections on record (most recently NAT, majority 396)."
+    },
+    {
+      "name": "Bay of Plenty",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tom Rutherford",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tom Rutherford",
+          "winnerParty": "NAT",
+          "majority": 15405,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Todd Muller",
+          "winnerParty": "NAT",
+          "majority": 3415,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Todd Muller",
+          "winnerParty": "NAT",
+          "majority": 13996,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 15,405 votes -- a safe seat."
+    },
+    {
+      "name": "Botany",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Christopher Luxon",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Christopher Luxon",
+          "winnerParty": "NAT",
+          "majority": 16337,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Christopher Luxon",
+          "winnerParty": "NAT",
+          "majority": 3999,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Jami-Lee Ross",
+          "winnerParty": "NAT",
+          "majority": 12839,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 16,337 votes -- a safe seat."
+    },
+    {
+      "name": "Christchurch Central",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Duncan Webb",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Duncan Webb",
+          "winnerParty": "LAB",
+          "majority": 1981,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Duncan Webb",
+          "winnerParty": "LAB",
+          "majority": 14098,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Duncan Webb",
+          "winnerParty": "LAB",
+          "majority": 2871,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 1,981 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Christchurch East",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Reuben Davidson",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Reuben Davidson",
+          "winnerParty": "LAB",
+          "majority": 2397,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Poto Williams",
+          "winnerParty": "LAB",
+          "majority": 17336,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Poto Williams",
+          "winnerParty": "LAB",
+          "majority": 7480,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 2,397 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Coromandel",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Scott Simpson",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Scott Simpson",
+          "winnerParty": "NAT",
+          "majority": 17014,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Scott Simpson",
+          "winnerParty": "NAT",
+          "majority": 3505,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Scott Simpson",
+          "winnerParty": "NAT",
+          "majority": 14326,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 17,014 votes -- a safe seat."
+    },
+    {
+      "name": "Dunedin",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Rachel Brooking",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Rachel Brooking",
+          "winnerParty": "LAB",
+          "majority": 7980,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "David Clark",
+          "winnerParty": "LAB",
+          "majority": 15521,
+          "runnerUpParty": "NAT",
+          "notional": true
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). LAB has won 2 of the last 2 elections, most recently by 7,980 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "East Coast",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Dana Kirkpatrick",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Dana Kirkpatrick",
+          "winnerParty": "NAT",
+          "majority": 3117,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Kiri Allan",
+          "winnerParty": "LAB",
+          "majority": 6331,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Anne Tolley",
+          "winnerParty": "NAT",
+          "majority": 4807,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 3,117 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "East Coast Bays",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Erica Stanford",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Erica Stanford",
+          "winnerParty": "NAT",
+          "majority": 20353,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Erica Stanford",
+          "winnerParty": "NAT",
+          "majority": 8764,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Erica Stanford",
+          "winnerParty": "NAT",
+          "majority": 16290,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 20,353 votes -- a safe seat."
+    },
+    {
+      "name": "Epsom",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "David Seymour",
+        "party": "ACT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "David Seymour",
+          "winnerParty": "ACT",
+          "majority": 8142,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "David Seymour",
+          "winnerParty": "ACT",
+          "majority": 9224,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "David Seymour",
+          "winnerParty": "ACT",
+          "majority": 5519,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "ACT",
+      "trendNote": "ACT has won 3 of the last 3 elections, most recently by 8,142 votes -- a safe seat."
+    },
+    {
+      "name": "Hamilton East",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Ryan Hamilton",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Ryan Hamilton",
+          "winnerParty": "NAT",
+          "majority": 5060,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Jamie Strange",
+          "winnerParty": "LAB",
+          "majority": 2973,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "David Bennett",
+          "winnerParty": "NAT",
+          "majority": 5810,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 5,060 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Hamilton West",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tama Potaka",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tama Potaka",
+          "winnerParty": "NAT",
+          "majority": 6488,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Gaurav Sharma",
+          "winnerParty": "LAB",
+          "majority": 6267,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Tim Macindoe",
+          "winnerParty": "NAT",
+          "majority": 7731,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,488 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Hauraki-Waikato",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Hana-Rawhiti Maipi-Clarke",
+        "party": "TPM",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Hana-Rawhiti Maipi-Clarke",
+          "winnerParty": "TPM",
+          "majority": 2911,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Nanaia Mahuta",
+          "winnerParty": "LAB",
+          "majority": 9660,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Nanaia Mahuta",
+          "winnerParty": "LAB",
+          "majority": 9223,
+          "runnerUpParty": "TPM",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Hutt South",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Chris Bishop",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Chris Bishop",
+          "winnerParty": "NAT",
+          "majority": 1332,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Ginny Andersen",
+          "winnerParty": "LAB",
+          "majority": 3777,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Chris Bishop",
+          "winnerParty": "NAT",
+          "majority": 1530,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), but only by 1,332 votes most recently -- a toss-up."
+    },
+    {
+      "name": "Ikaroa-Rāwhiti",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Cushla Tangaere-Manuel",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Cushla Tangaere-Manuel",
+          "winnerParty": "LAB",
+          "majority": 2843,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Meka Whaitiri",
+          "winnerParty": "LAB",
+          "majority": 6045,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Meka Whaitiri",
+          "winnerParty": "LAB",
+          "majority": 4210,
+          "runnerUpParty": "TPM",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 2,843 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Ilam",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Hamish Campbell",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Hamish Campbell",
+          "winnerParty": "NAT",
+          "majority": 7830,
+          "runnerUpParty": "TOP",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Sarah Pallett",
+          "winnerParty": "LAB",
+          "majority": 3463,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Gerry Brownlee",
+          "winnerParty": "NAT",
+          "majority": 8256,
+          "runnerUpParty": "OTH",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 7,830 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Invercargill",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Penny Simmonds",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Penny Simmonds",
+          "winnerParty": "NAT",
+          "majority": 9874,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Penny Simmonds",
+          "winnerParty": "NAT",
+          "majority": 224,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Sarah Dowie",
+          "winnerParty": "NAT",
+          "majority": 5579,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 9,874 votes -- a safe seat."
+    },
+    {
+      "name": "Kaikōura",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Stuart Smith",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Stuart Smith",
+          "winnerParty": "NAT",
+          "majority": 11412,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Stuart Smith",
+          "winnerParty": "NAT",
+          "majority": 2295,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Stuart Smith",
+          "winnerParty": "NAT",
+          "majority": 10553,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 11,412 votes -- a safe seat."
+    },
+    {
+      "name": "Kaipara ki Mahurangi",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Chris Penk",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Chris Penk",
+          "winnerParty": "NAT",
+          "majority": 19459,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Chris Penk",
+          "winnerParty": "NAT",
+          "majority": 4435,
+          "runnerUpParty": "LAB",
+          "notional": true
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). NAT has won 2 of the last 2 elections, most recently by 19,459 votes -- a safe seat."
+    },
+    {
+      "name": "Kelston",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Carmel Sepuloni",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Carmel Sepuloni",
+          "winnerParty": "LAB",
+          "majority": 4396,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Carmel Sepuloni",
+          "winnerParty": "LAB",
+          "majority": 15660,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Carmel Sepuloni",
+          "winnerParty": "LAB",
+          "majority": 7269,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 4,396 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Mana",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Barbara Edmonds",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Barbara Edmonds",
+          "winnerParty": "LAB",
+          "majority": 7372,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Barbara Edmonds",
+          "winnerParty": "LAB",
+          "majority": 16224,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Kris Faafoi",
+          "winnerParty": "LAB",
+          "majority": 10980,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 7,372 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Māngere",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Lemauga Lydia Sosene",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Lemauga Lydia Sosene",
+          "winnerParty": "LAB",
+          "majority": 11700,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "William Sio",
+          "winnerParty": "LAB",
+          "majority": 19396,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "William Sio",
+          "winnerParty": "LAB",
+          "majority": 14597,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 11,700 votes -- a safe seat."
+    },
+    {
+      "name": "Manurewa",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Arena Williams",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Arena Williams",
+          "winnerParty": "LAB",
+          "majority": 7113,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Arena Williams",
+          "winnerParty": "LAB",
+          "majority": 17179,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Louisa Wall",
+          "winnerParty": "LAB",
+          "majority": 8374,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 7,113 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Maungakiekie",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Greg Fleming",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Greg Fleming",
+          "winnerParty": "NAT",
+          "majority": 4617,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Priyanca Radhakrishnan",
+          "winnerParty": "LAB",
+          "majority": 635,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Denise Lee",
+          "winnerParty": "NAT",
+          "majority": 2157,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 4,617 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Mount Albert",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Helen White",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Helen White",
+          "winnerParty": "LAB",
+          "majority": 18,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Jacinda Ardern",
+          "winnerParty": "LAB",
+          "majority": 21246,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Jacinda Ardern",
+          "winnerParty": "LAB",
+          "majority": 15264,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 18 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Mount Roskill",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Carlos Cheung",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Carlos Cheung",
+          "winnerParty": "NAT",
+          "majority": 1565,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Michael Wood",
+          "winnerParty": "LAB",
+          "majority": 13853,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Michael Wood",
+          "winnerParty": "LAB",
+          "majority": 6898,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Napier",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Katie Nimon",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Katie Nimon",
+          "winnerParty": "NAT",
+          "majority": 8870,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Stuart Nash",
+          "winnerParty": "LAB",
+          "majority": 5856,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Stuart Nash",
+          "winnerParty": "LAB",
+          "majority": 5220,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Nelson",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Rachel Boyack",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Rachel Boyack",
+          "winnerParty": "LAB",
+          "majority": 26,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Rachel Boyack",
+          "winnerParty": "LAB",
+          "majority": 4525,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Nick Smith",
+          "winnerParty": "NAT",
+          "majority": 4283,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), but only by 26 votes most recently -- a toss-up."
+    },
+    {
+      "name": "New Lynn",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Paulo Garcia",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Paulo Garcia",
+          "winnerParty": "NAT",
+          "majority": 1013,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Deborah Russell",
+          "winnerParty": "LAB",
+          "majority": 13134,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Deborah Russell",
+          "winnerParty": "LAB",
+          "majority": 2825,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "New Plymouth",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "David MacLeod",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "David MacLeod",
+          "winnerParty": "NAT",
+          "majority": 6991,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Glen Bennett",
+          "winnerParty": "LAB",
+          "majority": 2555,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Jonathan Young",
+          "winnerParty": "NAT",
+          "majority": 7733,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,991 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "North Shore",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Simon Watts",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Simon Watts",
+          "winnerParty": "NAT",
+          "majority": 16330,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Simon Watts",
+          "winnerParty": "NAT",
+          "majority": 3734,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Maggie Barry",
+          "winnerParty": "NAT",
+          "majority": 12716,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 16,330 votes -- a safe seat."
+    },
+    {
+      "name": "Northcote",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Dan Bidois",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Dan Bidois",
+          "winnerParty": "NAT",
+          "majority": 9270,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Shanan Halbert",
+          "winnerParty": "LAB",
+          "majority": 2534,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Jonathan Coleman",
+          "winnerParty": "NAT",
+          "majority": 6210,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 9,270 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Northland",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Grant McCallum",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Grant McCallum",
+          "winnerParty": "NAT",
+          "majority": 6087,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Willow-Jean Prime",
+          "winnerParty": "LAB",
+          "majority": 163,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Matt King",
+          "winnerParty": "NAT",
+          "majority": 1389,
+          "runnerUpParty": "NZF",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,087 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Ōhāriu",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Greg O'Connor",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Greg O'Connor",
+          "winnerParty": "LAB",
+          "majority": 1260,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Greg O'Connor",
+          "winnerParty": "LAB",
+          "majority": 11961,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Greg O'Connor",
+          "winnerParty": "LAB",
+          "majority": 1051,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB has won 3 of the last 3 elections, but only by 1,260 votes most recently -- a toss-up."
+    },
+    {
+      "name": "Ōtaki",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tim Costley",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tim Costley",
+          "winnerParty": "NAT",
+          "majority": 6271,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Terisa Ngobi",
+          "winnerParty": "LAB",
+          "majority": 2988,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Nathan Guy",
+          "winnerParty": "NAT",
+          "majority": 6156,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,271 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Pakuranga",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Simeon Brown",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Simeon Brown",
+          "winnerParty": "NAT",
+          "majority": 18710,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Simeon Brown",
+          "winnerParty": "NAT",
+          "majority": 10050,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Simeon Brown",
+          "winnerParty": "NAT",
+          "majority": 14886,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 18,710 votes -- a safe seat."
+    },
+    {
+      "name": "Palmerston North",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tangi Utikere",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tangi Utikere",
+          "winnerParty": "LAB",
+          "majority": 3087,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Tangi Utikere",
+          "winnerParty": "LAB",
+          "majority": 12508,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Iain Lees-Galloway",
+          "winnerParty": "LAB",
+          "majority": 6392,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 3,087 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Panmure-Ōtāhuhu",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Jenny Salesa",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Jenny Salesa",
+          "winnerParty": "LAB",
+          "majority": 7970,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Jenny Salesa",
+          "winnerParty": "LAB",
+          "majority": 18626,
+          "runnerUpParty": "NAT",
+          "notional": true
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). LAB has won 2 of the last 2 elections, most recently by 7,970 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Papakura",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Judith Collins",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Judith Collins",
+          "winnerParty": "NAT",
+          "majority": 13459,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Judith Collins",
+          "winnerParty": "NAT",
+          "majority": 5583,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Judith Collins",
+          "winnerParty": "NAT",
+          "majority": 7486,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 13,459 votes -- a safe seat."
+    },
+    {
+      "name": "Rangitata",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "James Meager",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "James Meager",
+          "winnerParty": "NAT",
+          "majority": 10846,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Jo Luxton",
+          "winnerParty": "LAB",
+          "majority": 4408,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Andrew Falloon",
+          "winnerParty": "NAT",
+          "majority": 6331,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 10,846 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Rangitīkei",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Suze Redmayne",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Suze Redmayne",
+          "winnerParty": "NAT",
+          "majority": 9785,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Ian McKelvie",
+          "winnerParty": "NAT",
+          "majority": 2961,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Ian McKelvie",
+          "winnerParty": "NAT",
+          "majority": 10290,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 9,785 votes -- a safe seat."
+    },
+    {
+      "name": "Remutaka",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Chris Hipkins",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Chris Hipkins",
+          "winnerParty": "LAB",
+          "majority": 8859,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Chris Hipkins",
+          "winnerParty": "LAB",
+          "majority": 20497,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "LAB",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023). LAB has won 2 of the last 2 elections, most recently by 8,859 votes -- a safe seat."
+    },
+    {
+      "name": "Rongotai",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Julie Anne Genter",
+        "party": "GRN",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Julie Anne Genter",
+          "winnerParty": "GRN",
+          "majority": 2717,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Paul Eagle",
+          "winnerParty": "LAB",
+          "majority": 19207,
+          "runnerUpParty": "GRN",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Paul Eagle",
+          "winnerParty": "LAB",
+          "majority": 10900,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but GRN won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Rotorua",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Todd McClay",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Todd McClay",
+          "winnerParty": "NAT",
+          "majority": 8923,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Todd McClay",
+          "winnerParty": "NAT",
+          "majority": 825,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Todd McClay",
+          "winnerParty": "NAT",
+          "majority": 7901,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 8,923 votes -- a safe seat."
+    },
+    {
+      "name": "Selwyn",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Nicola Grigg",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Nicola Grigg",
+          "winnerParty": "NAT",
+          "majority": 19782,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Nicola Grigg",
+          "winnerParty": "NAT",
+          "majority": 4968,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Amy Adams",
+          "winnerParty": "NAT",
+          "majority": 19639,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 19,782 votes -- a safe seat."
+    },
+    {
+      "name": "Southland",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Joseph Mooney",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Joseph Mooney",
+          "winnerParty": "NAT",
+          "majority": 17211,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Joseph Mooney",
+          "winnerParty": "NAT",
+          "majority": 5645,
+          "runnerUpParty": "LAB",
+          "notional": true
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). NAT has won 2 of the last 2 elections, most recently by 17,211 votes -- a safe seat."
+    },
+    {
+      "name": "Taieri",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Ingrid Leary",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Ingrid Leary",
+          "winnerParty": "LAB",
+          "majority": 1443,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Ingrid Leary",
+          "winnerParty": "LAB",
+          "majority": 12398,
+          "runnerUpParty": "NAT",
+          "notional": true
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). LAB has won 2 of the last 2 elections, most recently by 1,443 votes -- leaning LAB, not safe."
+    },
+    {
+      "name": "Takanini",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Rima Nakhle",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Rima Nakhle",
+          "winnerParty": "NAT",
+          "majority": 8775,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Neru Leavasa",
+          "winnerParty": "LAB",
+          "majority": 7724,
+          "runnerUpParty": "NAT",
+          "notional": true
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). No party has won a majority of the 2 elections on record (most recently NAT, majority 8,775)."
+    },
+    {
+      "name": "Tāmaki",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Brooke van Velden",
+        "party": "ACT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Brooke van Velden",
+          "winnerParty": "ACT",
+          "majority": 4158,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Simon O'Connor",
+          "winnerParty": "NAT",
+          "majority": 8068,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Simon O'Connor",
+          "winnerParty": "NAT",
+          "majority": 15402,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "NAT won more of the last 3 elections, but ACT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Tāmaki Makaurau",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Oriini Kaipara",
+        "party": "TPM",
+        "note": "Won the Tāmaki Makaurau by-election in September 2025, succeeding the party's own Takutai Tarsh Kemp -- the 2023 general election winner -- not a gain from another party."
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Takutai Tarsh Kemp",
+          "winnerParty": "TPM",
+          "majority": 42,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Peeni Henare",
+          "winnerParty": "LAB",
+          "majority": 927,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Peeni Henare",
+          "winnerParty": "LAB",
+          "majority": 3809,
+          "runnerUpParty": "TPM",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Taranaki-King Country",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Barbara Kuriger",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Barbara Kuriger",
+          "winnerParty": "NAT",
+          "majority": 14355,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Barbara Kuriger",
+          "winnerParty": "NAT",
+          "majority": 3134,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Barbara Kuriger",
+          "winnerParty": "NAT",
+          "majority": 15259,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 14,355 votes -- a safe seat."
+    },
+    {
+      "name": "Taupō",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Louise Upston",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Louise Upston",
+          "winnerParty": "NAT",
+          "majority": 16505,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Louise Upston",
+          "winnerParty": "NAT",
+          "majority": 5119,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Louise Upston",
+          "winnerParty": "NAT",
+          "majority": 14335,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 16,505 votes -- a safe seat."
+    },
+    {
+      "name": "Tauranga",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Sam Uffindell",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Sam Uffindell",
+          "winnerParty": "NAT",
+          "majority": 9370,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Simon Bridges",
+          "winnerParty": "NAT",
+          "majority": 1856,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Simon Bridges",
+          "winnerParty": "NAT",
+          "majority": 11252,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 9,370 votes -- a safe seat."
+    },
+    {
+      "name": "Te Atatū",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Phil Twyford",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Phil Twyford",
+          "winnerParty": "LAB",
+          "majority": 131,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Phil Twyford",
+          "winnerParty": "LAB",
+          "majority": 10508,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Phil Twyford",
+          "winnerParty": "LAB",
+          "majority": 3184,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB has won 3 of the last 3 elections, but only by 131 votes most recently -- a toss-up."
+    },
+    {
+      "name": "Te Tai Hauāuru",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Debbie Ngarewa-Packer",
+        "party": "TPM",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Debbie Ngarewa-Packer",
+          "winnerParty": "TPM",
+          "majority": 9222,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Adrian Rurawhe",
+          "winnerParty": "LAB",
+          "majority": 1053,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Adrian Rurawhe",
+          "winnerParty": "LAB",
+          "majority": 1039,
+          "runnerUpParty": "TPM",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Te Tai Tokerau",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Mariameno Kapa-Kingi",
+        "party": "OTH",
+        "note": "Won the seat for Te Pāti Māori in 2023, but left the party in May 2026 to start her own Te Tai Tokerau Party. Still holds the seat."
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Mariameno Kapa-Kingi",
+          "winnerParty": "TPM",
+          "majority": 517,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Kelvin Davis",
+          "winnerParty": "LAB",
+          "majority": 8164,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Kelvin Davis",
+          "winnerParty": "LAB",
+          "majority": 4807,
+          "runnerUpParty": "OTH",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "Changed hands since the 2023 general election (won by TPM, now held by OTH) -- treated as a toss-up regardless of prior margins."
+    },
+    {
+      "name": "Te Tai Tonga",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tākuta Ferris",
+        "party": "TPM",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tākuta Ferris",
+          "winnerParty": "TPM",
+          "majority": 2824,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Rino Tirikatene",
+          "winnerParty": "LAB",
+          "majority": 6855,
+          "runnerUpParty": "TPM",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Rino Tirikatene",
+          "winnerParty": "LAB",
+          "majority": 4676,
+          "runnerUpParty": "GRN",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Tukituki",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Catherine Wedd",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Catherine Wedd",
+          "winnerParty": "NAT",
+          "majority": 10118,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Anna Lorck",
+          "winnerParty": "LAB",
+          "majority": 1590,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Lawrence Yule",
+          "winnerParty": "NAT",
+          "majority": 2813,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 10,118 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Upper Harbour",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Cameron Brewer",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Cameron Brewer",
+          "winnerParty": "NAT",
+          "majority": 11192,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Vanushi Walters",
+          "winnerParty": "LAB",
+          "majority": 2392,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Paula Bennett",
+          "winnerParty": "NAT",
+          "majority": 9556,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 11,192 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Waiariki",
+      "seatType": "maori",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Rawiri Waititi",
+        "party": "TPM",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Rawiri Waititi",
+          "winnerParty": "TPM",
+          "majority": 15891,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Rawiri Waititi",
+          "winnerParty": "TPM",
+          "majority": 836,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Tāmati Coffey",
+          "winnerParty": "LAB",
+          "majority": 1719,
+          "runnerUpParty": "TPM",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "TPM",
+      "trendNote": "TPM has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 15,891 votes -- leaning TPM, not safe."
+    },
+    {
+      "name": "Waikato",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tim van de Molen",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tim van de Molen",
+          "winnerParty": "NAT",
+          "majority": 18046,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Tim van de Molen",
+          "winnerParty": "NAT",
+          "majority": 5216,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Tim van de Molen",
+          "winnerParty": "NAT",
+          "majority": 15452,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 18,046 votes -- a safe seat."
+    },
+    {
+      "name": "Waimakariri",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Matt Doocey",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Matt Doocey",
+          "winnerParty": "NAT",
+          "majority": 13010,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Matt Doocey",
+          "winnerParty": "NAT",
+          "majority": 1507,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Matt Doocey",
+          "winnerParty": "NAT",
+          "majority": 10766,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 13,010 votes -- a safe seat."
+    },
+    {
+      "name": "Wairarapa",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Mike Butterick",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Mike Butterick",
+          "winnerParty": "NAT",
+          "majority": 2816,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Kieran McAnulty",
+          "winnerParty": "LAB",
+          "majority": 6545,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Alastair Scott",
+          "winnerParty": "NAT",
+          "majority": 2872,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 2,816 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Waitaki",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Miles Anderson",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Miles Anderson",
+          "winnerParty": "NAT",
+          "majority": 12151,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Jacqui Dean",
+          "winnerParty": "NAT",
+          "majority": 3281,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Jacqui Dean",
+          "winnerParty": "NAT",
+          "majority": 12816,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 12,151 votes -- a safe seat."
+    },
+    {
+      "name": "Wellington Central",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Tamatha Paul",
+        "party": "GRN",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Tamatha Paul",
+          "winnerParty": "GRN",
+          "majority": 6066,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Grant Robertson",
+          "winnerParty": "LAB",
+          "majority": 18878,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Grant Robertson",
+          "winnerParty": "LAB",
+          "majority": 9963,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but GRN won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "West Coast-Tasman",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Maureen Pugh",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Maureen Pugh",
+          "winnerParty": "NAT",
+          "majority": 1017,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Damien O'Connor",
+          "winnerParty": "LAB",
+          "majority": 6208,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Damien O'Connor",
+          "winnerParty": "LAB",
+          "majority": 5593,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+    },
+    {
+      "name": "Whanganui",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Carl Bates",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Carl Bates",
+          "winnerParty": "NAT",
+          "majority": 5417,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Steph Lewis",
+          "winnerParty": "LAB",
+          "majority": 8191,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Harete Hipango",
+          "winnerParty": "NAT",
+          "majority": 1706,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 5,417 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Whangaparāoa",
+      "seatType": "general",
+      "isNewSeat": true,
+      "currentMp": {
+        "name": "Mark Mitchell",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Mark Mitchell",
+          "winnerParty": "NAT",
+          "majority": 23376,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Mark Mitchell",
+          "winnerParty": "NAT",
+          "majority": 7823,
+          "runnerUpParty": "LAB",
+          "notional": true
+        }
+      ],
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "New or substantially redrawn for the 2023 election, so only 2 comparable results exist (2023 + a notional 2020 recalculation under today's boundaries). NAT has won 2 of the last 2 elections, most recently by 23,376 votes -- a safe seat."
+    },
+    {
+      "name": "Whangārei",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Shane Reti",
+        "party": "NAT",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Shane Reti",
+          "winnerParty": "NAT",
+          "majority": 11424,
+          "runnerUpParty": "LAB",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Emily Henderson",
+          "winnerParty": "LAB",
+          "majority": 431,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Shane Reti",
+          "winnerParty": "NAT",
+          "majority": 10967,
+          "runnerUpParty": "LAB",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 11,424 votes -- leaning NAT, not safe."
+    },
+    {
+      "name": "Wigram",
+      "seatType": "general",
+      "isNewSeat": false,
+      "currentMp": {
+        "name": "Megan Woods",
+        "party": "LAB",
+        "note": null
+      },
+      "history": [
+        {
+          "year": 2023,
+          "winnerName": "Megan Woods",
+          "winnerParty": "LAB",
+          "majority": 1187,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2020,
+          "winnerName": "Megan Woods",
+          "winnerParty": "LAB",
+          "majority": 14770,
+          "runnerUpParty": "NAT",
+          "notional": false
+        },
+        {
+          "year": 2017,
+          "winnerName": "Megan Woods",
+          "winnerParty": "LAB",
+          "majority": 4594,
+          "runnerUpParty": "NAT",
+          "notional": false
+        }
+      ],
+      "classification": "leaning",
+      "classificationParty": "LAB",
+      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 1,187 votes -- leaning LAB, not safe."
+    }
+  ]
+}

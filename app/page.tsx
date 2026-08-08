@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Dashboard from "@/components/Dashboard";
 import ThemeToggle from "@/components/ThemeToggle";
 import { actualPolls } from "@/lib/pollOfPolls";
@@ -28,6 +29,12 @@ export default function Home() {
             A rolling average of published opinion polls ahead of the 2026 New Zealand
             general election, built from {surveyCount} surveys since the 2023 election.
           </p>
+          <Link
+            href="/electorates"
+            className="mt-2 inline-block text-xs font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-400 dark:decoration-neutral-600"
+          >
+            Browse all electorates →
+          </Link>
         </div>
         <ThemeToggle />
       </header>

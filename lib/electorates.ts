@@ -9,14 +9,20 @@ export type ElectorateSeatMap = Partial<Record<PartyCode, number>>;
  * Act s191: 5% party vote OR >=1 electorate seat), and (b) floor a party's
  * total seats at the electorate seats it actually holds.
  *
- * Derived from the 2023 election result plus the two electorate-relevant
- * events visible in the scraped Wikipedia page's event notes:
+ * Derived from the real 2023 electorate-by-electorate results (see
+ * data/electorates.json / scripts/fetch-electorates.ts) plus the two
+ * electorate-relevant events visible in the scraped Wikipedia page's event
+ * notes for the current parliamentary term:
+ * - Te Pati Maori won 6 of the 7 Maori electorates outright in the 2023
+ *   general election (Hauraki-Waikato, Tamaki Makaurau, Te Tai Hauauru, Te
+ *   Tai Tokerau, Te Tai Tonga, Waiariki); Ikaroa-Rawhiti went to Labour.
  * - 6 Sep 2025: Te Pati Maori's Oriini Kaipara won the Tamaki Makaurau
- *   by-election, giving the party all 7 Maori electorates.
+ *   by-election -- succeeding the party's own Takutai Tarsh Kemp, the 2023
+ *   winner, not a gain from another party. No change to the party's count.
  * - 11 May 2026: Te Pati Maori's Mariameno Kapa-Kingi (MP for Te Tai
  *   Tokerau) left to start her own "Te Tai Tokerau Party". She keeps the
  *   seat (no vacancy was triggered), so it no longer counts as a Te Pati
- *   Maori electorate -- net effect, Te Pati Maori holds 6 of the 7 Maori
+ *   Maori electorate -- net effect, Te Pati Maori holds 5 of the 7 Maori
  *   electorates as of today. Te Tai Tokerau Party itself isn't modeled here
  *   (it isn't a column in the polling data and has no measurable party vote).
  *
@@ -24,7 +30,7 @@ export type ElectorateSeatMap = Partial<Record<PartyCode, number>>;
  * after any further by-election, defection, or the 2026 election itself.
  */
 export const ELECTORATE_SEATS: ElectorateSeatMap = {
-  TPM: 6,
+  TPM: 5,
   ACT: 1, // Epsom
 };
 
