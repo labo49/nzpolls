@@ -13,6 +13,7 @@
  */
 import { writeFile } from "node:fs/promises";
 import { installDevProxyIfPresent, scrapeWikiPollTable } from "../lib/wikiPollScraper";
+import type { ScrapedPoll } from "../lib/wikiPollScraper";
 import { PARTIES } from "../lib/parties";
 import polls from "../data/polls.json" with { type: "json" };
 import type { Poll } from "../lib/types";
@@ -70,7 +71,7 @@ async function main() {
 
   const currentPollsters = new Set((polls as Poll[]).map((p) => p.pollster));
 
-  const latestByPollster = new Map<string, Poll>();
+  const latestByPollster = new Map<string, ScrapedPoll>();
   for (const p of historicalPolls) {
     if (p.date >= ELECTION_DATE) continue; // skip the result row itself and anything after
     const canonical = canonicalPollster(p.pollster);

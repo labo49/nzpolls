@@ -9,6 +9,8 @@ export interface Poll {
   sourceUrl: string | null;
   sampleSize: number | null;
   results: Partial<Record<PartyCode, number>>;
+  /** ISO timestamp of the scraper run that first picked up this poll. */
+  firstSeenAt: string;
 }
 
 export interface PollOfPollsPoint {

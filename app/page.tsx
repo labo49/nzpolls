@@ -1,6 +1,8 @@
 import CreatedByLine from "@/components/CreatedByLine";
 import Dashboard from "@/components/Dashboard";
+import NewPollsBanner from "@/components/NewPollsBanner";
 import { actualPolls } from "@/lib/pollOfPolls";
+import { recentlyAddedPolls } from "@/lib/newPolls";
 import polls from "@/data/polls.json";
 import meta from "@/data/meta.json";
 import type { Poll } from "@/lib/types";
@@ -23,6 +25,8 @@ export default function Home() {
 
   return (
     <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">
+      <NewPollsBanner polls={recentlyAddedPolls(typedPolls)} />
+
       <header className="mb-8">
         <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
           Poll of Polls

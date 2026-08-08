@@ -45,8 +45,11 @@ function parseDateLabelToISO(label: string): string | null {
   return `${year}-${String(month).padStart(2, "0")}-${day.padStart(2, "0")}`;
 }
 
+/** A freshly-parsed poll row, before the caller stamps a `firstSeenAt`. */
+export type ScrapedPoll = Omit<Poll, "firstSeenAt">;
+
 export interface ScrapeResult {
-  polls: Poll[];
+  polls: ScrapedPoll[];
   skipped: number;
 }
 
@@ -85,7 +88,7 @@ export function scrapeWikiPollTable(html: string, headingId: string): ScrapeResu
     return HEADER_TO_CODE[text] ?? null;
   });
 
-  const polls: Poll[] = [];
+  const polls: ScrapedPoll[] = [];
   let skipped = 0;
 
   allRows.slice(1).each((_, rowEl) => {
