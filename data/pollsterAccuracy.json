@@ -1,0 +1,42 @@
+{
+  "methodology": "Mean absolute error (percentage points) between each pollster's final poll before the 2023 general election and the actual 2023 result, across parties both report. Lower is more accurate. Pollsters with no pre-election poll within 90 days of the 2023 election are omitted (insufficient data), not rated as unreliable.",
+  "referenceElection": "2023-10-14",
+  "ratings": [
+    {
+      "pollster": "Talbot Mills",
+      "finalPollDate": "2023-09-28",
+      "partiesCompared": 7,
+      "meanAbsError": 0.33
+    },
+    {
+      "pollster": "1 News–Verian",
+      "finalPollDate": "2023-10-10",
+      "partiesCompared": 7,
+      "meanAbsError": 0.92
+    },
+    {
+      "pollster": "Taxpayers' Union–Curia",
+      "finalPollDate": "2023-10-04",
+      "partiesCompared": 7,
+      "meanAbsError": 0.96
+    },
+    {
+      "pollster": "The Post/Freshwater Strategy",
+      "finalPollDate": "2023-08-30",
+      "partiesCompared": 6,
+      "meanAbsError": 0.99
+    },
+    {
+      "pollster": "RNZ–Reid Research",
+      "finalPollDate": "2023-10-10",
+      "partiesCompared": 7,
+      "meanAbsError": 1.25
+    },
+    {
+      "pollster": "Roy Morgan",
+      "finalPollDate": "2023-10-08",
+      "partiesCompared": 7,
+      "meanAbsError": 2.5
+    }
+  ]
+}

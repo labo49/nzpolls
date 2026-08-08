@@ -8,6 +8,7 @@ import PollsTable from "@/components/PollsTable";
 import PollsterFilter from "@/components/PollsterFilter";
 import { computeBlocs } from "@/lib/blocs";
 import { actualPolls, computePollOfPolls, isElectionResult } from "@/lib/pollOfPolls";
+import { getReliability } from "@/lib/reliability";
 import type { Poll } from "@/lib/types";
 
 export default function Dashboard({ polls }: { polls: Poll[] }) {
@@ -15,6 +16,11 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
     const names = new Set(actualPolls(polls).map((p) => p.pollster));
     return Array.from(names).sort((a, b) => a.localeCompare(b));
   }, [polls]);
+
+  const mostReliable = useMemo(
+    () => allPollsters.filter((p) => getReliability(p).tier === "high"),
+    [allPollsters]
+  );
 
   const [selected, setSelected] = useState<Set<string>>(() => new Set(allPollsters));
 
@@ -33,7 +39,12 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
         <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
           Pollsters included
         </h2>
-        <PollsterFilter pollsters={allPollsters} selected={selected} onChange={setSelected} />
+        <PollsterFilter
+          pollsters={allPollsters}
+          selected={selected}
+          onChange={setSelected}
+          mostReliable={mostReliable}
+        />
       </section>
 
       {latest ? (

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "fetch-polls": "tsx scripts/fetch-polls.ts"
+    "fetch-polls": "tsx scripts/fetch-polls.ts",
+    "fetch-pollster-accuracy": "tsx scripts/fetch-pollster-accuracy.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
