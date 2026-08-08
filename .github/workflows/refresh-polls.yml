@@ -29,7 +29,8 @@ jobs:
       - id: diff
         run: echo "changed=$(git status --porcelain data/ | wc -l)" >> "$GITHUB_OUTPUT"
 
-      - if: steps.diff.outputs.changed != '0'
+      - id: create-pr
+        if: steps.diff.outputs.changed != '0'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: refresh poll data"
@@ -37,3 +38,8 @@ jobs:
           body: Automated poll data refresh from the Wikipedia opinion-polling table.
           branch: automated/refresh-polls
           add-paths: data/
+
+      - if: steps.create-pr.outputs.pull-request-number
+        run: gh pr merge --squash --delete-branch "${{ steps.create-pr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
