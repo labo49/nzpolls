@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -17,7 +18,8 @@ export default function SiteHeader() {
     <header className="border-b border-black/10 dark:border-white/10">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-          <Link href="/" className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+          <Link href="/" className="flex items-center gap-2 text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+            <Image src="/logo-mark.png" alt="" width={24} height={32} className="h-8 w-auto" priority />
             NZ 2026 Elections
           </Link>
           <nav className="flex items-center gap-4">
