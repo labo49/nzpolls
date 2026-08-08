@@ -1,5 +1,6 @@
 import { PARTIES } from "@/lib/parties";
 import { isElectionResult } from "@/lib/pollOfPolls";
+import { getReliability, TIER_COLOR, TIER_LABEL } from "@/lib/reliability";
 import type { Poll } from "@/lib/types";
 
 function formatDate(iso: string): string {
@@ -27,6 +28,12 @@ export default function PollsTable({ polls }: { polls: Poll[] }) {
         <tbody>
           {rows.map((poll) => {
             const isResult = isElectionResult(poll);
+            const reliability = getReliability(poll.pollster);
+            const dotColor = TIER_COLOR[reliability.tier];
+            const dotTitle =
+              reliability.meanAbsError !== undefined
+                ? `${TIER_LABEL[reliability.tier]} — avg. ${reliability.meanAbsError}pp off the actual 2023 result`
+                : TIER_LABEL[reliability.tier];
             return (
               <tr
                 key={`${poll.date}-${poll.pollster}`}
@@ -38,18 +45,28 @@ export default function PollsTable({ polls }: { polls: Poll[] }) {
                   {formatDate(poll.date)}
                 </td>
                 <td className="px-3 py-2">
-                  {poll.sourceUrl ? (
-                    <a
-                      href={poll.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-neutral-900 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-100 dark:decoration-neutral-600"
-                    >
-                      {poll.pollster}
-                    </a>
-                  ) : (
-                    poll.pollster
-                  )}
+                  <span className="flex items-center gap-1.5">
+                    {!isResult && (
+                      <span
+                        aria-hidden
+                        title={dotTitle}
+                        className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                        style={{ backgroundColor: dotColor.light }}
+                      />
+                    )}
+                    {poll.sourceUrl ? (
+                      <a
+                        href={poll.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-neutral-900 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-100 dark:decoration-neutral-600"
+                      >
+                        {poll.pollster}
+                      </a>
+                    ) : (
+                      poll.pollster
+                    )}
+                  </span>
                 </td>
                 <td className="px-3 py-2 text-right tabular-nums text-neutral-500 dark:text-neutral-400">
                   {poll.sampleSize?.toLocaleString("en-NZ") ?? "–"}

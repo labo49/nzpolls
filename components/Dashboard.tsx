@@ -6,6 +6,7 @@ import LatestSnapshot from "@/components/LatestSnapshot";
 import PollChart from "@/components/PollChart";
 import PollsTable from "@/components/PollsTable";
 import PollsterFilter from "@/components/PollsterFilter";
+import RecencyFilter, { type RecencyLimit } from "@/components/RecencyFilter";
 import { computeBlocs } from "@/lib/blocs";
 import { actualPolls, computePollOfPolls, isElectionResult } from "@/lib/pollOfPolls";
 import { getReliability } from "@/lib/reliability";
@@ -23,11 +24,21 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
   );
 
   const [selected, setSelected] = useState<Set<string>>(() => new Set(allPollsters));
+  const [recencyLimit, setRecencyLimit] = useState<RecencyLimit>("all");
 
-  const filteredPolls = useMemo(
+  const pollsterFiltered = useMemo(
     () => polls.filter((p) => isElectionResult(p) || selected.has(p.pollster)),
     [polls, selected]
   );
+
+  const filteredPolls = useMemo(() => {
+    if (recencyLimit === "all") return pollsterFiltered;
+    // Zooming into a recent window: drop the 2023 election-result anchor too,
+    // since a 3-year-old reference point isn't useful alongside "last 5 polls".
+    const surveys = pollsterFiltered.filter((p) => !isElectionResult(p));
+    const mostRecentFirst = [...surveys].sort((a, b) => b.date.localeCompare(a.date));
+    return mostRecentFirst.slice(0, recencyLimit).sort((a, b) => a.date.localeCompare(b.date));
+  }, [pollsterFiltered, recencyLimit]);
 
   const series = useMemo(() => computePollOfPolls(filteredPolls), [filteredPolls]);
   const latest = series[series.length - 1];
@@ -45,6 +56,13 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
           onChange={setSelected}
           mostReliable={mostReliable}
         />
+      </section>
+
+      <section className="mb-8">
+        <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+          Recency
+        </h2>
+        <RecencyFilter value={recencyLimit} onChange={setRecencyLimit} />
       </section>
 
       {latest ? (

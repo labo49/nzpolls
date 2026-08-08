@@ -1,5 +1,6 @@
 "use client";
 
+import ActionButton from "@/components/ActionButton";
 import { getReliability, TIER_COLOR, TIER_LABEL } from "@/lib/reliability";
 
 interface PollsterFilterProps {
@@ -10,7 +11,8 @@ interface PollsterFilterProps {
 }
 
 export default function PollsterFilter({ pollsters, selected, onChange, mostReliable }: PollsterFilterProps) {
-  const allSelected = selected.size === pollsters.length;
+  const isAllSelection = selected.size === pollsters.length;
+  const isClearSelection = selected.size === 0;
   const isMostReliableSelection =
     selected.size === mostReliable.length && mostReliable.every((p) => selected.has(p));
 
@@ -26,31 +28,16 @@ export default function PollsterFilter({ pollsters, selected, onChange, mostReli
 
   return (
     <div>
-      <div className="mb-2 flex flex-wrap items-center gap-3">
-        <button
-          type="button"
-          onClick={() => onChange(new Set(pollsters))}
-          disabled={allSelected}
-          className="text-xs font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 disabled:cursor-default disabled:text-neutral-400 disabled:no-underline dark:text-neutral-300 dark:decoration-neutral-600 dark:disabled:text-neutral-600"
-        >
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <ActionButton active={isAllSelection} onClick={() => onChange(new Set(pollsters))}>
           Select all
-        </button>
-        <button
-          type="button"
-          onClick={() => onChange(new Set())}
-          disabled={selected.size === 0}
-          className="text-xs font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 disabled:cursor-default disabled:text-neutral-400 disabled:no-underline dark:text-neutral-300 dark:decoration-neutral-600 dark:disabled:text-neutral-600"
-        >
+        </ActionButton>
+        <ActionButton active={isClearSelection} onClick={() => onChange(new Set())}>
           Clear
-        </button>
-        <button
-          type="button"
-          onClick={() => onChange(new Set(mostReliable))}
-          disabled={mostReliable.length === 0 || isMostReliableSelection}
-          className="text-xs font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 disabled:cursor-default disabled:text-neutral-400 disabled:no-underline dark:text-neutral-300 dark:decoration-neutral-600 dark:disabled:text-neutral-600"
-        >
+        </ActionButton>
+        <ActionButton active={isMostReliableSelection} onClick={() => onChange(new Set(mostReliable))}>
           Most reliable only
-        </button>
+        </ActionButton>
       </div>
       <div className="flex flex-wrap gap-1.5">
         {pollsters.map((pollster) => {

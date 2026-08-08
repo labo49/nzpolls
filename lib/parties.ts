@@ -15,19 +15,24 @@ export interface PartyMeta {
   color: { light: string; dark: string };
 }
 
-// Order matches the Wikipedia "Table of polls" column order. Colors are the
-// validated 8-slot categorical palette assigned in that fixed order (see
-// dataviz skill) -- identity is carried by the legend/labels, not by matching
-// real-world party branding.
+// Order matches the Wikipedia "Table of polls" column order. Colors match
+// each party's real-world branding, per explicit request, rather than the
+// generic CVD-safe categorical palette -- red vs. green (Labour vs. Green)
+// is a known-hard pair for deuteranopia this way, and black/gray (NZ First
+// vs. Others) have no hue to separate on at all. Mitigated the same way the
+// dataviz skill prescribes for this exact situation: legend always visible,
+// direct end-of-line labels on the chart, a colored-dot+name tooltip, and
+// the full data table below -- never color as the only cue.
+// Te Pāti Māori's color wasn't specified; used their actual brand maroon.
 export const PARTIES: PartyMeta[] = [
-  { code: "NAT", name: "National", color: { light: "#2a78d6", dark: "#3987e5" } },
-  { code: "LAB", name: "Labour", color: { light: "#eb6834", dark: "#d95926" } },
-  { code: "GRN", name: "Green", color: { light: "#1baf7a", dark: "#199e70" } },
-  { code: "ACT", name: "ACT", color: { light: "#eda100", dark: "#c98500" } },
-  { code: "NZF", name: "NZ First", color: { light: "#e87ba4", dark: "#d55181" } },
-  { code: "TPM", name: "Te Pāti Māori", color: { light: "#008300", dark: "#008300" } },
-  { code: "TOP", name: "TOP", color: { light: "#4a3aa7", dark: "#9085e9" } },
-  { code: "OTH", name: "Others", color: { light: "#e34948", dark: "#e66767" } },
+  { code: "NAT", name: "National", color: { light: "#0057B8", dark: "#4C9AFF" } },
+  { code: "LAB", name: "Labour", color: { light: "#D82A20", dark: "#F0524B" } },
+  { code: "GRN", name: "Green", color: { light: "#098137", dark: "#22A35C" } },
+  { code: "ACT", name: "ACT", color: { light: "#FFC800", dark: "#FFD84D" } },
+  { code: "NZF", name: "NZ First", color: { light: "#111111", dark: "#EDEDED" } },
+  { code: "TPM", name: "Te Pāti Māori", color: { light: "#8B1E3F", dark: "#D9668A" } },
+  { code: "TOP", name: "TOP", color: { light: "#14B8A6", dark: "#2DD4BF" } },
+  { code: "OTH", name: "Others", color: { light: "#8A8A8A", dark: "#8F8F8F" } },
 ];
 
 export const PARTY_BY_CODE: Record<PartyCode, PartyMeta> = Object.fromEntries(
