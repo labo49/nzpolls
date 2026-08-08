@@ -1,4 +1,5 @@
 import type { PartyCode } from "./parties";
+import type { SeatResult } from "./seats";
 import type { PollOfPollsPoint } from "./types";
 
 export type BlocKey = "RIGHT" | "LEFT" | "TOP";
@@ -50,4 +51,16 @@ export function computeBlocs(series: PollOfPollsPoint[]): BlocPoint[] {
     }
     return { date: point.date, values };
   });
+}
+
+/** Sums each bloc's projected seats (lib/seats.ts) for a single snapshot. A
+ * party that didn't qualify for any seats (see computeSeats) contributes 0. */
+export function computeBlocSeats(seatResults: SeatResult[]): Partial<Record<BlocKey, number>> {
+  const values: Partial<Record<BlocKey, number>> = {};
+  for (const bloc of BLOCS) {
+    values[bloc.key] = seatResults
+      .filter((r) => bloc.members.includes(r.code))
+      .reduce((sum, r) => sum + r.totalSeats, 0);
+  }
+  return values;
 }

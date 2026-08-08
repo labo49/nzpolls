@@ -1,3 +1,4 @@
+import PartyDot from "@/components/PartyDot";
 import { PARTIES } from "@/lib/parties";
 import type { PollOfPollsPoint } from "@/lib/types";
 
@@ -15,10 +16,7 @@ export default function LatestSnapshot({ point }: { point: PollOfPollsPoint }) {
           className="rounded-lg border border-black/10 px-3 py-2.5 dark:border-white/10"
         >
           <div className="flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400">
-            <span
-              className="inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: party.color.light }}
-            />
+            <PartyDot color={party.color} />
             {party.name}
           </div>
           <div className="mt-0.5 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
