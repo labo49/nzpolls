@@ -1,19 +1,28 @@
 /**
- * Builds data/electorates.json: all 71 current electorates, their current
- * MP/party, and a safe/leaning/toss-up classification derived from the last
- * 2-3 general elections (2023, 2020, 2017), scraped from Wikipedia's
- * "Results of the YYYY New Zealand general election" pages.
+ * Builds data/electorates.json: all 71 electorates under the boundaries
+ * finalized 8 August 2026 for that year's general election, each with its
+ * declared candidates, current MP, and a safe/leaning/toss-up classification
+ * derived from whichever of the last 3 general elections (2023, 2020, 2017)
+ * still match by name under the new lines.
+ *
+ * The electorate list, current MP, and candidates all come from Wikipedia's
+ * "Candidates in the 2026 New Zealand general election by electorate" page
+ * -- the only page that reflects the new boundaries. The historical
+ * "Results of the YYYY New Zealand general election" pages predate this
+ * redistribution, so an electorate whose name changed (or is genuinely new)
+ * won't match any of them by name and is flagged `isNewFor2026` with
+ * whatever partial history (often none) still lines up.
  *
  * This is a one-off/occasional build, not part of the daily poll refresh --
  * electorate boundaries and MPs don't change often. Re-run after a
- * redistribution, a by-election, or an MP defection you want reflected.
+ * candidate-selection update, a by-election, or an MP defection you want
+ * reflected.
  *
  * Run with: npx tsx scripts/fetch-electorates.ts
  */
 import { writeFile } from "node:fs/promises";
-import {
-  installDevProxyIfPresent,
-} from "../lib/wikiPollScraper";
+import { installDevProxyIfPresent } from "../lib/wikiPollScraper";
+import { parseElectorateCandidatesTable, type CandidateEntry } from "../lib/electorateCandidates";
 import {
   cleanElectorateName,
   normalizeElectorateName,
@@ -45,36 +54,21 @@ interface HistoryPoint {
 interface Electorate {
   name: string;
   seatType: "general" | "maori";
-  isNewSeat: boolean;
-  currentMp: { name: string; party: ElectorateParty; note: string | null };
+  isNewFor2026: boolean;
+  currentMp: { name: string; party: ElectorateParty; note: string | null } | null;
+  candidates: CandidateEntry[];
   history: HistoryPoint[];
   classification: "safe" | "leaning" | "tossup";
   classificationParty: ElectorateParty | null;
   trendNote: string;
 }
 
-// Post-2023 changes visible in the scraped 2026-polling-page event notes
-// (lib/electorates.ts documents the same two facts for the seat model) --
-// not derivable from the results pages themselves, which only go up to 2023.
-const CURRENT_MP_OVERRIDES: Record<string, { name: string; party: ElectorateParty; note: string }> = {
-  "tamaki makaurau": {
-    name: "Oriini Kaipara",
-    party: "TPM",
-    note:
-      "Won the Tāmaki Makaurau by-election in September 2025, succeeding the party's own Takutai Tarsh Kemp -- the 2023 general election winner -- not a gain from another party.",
-  },
-  "te tai tokerau": {
-    name: "Mariameno Kapa-Kingi",
-    party: "OTH",
-    note:
-      "Won the seat for Te Pāti Māori in 2023, but left the party in May 2026 to start her own Te Tai Tokerau Party. Still holds the seat.",
-  },
-};
-
 // The 2023 results table has no row for Port Waikato -- the general election
 // contest there was cancelled after a candidate's family bereavement, and
 // re-run as a stand-alone by-election in February 2024. Scraped separately
-// from "2024 Port Waikato by-election".
+// from "2024 Port Waikato by-election". Unlike the 11 electorates the 2026
+// boundary review actually renamed or redrew, Port Waikato's boundary is
+// unchanged -- this is filling a historical gap, not flagging a new seat.
 const PORT_WAIKATO_2023_OVERRIDE: HistoryPoint = {
   year: 2023,
   winnerName: "Andrew Bayly",
@@ -90,19 +84,28 @@ const PORT_WAIKATO_2023_OVERRIDE: HistoryPoint = {
  * seats to Labour and vice versa in other cycles), so "won every election on
  * record" is too strict a bar -- a seat National held in 2017 and 2023 but
  * lost only in the 2020 wave is a real trend, not a coin flip. The rule:
- * whichever party has the most wins across the 2-3 elections on record is
- * the "leaning" party, *provided the most recent election agrees with that
+ * whichever party has the most wins across the elections on record is the
+ * "leaning" party, *provided the most recent election agrees with that
  * majority* (if the most recent election just broke from an otherwise
  * consistent history, that's a genuine recent shift, not noise -- toss-up).
  */
 function classify(
   history: HistoryPoint[],
-  currentMp: { party: ElectorateParty }
+  currentMp: { party: ElectorateParty } | null
 ): { classification: "safe" | "leaning" | "tossup"; classificationParty: ElectorateParty | null; trendNote: string } {
+  if (history.length === 0) {
+    return {
+      classification: "tossup",
+      classificationParty: null,
+      trendNote:
+        "New or substantially redrawn by the boundary review finalized 8 Aug 2026, with no comparable result under these boundaries yet -- treated as a toss-up until real results exist.",
+    };
+  }
+
   const sorted = [...history].sort((a, b) => b.year - a.year);
   const mostRecent = sorted[0];
 
-  const flipped = mostRecent && currentMp.party !== mostRecent.winnerParty;
+  const flipped = currentMp && currentMp.party !== mostRecent.winnerParty;
   if (flipped) {
     return {
       classification: "tossup",
@@ -165,16 +168,19 @@ function classify(
 async function main() {
   await installDevProxyIfPresent();
 
-  const [html2023, html2020, html2017] = await Promise.all([
+  const [htmlCandidates, html2023, html2020, html2017] = await Promise.all([
+    fetchHtml("Candidates_in_the_2026_New_Zealand_general_election_by_electorate"),
     fetchHtml("Results_of_the_2023_New_Zealand_general_election"),
     fetchHtml("Results_of_the_2020_New_Zealand_general_election"),
     fetchHtml("Results_of_the_2017_New_Zealand_general_election"),
   ]);
 
+  const candidateRows = parseElectorateCandidatesTable(htmlCandidates);
   const rows2023 = parseElectorateResultsTable(html2023, "Electorate_results");
   const rows2020 = parseElectorateResultsTable(html2020, "Electorate_vote");
   const rows2017 = parseElectorateResultsTable(html2017, "Electorate_results");
 
+  const byNormalized2023 = new Map(rows2023.map((r) => [normalizeElectorateName(r.electorateName), r]));
   const byNormalized2020 = new Map(rows2020.map((r) => [normalizeElectorateName(r.electorateName), r]));
   const byNormalized2017 = new Map(rows2017.map((r) => [normalizeElectorateName(r.electorateName), r]));
 
@@ -187,49 +193,50 @@ async function main() {
     notional: r.notional,
   });
 
-  const electorates: Electorate[] = [];
+  const electorates: Electorate[] = candidateRows.map((row) => {
+    const key = normalizeElectorateName(row.electorateName);
+    const history: HistoryPoint[] = [];
 
-  for (const row2023 of rows2023) {
-    const key = normalizeElectorateName(row2023.electorateName);
-    const history: HistoryPoint[] = [toPoint(row2023, 2023)];
+    const r2023 = byNormalized2023.get(key);
+    if (r2023) history.push(toPoint(r2023, 2023));
 
     const r2020 = byNormalized2020.get(key);
     if (r2020) history.push(toPoint(r2020, 2020));
 
     const r2017 = byNormalized2017.get(key);
-    const isNewSeat = !r2017 || (r2020?.notional ?? false);
     if (r2017 && !r2020?.notional) history.push(toPoint(r2017, 2017));
 
-    const override = CURRENT_MP_OVERRIDES[key];
-    const currentMp = override
-      ? { name: override.name, party: override.party, note: override.note }
-      : { name: row2023.winnerName, party: row2023.winnerParty, note: null };
+    // Not matched under this name in the 2023 results -- either genuinely
+    // new, or renamed/redrawn by the review finalized 8 Aug 2026.
+    const isNewFor2026 = !r2023;
+
+    const incumbent = row.candidates.find((c) => c.isIncumbent) ?? null;
+    const currentMp = incumbent
+      ? { name: incumbent.name, party: incumbent.partyCode, note: incumbent.notes }
+      : null;
 
     const { classification, classificationParty, trendNote } = classify(history, currentMp);
 
-    electorates.push({
-      name: cleanElectorateName(row2023.electorateName),
-      seatType: row2023.seatType,
-      isNewSeat,
+    return {
+      name: cleanElectorateName(row.electorateName),
+      seatType: row.seatType,
+      isNewFor2026,
       currentMp,
+      candidates: row.candidates,
       history,
       classification,
       classificationParty,
-      trendNote: isNewSeat
-        ? `New or substantially redrawn for the 2023 election, so only ${history.length} comparable result${history.length === 1 ? "" : "s"} exist${history.length === 1 ? "s" : ""} (2023${history.some((h) => h.notional) ? " + a notional 2020 recalculation under today's boundaries" : ""}). ${trendNote}`
-        : trendNote,
-    });
-  }
+      trendNote,
+    };
+  });
 
-  // Port Waikato: inject the by-election result as its "2023" data point.
+  // Port Waikato: inject the by-election result as its "2023" data point --
+  // its boundary is unchanged, this is a historical-data gap, not a 2026
+  // redistribution flag.
   const portWaikato = electorates.find((e) => normalizeElectorateName(e.name) === "port waikato");
-  if (portWaikato) {
-    portWaikato.history = portWaikato.history.map((h) =>
-      h.year === 2023 ? { ...PORT_WAIKATO_2023_OVERRIDE } : h
-    );
-    if (!portWaikato.history.some((h) => h.year === 2023)) {
-      portWaikato.history.unshift(PORT_WAIKATO_2023_OVERRIDE);
-    }
+  if (portWaikato && !portWaikato.history.some((h) => h.year === 2023)) {
+    portWaikato.history = [PORT_WAIKATO_2023_OVERRIDE, ...portWaikato.history];
+    portWaikato.isNewFor2026 = false;
     const recomputed = classify(portWaikato.history, portWaikato.currentMp);
     Object.assign(portWaikato, recomputed);
   }
@@ -238,9 +245,11 @@ async function main() {
 
   const generalCount = electorates.filter((e) => e.seatType === "general").length;
   const maoriCount = electorates.filter((e) => e.seatType === "maori").length;
+  const noIncumbent = electorates.filter((e) => e.currentMp === null).length;
   console.log(
     `Parsed ${electorates.length} electorates (${generalCount} general, ${maoriCount} Māori). ` +
-      `${electorates.filter((e) => e.isNewSeat).length} flagged as new/redrawn.`
+      `${electorates.filter((e) => e.isNewFor2026).length} flagged as new/redrawn for 2026, ` +
+      `${noIncumbent} with no incumbent flagged yet.`
   );
 
   await writeFile(
@@ -249,6 +258,7 @@ async function main() {
       {
         fetchedAt: new Date().toISOString(),
         sources: [
+          "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
           "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
           "https://en.wikipedia.org/wiki/Results_of_the_2020_New_Zealand_general_election",
           "https://en.wikipedia.org/wiki/Results_of_the_2017_New_Zealand_general_election",

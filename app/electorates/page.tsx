@@ -5,7 +5,7 @@ import type { ElectoratesData } from "@/lib/electorateTypes";
 
 export const metadata = {
   title: "Electorates",
-  description: "All 71 New Zealand electorates, their current MP, and a safe/leaning/toss-up trend from the last 3 general elections.",
+  description: "All 71 New Zealand electorates under the 2026 boundaries, their current MP, declared candidates, and a safe/leaning/toss-up trend from the last 3 general elections.",
 };
 
 export default function ElectoratesPage() {
@@ -23,8 +23,9 @@ export default function ElectoratesPage() {
           Electorates
         </h1>
         <p className="mt-1.5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-          All {data.electorates.length} electorates, their current MP, and a safe / leaning / toss-up read
-          from the last three general elections (2023, 2020, 2017).
+          All {data.electorates.length} electorates under the boundaries finalized 8 August 2026, their current
+          MP, declared candidates, and a safe / leaning / toss-up read from the last three general elections
+          (2023, 2020, 2017).
         </p>
       </header>
 
@@ -39,8 +40,14 @@ export default function ElectoratesPage() {
           most recent result agrees; and a <strong>toss-up</strong> otherwise, including any seat that has
           changed hands since its last general election result (by-election or defection) regardless of prior
           margins. Electorate seats aren&apos;t polled directly, so this is built entirely from past results,
-          not current voting intention — treat it as historical context, not a prediction. New or substantially
-          redrawn 2023 electorates are flagged and classified from fewer elections.
+          not current voting intention — treat it as historical context, not a prediction. A nationwide boundary
+          review finalized 8 August 2026 renamed or redrew 11 electorates (mostly a lower-North-Island
+          consolidation: Ōhāriu, Mana and Ōtaki became Kapiti and Kenepuru, a net reduction of one North Island
+          seat, plus straightforward renames elsewhere) — those are flagged as new/redrawn and shown as toss-ups
+          with no historical trend until real results exist under the new lines. Current MPs and candidates come
+          from whichever candidate is marked as the incumbent for each electorate; candidate selection is
+          ongoing, so many electorates are still partially filled in — nominations for the 2026 election don&apos;t
+          close until 8 October 2026.
         </p>
         <p className="mt-2">
           Source data:{" "}
