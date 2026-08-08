@@ -50,9 +50,7 @@ export default function Home() {
           >
             Wikipedia &mdash; Opinion polling for the 2026 New Zealand general election
           </a>
-          . Last refreshed {fetchedAt}. Run{" "}
-          <code className="rounded bg-black/5 px-1 py-0.5 dark:bg-white/10">npm run fetch-polls</code>{" "}
-          to update.
+          . Last refreshed {fetchedAt}.
         </p>
         <CreatedByLine />
       </footer>
