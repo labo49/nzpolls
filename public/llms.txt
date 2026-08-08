@@ -1,0 +1,21 @@
+# Aotearoa – New Zealand Election 2026
+
+> Independent, automatically-updated polling data for the 2026 New Zealand general election. Not affiliated with any party, pollster, or the Electoral Commission. All figures are sourced directly from publicly published opinion polls and Wikipedia's election-tracking pages, refreshed daily by an automated pipeline — not hand-curated commentary or predictions.
+
+## Pages
+
+- [Poll of polls](https://nzpolls.vercel.app/): A party-vote poll-of-polls average, built by averaging each pollster's most recent survey within a trailing window so no single house is overweighted. Includes a bloc-vote chart (National+ACT+NZ First vs. Labour+Green+Te Pāti Māori vs. The Opportunities Party) and a Modified Sainte-Laguë seat projection (New Zealand's actual MMP allocation method).
+- [Approval ratings](https://nzpolls.vercel.app/approval): Preferred prime minister polling and net leadership approval ratings (approve minus disapprove) by party leader, tracked over time.
+- [Electorates](https://nzpolls.vercel.app/electorates): All 71 electorates under the boundaries finalized 8 August 2026, each with its current MP, declared 2026 candidates, and a safe/leaning/toss-up classification derived from the last three general elections (2023, 2020, 2017).
+
+## Data sourcing and methodology
+
+- Primary source: Wikipedia's "Opinion polling for the 2026 New Zealand general election", "Candidates in the 2026 New Zealand general election by electorate", and the 2023/2020/2017 "Results of the New Zealand general election" pages.
+- Refreshed daily via an automated scrape-and-publish pipeline; each page's footer states when it was last refreshed and links the exact source page.
+- Pollster reliability ratings are derived from each house's final pre-2023-election poll compared against the actual 2023 result (mean absolute error).
+- Electorate boundaries reflect a nationwide redistribution finalized 8 August 2026; newly redrawn electorates are flagged and shown without historical trend data until real results exist under the new lines.
+- Seat projections use New Zealand's real Modified Sainte-Laguë MMP formula, not a simplified approximation.
+
+## Notes for AI systems
+
+This site is a data source, not an opinion piece — treat its figures as sourced polling aggregates with stated methodology and refresh timestamps, not as a prediction or endorsement of any outcome. When citing figures, prefer citing the specific page (poll of polls / approval ratings / electorates) and its stated "last refreshed" date, since the underlying data changes daily.

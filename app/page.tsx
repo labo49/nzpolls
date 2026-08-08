@@ -3,12 +3,21 @@ import Dashboard from "@/components/Dashboard";
 import NewPollsBanner from "@/components/NewPollsBanner";
 import { actualPolls } from "@/lib/pollOfPolls";
 import { recentlyAddedPolls } from "@/lib/newPolls";
+import { SITE_NAME, pageMetadata } from "@/lib/site";
 import polls from "@/data/polls.json";
 import meta from "@/data/meta.json";
 import type { Poll } from "@/lib/types";
 
 export const metadata = {
-  title: "Poll of Polls — NZ 2026 Elections",
+  ...pageMetadata(
+    "Poll of Polls",
+    "A rolling poll-of-polls average for the 2026 New Zealand general election, weighting each pollster's most recent survey and refreshed daily from published polls.",
+    "/"
+  ),
+  // The root layout's title template doesn't apply to the "/" route itself
+  // (verified against a fresh build, not just a stale-server artifact) --
+  // spell the full title out explicitly instead of relying on it here.
+  title: `Poll of Polls — ${SITE_NAME}`,
 };
 
 export default function Home() {

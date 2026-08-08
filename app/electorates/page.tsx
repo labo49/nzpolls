@@ -1,12 +1,14 @@
 import CreatedByLine from "@/components/CreatedByLine";
 import ElectoratesExplorer from "@/components/ElectoratesExplorer";
+import { pageMetadata } from "@/lib/site";
 import electoratesData from "@/data/electorates.json";
 import type { ElectoratesData } from "@/lib/electorateTypes";
 
-export const metadata = {
-  title: "Electorates",
-  description: "All 71 New Zealand electorates under the 2026 boundaries, their current MP, declared candidates, and a safe/leaning/toss-up trend from the last 3 general elections.",
-};
+export const metadata = pageMetadata(
+  "Electorates",
+  "All 71 New Zealand electorates under the 2026 boundaries, their current MP, declared candidates, and a safe/leaning/toss-up trend from the last 3 general elections.",
+  "/electorates"
+);
 
 export default function ElectoratesPage() {
   const data = electoratesData as ElectoratesData;

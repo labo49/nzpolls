@@ -20,7 +20,7 @@ export default function SiteHeader() {
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <Link href="/" className="flex items-center gap-2 text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
             <Image src="/logo-mark.png" alt="" width={24} height={32} className="h-8 w-auto" priority />
-            NZ 2026 Elections
+            Aotearoa – New Zealand
           </Link>
           <nav className="flex items-center gap-4">
             {NAV_LINKS.map((link) => {

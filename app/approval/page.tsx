@@ -1,12 +1,14 @@
 import ApprovalDashboard from "@/components/ApprovalDashboard";
 import CreatedByLine from "@/components/CreatedByLine";
+import { pageMetadata } from "@/lib/site";
 import approvalData from "@/data/approval.json";
 import type { ApprovalData } from "@/lib/approvalTypes";
 
-export const metadata = {
-  title: "Approval Ratings",
-  description: "Preferred prime minister and leadership approval polling for the 2026 New Zealand general election.",
-};
+export const metadata = pageMetadata(
+  "Approval Ratings",
+  "Preferred prime minister and leadership approval polling for the 2026 New Zealand general election, tracked over time by pollster.",
+  "/approval"
+);
 
 export default function ApprovalPage() {
   const data = approvalData as ApprovalData;
