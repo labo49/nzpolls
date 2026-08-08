@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import SiteHeader from "@/components/SiteHeader";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
@@ -15,8 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NZ Poll of Polls",
-  description: "A rolling poll-of-polls average for the 2026 New Zealand general election.",
+  title: {
+    template: "%s — NZ 2026 Elections",
+    default: "NZ 2026 Elections",
+  },
+  description: "A rolling poll-of-polls average and electorate-by-electorate outlook for the 2026 New Zealand general election.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -33,7 +37,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <SiteHeader />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

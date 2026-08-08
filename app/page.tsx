@@ -1,10 +1,13 @@
-import Link from "next/link";
+import CreatedByLine from "@/components/CreatedByLine";
 import Dashboard from "@/components/Dashboard";
-import ThemeToggle from "@/components/ThemeToggle";
 import { actualPolls } from "@/lib/pollOfPolls";
 import polls from "@/data/polls.json";
 import meta from "@/data/meta.json";
 import type { Poll } from "@/lib/types";
+
+export const metadata = {
+  title: "Poll of Polls — NZ 2026 Elections",
+};
 
 export default function Home() {
   const typedPolls = polls as Poll[];
@@ -20,23 +23,14 @@ export default function Home() {
 
   return (
     <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">
-      <header className="mb-8 flex items-start justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
-            NZ Poll of Polls
-          </h1>
-          <p className="mt-1.5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-            A rolling average of published opinion polls ahead of the 2026 New Zealand
-            general election, built from {surveyCount} surveys since the 2023 election.
-          </p>
-          <Link
-            href="/electorates"
-            className="mt-2 inline-block text-xs font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-400 dark:decoration-neutral-600"
-          >
-            Browse all electorates →
-          </Link>
-        </div>
-        <ThemeToggle />
+      <header className="mb-8">
+        <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
+          Poll of Polls
+        </h1>
+        <p className="mt-1.5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          A rolling average of published opinion polls ahead of the 2026 New Zealand
+          general election, built from {surveyCount} surveys since the 2023 election.
+        </p>
       </header>
 
       <Dashboard polls={typedPolls} />
@@ -56,7 +50,7 @@ export default function Home() {
           <code className="rounded bg-black/5 px-1 py-0.5 dark:bg-white/10">npm run fetch-polls</code>{" "}
           to update.
         </p>
-        <p className="mt-2">Created by Ilan Boock</p>
+        <CreatedByLine />
       </footer>
     </main>
   );

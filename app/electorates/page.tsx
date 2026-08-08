@@ -1,11 +1,10 @@
-import Link from "next/link";
+import CreatedByLine from "@/components/CreatedByLine";
 import ElectoratesExplorer from "@/components/ElectoratesExplorer";
-import ThemeToggle from "@/components/ThemeToggle";
 import electoratesData from "@/data/electorates.json";
 import type { ElectoratesData } from "@/lib/electorateTypes";
 
 export const metadata = {
-  title: "Electorates — NZ Poll of Polls",
+  title: "Electorates",
   description: "All 71 New Zealand electorates, their current MP, and a safe/leaning/toss-up trend from the last 3 general elections.",
 };
 
@@ -19,23 +18,14 @@ export default function ElectoratesPage() {
 
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6">
-      <header className="mb-8 flex items-start justify-between gap-4">
-        <div>
-          <Link
-            href="/"
-            className="text-xs font-medium text-neutral-500 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:text-neutral-400 dark:decoration-neutral-600"
-          >
-            ← NZ Poll of Polls
-          </Link>
-          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
-            Electorates
-          </h1>
-          <p className="mt-1.5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-            All {data.electorates.length} electorates, their current MP, and a safe / leaning / toss-up read
-            from the last three general elections (2023, 2020, 2017).
-          </p>
-        </div>
-        <ThemeToggle />
+      <header className="mb-8">
+        <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
+          Electorates
+        </h1>
+        <p className="mt-1.5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          All {data.electorates.length} electorates, their current MP, and a safe / leaning / toss-up read
+          from the last three general elections (2023, 2020, 2017).
+        </p>
       </header>
 
       <ElectoratesExplorer electorates={data.electorates} />
@@ -71,6 +61,7 @@ export default function ElectoratesPage() {
           <code className="rounded bg-black/5 px-1 py-0.5 dark:bg-white/10">npm run fetch-electorates</code> to
           update.
         </p>
+        <CreatedByLine />
       </footer>
     </main>
   );
