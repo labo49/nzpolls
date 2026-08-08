@@ -9,7 +9,8 @@
     "lint": "eslint",
     "fetch-polls": "tsx scripts/fetch-polls.ts",
     "fetch-pollster-accuracy": "tsx scripts/fetch-pollster-accuracy.ts",
-    "fetch-electorates": "tsx scripts/fetch-electorates.ts"
+    "fetch-electorates": "tsx scripts/fetch-electorates.ts",
+    "post-social": "tsx scripts/post-social.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
