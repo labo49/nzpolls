@@ -133,6 +133,12 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
                         </div>
                         <div className="text-xs text-neutral-500 dark:text-neutral-500">
                           {mpParty ? mpParty.name : "Independent / other"}
+                          {e.currentMp.retiring && (
+                            <span className="font-medium text-amber-700 dark:text-amber-500">
+                              {" "}
+                              &middot; not seeking re-election here
+                            </span>
+                          )}
                         </div>
                         {e.currentMp.note && (
                           <div className="mt-0.5 text-xs text-neutral-400 dark:text-neutral-600">{e.currentMp.note}</div>

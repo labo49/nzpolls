@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-08T21:48:35.559Z",
+  "fetchedAt": "2026-08-08T22:07:52.462Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
@@ -15,7 +15,8 @@
       "currentMp": {
         "name": "Chlöe Swarbrick",
         "party": "GRN",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -106,7 +107,8 @@
       "currentMp": {
         "name": "Vanessa Weenink",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -209,7 +211,8 @@
       "currentMp": {
         "name": "Christopher Luxon",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -277,7 +280,12 @@
       "name": "Christchurch Central",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Duncan Webb",
+        "party": "LAB",
+        "note": null,
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "NZF",
@@ -397,7 +405,8 @@
       "currentMp": {
         "name": "Reuben Davidson",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -498,7 +507,8 @@
       "currentMp": {
         "name": "Scott Simpson",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -589,7 +599,8 @@
       "currentMp": {
         "name": "Rachel Brooking",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -682,7 +693,8 @@
       "currentMp": {
         "name": "Dana Kirkpatrick",
         "party": "NAT",
-        "note": "MP for East Coast since 2023"
+        "note": "MP for East Coast since 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -758,7 +770,8 @@
       "currentMp": {
         "name": "Erica Stanford",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -849,7 +862,8 @@
       "currentMp": {
         "name": "David Seymour",
         "party": "ACT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -950,7 +964,8 @@
       "currentMp": {
         "name": "Carmel Sepuloni",
         "party": "LAB",
-        "note": "MP for Kelston since 2014"
+        "note": "MP for Kelston since 2014",
+        "retiring": false
       },
       "candidates": [
         {
@@ -1036,7 +1051,8 @@
       "currentMp": {
         "name": "Ryan Hamilton",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1117,7 +1133,8 @@
       "currentMp": {
         "name": "Tama Potaka",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1208,7 +1225,8 @@
       "currentMp": {
         "name": "Hana-Rawhiti Maipi-Clarke",
         "party": "TPM",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1269,7 +1287,8 @@
       "currentMp": {
         "name": "Phil Twyford",
         "party": "LAB",
-        "note": "MP for Te Atatū since 2011"
+        "note": "MP for Te Atatū since 2011",
+        "retiring": false
       },
       "candidates": [
         {
@@ -1345,7 +1364,8 @@
       "currentMp": {
         "name": "Chris Bishop",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1436,7 +1456,8 @@
       "currentMp": {
         "name": "Cushla Tangaere-Manuel",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1507,7 +1528,8 @@
       "currentMp": {
         "name": "Hamish Campbell",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1608,7 +1630,8 @@
       "currentMp": {
         "name": "Penny Simmonds",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1679,7 +1702,8 @@
       "currentMp": {
         "name": "Stuart Smith",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1770,7 +1794,8 @@
       "currentMp": {
         "name": "Chris Penk",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -1873,7 +1898,8 @@
       "currentMp": {
         "name": "Tim Costley",
         "party": "NAT",
-        "note": "MP for Ōtaki since 2023"
+        "note": "MP for Ōtaki since 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -1949,7 +1975,8 @@
       "currentMp": {
         "name": "Barbara Edmonds",
         "party": "LAB",
-        "note": "MP for Mana since 2020"
+        "note": "MP for Mana since 2020",
+        "retiring": false
       },
       "candidates": [
         {
@@ -2025,7 +2052,8 @@
       "currentMp": {
         "name": "Lemauga Lydia Sosene",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2136,7 +2164,8 @@
       "currentMp": {
         "name": "Arena Williams",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2217,7 +2246,8 @@
       "currentMp": {
         "name": "Greg Fleming",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2318,7 +2348,8 @@
       "currentMp": {
         "name": "Helen White",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2419,7 +2450,8 @@
       "currentMp": {
         "name": "Tom Rutherford",
         "party": "NAT",
-        "note": "MP for Bay of Plenty since 2023"
+        "note": "MP for Bay of Plenty since 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -2485,7 +2517,8 @@
       "currentMp": {
         "name": "Carlos Cheung",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2566,7 +2599,8 @@
       "currentMp": {
         "name": "Katie Nimon",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2667,7 +2701,8 @@
       "currentMp": {
         "name": "Rachel Boyack",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2758,7 +2793,8 @@
       "currentMp": {
         "name": "David MacLeod",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2839,7 +2875,8 @@
       "currentMp": {
         "name": "Simon Watts",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -2940,7 +2977,8 @@
       "currentMp": {
         "name": "Dan Bidois",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3041,7 +3079,8 @@
       "currentMp": {
         "name": "Grant McCallum",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3152,7 +3191,8 @@
       "currentMp": {
         "name": "Jenny Salesa",
         "party": "LAB",
-        "note": "MP for Panmure-Ōtāhuhu since 2020"
+        "note": "MP for Panmure-Ōtāhuhu since 2020",
+        "retiring": false
       },
       "candidates": [
         {
@@ -3218,7 +3258,8 @@
       "currentMp": {
         "name": "Simeon Brown",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3309,7 +3350,8 @@
       "currentMp": {
         "name": "Tangi Utikere",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3417,7 +3459,12 @@
       "name": "Papakura",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Judith Collins",
+        "party": "NAT",
+        "note": null,
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "NAT",
@@ -3524,7 +3571,12 @@
       "name": "Port Waikato",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Andrew Bayly",
+        "party": "NAT",
+        "note": null,
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "LAB",
@@ -3626,7 +3678,8 @@
       "currentMp": {
         "name": "James Meager",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3737,7 +3790,8 @@
       "currentMp": {
         "name": "Suze Redmayne",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3838,7 +3892,8 @@
       "currentMp": {
         "name": "Chris Hipkins",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -3931,7 +3986,8 @@
       "currentMp": {
         "name": "Todd McClay",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4012,7 +4068,8 @@
       "currentMp": {
         "name": "Nicola Grigg",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4143,7 +4200,8 @@
       "currentMp": {
         "name": "Joseph Mooney",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4226,7 +4284,8 @@
       "currentMp": {
         "name": "Ingrid Leary",
         "party": "LAB",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4319,7 +4378,8 @@
       "currentMp": {
         "name": "Rima Nakhle",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4389,7 +4449,12 @@
       "name": "Tāmaki",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Brooke van Velden",
+        "party": "ACT",
+        "note": null,
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "ACT",
@@ -4509,7 +4574,8 @@
       "currentMp": {
         "name": "Oriini Kaipara",
         "party": "TPM",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4580,7 +4646,8 @@
       "currentMp": {
         "name": "Barbara Kuriger",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4661,7 +4728,8 @@
       "currentMp": {
         "name": "Louise Upston",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4732,7 +4800,8 @@
       "currentMp": {
         "name": "Sam Uffindell",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4833,7 +4902,8 @@
       "currentMp": {
         "name": "Debbie Ngarewa-Packer",
         "party": "TPM",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -4904,7 +4974,8 @@
       "currentMp": {
         "name": "Mariameno Kapa-Kingi",
         "party": "OTH",
-        "note": "Elected as Te Pāti Māori MP in 2023"
+        "note": "Elected as Te Pāti Māori MP in 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -4995,7 +5066,8 @@
       "currentMp": {
         "name": "Tākuta Ferris",
         "party": "OTH",
-        "note": "Elected as Te Pāti Māori MP in 2023"
+        "note": "Elected as Te Pāti Māori MP in 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -5076,7 +5148,8 @@
       "currentMp": {
         "name": "Catherine Wedd",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5187,7 +5260,8 @@
       "currentMp": {
         "name": "Cameron Brewer",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5288,7 +5362,8 @@
       "currentMp": {
         "name": "Rawiri Waititi",
         "party": "TPM",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5369,7 +5444,8 @@
       "currentMp": {
         "name": "Tim van de Molen",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5460,7 +5536,8 @@
       "currentMp": {
         "name": "Matt Doocey",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5561,7 +5638,8 @@
       "currentMp": {
         "name": "Mike Butterick",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5649,7 +5727,12 @@
       "name": "Waitakere",
       "seatType": "general",
       "isNewFor2026": true,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Paulo Garcia",
+        "party": "NAT",
+        "note": "MP for New Lynn since 2023",
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "GRN",
@@ -5724,7 +5807,8 @@
       "currentMp": {
         "name": "Miles Anderson",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -5815,7 +5899,8 @@
       "currentMp": {
         "name": "Julie Anne Genter",
         "party": "GRN",
-        "note": "MP for Rongotai since 2023"
+        "note": "MP for Rongotai since 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -5891,7 +5976,8 @@
       "currentMp": {
         "name": "Tamatha Paul",
         "party": "GRN",
-        "note": "MP for Wellington Central since 2023"
+        "note": "MP for Wellington Central since 2023",
+        "retiring": false
       },
       "candidates": [
         {
@@ -5974,7 +6060,12 @@
       "name": "West Coast-Tasman",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Maureen Pugh",
+        "party": "NAT",
+        "note": null,
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "GRN",
@@ -6114,7 +6205,8 @@
       "currentMp": {
         "name": "Carl Bates",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -6205,7 +6297,8 @@
       "currentMp": {
         "name": "Mark Mitchell",
         "party": "NAT",
-        "note": null
+        "note": null,
+        "retiring": false
       },
       "candidates": [
         {
@@ -6265,7 +6358,12 @@
       "name": "Whangārei",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Shane Reti",
+        "party": "NAT",
+        "note": null,
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "NAT",
@@ -6362,7 +6460,12 @@
       "name": "Wigram",
       "seatType": "general",
       "isNewFor2026": false,
-      "currentMp": null,
+      "currentMp": {
+        "name": "Megan Woods",
+        "party": "LAB",
+        "note": "Contesting list only",
+        "retiring": true
+      },
       "candidates": [
         {
           "partyCode": "ACT",

@@ -55,7 +55,7 @@ interface Electorate {
   name: string;
   seatType: "general" | "maori";
   isNewFor2026: boolean;
-  currentMp: { name: string; party: ElectorateParty; note: string | null } | null;
+  currentMp: { name: string; party: ElectorateParty; note: string | null; retiring: boolean } | null;
   candidates: CandidateEntry[];
   history: HistoryPoint[];
   classification: "safe" | "leaning" | "tossup";
@@ -210,9 +210,20 @@ async function main() {
     // new, or renamed/redrawn by the review finalized 8 Aug 2026.
     const isNewFor2026 = !r2023;
 
-    const incumbent = row.candidates.find((c) => c.isIncumbent) ?? null;
-    const currentMp = incumbent
-      ? { name: incumbent.name, party: incumbent.partyCode, note: incumbent.notes }
+    // No blue-shaded incumbent doesn't always mean "unconfirmed" -- it's
+    // often that the sitting MP simply isn't contesting this electorate
+    // again (yellow shading), e.g. retiring or standing list-only. Fall back
+    // to them so "current MP" still reflects who actually holds the seat.
+    const incumbentEntry = row.candidates.find((c) => c.isIncumbent) ?? null;
+    const retiringEntry = row.candidates.find((c) => c.isRetiringMp) ?? null;
+    const mpEntry = incumbentEntry ?? retiringEntry;
+    const currentMp = mpEntry
+      ? {
+          name: mpEntry.name,
+          party: mpEntry.partyCode,
+          note: mpEntry.notes,
+          retiring: mpEntry === retiringEntry,
+        }
       : null;
 
     const { classification, classificationParty, trendNote } = classify(history, currentMp);
