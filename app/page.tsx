@@ -1,15 +1,11 @@
-import LatestSnapshot from "@/components/LatestSnapshot";
-import PollChart from "@/components/PollChart";
-import PollsTable from "@/components/PollsTable";
-import { actualPolls, computePollOfPolls } from "@/lib/pollOfPolls";
+import Dashboard from "@/components/Dashboard";
+import { actualPolls } from "@/lib/pollOfPolls";
 import polls from "@/data/polls.json";
 import meta from "@/data/meta.json";
 import type { Poll } from "@/lib/types";
 
 export default function Home() {
   const typedPolls = polls as Poll[];
-  const series = computePollOfPolls(typedPolls);
-  const latest = series[series.length - 1];
   const surveyCount = actualPolls(typedPolls).length;
 
   const fetchedAt = new Date(meta.fetchedAt).toLocaleString("en-NZ", {
@@ -32,32 +28,7 @@ export default function Home() {
         </p>
       </header>
 
-      {latest && (
-        <section className="mb-8">
-          <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-            Current poll of polls
-          </h2>
-          <LatestSnapshot point={latest} />
-          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
-            Average of the most recent poll from each pollster active in the last 60 days
-            ({latest.pollCount} pollster{latest.pollCount === 1 ? "" : "s"}).
-          </p>
-        </section>
-      )}
-
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          Trend
-        </h2>
-        <PollChart series={series} />
-      </section>
-
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          All polls
-        </h2>
-        <PollsTable polls={typedPolls} />
-      </section>
+      <Dashboard polls={typedPolls} />
 
       <footer className="border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-500">
         <p>
