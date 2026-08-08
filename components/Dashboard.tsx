@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import BlocChart from "@/components/BlocChart";
 import LatestSnapshot from "@/components/LatestSnapshot";
 import PollChart from "@/components/PollChart";
 import PollsTable from "@/components/PollsTable";
 import PollsterFilter from "@/components/PollsterFilter";
+import { computeBlocs } from "@/lib/blocs";
 import { actualPolls, computePollOfPolls, isElectionResult } from "@/lib/pollOfPolls";
 import type { Poll } from "@/lib/types";
 
@@ -23,6 +25,7 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
 
   const series = useMemo(() => computePollOfPolls(filteredPolls), [filteredPolls]);
   const latest = series[series.length - 1];
+  const blocPoints = useMemo(() => computeBlocs(series), [series]);
 
   return (
     <>
@@ -62,6 +65,15 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
           </div>
         )}
       </section>
+
+      {blocPoints.length > 0 && (
+        <section className="mb-10">
+          <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+            Blocs
+          </h2>
+          <BlocChart points={blocPoints} />
+        </section>
+      )}
 
       <section className="mb-10">
         <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
