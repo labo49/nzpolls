@@ -66,9 +66,7 @@ export default function ElectoratesPage() {
               {i < data.sources.length - 1 ? ", " : ""}
             </span>
           ))}
-          . Last refreshed {fetchedAt}. Run{" "}
-          <code className="rounded bg-black/5 px-1 py-0.5 dark:bg-white/10">npm run fetch-electorates</code> to
-          update.
+          . Last refreshed {fetchedAt}.
         </p>
         <CreatedByLine />
       </footer>
