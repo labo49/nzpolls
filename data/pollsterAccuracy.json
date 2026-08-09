@@ -1,42 +1,325 @@
 {
   "methodology": "Mean absolute error (percentage points) between each pollster's final poll before the 2023 general election and the actual 2023 result, across parties both report. Lower is more accurate. Pollsters with no pre-election poll within 90 days of the 2023 election are omitted (insufficient data), not rated as unreliable.",
   "referenceElection": "2023-10-14",
+  "actualResult": {
+    "NAT": 38.08,
+    "LAB": 26.92,
+    "GRN": 11.61,
+    "ACT": 8.64,
+    "NZF": 6.09,
+    "TPM": 3.08,
+    "TOP": 2.22
+  },
   "ratings": [
     {
       "pollster": "Talbot Mills",
       "finalPollDate": "2023-09-28",
+      "sourceUrl": "https://www.nzherald.co.nz/nz/politics/election-2023-last-pre-election-talbot-mills-shows-nz-first-rising-and-in-the-box-seat-national-and-greens-rising-act-and-labour-dropping/RD7ZJZEWZVGBLE3YPGMXEZQDJ4/",
       "partiesCompared": 7,
-      "meanAbsError": 0.33
+      "meanAbsError": 0.33,
+      "breakdown": [
+        {
+          "party": "NAT",
+          "polled": 38,
+          "actual": 38.08,
+          "error": 0.08
+        },
+        {
+          "party": "LAB",
+          "polled": 27,
+          "actual": 26.92,
+          "error": 0.08
+        },
+        {
+          "party": "GRN",
+          "polled": 13,
+          "actual": 11.61,
+          "error": 1.39
+        },
+        {
+          "party": "ACT",
+          "polled": 9,
+          "actual": 8.64,
+          "error": 0.36
+        },
+        {
+          "party": "NZF",
+          "polled": 6.4,
+          "actual": 6.09,
+          "error": 0.31
+        },
+        {
+          "party": "TPM",
+          "polled": 3.1,
+          "actual": 3.08,
+          "error": 0.02
+        },
+        {
+          "party": "TOP",
+          "polled": 2.3,
+          "actual": 2.22,
+          "error": 0.08
+        }
+      ]
     },
     {
       "pollster": "1 News–Verian",
       "finalPollDate": "2023-10-10",
+      "sourceUrl": "https://www.scribd.com/document/676799537/1News-Verian-Poll-October-7-10",
       "partiesCompared": 7,
-      "meanAbsError": 0.92
+      "meanAbsError": 0.92,
+      "breakdown": [
+        {
+          "party": "NAT",
+          "polled": 37,
+          "actual": 38.08,
+          "error": 1.08
+        },
+        {
+          "party": "LAB",
+          "polled": 28,
+          "actual": 26.92,
+          "error": 1.08
+        },
+        {
+          "party": "GRN",
+          "polled": 14,
+          "actual": 11.61,
+          "error": 2.39
+        },
+        {
+          "party": "ACT",
+          "polled": 9,
+          "actual": 8.64,
+          "error": 0.36
+        },
+        {
+          "party": "NZF",
+          "polled": 6,
+          "actual": 6.09,
+          "error": 0.09
+        },
+        {
+          "party": "TPM",
+          "polled": 1.7,
+          "actual": 3.08,
+          "error": 1.38
+        },
+        {
+          "party": "TOP",
+          "polled": 2.3,
+          "actual": 2.22,
+          "error": 0.08
+        }
+      ]
     },
     {
       "pollster": "Taxpayers' Union–Curia",
       "finalPollDate": "2023-10-04",
+      "sourceUrl": "https://www.taxpayers.org.nz/gen_poll_oct_2023_06_10_23_nztu_curia",
       "partiesCompared": 7,
-      "meanAbsError": 0.96
+      "meanAbsError": 0.96,
+      "breakdown": [
+        {
+          "party": "NAT",
+          "polled": 35.9,
+          "actual": 38.08,
+          "error": 2.18
+        },
+        {
+          "party": "LAB",
+          "polled": 27.9,
+          "actual": 26.92,
+          "error": 0.98
+        },
+        {
+          "party": "GRN",
+          "polled": 10.6,
+          "actual": 11.61,
+          "error": 1.01
+        },
+        {
+          "party": "ACT",
+          "polled": 9.1,
+          "actual": 8.64,
+          "error": 0.46
+        },
+        {
+          "party": "NZF",
+          "polled": 6.9,
+          "actual": 6.09,
+          "error": 0.81
+        },
+        {
+          "party": "TPM",
+          "polled": 3.7,
+          "actual": 3.08,
+          "error": 0.62
+        },
+        {
+          "party": "TOP",
+          "polled": 2.9,
+          "actual": 2.22,
+          "error": 0.68
+        }
+      ]
     },
     {
       "pollster": "The Post/Freshwater Strategy",
       "finalPollDate": "2023-08-30",
+      "sourceUrl": "https://www.thepost.co.nz/a/politics/350068072/labour-slumps-new-poll-low-numbers-offer-some-comfort",
       "partiesCompared": 6,
-      "meanAbsError": 0.99
+      "meanAbsError": 0.99,
+      "breakdown": [
+        {
+          "party": "NAT",
+          "polled": 36,
+          "actual": 38.08,
+          "error": 2.08
+        },
+        {
+          "party": "LAB",
+          "polled": 26,
+          "actual": 26.92,
+          "error": 0.92
+        },
+        {
+          "party": "GRN",
+          "polled": 12,
+          "actual": 11.61,
+          "error": 0.39
+        },
+        {
+          "party": "ACT",
+          "polled": 11,
+          "actual": 8.64,
+          "error": 2.36
+        },
+        {
+          "party": "NZF",
+          "polled": 6,
+          "actual": 6.09,
+          "error": 0.09
+        },
+        {
+          "party": "TPM",
+          "polled": 3,
+          "actual": 3.08,
+          "error": 0.08
+        }
+      ]
     },
     {
       "pollster": "RNZ–Reid Research",
       "finalPollDate": "2023-10-10",
+      "sourceUrl": "https://web.archive.org/web/20231011051224/https://www.newshub.co.nz/home/politics/2023/10/newshub-reid-research-poll-national-right-to-panic-as-support-plummets-new-zealand-first-surges.html",
       "partiesCompared": 7,
-      "meanAbsError": 1.25
+      "meanAbsError": 1.25,
+      "breakdown": [
+        {
+          "party": "NAT",
+          "polled": 34.5,
+          "actual": 38.08,
+          "error": 3.58
+        },
+        {
+          "party": "LAB",
+          "polled": 27.5,
+          "actual": 26.92,
+          "error": 0.58
+        },
+        {
+          "party": "GRN",
+          "polled": 14.9,
+          "actual": 11.61,
+          "error": 3.29
+        },
+        {
+          "party": "ACT",
+          "polled": 8.8,
+          "actual": 8.64,
+          "error": 0.16
+        },
+        {
+          "party": "NZF",
+          "polled": 6.8,
+          "actual": 6.09,
+          "error": 0.71
+        },
+        {
+          "party": "TPM",
+          "polled": 2.7,
+          "actual": 3.08,
+          "error": 0.38
+        },
+        {
+          "party": "TOP",
+          "polled": 2.2,
+          "actual": 2.22,
+          "error": 0.02
+        }
+      ]
     },
     {
       "pollster": "Roy Morgan",
       "finalPollDate": "2023-10-08",
+      "sourceUrl": "https://www.roymorgan.com/findings/9362-nz-national-voting-intention-september-october-2023",
       "partiesCompared": 7,
-      "meanAbsError": 2.5
+      "meanAbsError": 2.5,
+      "breakdown": [
+        {
+          "party": "NAT",
+          "polled": 30.5,
+          "actual": 38.08,
+          "error": 7.58
+        },
+        {
+          "party": "LAB",
+          "polled": 26,
+          "actual": 26.92,
+          "error": 0.92
+        },
+        {
+          "party": "GRN",
+          "polled": 15,
+          "actual": 11.61,
+          "error": 3.39
+        },
+        {
+          "party": "ACT",
+          "polled": 11.5,
+          "actual": 8.64,
+          "error": 2.86
+        },
+        {
+          "party": "NZF",
+          "polled": 7.5,
+          "actual": 6.09,
+          "error": 1.41
+        },
+        {
+          "party": "TPM",
+          "polled": 3,
+          "actual": 3.08,
+          "error": 0.08
+        },
+        {
+          "party": "TOP",
+          "polled": 3.5,
+          "actual": 2.22,
+          "error": 1.28
+        }
+      ]
+    }
+  ],
+  "omitted": [
+    {
+      "pollster": "Curia",
+      "reason": "No poll from this house was found on the 2023 opinion-polling page at all."
+    },
+    {
+      "pollster": "Labour–Talbot Mills",
+      "reason": "Closest pre-election poll on record was 710 days before the 2023 election (2021-11-03), beyond the 90-day cutoff for a meaningful \"final poll\" comparison."
     }
   ]
 }

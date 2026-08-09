@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/", label: "Poll of Polls" },
   { href: "/approval", label: "Approval Ratings" },
   { href: "/electorates", label: "Electorates" },
+  { href: "/reliability", label: "Reliability" },
 ];
 
 export default function SiteHeader() {

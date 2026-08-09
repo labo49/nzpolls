@@ -15,6 +15,7 @@ import { writeFile } from "node:fs/promises";
 import { installDevProxyIfPresent, scrapeWikiPollTable } from "../lib/wikiPollScraper";
 import type { ScrapedPoll } from "../lib/wikiPollScraper";
 import { PARTIES } from "../lib/parties";
+import { actualPolls } from "../lib/pollOfPolls";
 import polls from "../data/polls.json" with { type: "json" };
 import type { Poll } from "../lib/types";
 
@@ -69,7 +70,7 @@ async function main() {
     throw new Error(`Could not find the ${ELECTION_DATE} election result row on the 2023 page`);
   }
 
-  const currentPollsters = new Set((polls as Poll[]).map((p) => p.pollster));
+  const currentPollsters = new Set(actualPolls(polls as Poll[]).map((p) => p.pollster));
 
   const latestByPollster = new Map<string, ScrapedPoll>();
   for (const p of historicalPolls) {
@@ -90,16 +91,46 @@ async function main() {
       const compared = partyCodes.filter(
         (code) => p.results[code] !== undefined && actualResult.results[code] !== undefined
       );
-      const errors = compared.map((code) => Math.abs((p.results[code] ?? 0) - (actualResult.results[code] ?? 0)));
-      const meanAbsError = errors.reduce((a, b) => a + b, 0) / errors.length;
+      const breakdown = compared.map((code) => {
+        const polled = p.results[code] ?? 0;
+        const actual = actualResult.results[code] ?? 0;
+        return {
+          party: code,
+          polled,
+          actual,
+          error: Math.round(Math.abs(polled - actual) * 100) / 100,
+        };
+      });
+      const meanAbsError = breakdown.reduce((a, b) => a + b.error, 0) / breakdown.length;
       return {
         pollster: p.pollster,
         finalPollDate: p.date,
+        sourceUrl: p.sourceUrl,
         partiesCompared: compared.length,
         meanAbsError: Math.round(meanAbsError * 100) / 100,
+        breakdown,
       };
     })
     .sort((a, b) => a.meanAbsError - b.meanAbsError);
+
+  // Currently-tracked pollsters that didn't make it into `ratings`, and why
+  // -- so the reliability page can explain an "unrated" tier rather than
+  // just silently omitting a house.
+  const ratedNames = new Set(ratings.map((r) => r.pollster));
+  const omitted = Array.from(currentPollsters)
+    .filter((name) => !ratedNames.has(name))
+    .map((pollster) => {
+      const closest = latestByPollster.get(pollster);
+      const reason = closest
+        ? `Closest pre-election poll on record was ${Math.round(daysBetween(closest.date, ELECTION_DATE))} days before the 2023 election (${closest.date}), beyond the ${MAX_STALENESS_DAYS}-day cutoff for a meaningful "final poll" comparison.`
+        : "No poll from this house was found on the 2023 opinion-polling page at all.";
+      return { pollster, reason };
+    });
+
+  const actualResultSummary: Record<string, number> = {};
+  for (const code of partyCodes) {
+    if (actualResult.results[code] !== undefined) actualResultSummary[code] = actualResult.results[code];
+  }
 
   await writeFile(
     OUTPUT_PATH,
@@ -108,15 +139,17 @@ async function main() {
         methodology:
           "Mean absolute error (percentage points) between each pollster's final poll before the 2023 general election and the actual 2023 result, across parties both report. Lower is more accurate. Pollsters with no pre-election poll within 90 days of the 2023 election are omitted (insufficient data), not rated as unreliable.",
         referenceElection: ELECTION_DATE,
+        actualResult: actualResultSummary,
         ratings,
+        omitted,
       },
       null,
       2
     ) + "\n",
     "utf-8"
   );
-  console.log(`Wrote accuracy ratings for ${ratings.length} pollsters to data/pollsterAccuracy.json`);
-  console.table(ratings);
+  console.log(`Wrote accuracy ratings for ${ratings.length} pollsters (${omitted.length} omitted) to data/pollsterAccuracy.json`);
+  console.table(ratings.map((r) => ({ pollster: r.pollster, finalPollDate: r.finalPollDate, meanAbsError: r.meanAbsError })));
 }
 
 main().catch((err) => {
