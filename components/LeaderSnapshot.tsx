@@ -39,7 +39,7 @@ export default function LeaderSnapshot({
             </div>
             <div className="mt-0.5 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
               {formatValue(value, signed)}
-              <span className="text-sm font-normal text-neutral-400">{suffix}</span>
+              <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400">{suffix}</span>
             </div>
           </div>
         );

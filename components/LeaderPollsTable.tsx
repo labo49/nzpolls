@@ -73,7 +73,7 @@ export default function LeaderPollsTable({
           ))}
         </tbody>
       </table>
-      <p className="border-t border-black/5 px-3 py-2 text-xs text-neutral-400 dark:border-white/5 dark:text-neutral-600">
+      <p className="border-t border-black/5 px-3 py-2 text-xs text-neutral-500 dark:border-white/5 dark:text-neutral-400">
         {leaders.map((l, i) => (
           <span key={l.key}>
             {l.shortName} = {PARTY_BY_CODE[leaderParty(l.key)].name}

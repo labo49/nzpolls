@@ -30,11 +30,16 @@ export default function SiteHeader() {
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  className={`text-sm font-medium transition-colors ${
+                  className={
                     active
-                      ? "text-neutral-900 dark:text-neutral-50"
-                      : "text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
-                  }`}
+                      ? "text-sm font-medium text-neutral-900 dark:text-neutral-50"
+                      : // transition-colors only applies here, where there's an actual hover
+                        // state to animate -- on the active link it had nothing to transition
+                        // *to* except a flash of near-invisible text whenever the theme toggle
+                        // flips the page background instantly but eases this link's color over
+                        // the transition duration instead.
+                        "text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+                  }
                 >
                   {link.label}
                 </Link>

@@ -72,7 +72,7 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
           className={`rounded-full border px-2.5 py-1 text-xs transition-colors ${
             partyFilter === "all"
               ? "border-neutral-900 bg-neutral-900 text-white dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900"
-              : "border-black/15 text-neutral-500 hover:border-black/30 dark:border-white/15 dark:text-neutral-500 dark:hover:border-white/30"
+              : "border-black/15 text-neutral-500 hover:border-black/30 dark:border-white/15 dark:text-neutral-400 dark:hover:border-white/30"
           }`}
         >
           Any current party
@@ -87,7 +87,7 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
               className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs transition-colors ${
                 active
                   ? "border-neutral-900 bg-neutral-900 text-white dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900"
-                  : "border-black/15 text-neutral-500 hover:border-black/30 dark:border-white/15 dark:text-neutral-500 dark:hover:border-white/30"
+                  : "border-black/15 text-neutral-500 hover:border-black/30 dark:border-white/15 dark:text-neutral-400 dark:hover:border-white/30"
               }`}
             >
               <PartyDot color={party.color} />
@@ -119,7 +119,7 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
                 <tr key={e.name} className="border-b border-black/5 align-top last:border-0 dark:border-white/5">
                   <td className="px-3 py-2">
                     <div className="font-medium text-neutral-900 dark:text-neutral-100">{e.name}</div>
-                    <div className="text-xs text-neutral-500 dark:text-neutral-500">
+                    <div className="text-xs text-neutral-500 dark:text-neutral-400">
                       {e.seatType === "maori" ? "Māori electorate" : "General electorate"}
                       {e.isNewFor2026 && " · new/redrawn 2026"}
                     </div>
@@ -131,7 +131,7 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
                           {mpParty ? <PartyDot color={mpParty.color} /> : <span className="h-2 w-2" />}
                           <span>{e.currentMp.name}</span>
                         </div>
-                        <div className="text-xs text-neutral-500 dark:text-neutral-500">
+                        <div className="text-xs text-neutral-500 dark:text-neutral-400">
                           {mpParty ? mpParty.name : "Independent / other"}
                           {e.currentMp.retiring && (
                             <span className="font-medium text-amber-700 dark:text-amber-500">
@@ -141,16 +141,16 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
                           )}
                         </div>
                         {e.currentMp.note && (
-                          <div className="mt-0.5 text-xs text-neutral-400 dark:text-neutral-600">{e.currentMp.note}</div>
+                          <div className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">{e.currentMp.note}</div>
                         )}
                       </>
                     ) : (
-                      <span className="text-xs text-neutral-400 dark:text-neutral-600">Not yet confirmed</span>
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">Not yet confirmed</span>
                     )}
                   </td>
                   <td className="px-2 py-2">
                     <ClassificationBadge classification={e.classification} party={e.classificationParty} />
-                    <div className="mt-1 max-w-xs text-xs text-neutral-500 dark:text-neutral-500">{e.trendNote}</div>
+                    <div className="mt-1 max-w-xs text-xs text-neutral-500 dark:text-neutral-400">{e.trendNote}</div>
                   </td>
                   <td className="px-2 py-2">
                     {e.candidates.length > 0 ? (
@@ -164,12 +164,12 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
                         ))}
                       </div>
                     ) : (
-                      <span className="text-xs text-neutral-400 dark:text-neutral-600">None declared yet</span>
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">None declared yet</span>
                     )}
                   </td>
                   <td className="px-3 py-2 text-xs tabular-nums text-neutral-600 dark:text-neutral-400">
                     {historySummary(e) || (
-                      <span className="text-neutral-400 dark:text-neutral-600">No comparable results yet</span>
+                      <span className="text-neutral-500 dark:text-neutral-400">No comparable results yet</span>
                     )}
                   </td>
                 </tr>
@@ -178,7 +178,7 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
           </tbody>
         </table>
       </div>
-      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
         * = notional result, recalculated under today&apos;s boundaries rather than the real contest that year.
         Declared candidates reflect selections announced to date, not a final list -- nominations for the 2026
         election don&apos;t close until 8 October 2026.

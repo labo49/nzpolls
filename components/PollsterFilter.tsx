@@ -58,7 +58,7 @@ export default function PollsterFilter({ pollsters, selected, onChange, mostReli
               className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs transition-colors ${
                 isOn
                   ? "border-neutral-900 bg-neutral-900 text-white dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900"
-                  : "border-black/15 text-neutral-500 hover:border-black/30 dark:border-white/15 dark:text-neutral-500 dark:hover:border-white/30"
+                  : "border-black/15 text-neutral-500 hover:border-black/30 dark:border-white/15 dark:text-neutral-400 dark:hover:border-white/30"
               }`}
             >
               <span
@@ -71,7 +71,7 @@ export default function PollsterFilter({ pollsters, selected, onChange, mostReli
           );
         })}
       </div>
-      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
         Dot color is accuracy vs. the actual 2023 result (green = high, amber = moderate, red = lower,
         gray = no 2023 pre-election poll on record). Hover a pollster for its exact error.
       </p>

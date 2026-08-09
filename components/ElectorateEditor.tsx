@@ -16,7 +16,7 @@ function CompletenessNote({ map }: { map: ElectorateSeatMap }) {
     <p
       className={`text-xs ${
         complete
-          ? "text-neutral-500 dark:text-neutral-500"
+          ? "text-neutral-500 dark:text-neutral-400"
           : "font-medium text-amber-700 dark:text-amber-500"
       }`}
     >

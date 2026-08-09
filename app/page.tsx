@@ -33,7 +33,7 @@ export default function Home() {
   });
 
   return (
-    <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">
+    <main id="main-content" className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">
       <NewPollsBanner polls={recentlyAddedPolls(typedPolls)} />
 
       <header className="mb-8">
@@ -48,7 +48,7 @@ export default function Home() {
 
       <Dashboard polls={typedPolls} />
 
-      <footer className="border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-500">
+      <footer className="border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-400">
         <p>
           Source data:{" "}
           <a

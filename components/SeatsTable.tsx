@@ -34,7 +34,7 @@ export default function SeatsTable({ seats }: { seats: SeatResult[] }) {
                   {row.overhang && (
                     <span
                       title="Overhang: this party's electorate seats exceed its proportional entitlement"
-                      className="ml-1 text-xs font-normal text-neutral-400"
+                      className="ml-1 text-xs font-normal text-neutral-500 dark:text-neutral-400"
                     >
                       *
                     </span>

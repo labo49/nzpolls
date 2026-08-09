@@ -100,7 +100,7 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
             Current poll of polls
           </h2>
           <LatestSnapshot point={latest} />
-          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
             Average of the most recent poll from each selected pollster active in the last 60 days
             ({latest.pollCount} pollster{latest.pollCount === 1 ? "" : "s"}).
           </p>
@@ -156,7 +156,7 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
           <div className="mt-4">
             <SeatsTable seats={seatResults} />
           </div>
-          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
             Modified Sainte-Laguë allocation (New Zealand&apos;s actual MMP method) over today&apos;s poll of
             polls. A party needs 5% party vote or an electorate seat to qualify. There are 71 electorates
             in total; the built-in default only itemizes ACT holding Epsom and Te Pāti Māori holding 5 of

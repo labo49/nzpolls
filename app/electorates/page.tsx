@@ -19,7 +19,7 @@ export default function ElectoratesPage() {
   });
 
   return (
-    <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6">
+    <main id="main-content" className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6">
       <header className="mb-8">
         <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-3xl">
           Electorates
@@ -33,7 +33,7 @@ export default function ElectoratesPage() {
 
       <ElectoratesExplorer electorates={data.electorates} />
 
-      <footer className="mt-10 border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-500">
+      <footer className="mt-10 border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-400">
         <p>
           Classification methodology: an electorate is <strong>safe</strong> if the same party has won every
           election on record with a recent majority over 8,000 votes; <strong>leaning</strong> a party if that

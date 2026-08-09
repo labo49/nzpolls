@@ -21,7 +21,7 @@ export default function LatestSnapshot({ point }: { point: PollOfPollsPoint }) {
           </div>
           <div className="mt-0.5 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
             {value.toFixed(1)}
-            <span className="text-sm font-normal text-neutral-400">%</span>
+            <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400">%</span>
           </div>
         </div>
       ))}

@@ -56,7 +56,7 @@ export default function ApprovalDashboard({ data }: { data: ApprovalData }) {
         {latestPm ? (
           <>
             <LeaderSnapshot leaders={data.preferredPm.leaders} values={latestPm.results} />
-            <p className="mt-2 mb-4 text-xs text-neutral-500 dark:text-neutral-500">
+            <p className="mt-2 mb-4 text-xs text-neutral-500 dark:text-neutral-400">
               Most recent poll: {latestPm.pollster} ({latestPm.dateLabel}).
             </p>
             <LeaderTrendChart leaders={data.preferredPm.leaders} polls={pmPolls} />
@@ -80,7 +80,7 @@ export default function ApprovalDashboard({ data }: { data: ApprovalData }) {
               suffix="pp"
               signed
             />
-            <p className="mt-2 mb-4 text-xs text-neutral-500 dark:text-neutral-500">
+            <p className="mt-2 mb-4 text-xs text-neutral-500 dark:text-neutral-400">
               Net approval (approve minus disapprove). Most recent poll: {latestApproval.pollster} (
               {latestApproval.dateLabel}).
             </p>

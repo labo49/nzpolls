@@ -115,7 +115,7 @@ export default function BlocChart({ points }: { points: BlocPoint[] }) {
           </li>
         ))}
       </ul>
-      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
         Combined party-vote share, not a seat projection &mdash; MMP&apos;s thresholds and
         electorate seats mean vote share and seat share can diverge.
       </p>

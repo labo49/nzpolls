@@ -115,13 +115,13 @@ export default function SeatsChart({
           </li>
         ))}
       </ul>
-      <p className="mt-2 text-center text-xs text-neutral-500 dark:text-neutral-500">
+      <p className="mt-2 text-center text-xs text-neutral-500 dark:text-neutral-400">
         {majority} seats needed for a majority.{" "}
         {leaderHasMajority
           ? `${leader.name} would govern alone.`
           : "No bloc reaches a majority alone at this snapshot."}
       </p>
-      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+      <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
         Projected seats (out of {houseSize}) from today&apos;s poll of polls, using New Zealand&apos;s modified
         Sainte-Laguë MMP allocation. Assumes today&apos;s electorate seats are unchanged at the next election
         &mdash; see the methodology note below.
