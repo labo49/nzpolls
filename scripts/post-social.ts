@@ -225,9 +225,19 @@ async function main() {
     return;
   }
 
-  await postToTelegram(buildMessage(newPolls));
-  await postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH));
-  await postToX(truncateMessage(newPolls, X_MAX_LENGTH));
+  // Each platform is independent -- one failing (e.g. X's API credits
+  // running out) shouldn't stop the others from being attempted, and
+  // shouldn't be silently swallowed either.
+  const results = await Promise.allSettled([
+    postToTelegram(buildMessage(newPolls)),
+    postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH)),
+    postToX(truncateMessage(newPolls, X_MAX_LENGTH)),
+  ]);
+  const failures = results.filter((r) => r.status === "rejected");
+  for (const f of failures) console.error(f.reason);
+  if (failures.length > 0) {
+    process.exitCode = 1;
+  }
 }
 
 main().catch((err) => {
