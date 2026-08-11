@@ -1862,7 +1862,7 @@
     "date": "2026-06-11",
     "dateLabel": "5–11 Jun 2026",
     "pollster": "The Post/Freshwater Strategy",
-    "sourceUrl": "https://www.rnz.co.nz/news/political/598196/national-slides-below-30-percent-in-latest-poll-act-and-nz-first-gain",
+    "sourceUrl": "https://freshwaterstrategy.com/2026/06/19/the-post-freshwater-strategy-june-polling-data-2/",
     "sampleSize": 1038,
     "results": {
       "NAT": 29,
@@ -1870,7 +1870,8 @@
       "GRN": 10,
       "ACT": 8,
       "NZF": 12,
-      "TPM": 2
+      "TPM": 2,
+      "OTH": 3
     },
     "firstSeenAt": "2026-06-11"
   },
