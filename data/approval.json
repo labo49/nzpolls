@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-12T10:00:50.774Z",
+  "fetchedAt": "2026-08-12T20:20:54.689Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -979,7 +979,7 @@
       {
         "date": "2026-08-11",
         "dateLabel": "8–11 Aug 2026",
-        "pollster": "1News–Verian",
+        "pollster": "1 News–Verian",
         "sourceUrl": "https://www.1news.co.nz/2026/08/12/poll-opportunity-party-surges-as-nz-first-slides-amid-luxon-saga/",
         "sampleSize": 847,
         "results": {

@@ -22,13 +22,15 @@ export function stripFootnotes(text: string): string {
 }
 
 /** Collapses plain hyphens to en-dashes in a pollster name, e.g. "1
- * News-Verian" -> "1 News–Verian". Wikipedia's own tables aren't internally
- * consistent about this -- the same house appears with both a hyphen and an
- * en-dash across different rows on at least one table -- which would
- * otherwise silently split one pollster into two entries in every
- * pollster-filter UI on the site. */
+ * News-Verian" -> "1 News–Verian", and inserts a missing space between a
+ * leading number and the name that follows it, e.g. "1News" -> "1 News".
+ * Wikipedia's own tables aren't internally consistent about either -- the
+ * same house appears with different spacing/punctuation across different
+ * rows, sometimes even within the same table -- which would otherwise
+ * silently split one pollster into two entries in every pollster-filter UI
+ * on the site. */
 export function normalizePollsterName(name: string): string {
-  return name.replace(/-/g, "–");
+  return name.replace(/-/g, "–").replace(/^(\d+)(?=[A-Za-z])/, "$1 ");
 }
 
 export function parseNumber(raw: string): number | null {
