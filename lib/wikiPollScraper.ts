@@ -10,6 +10,12 @@ const HEADER_TO_CODE: Record<string, string> = Object.fromEntries(
   PARTIES.filter((p) => p.code !== "OTH").map((p) => [p.code, p.code])
 );
 HEADER_TO_CODE["OTHERS"] = "OTH";
+// The Opportunities Party's column header changed from "TOP" to "OPP" on the
+// live page at some point after this scraper was written -- every row's TOP
+// value silently vanished as of that day's refresh (the column just stopped
+// matching), corrupting the *historical* data too, since every run re-scrapes
+// the full table rather than only new rows.
+HEADER_TO_CODE["OPP"] = "TOP";
 
 export function stripFootnotes(text: string): string {
   return text.replace(/\[[a-z0-9]+\]/gi, "").trim();
