@@ -9,10 +9,17 @@
 import { createHmac, randomBytes } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { installDevProxyIfPresent } from "../lib/wikiPollScraper";
+import { buildLast5PollsChartPng } from "../lib/socialChart";
 import { PARTIES } from "../lib/parties";
 import type { Poll } from "../lib/types";
 
+interface Chart {
+  png: Buffer;
+  altText: string;
+}
+
 const NEW_POLLS_PATH = new URL("../data/newPolls.json", import.meta.url);
+const ALL_POLLS_PATH = new URL("../data/polls.json", import.meta.url);
 const SITE_URL = "https://nzpolls.vercel.app";
 const LINK_LABEL = "See all polls here";
 const HASHTAGS = "#NZPoll #NZ2026 #NZElections #NZPol";
@@ -50,13 +57,29 @@ function truncateMessage(newPolls: Poll[], maxLength: number): string {
   return `${body.slice(0, budget)}…${tail}`;
 }
 
-async function postToTelegram(message: string): Promise<void> {
+async function postToTelegram(message: string, chart: Chart | null): Promise<void> {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
   if (!token || !chatId) {
     console.log("Skipping Telegram post: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set.");
     return;
   }
+
+  if (chart) {
+    // sendPhoto's caption cap (1024 chars) is well above anything our
+    // messages produce, so the full text always fits alongside the chart.
+    const form = new FormData();
+    form.set("chat_id", chatId);
+    form.set("caption", message);
+    form.set("photo", new Blob([new Uint8Array(chart.png)], { type: "image/png" }), "poll-of-polls.png");
+    const res = await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, { method: "POST", body: form });
+    if (!res.ok) {
+      throw new Error(`Telegram photo post failed: ${res.status} ${await res.text()}`);
+    }
+    console.log("Posted to Telegram (with chart).");
+    return;
+  }
+
   const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -105,7 +128,7 @@ function buildFacets(text: string): BlueskyFacet[] {
   return facets;
 }
 
-async function postToBluesky(message: string): Promise<void> {
+async function postToBluesky(message: string, chart: Chart | null): Promise<void> {
   const identifier = process.env.BLUESKY_IDENTIFIER;
   const password = process.env.BLUESKY_APP_PASSWORD;
   if (!identifier || !password) {
@@ -123,6 +146,23 @@ async function postToBluesky(message: string): Promise<void> {
   }
   const session = (await sessionRes.json()) as { accessJwt: string; did: string };
 
+  let embed: Record<string, unknown> | undefined;
+  if (chart) {
+    const blobRes = await fetch("https://bsky.social/xrpc/com.atproto.repo.uploadBlob", {
+      method: "POST",
+      headers: {
+        "Content-Type": "image/png",
+        Authorization: `Bearer ${session.accessJwt}`,
+      },
+      body: new Uint8Array(chart.png),
+    });
+    if (!blobRes.ok) {
+      throw new Error(`Bluesky image upload failed: ${blobRes.status} ${await blobRes.text()}`);
+    }
+    const { blob } = (await blobRes.json()) as { blob: unknown };
+    embed = { $type: "app.bsky.embed.images", images: [{ image: blob, alt: chart.altText }] };
+  }
+
   const postRes = await fetch("https://bsky.social/xrpc/com.atproto.repo.createRecord", {
     method: "POST",
     headers: {
@@ -137,6 +177,7 @@ async function postToBluesky(message: string): Promise<void> {
         text: message,
         createdAt: new Date().toISOString(),
         facets: buildFacets(message),
+        ...(embed ? { embed } : {}),
       },
     }),
   });
@@ -190,7 +231,7 @@ function buildXAuthHeader(
     .join(", ")}`;
 }
 
-async function postToX(message: string): Promise<void> {
+async function postToX(message: string, chart: Chart | null): Promise<void> {
   const consumerKey = process.env.X_API_KEY;
   const consumerSecret = process.env.X_API_SECRET;
   const accessToken = process.env.X_ACCESS_TOKEN;
@@ -200,6 +241,30 @@ async function postToX(message: string): Promise<void> {
     return;
   }
 
+  let mediaId: string | undefined;
+  if (chart) {
+    // The legacy v1.1 media endpoint (still required for uploads -- v2 has
+    // no upload route of its own) is multipart/form-data, so per the OAuth
+    // 1.0a spec the body isn't part of the signature base string (only
+    // application/x-www-form-urlencoded bodies are) -- the same header
+    // builder used for the JSON tweet body below applies unchanged.
+    const uploadUrl = "https://upload.twitter.com/1.1/media/upload.json";
+    const form = new FormData();
+    form.set("media", new Blob([new Uint8Array(chart.png)], { type: "image/png" }), "poll-of-polls.png");
+    const uploadRes = await fetch(uploadUrl, {
+      method: "POST",
+      headers: {
+        Authorization: buildXAuthHeader("POST", uploadUrl, consumerKey, consumerSecret, accessToken, accessTokenSecret),
+      },
+      body: form,
+    });
+    if (!uploadRes.ok) {
+      throw new Error(`X media upload failed: ${uploadRes.status} ${await uploadRes.text()}`);
+    }
+    const uploaded = (await uploadRes.json()) as { media_id_string: string };
+    mediaId = uploaded.media_id_string;
+  }
+
   const url = "https://api.twitter.com/2/tweets";
   const res = await fetch(url, {
     method: "POST",
@@ -207,7 +272,7 @@ async function postToX(message: string): Promise<void> {
       "Content-Type": "application/json",
       Authorization: buildXAuthHeader("POST", url, consumerKey, consumerSecret, accessToken, accessTokenSecret),
     },
-    body: JSON.stringify({ text: message }),
+    body: JSON.stringify({ text: message, ...(mediaId ? { media: { media_ids: [mediaId] } } : {}) }),
   });
   if (!res.ok) {
     throw new Error(`X post failed: ${res.status} ${await res.text()}`);
@@ -215,24 +280,51 @@ async function postToX(message: string): Promise<void> {
   console.log("Posted to X.");
 }
 
+// --test posts the most recent already-known poll instead of requiring an
+// actual new one this run (data/newPolls.json is normally empty between
+// refreshes) -- for manually verifying credentials/formatting on demand.
+// --platform=telegram|bluesky|x restricts the run to a single platform.
+function parseArgs(argv: string[]): { test: boolean; platform: string | null } {
+  const test = argv.includes("--test");
+  const platformArg = argv.find((a) => a.startsWith("--platform="));
+  const platform = platformArg ? platformArg.slice("--platform=".length) : null;
+  return { test, platform };
+}
+
 async function main() {
   await installDevProxyIfPresent();
 
-  const raw = await readFile(NEW_POLLS_PATH, "utf-8");
-  const newPolls = JSON.parse(raw) as Poll[];
-  if (newPolls.length === 0) {
-    console.log("No new polls this run -- nothing to post.");
-    return;
+  const { test, platform } = parseArgs(process.argv.slice(2));
+
+  const allPolls = JSON.parse(await readFile(ALL_POLLS_PATH, "utf-8")) as Poll[];
+  const chart = await buildLast5PollsChartPng(allPolls);
+
+  let newPolls: Poll[];
+  if (test) {
+    newPolls = allPolls.slice(-1);
+    console.log(`--test: posting the most recent known poll (${newPolls[0]?.pollster}, ${newPolls[0]?.dateLabel}).`);
+  } else {
+    newPolls = JSON.parse(await readFile(NEW_POLLS_PATH, "utf-8")) as Poll[];
+    if (newPolls.length === 0) {
+      console.log("No new polls this run -- nothing to post.");
+      return;
+    }
+  }
+
+  const platforms: Array<[string, () => Promise<void>]> = [
+    ["telegram", () => postToTelegram(buildMessage(newPolls), chart)],
+    ["bluesky", () => postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH), chart)],
+    ["x", () => postToX(truncateMessage(newPolls, X_MAX_LENGTH), chart)],
+  ];
+  const selected = platform ? platforms.filter(([name]) => name === platform) : platforms;
+  if (platform && selected.length === 0) {
+    throw new Error(`Unknown --platform "${platform}" (expected telegram, bluesky, or x).`);
   }
 
   // Each platform is independent -- one failing (e.g. X's API credits
   // running out) shouldn't stop the others from being attempted, and
   // shouldn't be silently swallowed either.
-  const results = await Promise.allSettled([
-    postToTelegram(buildMessage(newPolls)),
-    postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH)),
-    postToX(truncateMessage(newPolls, X_MAX_LENGTH)),
-  ]);
+  const results = await Promise.allSettled(selected.map(([, run]) => run()));
   const failures = results.filter((r) => r.status === "rejected");
   for (const f of failures) console.error(f.reason);
   if (failures.length > 0) {
