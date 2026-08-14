@@ -2017,5 +2017,22 @@
       "OTH": 2.7
     },
     "firstSeenAt": "2026-08-12T10:00:49.751Z"
+  },
+  {
+    "date": "2026-08-11",
+    "dateLabel": "1–11 Aug 2026",
+    "pollster": "Talbot Mills",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/poll-national-down-and-out-of-government-in-new-talbot-mills-poll/XXSSJVLG35GP7C4NZTSALVAPGE/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 29,
+      "LAB": 34,
+      "GRN": 8,
+      "ACT": 7,
+      "NZF": 13,
+      "TPM": 3,
+      "TOP": 5
+    },
+    "firstSeenAt": "2026-08-14T10:00:53.365Z"
   }
 ]

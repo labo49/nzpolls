@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-14T07:27:48.924Z",
+  "fetchedAt": "2026-08-14T10:00:54.345Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -988,6 +988,20 @@
           "Chlöe Swarbrick": 6,
           "David Seymour": 5,
           "Winston Peters": 7
+        }
+      },
+      {
+        "date": "2026-08-11",
+        "dateLabel": "1–11 Aug 2026",
+        "pollster": "Talbot Mills",
+        "sourceUrl": "https://www.stuff.co.nz/politics/361020460/election-2026-another-poll-puts-opportunity-kingmaker-position",
+        "sampleSize": null,
+        "results": {
+          "Christopher Luxon": 22,
+          "Chris Hipkins": 23,
+          "Chlöe Swarbrick": 8,
+          "David Seymour": 7,
+          "Winston Peters": 12
         }
       }
     ],
