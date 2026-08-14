@@ -46,6 +46,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # create-pull-request resets this checkout back to the pre-refresh
+      # commit once it has branched off the new data (so the job's working
+      # directory doesn't stay dirty) -- the merge above only updates the
+      # remote, so without this pull, post-social below would still see the
+      # stale pre-refresh data/newPolls.json and think nothing new arrived.
+      - if: steps.create-pr.outputs.pull-request-number
+        run: git pull origin "${{ github.ref_name }}"
+
       - if: steps.create-pr.outputs.pull-request-number
         run: npm run post-social
         env:
