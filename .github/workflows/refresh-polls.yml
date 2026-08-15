@@ -2,9 +2,14 @@ name: Refresh poll data
 
 on:
   schedule:
-    # Daily at 06:00 UTC (~6pm NZDT / 5pm NZST) -- after most NZ pollsters
-    # publish, before the next morning's news cycle.
-    - cron: "0 6 * * *"
+    # Twice daily, 12h apart -- evening (catches the day's just-published
+    # polls) and morning (catches anything published overnight). Cron is
+    # fixed UTC and doesn't follow NZ daylight saving, so these track
+    # 7pm/7am NZST (UTC+12) and drift to 8pm/8am during NZDT (UTC+13, late
+    # Sep-early Apr) -- same tradeoff the original single run accepted
+    # rather than re-pointing the schedule twice a year.
+    - cron: "0 7 * * *" # ~7pm NZST / 8pm NZDT
+    - cron: "0 19 * * *" # ~7am NZST / 8am NZDT (next NZ day)
   workflow_dispatch: {}
 
 permissions:
