@@ -63,6 +63,24 @@ export function parseDateLabelToISO(label: string): string | null {
   return `${year}-${String(month).padStart(2, "0")}-${day.padStart(2, "0")}`;
 }
 
+function findPollsTable($: cheerio.CheerioAPI, headingId: string): cheerio.Cheerio<import("domhandler").Element> {
+  const heading = $(`#${headingId}`);
+  if (heading.length === 0) {
+    throw new Error(`Could not find #${headingId} heading on the page`);
+  }
+  const table = heading.closest("section").find("table.wikitable").first();
+  if (table.length === 0) {
+    throw new Error(`Could not find the polls table under #${headingId}`);
+  }
+  return table;
+}
+
+function hrefToSourceUrl(href: string | null | undefined): string | null {
+  if (!href) return null;
+  if (!href.startsWith("./") && !href.startsWith("#")) return href;
+  return `https://en.wikipedia.org/wiki/${href.replace(/^\.\//, "")}`;
+}
+
 /** A freshly-parsed poll row, before the caller stamps a `firstSeenAt`. */
 export type ScrapedPoll = Omit<Poll, "firstSeenAt">;
 
@@ -79,15 +97,7 @@ export interface ScrapeResult {
  */
 export function scrapeWikiPollTable(html: string, headingId: string): ScrapeResult {
   const $ = cheerio.load(html);
-
-  const heading = $(`#${headingId}`);
-  if (heading.length === 0) {
-    throw new Error(`Could not find #${headingId} heading on the page`);
-  }
-  const table = heading.closest("section").find("table.wikitable").first();
-  if (table.length === 0) {
-    throw new Error(`Could not find the polls table under #${headingId}`);
-  }
+  const table = findPollsTable($, headingId);
 
   const allRows = table.find("tr");
   const headerCells = allRows.first().find("th");
@@ -129,13 +139,7 @@ export function scrapeWikiPollTable(html: string, headingId: string): ScrapeResu
 
     const pollsterTd = tds.eq(columnCodes.indexOf("POLLSTER"));
     const pollster = normalizePollsterName(stripFootnotes(pollsterTd.text()));
-    const link = pollsterTd.find("a").first();
-    const href = link.attr("href") ?? null;
-    const sourceUrl = href && !href.startsWith("./") && !href.startsWith("#")
-      ? href
-      : href
-        ? `https://en.wikipedia.org/wiki/${href.replace(/^\.\//, "")}`
-        : null;
+    const sourceUrl = hrefToSourceUrl(pollsterTd.find("a").first().attr("href"));
 
     const sampleSize = parseNumber(tds.eq(columnCodes.indexOf("SAMPLE")).text());
 
@@ -164,6 +168,49 @@ export function scrapeWikiPollTable(html: string, headingId: string): ScrapeResu
   polls.sort((a, b) => a.date.localeCompare(b.date));
 
   return { polls, skipped };
+}
+
+export interface Milestone {
+  date: string;
+  label: string;
+  sourceUrl: string | null;
+}
+
+/**
+ * Parses the same wikitable's event-annotation rows (the ones
+ * `scrapeWikiPollTable` skips as not having one cell per data column) into
+ * timeline milestones -- these render as a 2-cell row: a date cell and a
+ * bolded description cell spanning the rest of the columns, e.g. "2 Mar
+ * 2026 | The Strait of Hormuz is closed as part of the Iran war...". A
+ * handful of other non-poll rows (blank spacers, the repeated header row
+ * further down the page) also fail the "one cell per column" test but have
+ * 0 or a different td count, so requiring exactly 2 tds is what isolates
+ * genuine milestones.
+ */
+export function scrapeWikiMilestones(html: string, headingId: string): Milestone[] {
+  const $ = cheerio.load(html);
+  const table = findPollsTable($, headingId);
+  const allRows = table.find("tr");
+
+  const milestones: Milestone[] = [];
+  allRows.slice(1).each((_, rowEl) => {
+    const tds = $(rowEl).find("td");
+    if (tds.length !== 2) return;
+
+    const dateTd = tds.eq(0);
+    const dateLabel = stripFootnotes(dateTd.text());
+    const isoDate = parseDateLabelToISO(dateLabel) ?? dateTd.attr("data-sort-value") ?? null;
+    if (!isoDate) return;
+
+    const descTd = tds.eq(1);
+    const label = stripFootnotes(descTd.text()).replace(/\s+/g, " ").trim();
+    if (!label) return;
+
+    milestones.push({ date: isoDate, label, sourceUrl: hrefToSourceUrl(descTd.find("a").first().attr("href")) });
+  });
+
+  milestones.sort((a, b) => a.date.localeCompare(b.date));
+  return milestones;
 }
 
 /** Sandboxed dev environments route outbound HTTPS through a local proxy that
