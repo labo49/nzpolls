@@ -167,9 +167,9 @@ export default function Dashboard({
           <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
             Modified Sainte-Laguë allocation (New Zealand&apos;s actual MMP method) over today&apos;s poll of
             polls. A party needs 5% party vote or an electorate seat to qualify. There are 71 electorates
-            in total; the built-in default only itemizes ACT holding Epsom and Te Pāti Māori holding 5 of
-            7 Māori electorates (won 6 of 7 in 2023, minus Mariameno Kapa-Kingi&apos;s May 2026 departure)
-            &mdash; the
+            in total; the built-in default only itemizes ACT holding Epsom and Te Pāti Māori holding 4 of
+            7 Māori electorates (won 6 of 7 in 2023, minus Tākuta Ferris and Mariameno Kapa-Kingi&apos;s
+            Nov 2025 expulsion from the party) &mdash; the
             remaining electorates sit with National and Labour in reality but aren&apos;t itemized, since
             there&apos;s no electorate-level polling to derive that from (&ldquo;Edit electorate
             assumptions&rdquo; above shows exactly how many of the 71 are currently accounted for, and
