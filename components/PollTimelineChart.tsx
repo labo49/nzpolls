@@ -236,8 +236,34 @@ export default function PollTimelineChart({
   }).filter((r): r is { code: string; y: number } => r !== null);
   const resolvedLabelY = resolveLabelPositions(labelRows);
 
+  const milestoneColor = "#f97316"; // orange-500, same in both themes -- bright against the chart's neutral axis/grid ink
+
   return (
     <div>
+      <div className="mb-3 rounded-lg border border-orange-400/50 bg-orange-500/[0.06] px-4 py-3 dark:border-orange-400/40 dark:bg-orange-500/[0.08]">
+        <div className="text-xs font-medium tabular-nums text-orange-700 dark:text-orange-400">
+          {formatFullDate(displayT)}
+        </div>
+        <div className="mt-0.5 text-sm font-medium text-neutral-900 dark:text-neutral-100">
+          {currentMilestone ? (
+            currentMilestone.sourceUrl ? (
+              <a
+                href={currentMilestone.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-orange-400/50 underline-offset-2 hover:decoration-orange-500"
+              >
+                {currentMilestone.label}
+              </a>
+            ) : (
+              currentMilestone.label
+            )
+          ) : (
+            <span className="text-neutral-500 dark:text-neutral-400">Starting point: the 2023 election result</span>
+          )}
+        </div>
+      </div>
+
       <div className="relative w-full overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
         <svg
           ref={svgRef}
@@ -270,18 +296,18 @@ export default function PollTimelineChart({
             const x = xScale(t);
             const reached = t <= cursorT;
             return (
-              <g key={m.date + m.label} opacity={reached ? 1 : 0.35}>
+              <g key={m.date + m.label} opacity={reached ? 1 : 0.4}>
                 <line
                   x1={x}
                   x2={x}
                   y1={PLOT_TOP}
                   y2={PLOT_BOTTOM}
-                  stroke={isDark ? "#ffffff" : "#000000"}
-                  strokeOpacity={reached ? 0.16 : 0.08}
-                  strokeWidth={1}
+                  stroke={milestoneColor}
+                  strokeOpacity={reached ? 0.55 : 0.25}
+                  strokeWidth={reached ? 1.5 : 1}
                   strokeDasharray="2 3"
                 />
-                <circle cx={x} cy={PLOT_BOTTOM} r={reached ? 3 : 2} fill={reached ? "#f97316" : tickTextColor}>
+                <circle cx={x} cy={PLOT_BOTTOM} r={reached ? 3.5 : 2} fill={milestoneColor}>
                   <title>{`${formatFullDate(t)} — ${m.label}`}</title>
                 </circle>
               </g>
@@ -333,29 +359,6 @@ export default function PollTimelineChart({
             />
           )}
         </svg>
-
-        <div className="border-t border-black/10 bg-black/[0.02] px-4 py-2 text-xs text-neutral-600 dark:border-white/10 dark:bg-white/[0.02] dark:text-neutral-400">
-          <span className="font-medium tabular-nums text-neutral-800 dark:text-neutral-200">
-            {formatFullDate(displayT)}
-          </span>
-          {currentMilestone && (
-            <>
-              {" — "}
-              {currentMilestone.sourceUrl ? (
-                <a
-                  href={currentMilestone.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:decoration-neutral-600"
-                >
-                  {currentMilestone.label}
-                </a>
-              ) : (
-                currentMilestone.label
-              )}
-            </>
-          )}
-        </div>
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-3">
