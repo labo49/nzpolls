@@ -14,6 +14,7 @@ const PLOT_RIGHT = W - MARGIN.right;
 const PLOT_TOP = MARGIN.top;
 const PLOT_BOTTOM = H - MARGIN.bottom;
 const DURATION_MS = 26000;
+const LOOP_HOLD_MS = 1800;
 // Each label is two lines (party name + value), roughly 28px tall -- the
 // minimum gap has to clear the whole block, not just one text line, or
 // adjacent labels visually collide exactly when two parties are close in
@@ -74,11 +75,28 @@ export default function PollTimelineChart({
 }) {
   const isDark = useIsDark();
   const [progress, setProgress] = useState(0);
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const [hoverT, setHoverT] = useState<number | null>(null);
   const rafRef = useRef<number | null>(null);
   const lastTsRef = useRef<number | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const playingRef = useRef(playing);
+  const loopTimeoutRef = useRef<number | null>(null);
+  const loopScheduledRef = useRef(false);
+
+  useEffect(() => {
+    playingRef.current = playing;
+  }, [playing]);
+
+  function clearScheduledLoop() {
+    if (loopTimeoutRef.current !== null) {
+      clearTimeout(loopTimeoutRef.current);
+      loopTimeoutRef.current = null;
+    }
+    loopScheduledRef.current = false;
+  }
+
+  useEffect(() => () => clearScheduledLoop(), []);
 
   const tMin = useMemo(() => new Date(frames[0].date).getTime(), [frames]);
   const tMax = useMemo(() => new Date(frames[frames.length - 1].date).getTime(), [frames]);
@@ -136,9 +154,21 @@ export default function PollTimelineChart({
       const dt = ts - lastTsRef.current;
       lastTsRef.current = ts;
       setProgress((p) => {
+        if (p >= 1) return 1; // holding at the end until the loop timeout below fires
         const next = p + dt / DURATION_MS;
         if (next >= 1) {
-          setPlaying(false);
+          // Pause briefly on the final frame (so the last milestone/values are
+          // readable) before looping back to the start -- keeps playing rather
+          // than stopping, per "keep on playing".
+          if (!loopScheduledRef.current) {
+            loopScheduledRef.current = true;
+            loopTimeoutRef.current = window.setTimeout(() => {
+              loopScheduledRef.current = false;
+              if (!playingRef.current) return; // user paused during the hold
+              lastTsRef.current = null;
+              setProgress(0);
+            }, LOOP_HOLD_MS);
+          }
           return 1;
         }
         return next;
@@ -152,11 +182,18 @@ export default function PollTimelineChart({
   }, [playing]);
 
   function togglePlay() {
-    if (progress >= 1) setProgress(0);
-    setPlaying((p) => !p);
+    setPlaying((p) => {
+      const next = !p;
+      if (next && progress >= 1) {
+        clearScheduledLoop();
+        setProgress(0);
+      }
+      return next;
+    });
   }
 
   function scrub(value: number) {
+    clearScheduledLoop();
     setPlaying(false);
     setProgress(value / 1000);
   }
