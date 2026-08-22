@@ -3,10 +3,13 @@ import Dashboard from "@/components/Dashboard";
 import NewPollsBanner from "@/components/NewPollsBanner";
 import { actualPolls } from "@/lib/pollOfPolls";
 import { recentlyAddedPolls } from "@/lib/newPolls";
+import { summarizeElectorateOutlook } from "@/lib/electorateOutlook";
 import { SITE_NAME, pageMetadata } from "@/lib/site";
 import polls from "@/data/polls.json";
 import meta from "@/data/meta.json";
+import electoratesData from "@/data/electorates.json";
 import type { Poll } from "@/lib/types";
+import type { ElectoratesData } from "@/lib/electorateTypes";
 
 export const metadata = {
   ...pageMetadata(
@@ -23,6 +26,7 @@ export const metadata = {
 export default function Home() {
   const typedPolls = polls as Poll[];
   const surveyCount = actualPolls(typedPolls).length;
+  const electorateOutlook = summarizeElectorateOutlook((electoratesData as ElectoratesData).electorates);
 
   const fetchedAt = new Date(meta.fetchedAt).toLocaleString("en-NZ", {
     day: "numeric",
@@ -46,7 +50,7 @@ export default function Home() {
         </p>
       </header>
 
-      <Dashboard polls={typedPolls} />
+      <Dashboard polls={typedPolls} electorateOutlook={electorateOutlook} />
 
       <footer className="border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-400">
         <p>

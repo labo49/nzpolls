@@ -6,6 +6,7 @@ import PartyDot from "@/components/PartyDot";
 import { PARTIES } from "@/lib/parties";
 import { TOTAL_ELECTORATE_SEATS, totalAllocatedElectorateSeats } from "@/lib/electorates";
 import type { ElectorateSeatMap } from "@/lib/electorates";
+import type { ElectorateOutlookSummary } from "@/lib/electorateOutlook";
 
 const EDITABLE_PARTIES = PARTIES.filter((p) => p.code !== "OTH");
 
@@ -40,11 +41,16 @@ export default function ElectorateEditor({
   isOverride,
   onSave,
   onReset,
+  outlook,
 }: {
   current: ElectorateSeatMap;
   isOverride: boolean;
   onSave: (next: ElectorateSeatMap) => void;
   onReset: () => void;
+  /** Reference context from the /electorates page's own classification data
+   * -- who actually holds each seat today, and how many are rated safe or
+   * leaning for them -- so filling in the override isn't a blind guess. */
+  outlook: ElectorateOutlookSummary;
 }) {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState<ElectorateSeatMap>(current);
@@ -94,27 +100,46 @@ export default function ElectorateEditor({
         How many electorate seats does each party currently hold? Saved in this browser only &mdash;
         there&apos;s no shared backend, so this won&apos;t change what other visitors see.
       </p>
-      <div className="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
-        {EDITABLE_PARTIES.map((party) => (
-          <label key={party.code} className="flex items-center justify-between gap-2 text-sm">
-            <span className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-300">
-              <PartyDot color={party.color} />
-              {party.name}
-            </span>
-            <input
-              type="number"
-              inputMode="numeric"
-              min={0}
-              max={71}
-              value={draft[party.code] ?? 0}
-              onChange={(e) =>
-                setDraft((d) => ({ ...d, [party.code]: Math.max(0, Number(e.target.value) || 0) }))
-              }
-              className="w-14 rounded border border-black/15 bg-transparent px-1.5 py-0.5 text-right tabular-nums dark:border-white/15"
-            />
-          </label>
-        ))}
+      <div className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3">
+        {EDITABLE_PARTIES.map((party) => {
+          const partyOutlook = outlook.byParty[party.code];
+          return (
+            <div key={party.code}>
+              <label className="flex items-center justify-between gap-2 text-sm">
+                <span className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-300">
+                  <PartyDot color={party.color} />
+                  {party.name}
+                </span>
+                <input
+                  type="number"
+                  inputMode="numeric"
+                  min={0}
+                  max={71}
+                  value={draft[party.code] ?? 0}
+                  onChange={(e) =>
+                    setDraft((d) => ({ ...d, [party.code]: Math.max(0, Number(e.target.value) || 0) }))
+                  }
+                  className="w-14 rounded border border-black/15 bg-transparent px-1.5 py-0.5 text-right tabular-nums dark:border-white/15"
+                />
+              </label>
+              <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">
+                Current {partyOutlook?.current ?? 0} &middot; Safe {partyOutlook?.safe ?? 0} &middot; Leaning{" "}
+                {partyOutlook?.leaning ?? 0}
+              </p>
+            </div>
+          );
+        })}
       </div>
+      <p className="mt-3 text-xs text-neutral-500 dark:text-neutral-400">
+        {outlook.tossupCount} electorate{outlook.tossupCount === 1 ? "" : "s"} rated toss-up on the{" "}
+        <a
+          href="/electorates"
+          className="underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500 dark:decoration-neutral-600"
+        >
+          Electorates
+        </a>{" "}
+        page &mdash; not attributed to any party there, so not counted above.
+      </p>
       <div className="mt-3">
         <CompletenessNote map={draft} />
       </div>

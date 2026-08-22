@@ -17,12 +17,19 @@ import {
   loadElectorateOverride,
   saveElectorateOverride,
 } from "@/lib/electorateOverride";
+import type { ElectorateOutlookSummary } from "@/lib/electorateOutlook";
 import { actualPolls, computePollOfPolls, isElectionResult } from "@/lib/pollOfPolls";
 import { getReliability } from "@/lib/reliability";
 import { computeSeats, houseSize, majorityThreshold } from "@/lib/seats";
 import type { Poll } from "@/lib/types";
 
-export default function Dashboard({ polls }: { polls: Poll[] }) {
+export default function Dashboard({
+  polls,
+  electorateOutlook,
+}: {
+  polls: Poll[];
+  electorateOutlook: ElectorateOutlookSummary;
+}) {
   const allPollsters = useMemo(() => {
     const names = new Set(actualPolls(polls).map((p) => p.pollster));
     return Array.from(names).sort((a, b) => a.localeCompare(b));
@@ -142,6 +149,7 @@ export default function Dashboard({ polls }: { polls: Poll[] }) {
             <ElectorateEditor
               current={effectiveElectorateSeats}
               isOverride={electorateOverride !== null}
+              outlook={electorateOutlook}
               onSave={(next) => {
                 saveElectorateOverride(next);
                 setElectorateOverride(next);
