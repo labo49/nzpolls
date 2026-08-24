@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-08-21",
-    "dateLabel": "14-21 Aug 2026",
+    "dateLabel": "14–21 Aug 2026",
     "pollster": "RNZ–Reid Research",
     "sourceUrl": "https://www.rnz.co.nz/news/politics_election-2026/1093636/rnz-reid-research-poll-opportunity-in-kingmaker-position-luxon-and-hipkins-approval-slumps",
     "sampleSize": 1000,
@@ -15,6 +15,6 @@
       "TOP": 5.3,
       "OTH": 0.6
     },
-    "firstSeenAt": "2026-08-23T19:19:42.105Z"
+    "firstSeenAt": "2026-08-24T07:52:11.533Z"
   }
 ]
