@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-23T19:19:42.851Z",
+  "fetchedAt": "2026-08-24T07:52:12.596Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1002,6 +1002,20 @@
           "Chlöe Swarbrick": 8,
           "David Seymour": 7,
           "Winston Peters": 12
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "dateLabel": "14–21 Aug 2026",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/politics_election-2026/1093636/rnz-reid-research-poll-opportunity-in-kingmaker-position-luxon-and-hipkins-approval-slumps",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 19.9,
+          "Chris Hipkins": 21.3,
+          "Chlöe Swarbrick": 7.4,
+          "David Seymour": 6.2,
+          "Winston Peters": 11.1
         }
       }
     ],
