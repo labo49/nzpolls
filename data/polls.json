@@ -2052,5 +2052,23 @@
       "OTH": 0.6
     },
     "firstSeenAt": "2026-08-24T07:52:11.533Z"
+  },
+  {
+    "date": "2026-08-23",
+    "dateLabel": "27 Jul – 23 Aug 2026",
+    "pollster": "Roy Morgan",
+    "sourceUrl": "https://www.roymorgan.com/findings/10321-nz-national-voting-intention-august-2026",
+    "sampleSize": 858,
+    "results": {
+      "NAT": 31,
+      "LAB": 24,
+      "GRN": 15.5,
+      "ACT": 10.5,
+      "NZF": 7.5,
+      "TPM": 1.5,
+      "TOP": 9.5,
+      "OTH": 0.5
+    },
+    "firstSeenAt": "2026-08-31T10:00:49.713Z"
   }
 ]
