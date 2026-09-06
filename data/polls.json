@@ -2070,5 +2070,23 @@
       "OTH": 0.5
     },
     "firstSeenAt": "2026-08-31T10:00:49.713Z"
+  },
+  {
+    "date": "2026-09-03",
+    "dateLabel": "1 Sep – 3 Sep 2026",
+    "pollster": "Taxpayers' Union—Curia",
+    "sourceUrl": "https://www.taxpayers.org.nz/sept26_pollnztughjkuhn?",
+    "sampleSize": 858,
+    "results": {
+      "NAT": 29,
+      "LAB": 25.9,
+      "GRN": 13.9,
+      "ACT": 10.5,
+      "NZF": 8.4,
+      "TPM": 2,
+      "TOP": 4.5,
+      "OTH": 5.9
+    },
+    "firstSeenAt": "2026-09-06T21:01:22.118Z"
   }
 ]
