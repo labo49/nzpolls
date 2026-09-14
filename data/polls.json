@@ -2088,5 +2088,23 @@
       "OTH": 5.9
     },
     "firstSeenAt": "2026-09-07T10:00:52.701Z"
+  },
+  {
+    "date": "2026-09-11",
+    "dateLabel": "4-11 Sep 2026",
+    "pollster": "The Post/Freshwater Strategy",
+    "sourceUrl": "https://www.thepost.co.nz/politics/361079350/historic-major-party-slump-deepens-labour-edges-national-new-poll",
+    "sampleSize": 1011,
+    "results": {
+      "NAT": 27,
+      "LAB": 28,
+      "GRN": 14,
+      "ACT": 9,
+      "NZF": 13,
+      "TPM": 2,
+      "TOP": 6,
+      "OTH": 2
+    },
+    "firstSeenAt": "2026-09-14T22:14:44.784Z"
   }
 ]
