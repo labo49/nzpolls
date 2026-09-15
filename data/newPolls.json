@@ -1,7 +1,24 @@
 [
   {
+    "date": "2026-09-10",
+    "dateLabel": "4–10 Sep 2026",
+    "pollster": "Anacta",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/labour-slumps-in-another-poll-but-still-ahead-of-national/HDUVF4SBJJHK3LYLGXLVLG3F7U/",
+    "sampleSize": 1701,
+    "results": {
+      "NAT": 30,
+      "LAB": 31,
+      "GRN": 12,
+      "ACT": 8,
+      "NZF": 10,
+      "TPM": 2,
+      "TOP": 7
+    },
+    "firstSeenAt": "2026-09-15T10:00:53.671Z"
+  },
+  {
     "date": "2026-09-11",
-    "dateLabel": "4-11 Sep 2026",
+    "dateLabel": "4–11 Sep 2026",
     "pollster": "The Post/Freshwater Strategy",
     "sourceUrl": "https://www.thepost.co.nz/politics/361079350/historic-major-party-slump-deepens-labour-edges-national-new-poll",
     "sampleSize": 1011,
@@ -15,6 +32,6 @@
       "TOP": 6,
       "OTH": 2
     },
-    "firstSeenAt": "2026-09-14T22:14:44.784Z"
+    "firstSeenAt": "2026-09-15T10:00:53.671Z"
   }
 ]
