@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-14T22:14:45.769Z",
+  "fetchedAt": "2026-09-15T10:00:54.587Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1030,6 +1030,17 @@
           "Chlöe Swarbrick": 7,
           "David Seymour": 7.8,
           "Winston Peters": 10.7
+        }
+      },
+      {
+        "date": "2026-09-11",
+        "dateLabel": "4–11 Sep 2026",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.thepost.co.nz/politics/361079350/historic-major-party-slump-deepens-labour-edges-national-new-poll",
+        "sampleSize": 1011,
+        "results": {
+          "Christopher Luxon": 35,
+          "Chris Hipkins": 45
         }
       }
     ],
