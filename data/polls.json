@@ -2123,5 +2123,23 @@
       "OTH": 2
     },
     "firstSeenAt": "2026-09-15T10:00:53.671Z"
+  },
+  {
+    "date": "2026-09-27",
+    "dateLabel": "23–27 Sep 2026",
+    "pollster": "1 News–Verian",
+    "sourceUrl": "https://www.1news.co.nz/2026/09/28/poll-greens-surge-to-best-result-ever-as-national-labour-slide-further/",
+    "sampleSize": 1004,
+    "results": {
+      "NAT": 28,
+      "LAB": 28,
+      "GRN": 16,
+      "ACT": 11,
+      "NZF": 9,
+      "TPM": 1.2,
+      "TOP": 6,
+      "OTH": 1
+    },
+    "firstSeenAt": "2026-09-28T10:00:47.576Z"
   }
 ]

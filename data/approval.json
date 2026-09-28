@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-27T21:49:59.329Z",
+  "fetchedAt": "2026-09-28T10:00:48.342Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1041,6 +1041,20 @@
         "results": {
           "Christopher Luxon": 35,
           "Chris Hipkins": 45
+        }
+      },
+      {
+        "date": "2026-09-27",
+        "dateLabel": "23–27 Sep 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://tvnz-my.sharepoint.com/personal/justin_hu_tvnz_co_nz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjustin%5Fhu%5Ftvnz%5Fco%5Fnz%2FDocuments%2F23%2D27%20September%202026%201%20NEWS%20Verian%20Poll%20Report%20%2Epdf&parent=%2Fpersonal%2Fjustin%5Fhu%5Ftvnz%5Fco%5Fnz%2FDocuments&ga=1",
+        "sampleSize": 1004,
+        "results": {
+          "Christopher Luxon": 19,
+          "Chris Hipkins": 14,
+          "Chlöe Swarbrick": 8,
+          "David Seymour": 7,
+          "Winston Peters": 7
         }
       }
     ],
