@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-06T00:33:56.709Z",
+  "fetchedAt": "2026-10-06T10:00:57.352Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1055,6 +1055,34 @@
           "Chlöe Swarbrick": 8,
           "David Seymour": 7,
           "Winston Peters": 7
+        }
+      },
+      {
+        "date": "2026-10-01",
+        "dateLabel": "24 Sep – 1 Oct 2026",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/politics_election-2026/1749693/rnz-reid-research-poll-national-crashes-greens-surge-opportunity-kingmaker",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 17.1,
+          "Chris Hipkins": 21.9,
+          "Chlöe Swarbrick": 8.7,
+          "David Seymour": 7.6,
+          "Winston Peters": 11.2
+        }
+      },
+      {
+        "date": "2026-10-05",
+        "dateLabel": "1–5 Oct 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://tvnz-my.sharepoint.com/personal/justin_hu_tvnz_co_nz/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjustin%5Fhu%5Ftvnz%5Fco%5Fnz%2FDocuments%2F1%2D5%20October%202026%201%20NEWS%20Verian%20Poll%20Report%2Epdf&parent=%2Fpersonal%2Fjustin%5Fhu%5Ftvnz%5Fco%5Fnz%2FDocuments&ga=1",
+        "sampleSize": 1001,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 7,
+          "David Seymour": 5,
+          "Winston Peters": 9
         }
       }
     ],
