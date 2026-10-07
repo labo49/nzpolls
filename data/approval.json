@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-07T10:00:55.382Z",
+  "fetchedAt": "2026-10-07T14:07:22.394Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1119,7 +1119,6 @@
         "sourceUrl": "https://www.nzherald.co.nz/nz/politics/honeymoon-over-christopher-luxon-takes-a-dive-nz-first-overtakes-act-in-new-poll/NTXYYSEQBNCN7MJD3THKJXGRVA/",
         "sampleSize": null,
         "results": {
-          "Christopher Luxon": -1,
           "Chris Hipkins": 9
         }
       },
@@ -1152,7 +1151,6 @@
         "sourceUrl": "https://www.taxpayers.org.nz/taxpayers_union_curia_poll_march_2024",
         "sampleSize": 1000,
         "results": {
-          "Christopher Luxon": -5,
           "Chris Hipkins": 2
         }
       },
@@ -1162,10 +1160,7 @@
         "pollster": "Taxpayers' Union–Curia",
         "sourceUrl": "https://www.taxpayers.org.nz/poll_april_2024",
         "sampleSize": 1000,
-        "results": {
-          "Christopher Luxon": -7,
-          "Chris Hipkins": -6
-        }
+        "results": {}
       },
       {
         "date": "2024-05-07",
@@ -1174,8 +1169,7 @@
         "sourceUrl": "https://www.taxpayers.org.nz/taxpayers_union_curia_poll_may_2024",
         "sampleSize": 1000,
         "results": {
-          "Christopher Luxon": 8,
-          "Chris Hipkins": -1
+          "Christopher Luxon": 8
         }
       },
       {
@@ -1289,12 +1283,7 @@
         "pollster": "Taxpayers' Union–Curia",
         "sourceUrl": "https://www.thepost.co.nz/politics/360938265/christopher-luxon-hits-lowest-popularity-past-year-leaked-poll-reveals-souring-public-mood",
         "sampleSize": 1000,
-        "results": {
-          "Christopher Luxon": -17,
-          "Chris Hipkins": -4,
-          "David Seymour": -24,
-          "Winston Peters": -6
-        }
+        "results": {}
       },
       {
         "date": "2026-02-03",
@@ -1302,12 +1291,7 @@
         "pollster": "Taxpayers' Union–Curia",
         "sourceUrl": "https://www.nzherald.co.nz/business/companies/energy/luxon-has-done-a-poor-job-of-selling-1b-lng-terminal-and-india-trade-deal-matthew-hooton/premium/IZUIJLIR2FHAHJZ2TAFVEMIHBE/",
         "sampleSize": 1000,
-        "results": {
-          "Christopher Luxon": -16,
-          "Chris Hipkins": -8,
-          "David Seymour": -28,
-          "Winston Peters": -7
-        }
+        "results": {}
       },
       {
         "date": "2026-06-08",
@@ -1315,12 +1299,7 @@
         "pollster": "Taxpayers' Union–Curia",
         "sourceUrl": "https://www.taxpayers.org.nz/pollnztu_june2026",
         "sampleSize": 1000,
-        "results": {
-          "Christopher Luxon": -19,
-          "Chris Hipkins": -7,
-          "David Seymour": -18,
-          "Winston Peters": -5
-        }
+        "results": {}
       },
       {
         "date": "2026-08-04",
@@ -1328,12 +1307,7 @@
         "pollster": "Taxpayers' Union–Curia",
         "sourceUrl": "https://www.thepost.co.nz/politics/361058988/erica-stanford-rules-out-run-national-leadership-talk-returns",
         "sampleSize": 1000,
-        "results": {
-          "Christopher Luxon": -19,
-          "Chris Hipkins": -7,
-          "David Seymour": -24,
-          "Winston Peters": -16
-        }
+        "results": {}
       }
     ],
     "leaders": [
