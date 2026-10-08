@@ -21,7 +21,7 @@ export const metadata = pageMetadata(
 export default function TimelinePage() {
   const frames = buildTimelineFrames(polls as Poll[]);
   const typedMilestones = milestones as Milestone[];
-  const { preferredPm } = approval as ApprovalData;
+  const { preferredPm } = approval as unknown as ApprovalData;
 
   return (
     <main id="main-content" className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">

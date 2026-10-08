@@ -11,7 +11,7 @@ export const metadata = pageMetadata(
 );
 
 export default function ApprovalPage() {
-  const data = approvalData as ApprovalData;
+  const data = approvalData as unknown as ApprovalData;
   const fetchedAt = new Date(data.fetchedAt).toLocaleString("en-NZ", {
     day: "numeric",
     month: "short",
