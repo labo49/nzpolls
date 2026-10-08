@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "date": "2026-10-05",
+    "dateLabel": "1–5 Oct 2026",
+    "pollster": "Taxpayers' Union–Curia",
+    "sourceUrl": "https://www.taxpayers.org.nz/oct2026_nztucurpolljjhhfas",
+    "sampleSize": 1000,
+    "results": {
+      "NAT": 28.5,
+      "LAB": 28.2,
+      "GRN": 13.3,
+      "ACT": 9.2,
+      "NZF": 12,
+      "TPM": 1.4,
+      "TOP": 4.8,
+      "OTH": 2.7
+    },
+    "firstSeenAt": "2026-10-08T10:01:36.212Z"
+  }
+]
