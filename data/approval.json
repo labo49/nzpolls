@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-13T01:05:19.299Z",
+  "fetchedAt": "2026-10-13T10:00:48.138Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1097,6 +1097,20 @@
           "Chlöe Swarbrick": 7,
           "David Seymour": 5,
           "Winston Peters": 9
+        }
+      },
+      {
+        "date": "2026-10-12",
+        "dateLabel": "8–12 Oct 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.1news.co.nz/2026/10/13/poll-hipkins-and-luxon-now-neck-and-neck-opportunity-on-track-for-10-mps/",
+        "sampleSize": 1007,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 20,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 4,
+          "Winston Peters": 7
         }
       }
     ],
