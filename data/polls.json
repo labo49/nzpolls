@@ -2248,5 +2248,22 @@
       "OTH": 1.6
     },
     "firstSeenAt": "2026-10-13T10:00:47.401Z"
+  },
+  {
+    "date": "2026-10-19",
+    "dateLabel": "9-19 Oct 2026",
+    "pollster": "The Post/Freshwater Strategy",
+    "sourceUrl": "https://www.thepost.co.nz/politics/361101225/postfreshwater-strategy-poll-fraction-point-could-decide-who-governs",
+    "sampleSize": 1458,
+    "results": {
+      "NAT": 27.6,
+      "LAB": 28.7,
+      "GRN": 14.3,
+      "ACT": 9,
+      "NZF": 11.8,
+      "TPM": 2,
+      "TOP": 5.4
+    },
+    "firstSeenAt": "2026-10-19T22:47:56.521Z"
   }
 ]
