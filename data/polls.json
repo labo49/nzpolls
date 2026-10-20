@@ -2251,7 +2251,25 @@
   },
   {
     "date": "2026-10-19",
-    "dateLabel": "9-19 Oct 2026",
+    "dateLabel": "15–19 Oct 2026",
+    "pollster": "1 News–Verian",
+    "sourceUrl": "https://www.1news.co.nz/2026/10/20/poll-national-jumps-leaving-labours-position-perilous/",
+    "sampleSize": 1003,
+    "results": {
+      "NAT": 32,
+      "LAB": 27,
+      "GRN": 16,
+      "ACT": 11,
+      "NZF": 8,
+      "TPM": 0.7,
+      "TOP": 7,
+      "OTH": 0.7
+    },
+    "firstSeenAt": "2026-10-20T10:01:01.573Z"
+  },
+  {
+    "date": "2026-10-19",
+    "dateLabel": "9–19 Oct 2026",
     "pollster": "The Post/Freshwater Strategy",
     "sourceUrl": "https://www.thepost.co.nz/politics/361101225/postfreshwater-strategy-poll-fraction-point-could-decide-who-governs",
     "sampleSize": 1458,
@@ -2264,6 +2282,6 @@
       "TPM": 2,
       "TOP": 5.4
     },
-    "firstSeenAt": "2026-10-19T22:47:56.521Z"
+    "firstSeenAt": "2026-10-20T10:01:01.573Z"
   }
 ]
