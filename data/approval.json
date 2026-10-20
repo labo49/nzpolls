@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-19T22:47:57.522Z",
+  "fetchedAt": "2026-10-20T10:01:02.627Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1122,6 +1122,20 @@
           "Chlöe Swarbrick": 6,
           "David Seymour": 4,
           "Winston Peters": 7
+        }
+      },
+      {
+        "date": "2026-10-19",
+        "dateLabel": "15–19 Oct 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.1news.co.nz/2026/10/20/poll-national-jumps-leaving-labours-position-perilous/",
+        "sampleSize": 1003,
+        "results": {
+          "Christopher Luxon": 20,
+          "Chris Hipkins": 17,
+          "Chlöe Swarbrick": 7,
+          "David Seymour": 5,
+          "Winston Peters": 8
         }
       }
     ],
