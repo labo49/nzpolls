@@ -90,7 +90,7 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/August_2026_New_Zealand_National_Party_leadership_election"
   },
   {
-    "date": "2026-10-02",
+    "date": "2026-10-01",
     "label": "Leaders of the GRN, ACT, NZF, TPM, OPP debate in the Stuff Kingmaker's Debate.",
     "sourceUrl": null
   },
@@ -112,6 +112,11 @@
   {
     "date": "2026-10-20",
     "label": "Stuff holds its leaders' debate between National Party leader Christopher Luxon and Labour leader Chris Hipkins.",
+    "sourceUrl": null
+  },
+  {
+    "date": "2026-10-21",
+    "label": "Leaders of the GRN, ACT, NZF, OPP debate in the NZ Herald Powerbrokers' Debate.",
     "sourceUrl": null
   }
 ]
