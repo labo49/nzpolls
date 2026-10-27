@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "date": "2026-10-25",
+    "dateLabel": "21–25 Oct 2026",
+    "pollster": "1 News–Verian",
+    "sourceUrl": "https://www.1news.co.nz/2026/10/27/poll-coalition-has-path-to-power-but-labour-steady-after-gangs-row/",
+    "sampleSize": 1000,
+    "results": {
+      "NAT": 28.9,
+      "LAB": 27.3,
+      "GRN": 14.8,
+      "ACT": 12.4,
+      "NZF": 10,
+      "TPM": 0.1,
+      "TOP": 6.3,
+      "OTH": 0.2
+    },
+    "firstSeenAt": "2026-10-27T10:01:03.206Z"
+  }
+]
