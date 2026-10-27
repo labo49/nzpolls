@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-26T23:00:39.093Z",
+  "fetchedAt": "2026-10-27T10:01:04.293Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1147,6 +1147,20 @@
         "results": {
           "Christopher Luxon": 36,
           "Chris Hipkins": 49
+        }
+      },
+      {
+        "date": "2026-10-25",
+        "dateLabel": "21–25 Oct 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.1news.co.nz/2026/10/27/poll-coalition-has-path-to-power-but-labour-steady-after-gangs-row/",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 24,
+          "Chris Hipkins": 18,
+          "Chlöe Swarbrick": 7,
+          "David Seymour": 6,
+          "Winston Peters": 7
         }
       }
     ],
