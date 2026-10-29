@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-28T22:56:27.597Z",
+  "fetchedAt": "2026-10-29T10:00:56.192Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1162,6 +1162,20 @@
           "David Seymour": 6,
           "Winston Peters": 7
         }
+      },
+      {
+        "date": "2026-10-26",
+        "dateLabel": "20–26 Oct 2026",
+        "pollster": "RNZ–Reid Research",
+        "sourceUrl": "https://www.rnz.co.nz/news/politics_election-2026/2211553/rnz-reid-research-poll-national-below-disastrous-2020-result-as-opportunity-surges",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 17.1,
+          "Chris Hipkins": 23.3,
+          "Chlöe Swarbrick": 10.5,
+          "David Seymour": 6.6,
+          "Winston Peters": 11.4
+        }
       }
     ],
     "leaders": [
@@ -1406,6 +1420,6 @@
         "shortName": "Peters"
       }
     ],
-    "skipped": 11
+    "skipped": 12
   }
 }
