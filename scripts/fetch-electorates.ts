@@ -2,8 +2,10 @@
  * Builds data/electorates.json: all 71 electorates under the boundaries
  * finalized 8 August 2026 for that year's general election, each with its
  * declared candidates, current MP, and a safe/leaning/toss-up classification
- * derived from whichever of the last 3 general elections (2023, 2020, 2017)
- * still match by name under the new lines.
+ * -- from a reliable electorate-specific seat poll where one exists (see
+ * classifyFromSeatPolls below), otherwise derived from whichever of the
+ * last 3 general elections (2023, 2020, 2017) still match by name under the
+ * new lines.
  *
  * The electorate list, current MP, and candidates all come from Wikipedia's
  * "Candidates in the 2026 New Zealand general election by electorate" page
@@ -11,12 +13,14 @@
  * "Results of the YYYY New Zealand general election" pages predate this
  * redistribution, so an electorate whose name changed (or is genuinely new)
  * won't match any of them by name and is flagged `isNewFor2026` with
- * whatever partial history (often none) still lines up.
+ * whatever partial history (often none) still lines up. Seat polls come
+ * from the national opinion-polling page's own "Electorate polling"
+ * section.
  *
- * This is a one-off/occasional build, not part of the daily poll refresh --
- * electorate boundaries and MPs don't change often. Re-run after a
- * candidate-selection update, a by-election, or an MP defection you want
- * reflected.
+ * Runs as part of the twice-daily automated refresh (not just an
+ * occasional manual build) -- with the election a week out, electorate
+ * seat polls are landing fast and need to stay just as current as the
+ * national ones.
  *
  * Run with: npx tsx scripts/fetch-electorates.ts
  */

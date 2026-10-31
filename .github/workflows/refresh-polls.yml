@@ -35,6 +35,13 @@ jobs:
 
       - run: npm run fetch-milestones
 
+      # With the election one week out (7 Nov 2026), electorate seat polls
+      # are landing fast and directly drive each electorate's
+      # safe/leaning/toss-up classification (see scrapeElectoratePolls) --
+      # this needs to stay as current as the national polls, not be the
+      # occasional manual run it started as.
+      - run: npm run fetch-electorates
+
       - id: diff
         run: echo "changed=$(git status --porcelain data/ | wc -l)" >> "$GITHUB_OUTPUT"
 
