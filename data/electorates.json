@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T13:14:36.949Z",
+  "fetchedAt": "2026-10-31T22:10:37.758Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
@@ -5174,21 +5174,21 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "OTH",
-          "partyLabel": "NZ Loyal",
-          "name": "Paul Teio",
-          "listNumber": 2,
-          "notes": "Contested Māngere for the Direct Democracy Party of New Zealand in 2005",
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Kharag Singh",
           "listNumber": 61,
           "notes": "Contested Botany in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Paul Teio",
+          "listNumber": 2,
+          "notes": "Contested Māngere for the Direct Democracy Party of New Zealand in 2005",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
