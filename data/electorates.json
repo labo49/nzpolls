@@ -1,11 +1,12 @@
 {
-  "fetchedAt": "2026-08-08T22:07:52.462Z",
+  "fetchedAt": "2026-10-31T10:02:09.507Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
     "https://en.wikipedia.org/wiki/Results_of_the_2020_New_Zealand_general_election",
     "https://en.wikipedia.org/wiki/Results_of_the_2017_New_Zealand_general_election",
-    "https://en.wikipedia.org/wiki/2024_Port_Waikato_by-election"
+    "https://en.wikipedia.org/wiki/2024_Port_Waikato_by-election",
+    "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election"
   ],
   "electorates": [
     {
@@ -50,10 +51,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Christopher Manaia",
+          "listNumber": 5,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Antonia Modkova",
-          "listNumber": null,
+          "listNumber": 13,
           "notes": "Contested Panmure-Ōtāhuhu in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -66,6 +77,26 @@
           "listNumber": 2,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Lester Bryant",
+          "listNumber": null,
+          "notes": "Announced, but not on final list of candidates",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Wero Te Kino",
+          "listNumber": null,
+          "notes": "Announced, but not on final list of candidates",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -96,9 +127,9 @@
           "notional": false
         }
       ],
-      "classification": "leaning",
-      "classificationParty": "GRN",
-      "trendNote": "GRN has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 3,896 votes -- leaning GRN, not safe."
+      "classification": "tossup",
+      "classificationParty": null,
+      "trendNote": "Based on Taxpayers' Union–Curia's 14–21 Oct 2026 electorate seat poll (n=400): Green leads the electorate vote on 39%, 4pp ahead of the runner-up on 35% -- too close to call, a toss-up on direct poll evidence."
     },
     {
       "name": "Banks Peninsula",
@@ -111,16 +142,6 @@
         "retiring": false
       },
       "candidates": [
-        {
-          "partyCode": "NZF",
-          "partyLabel": "NZ First",
-          "name": "Lindsay Kerslake",
-          "listNumber": null,
-          "notes": "Contested electorate in 2023",
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
         {
           "partyCode": "LAB",
           "partyLabel": "Labour",
@@ -143,9 +164,29 @@
         },
         {
           "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Leslie Sales",
+          "listNumber": 8,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "John Stringer",
+          "listNumber": 47,
+          "notes": "Contested Ilam for the Conservative Party in 2014",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Kyle Turnbull",
-          "listNumber": null,
+          "listNumber": 5,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -153,9 +194,9 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "New Conservative",
+          "partyLabel": "Conservative",
           "name": "Amy Turner",
-          "listNumber": null,
+          "listNumber": 8,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -175,8 +216,28 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Zachary Wellman",
-          "listNumber": null,
+          "listNumber": 31,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Animal Justice",
+          "name": "Rebecca Cleaver",
+          "listNumber": null,
+          "notes": "Announced, but not on final list of candidates",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "Lindsay Kerslake",
+          "listNumber": null,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -219,7 +280,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Ali Dahche",
-          "listNumber": null,
+          "listNumber": 28,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -242,6 +303,16 @@
           "listNumber": 1,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "Craig Stobo",
+          "listNumber": 8,
+          "notes": null,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -288,10 +359,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Blair Anderson",
+          "listNumber": 7,
+          "notes": "Contested Wigram in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Mark Arneil",
-          "listNumber": null,
+          "listNumber": 24,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -301,7 +382,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Greg Byrnes",
-          "listNumber": null,
+          "listNumber": 13,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -323,6 +404,26 @@
           "name": "George Hampton",
           "listNumber": 52,
           "notes": "Contested North Shore in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Economic Euthenics",
+          "name": "Tubby Hansen",
+          "listNumber": null,
+          "notes": "Contested Wigram in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Hayden Laurie",
+          "listNumber": null,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -352,7 +453,7 @@
           "partyLabel": "ACT",
           "name": "Christian van der Pump",
           "listNumber": null,
-          "notes": null,
+          "notes": "Announced, but not on final list of candidates",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -413,7 +514,17 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Teresa Butler",
-          "listNumber": null,
+          "listNumber": 55,
+          "notes": "List only candidate for Te Pāti Māori in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "David Cajar-Mueller",
+          "listNumber": 13,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -443,8 +554,28 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Ethan Gullery",
-          "listNumber": null,
+          "listNumber": 3,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Conservative",
+          "name": "Helen Houghton",
+          "listNumber": 1,
+          "notes": "Contested electorate in 2023; originally selected for Tāmaki",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Paula Lambert",
+          "listNumber": 4,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -453,8 +584,28 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Toni Severin",
-          "listNumber": null,
+          "listNumber": 39,
           "notes": "List MP 2020–2023; contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Vikramjit Singh",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Glenn Thompson",
+          "listNumber": 17,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -463,7 +614,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Shane Wiremu",
-          "listNumber": null,
+          "listNumber": 45,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -515,7 +666,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Vincent Anderson",
-          "listNumber": null,
+          "listNumber": 30,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -532,11 +683,31 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Ray Cobb",
+          "listNumber": 8,
+          "notes": "Contested electorate for New Zealand Loyal in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Pamela Grealey",
-          "listNumber": 33,
+          "listNumber": 32,
           "notes": "Contested electorate in 2020 and 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Steven Hart",
+          "listNumber": null,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -627,7 +798,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Victor Billot",
-          "listNumber": null,
+          "listNumber": 1,
           "notes": "Contested Dunedin North in 2011",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -654,9 +825,29 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Adrian McDermott",
+          "listNumber": 10,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Kym McDonald-King",
+          "listNumber": 26,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Benedict Ong",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -698,10 +889,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Gordon Dickson",
+          "listNumber": null,
+          "notes": "Contested East Coast in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Darrin Hawkes",
-          "listNumber": null,
+          "listNumber": 35,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -741,7 +942,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Jordan Walker",
-          "listNumber": null,
+          "listNumber": 45,
           "notes": "Contested East Coast in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -775,6 +976,16 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Allan Lind",
+          "listNumber": 12,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Brendan McEnroe",
@@ -788,7 +999,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Abe McKee",
-          "listNumber": null,
+          "listNumber": 35,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -798,7 +1009,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Sam Mills",
-          "listNumber": null,
+          "listNumber": 22,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -818,7 +1029,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Vaughan Taylor",
-          "listNumber": null,
+          "listNumber": 42,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -890,7 +1101,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Martin Gummer",
-          "listNumber": null,
+          "listNumber": 27,
           "notes": "Contested Waitakere for National in 1981",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -907,10 +1118,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Vision NZ",
+          "name": "Sawan Jerry",
+          "listNumber": 3,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "David Seymour",
-          "listNumber": null,
+          "listNumber": 1,
           "notes": null,
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -992,7 +1213,7 @@
           "partyCode": "OTH",
           "partyLabel": "Animal Justice",
           "name": "Robert McNeil",
-          "listNumber": null,
+          "listNumber": 1,
           "notes": "Contested Botany in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1002,7 +1223,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Alfred Ngaro",
-          "listNumber": null,
+          "listNumber": 5,
           "notes": "National list MP, 2011–2020; contested Te Atatū in 2020; NewZeal leader and list only candidate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1012,6 +1233,16 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Amanda Roberts",
+          "listNumber": 19,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Tua Schuster",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -1066,6 +1297,16 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Jacobus Gielen",
+          "listNumber": null,
+          "notes": "Contested electorate for The Republic of New Zealand Party in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Ryan Hamilton",
@@ -1079,7 +1320,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Nicola Laboyrie",
-          "listNumber": null,
+          "listNumber": 41,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1138,11 +1379,41 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "New World Order McCann Party",
+          "name": "Nathan Lee Couper",
+          "listNumber": null,
+          "notes": "Contested Hamilton East in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Louise Hutt",
           "listNumber": 19,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Steve Phelps",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Donna Pokere-Phillips",
+          "listNumber": 6,
+          "notes": "Contested Hauraki-Waikato in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -1171,8 +1442,18 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Kevin Stone",
-          "listNumber": null,
+          "listNumber": 43,
           "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Wiremu Thomson",
+          "listNumber": null,
+          "notes": "Contested Wigram in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -1230,6 +1511,16 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Neil Denby",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Kingi Kiriona",
@@ -1276,9 +1567,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+      "classification": "safe",
+      "classificationParty": "TPM",
+      "trendNote": "Based on Whakaata Māori–Curia's 21 Sep – 1 Oct 2026 electorate seat poll (n=500): Te Pāti Māori leads the electorate vote on 54%, 23pp ahead of the runner-up on 31% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Henderson",
@@ -1292,6 +1583,16 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Kay Luv",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Angee Nicholas",
@@ -1302,9 +1603,29 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Jobseeker Party",
+          "name": "Kelso Papali'i",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Nick Peirce",
+          "listNumber": 34,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "John Divine Paola Talagi",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -1335,7 +1656,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "David Wilson",
-          "listNumber": null,
+          "listNumber": 12,
           "notes": "Contested Upper Harbour in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -1392,6 +1713,36 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Alistair Boyce",
+          "listNumber": 35,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Malcolm Dick",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Socialist Equality Group",
+          "name": "Tom Petterson",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "David L F Smith",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -1445,9 +1796,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), but only by 1,332 votes most recently -- a toss-up."
+      "classification": "safe",
+      "classificationParty": "LAB",
+      "trendNote": "Based on Victor Consulting's 17–19 Sep 2026 electorate seat poll (n=533): Labour leads the electorate vote on 42%, 33pp ahead of the runner-up on 9% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Ikaroa-Rāwhiti",
@@ -1517,9 +1868,9 @@
           "notional": false
         }
       ],
-      "classification": "leaning",
+      "classification": "safe",
       "classificationParty": "LAB",
-      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 2,843 votes -- leaning LAB, not safe."
+      "trendNote": "Based on Whakaata Māori–Curia's 28 Sep – 8 Oct 2026 electorate seat poll (n=500): Labour leads the electorate vote on 40%, 21pp ahead of the runner-up on 19% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Ilam",
@@ -1556,7 +1907,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Courtney Fraser",
-          "listNumber": null,
+          "listNumber": 9,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1566,7 +1917,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Ken Harpur",
-          "listNumber": null,
+          "listNumber": 44,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1586,7 +1937,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Nathan Walton",
-          "listNumber": null,
+          "listNumber": 49,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1635,10 +1986,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Anntwinette Grumball",
+          "listNumber": 6,
+          "notes": "Contested Southland in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Dave Kennedy",
-          "listNumber": null,
+          "listNumber": 41,
           "notes": "Contested Southland in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1648,7 +2009,17 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Janice Lee",
-          "listNumber": 62,
+          "listNumber": 61,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Hayden John Seager",
+          "listNumber": null,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1658,7 +2029,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Penny Simmonds",
-          "listNumber": 15,
+          "listNumber": 14,
           "notes": null,
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -1710,10 +2081,20 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Jamie Arbuckle",
-          "listNumber": null,
+          "listNumber": 13,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Iain Britton",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
@@ -1737,10 +2118,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Ted Howard",
+          "listNumber": null,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Stuart Smith",
-          "listNumber": 22,
+          "listNumber": 21,
           "notes": null,
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -1750,7 +2141,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Tom Spooner",
-          "listNumber": null,
+          "listNumber": 24,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -1794,8 +2185,8 @@
       "currentMp": {
         "name": "Chris Penk",
         "party": "NAT",
-        "note": null,
-        "retiring": false
+        "note": "Was re-selected, but later chose to retire",
+        "retiring": true
       },
       "candidates": [
         {
@@ -1812,10 +2203,30 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Simon Court",
-          "listNumber": null,
+          "listNumber": 8,
           "notes": "Contested Te Atatū in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Mark Dennis",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Liz Dotcom",
+          "listNumber": 11,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
@@ -1832,7 +2243,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Jenny Marcroft",
-          "listNumber": null,
+          "listNumber": 10,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -1841,10 +2252,10 @@
         {
           "partyCode": "NAT",
           "partyLabel": "National",
-          "name": "Chris Penk",
-          "listNumber": 14,
+          "name": "Jessica Rowe",
+          "listNumber": 68,
           "notes": null,
-          "isIncumbent": true,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -1857,6 +2268,26 @@
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Ivan Wagstaff",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "NAT",
+          "partyLabel": "National",
+          "name": "Chris Penk",
+          "listNumber": null,
+          "notes": "Was re-selected, but later chose to retire",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": true
         },
         {
           "partyCode": "LAB",
@@ -1916,8 +2347,18 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Penny Gaylor",
-          "listNumber": null,
+          "listNumber": 19,
           "notes": "Contested Taranaki-King Country for Labour in 2014",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Not A Party",
+          "name": "Richard Goode",
+          "listNumber": null,
+          "notes": "Contested Mana in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -1938,6 +2379,16 @@
           "name": "Chee-Khiang Sng",
           "listNumber": 26,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Progressive Aotearoa",
+          "name": "Michael Walker",
+          "listNumber": null,
+          "notes": "Contested Mana in 2020",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -1966,7 +2417,7 @@
       "history": [],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "New or substantially redrawn by the boundary review finalized 8 Aug 2026, with no comparable result under these boundaries yet -- treated as a toss-up until real results exist."
+      "trendNote": "Based on Community Engagement Limited's 29–31 Jul 2026 electorate seat poll (n=821): Labour leads the electorate vote on 37.5%, 3.9pp ahead of the runner-up on 33.6% -- too close to call, a toss-up on direct poll evidence."
     },
     {
       "name": "Kenepuru",
@@ -1983,7 +2434,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Jon Blackshaw",
-          "listNumber": null,
+          "listNumber": 48,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2030,6 +2481,16 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Not A Party",
+          "name": "Bob Wessex",
+          "listNumber": null,
+          "notes": "Contested Ōtaki in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Lyra Yan Zhang",
@@ -2057,10 +2518,30 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Hine Afeaki",
+          "listNumber": 4,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Kelvyn Alp",
+          "listNumber": 1,
+          "notes": "Contested 2025 Tāmaki Makaurau by-election",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Rosemary Bourke",
-          "listNumber": 40,
+          "listNumber": 39,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2070,7 +2551,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Vicky Hau",
-          "listNumber": null,
+          "listNumber": 21,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2090,7 +2571,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Michel Mulipola",
-          "listNumber": null,
+          "listNumber": 49,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2100,7 +2581,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Manu Singh",
-          "listNumber": null,
+          "listNumber": 26,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2110,9 +2591,19 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Lemauga Lydia Sosene",
-          "listNumber": 42,
+          "listNumber": 41,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "People's Party New Zealand",
+          "name": "Alani Fisher Taione",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -2182,7 +2673,7 @@
           "partyCode": "OTH",
           "partyLabel": "Animal Justice",
           "name": "Avalua Tavui",
-          "listNumber": null,
+          "listNumber": 7,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2192,7 +2683,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Esther Tofilau-Tevaga",
-          "listNumber": null,
+          "listNumber": 18,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2254,7 +2745,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Juan Alvarez de Lugo",
-          "listNumber": null,
+          "listNumber": 25,
           "notes": "Contested New Lynn in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2274,7 +2765,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Keegan Langeveld",
-          "listNumber": null,
+          "listNumber": 36,
           "notes": "Contested Dunedin in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2294,7 +2785,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Adam Powell",
-          "listNumber": null,
+          "listNumber": 36,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2353,13 +2844,33 @@
       },
       "candidates": [
         {
-          "partyCode": "NZF",
-          "partyLabel": "NZ First",
-          "name": "Sheldon Eden-Whaitiri",
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Luke Bones",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "Sheldon Eden-Whaitiri",
+          "listNumber": 32,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "NAT",
+          "partyLabel": "National",
+          "name": "Melissa Lee",
+          "listNumber": 29,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": true,
           "isRetiringMp": false
         },
         {
@@ -2373,32 +2884,22 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "LAB",
-          "partyLabel": "Labour",
-          "name": "Helen White",
-          "listNumber": 38,
+          "partyCode": "ACT",
+          "partyLabel": "ACT",
+          "name": "Alex Price",
+          "listNumber": 14,
           "notes": null,
-          "isIncumbent": true,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
-          "partyCode": "NAT",
-          "partyLabel": "National",
-          "name": "Melissa Lee",
-          "listNumber": 30,
-          "notes": "Contested electorate in 2023",
-          "isIncumbent": false,
-          "isCurrentListMp": true,
-          "isRetiringMp": false
-        },
-        {
-          "partyCode": "ACT",
-          "partyLabel": "ACT",
-          "name": "Alex Price",
-          "listNumber": null,
+          "partyCode": "LAB",
+          "partyLabel": "Labour",
+          "name": "Helen White",
+          "listNumber": 37,
           "notes": null,
-          "isIncumbent": false,
+          "isIncumbent": true,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -2441,7 +2942,7 @@
       ],
       "classification": "leaning",
       "classificationParty": "LAB",
-      "trendNote": "LAB has won 3 of the last 3 elections, most recently by 18 votes -- leaning LAB, not safe."
+      "trendNote": "Based on Taxpayers' Union–Curia's 1–5 Oct 2026 electorate seat poll (n=400): Labour leads the electorate vote on 31%, 5pp ahead of the runner-up on 26% -- leaning Labour on direct poll evidence, not safe."
     },
     {
       "name": "Mount Maunganui",
@@ -2458,8 +2959,18 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Tracey Coxhead",
-          "listNumber": null,
+          "listNumber": 15,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Animal Justice",
+          "name": "Caitlin Grattan",
+          "listNumber": 9,
+          "notes": "Contested Bay of Plenty in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -2468,7 +2979,7 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Rhieve Grey",
-          "listNumber": 65,
+          "listNumber": 64,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2478,7 +2989,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Cameron Luxton",
-          "listNumber": null,
+          "listNumber": 12,
           "notes": "Contested Bay of Plenty in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -2488,7 +2999,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Tom Rutherford",
-          "listNumber": 28,
+          "listNumber": 27,
           "notes": "MP for Bay of Plenty since 2023",
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -2498,8 +3009,18 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Pualele Westhead",
-          "listNumber": null,
+          "listNumber": 51,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Greer Young",
+          "listNumber": 6,
+          "notes": "Originally selected for Tauranga",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -2535,9 +3056,39 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Carlos Cheung",
-          "listNumber": 34,
+          "listNumber": 33,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Animal Justice",
+          "name": "Priyanka Deo",
+          "listNumber": 6,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "GRN",
+          "partyLabel": "Green",
+          "name": "Anjana Iyer",
+          "listNumber": 38,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "ACT",
+          "partyLabel": "ACT",
+          "name": "Yang Qu",
+          "listNumber": 17,
+          "notes": null,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -2547,16 +3098,6 @@
           "name": "Michael Wood",
           "listNumber": null,
           "notes": "MP for Mount Roskill 2016–2023",
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
-          "partyCode": "ACT",
-          "partyLabel": "ACT",
-          "name": "Yang Qu",
-          "listNumber": null,
-          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -2588,9 +3129,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+      "classification": "safe",
+      "classificationParty": "LAB",
+      "trendNote": "Based on Community Engagement Limited's 1–12 Oct 2026 electorate seat poll (n=520): Labour leads the electorate vote on 47%, 17.1pp ahead of the runner-up on 29.9% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Napier",
@@ -2607,7 +3148,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Roy Boonen",
-          "listNumber": null,
+          "listNumber": 52,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2617,7 +3158,7 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Alex Hedley",
-          "listNumber": 50,
+          "listNumber": 49,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2627,7 +3168,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Te Kira Lawrence",
-          "listNumber": null,
+          "listNumber": 28,
           "notes": "Originally selected for East Cape",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2637,7 +3178,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Katie Nimon",
-          "listNumber": 27,
+          "listNumber": 26,
           "notes": null,
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -2647,6 +3188,16 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "John Ormond",
+          "listNumber": 40,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Graham Wainwright",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -2709,7 +3260,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Chris Baillie",
-          "listNumber": null,
+          "listNumber": 46,
           "notes": "List MP 2020–2023; contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2730,6 +3281,26 @@
           "partyLabel": "National",
           "name": "Blair Cameron",
           "listNumber": 41,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Julian Crawford",
+          "listNumber": 7,
+          "notes": "Contested Dunedin South for the Aotearoa Legalise Cannabis Party in 2014",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Progressive Aotearoa",
+          "name": "Bruce Dyer",
+          "listNumber": null,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2883,7 +3454,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Karen Chhour",
-          "listNumber": null,
+          "listNumber": 5,
           "notes": "Contested Upper Harbour in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -2894,16 +3465,6 @@
           "partyLabel": "Labour",
           "name": "Sam Collins",
           "listNumber": 63,
-          "notes": null,
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
-          "partyCode": "OTH",
-          "partyLabel": "New Conservative",
-          "name": "Marie Drury",
-          "listNumber": null,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -2936,6 +3497,16 @@
           "listNumber": 13,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Conservative",
+          "name": "Marie Drury",
+          "listNumber": 5,
+          "notes": "Changed candidacy to Northcote",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -2992,6 +3563,36 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Animal Justice",
+          "name": "Lily Carrington",
+          "listNumber": 3,
+          "notes": "Contested Hamilton East in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Conservative",
+          "name": "Marie Drury",
+          "listNumber": 5,
+          "notes": "Originally selected for North Shore",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Barak Ford",
+          "listNumber": 16,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Bhen Goodsir",
@@ -3005,7 +3606,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Daryl Habraken",
-          "listNumber": null,
+          "listNumber": 29,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3025,7 +3626,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Martin Lundqvist",
-          "listNumber": null,
+          "listNumber": 42,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3084,21 +3685,31 @@
       },
       "candidates": [
         {
-          "partyCode": "OTH",
-          "partyLabel": "Outdoors",
-          "name": "Sean Brickland",
+          "partyCode": "ACT",
+          "partyLabel": "ACT",
+          "name": "Mark Cameron",
           "listNumber": null,
-          "notes": null,
+          "notes": "Contested electorate in 2023. Withdrew from ACT's list due to ill health but remained ACT's Northland candidate.",
+          "isIncumbent": false,
+          "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "GRN",
+          "partyLabel": "Green",
+          "name": "Mike Finlayson",
+          "listNumber": 48,
+          "notes": "Contested electorate for Northland Party in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
-          "partyCode": "ACT",
-          "partyLabel": "ACT",
-          "name": "Mark Cameron",
-          "listNumber": null,
-          "notes": "Contested electorate in 2023. Withdrew from ACT’s list due to ill health but remained ACT's Northland candidate.",
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "Shane Jones",
+          "listNumber": 2,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
           "isRetiringMp": false
@@ -3115,9 +3726,19 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "New Conservative",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Jeff Lye",
+          "listNumber": 3,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Conservative",
           "name": "Doug Lyell",
-          "listNumber": null,
+          "listNumber": 4,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3137,6 +3758,36 @@
           "partyCode": "OTH",
           "partyLabel": "Build the Nation",
           "name": "Richard McIntosh",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Pete Verhoeven",
+          "listNumber": 10,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Alistair Wait",
+          "listNumber": 5,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Sean Brickland",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -3196,10 +3847,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "John Alcock",
+          "listNumber": 9,
+          "notes": "Contested Pakuranga for Rock The Vote NZ in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Lalit Arya",
-          "listNumber": 59,
+          "listNumber": 58,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3209,6 +3870,26 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Henrietta Devoe",
+          "listNumber": 21,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Phillip Harry Faleu",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "People's Party New Zealand",
+          "name": "Eseta Haunga",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -3221,6 +3902,26 @@
           "name": "Adam MacRae-Martin",
           "listNumber": 18,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Vision NZ",
+          "name": "Karl Mokaraka",
+          "listNumber": 4,
+          "notes": "Contested Panmure-Ōtāhuhu in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "James Robb",
+          "listNumber": null,
+          "notes": "Contested Panmure-Ōtāhuhu for Workers Now in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -3296,7 +3997,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Parmjeet Parmar",
-          "listNumber": null,
+          "listNumber": 10,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -3358,7 +4059,7 @@
           "partyCode": "OTH",
           "partyLabel": "Animal Justice",
           "name": "Brian Baker",
-          "listNumber": null,
+          "listNumber": 5,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3385,11 +4086,11 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "ACT",
-          "partyLabel": "ACT",
-          "name": "Bruce McGechan",
-          "listNumber": null,
-          "notes": "Contested New Plymouth in 2023",
+          "partyCode": "OTH",
+          "partyLabel": "Alliance",
+          "name": "Joshua Moss",
+          "listNumber": 11,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -3411,6 +4112,16 @@
           "listNumber": 14,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "ACT",
+          "partyLabel": "ACT",
+          "name": "Bruce McGechan",
+          "listNumber": null,
+          "notes": "Contested New Plymouth in 2023",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -3497,20 +4208,10 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "NZF",
-          "partyLabel": "NZ First",
-          "name": "George Ngatai",
-          "listNumber": null,
-          "notes": "Contested Takanini for Vision NZ in 2020",
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Malkiat Singh",
-          "listNumber": null,
+          "listNumber": 29,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3518,10 +4219,10 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Vision New Zealand",
+          "partyLabel": "Vision NZ",
           "name": "Hannah Tamaki",
-          "listNumber": null,
-          "notes": "Contested Waiariki in 2020, Tāmaki Makaurau in 2023, and contested the 2025 Tāmaki Makaurau by-election",
+          "listNumber": 1,
+          "notes": "Contested Tāmaki Makaurau in 2023 and also contested the 2025 Tāmaki Makaurau by-election",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -3535,6 +4236,16 @@
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": true
+        },
+        {
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "George Ngatai",
+          "listNumber": null,
+          "notes": "Contested Takanini for Vision NZ in 2020",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
         }
       ],
       "history": [
@@ -3592,27 +4303,17 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Casey Costello",
-          "listNumber": null,
+          "listNumber": 3,
           "notes": "Contested electorate in 2023 and contested 2023 Port Waikato by-election",
           "isIncumbent": false,
           "isCurrentListMp": true,
           "isRetiringMp": false
         },
         {
-          "partyCode": "OTH",
-          "partyLabel": "Outdoors",
-          "name": "Daymond Goulder-Horobin",
-          "listNumber": null,
-          "notes": null,
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Sarah Jane Lochead-Macmillan",
-          "listNumber": null,
+          "listNumber": 43,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3647,6 +4348,16 @@
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": true
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Daymond Goulder-Horobin",
+          "listNumber": 14,
+          "notes": "Later announced to be contesting list only",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
         }
       ],
       "history": [
@@ -3686,7 +4397,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Aaron Allred",
-          "listNumber": null,
+          "listNumber": 37,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3713,6 +4424,16 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Kevin McCraken",
+          "listNumber": 15,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "James Meager",
@@ -3726,7 +4447,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Isaac Nicholson",
-          "listNumber": null,
+          "listNumber": 38,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3736,7 +4457,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Dave Richards",
-          "listNumber": null,
+          "listNumber": 42,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3744,9 +4465,9 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "New Conservative",
+          "partyLabel": "Conservative",
           "name": "Karl Thomas",
-          "listNumber": null,
+          "listNumber": 2,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3796,10 +4517,10 @@
       "candidates": [
         {
           "partyCode": "OTH",
-          "partyLabel": "Alliance",
-          "name": "Kevin Campbell",
-          "listNumber": null,
-          "notes": "List MP 1999–2002; contested Wigram in 2011",
+          "partyLabel": "Outdoors",
+          "name": "Cedric Backhouse",
+          "listNumber": 12,
+          "notes": "Withdrew as New Conservative candidate for this electorate in 2020",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -3808,7 +4529,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Steve Gibson",
-          "listNumber": null,
+          "listNumber": 33,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3818,7 +4539,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Andrew Hoggard",
-          "listNumber": null,
+          "listNumber": 3,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -3828,7 +4549,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Bernard Long",
-          "listNumber": null,
+          "listNumber": 39,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3850,6 +4571,26 @@
           "name": "Karl Severinsen",
           "listNumber": 66,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Jason Smith",
+          "listNumber": 14,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Alliance",
+          "name": "Kevin Campbell",
+          "listNumber": null,
+          "notes": "List MP 1999–2002; contested Wigram in 2011",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -3897,10 +4638,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Victor Edward Dench",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Nigel Elder",
-          "listNumber": null,
+          "listNumber": 23,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3910,7 +4661,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Andy Foster",
-          "listNumber": null,
+          "listNumber": 11,
           "notes": "Contested Mana in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -3930,7 +4681,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Zabeen Lateef",
-          "listNumber": 68,
+          "listNumber": 67,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3940,7 +4691,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Chris Norton",
-          "listNumber": 35,
+          "listNumber": 34,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -3994,7 +4745,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Billy Brown",
-          "listNumber": null,
+          "listNumber": 34,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4076,7 +4827,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Alma de Anda",
-          "listNumber": 34,
+          "listNumber": 33,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4106,7 +4857,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Jesse Luke",
-          "listNumber": null,
+          "listNumber": 10,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4126,7 +4877,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Elizabeth Mundt",
-          "listNumber": null,
+          "listNumber": 46,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4136,7 +4887,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Iain Murray",
-          "listNumber": null,
+          "listNumber": 11,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4218,8 +4969,18 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Jason Herrick",
-          "listNumber": null,
+          "listNumber": 17,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Vision NZ",
+          "name": "Naomi Maclean",
+          "listNumber": 5,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -4248,7 +5009,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Todd Stephenson",
-          "listNumber": null,
+          "listNumber": 6,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -4292,7 +5053,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Robbie Byars",
-          "listNumber": null,
+          "listNumber": 32,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4312,7 +5073,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Anna Knight",
-          "listNumber": null,
+          "listNumber": 2,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4329,13 +5090,13 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "TOP",
-          "partyLabel": "Opportunity",
-          "name": "Mathew Phillips",
-          "listNumber": null,
-          "notes": null,
+          "partyCode": "NZF",
+          "partyLabel": "NZ First",
+          "name": "Mark Patterson",
+          "listNumber": 4,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
-          "isCurrentListMp": false,
+          "isCurrentListMp": true,
           "isRetiringMp": false
         },
         {
@@ -4346,6 +5107,16 @@
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "TOP",
+          "partyLabel": "Opportunity",
+          "name": "Mathew Phillips",
+          "listNumber": null,
+          "notes": "Resigned from party",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
           "isRetiringMp": false
         }
       ],
@@ -4386,7 +5157,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Elliot Ikilei",
-          "listNumber": null,
+          "listNumber": 20,
           "notes": "Contested electorate for New Conservatives in 2020",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4399,6 +5170,16 @@
           "listNumber": 45,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Paul Teio",
+          "listNumber": 2,
+          "notes": "Contested Māngere for the Direct Democracy Party of New Zealand in 2005",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -4416,7 +5197,7 @@
           "partyCode": "OTH",
           "partyLabel": "Animal Justice",
           "name": "Lynley Tulloch",
-          "listNumber": null,
+          "listNumber": 8,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4460,7 +5241,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "James Christmas",
-          "listNumber": null,
+          "listNumber": 7,
           "notes": "Contested the list only for National in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4487,20 +5268,10 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "OTH",
-          "partyLabel": "New Conservative",
-          "name": "Helen Houghton",
-          "listNumber": null,
-          "notes": "Contested Christchurch East in 2023",
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Donald Mackenzie-Mayo",
-          "listNumber": null,
+          "listNumber": 43,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4510,8 +5281,38 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Mahesh Muralidhar",
-          "listNumber": 24,
+          "listNumber": 23,
           "notes": "Contested Auckland Central in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Ryan Earl Pausina",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Finlay Smith",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Conservative",
+          "name": "Helen Houghton",
+          "listNumber": 1,
+          "notes": "Changed candidacy to Christchurch East",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -4589,11 +5390,11 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "LAB",
-          "partyLabel": "Labour",
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
           "name": "Kerrin Leoni",
-          "listNumber": 43,
-          "notes": "Contested Waikato in 2020",
+          "listNumber": 42,
+          "notes": "Contested Waikato in 2020. Resigned from Labour after 2026 nominations closed. Has promised to sit as an independent MP if elected, but remains on the ballot as a Labour candidate and on the Labour list.",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -4602,7 +5403,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Florence Te Ohaere",
-          "listNumber": null,
+          "listNumber": 44,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4637,7 +5438,7 @@
       ],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+      "trendNote": "Based on Whakaata Māori–Curia's 5–15 Oct 2026 electorate seat poll (n=500): Te Pāti Māori leads the electorate vote on 36%, 2pp ahead of the runner-up on 34% -- too close to call, a toss-up on direct poll evidence."
     },
     {
       "name": "Taranaki-King Country",
@@ -4671,6 +5472,16 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "GRN",
+          "partyLabel": "Green",
+          "name": "Phil McCabe",
+          "listNumber": 50,
+          "notes": "Contested Hunua in 2017",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "David Pattemore",
@@ -4684,7 +5495,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Lee Smith",
-          "listNumber": null,
+          "listNumber": 25,
           "notes": "Withdrew as DemocracyNZ candidate for this electorate in 2023, contested electorate for New Conservatives in 2020",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4743,6 +5554,26 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "GRN",
+          "partyLabel": "Green",
+          "name": "Celine Kearney",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Itania Nikolao",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "TOP",
           "partyLabel": "Opportunity",
           "name": "Sam Plummer",
@@ -4759,6 +5590,16 @@
           "listNumber": 7,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Gordon Wilson",
+          "listNumber": 13,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -4818,6 +5659,16 @@
           "partyCode": "OTH",
           "partyLabel": "Animal Justice",
           "name": "Sam Connely",
+          "listNumber": 10,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Tim Maltby",
           "listNumber": null,
           "notes": null,
           "isIncumbent": false,
@@ -4828,7 +5679,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Bryan Norton",
-          "listNumber": null,
+          "listNumber": 41,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4838,7 +5689,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Daniël Oosthuizen",
-          "listNumber": null,
+          "listNumber": 40,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -4861,6 +5712,26 @@
           "listNumber": 51,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Wendy Gillespie",
+          "listNumber": null,
+          "notes": "Contested Bay of Plenty for the Leighton Baker Party in 2023; Announced, but not on final list of candidates",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Greer Young",
+          "listNumber": 6,
+          "notes": "Changed candidacy to Mount Maunganui",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -4963,9 +5834,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "LAB won more of the last 3 elections, but TPM won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+      "classification": "leaning",
+      "classificationParty": "TPM",
+      "trendNote": "Based on Whakaata Māori–Curia's 14–24 Sep 2026 electorate seat poll (n=500): Te Pāti Māori leads the electorate vote on 46%, 12pp ahead of the runner-up on 34% -- leaning Te Pāti Māori on direct poll evidence, not safe."
     },
     {
       "name": "Te Tai Tokerau",
@@ -4978,6 +5849,16 @@
         "retiring": false
       },
       "candidates": [
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Your PIC Party",
+          "name": "Karl Barkley",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
         {
           "partyCode": "TPM",
           "partyLabel": "Te Pāti Māori",
@@ -4992,7 +5873,7 @@
           "partyCode": "OTH",
           "partyLabel": "Legalise Cannabis",
           "name": "Maki Herbert",
-          "listNumber": null,
+          "listNumber": 1,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5000,9 +5881,9 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Te Tai Tokerau Party",
+          "partyLabel": "Te Tai Tokerau",
           "name": "Mariameno Kapa-Kingi",
-          "listNumber": null,
+          "listNumber": 2,
           "notes": "Elected as Te Pāti Māori MP in 2023",
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -5055,9 +5936,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by TPM, now held by OTH) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "GRN",
+      "trendNote": "Based on Whakaata Māori–Curia's 5 Oct – 15 Oct 2026 electorate seat poll (n=500): Green leads the electorate vote on 24%, 6pp ahead of the runner-up on 18% -- leaning Green on direct poll evidence, not safe."
     },
     {
       "name": "Te Tai Tonga",
@@ -5077,6 +5958,26 @@
           "listNumber": null,
           "notes": "Elected as Te Pāti Māori MP in 2023",
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Christine Fisher",
+          "listNumber": 15,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Tania Henare",
+          "listNumber": 8,
+          "notes": null,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
@@ -5104,7 +6005,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Lisa Te Morenga",
-          "listNumber": null,
+          "listNumber": 46,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5137,9 +6038,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by TPM, now held by OTH) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "LAB",
+      "trendNote": "Based on Whakaata Māori–Curia's 14–24 Sep 2026 electorate seat poll (n=500): Labour leads the electorate vote on 36%, 15pp ahead of the runner-up on 21% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Tukituki",
@@ -5163,21 +6064,21 @@
           "isRetiringMp": false
         },
         {
-          "partyCode": "OTH",
-          "partyLabel": "Independent",
-          "name": "Kaleb Hawkins",
-          "listNumber": null,
+          "partyCode": "GRN",
+          "partyLabel": "Green",
+          "name": "Mark Longworth",
+          "listNumber": 47,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
-          "partyCode": "GRN",
-          "partyLabel": "Green",
-          "name": "Mark Longworth",
-          "listNumber": null,
-          "notes": null,
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Romana Manz Manning",
+          "listNumber": 9,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5186,7 +6087,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Taine Randell",
-          "listNumber": null,
+          "listNumber": 9,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5198,6 +6099,26 @@
           "name": "Dan Scott",
           "listNumber": null,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Grant Seton",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Allister Tosh",
+          "listNumber": null,
+          "notes": "Contested electorate for Future Youth in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5216,9 +6137,19 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Catherine Wedd",
-          "listNumber": 37,
+          "listNumber": 36,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Kaleb Hawkins",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -5268,7 +6199,7 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Hannah Pia Baral",
-          "listNumber": 45,
+          "listNumber": 44,
           "notes": "Contested Waitakere for United Future in 2005",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5285,10 +6216,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Jonathon Griffiths",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Panos Patros",
-          "listNumber": null,
+          "listNumber": 36,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5298,7 +6239,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Ryan Richards",
-          "listNumber": null,
+          "listNumber": 53,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5308,7 +6249,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Bernadette Soares",
-          "listNumber": null,
+          "listNumber": 22,
           "notes": "Contested electorate for Vision NZ in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5433,9 +6374,9 @@
           "notional": false
         }
       ],
-      "classification": "leaning",
+      "classification": "safe",
       "classificationParty": "TPM",
-      "trendNote": "TPM has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 15,891 votes -- leaning TPM, not safe."
+      "trendNote": "Based on Whakaata Māori–Curia's 21 Sep – 1 Oct 2026 electorate seat poll (n=500): Te Pāti Māori leads the electorate vote on 52%, 32pp ahead of the runner-up on 20% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Waikato",
@@ -5449,20 +6390,10 @@
       },
       "candidates": [
         {
-          "partyCode": "OTH",
-          "partyLabel": "Independent",
-          "name": "Walt Cavendish",
-          "listNumber": null,
-          "notes": null,
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Robbie Cookson",
-          "listNumber": null,
+          "listNumber": 23,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5472,8 +6403,18 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Ash Parmar",
-          "listNumber": null,
+          "listNumber": 16,
           "notes": "Contested Hamilton East in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Turi Te Kamonga Robinson",
+          "listNumber": null,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5492,9 +6433,29 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Tim van de Molen",
-          "listNumber": 49,
+          "listNumber": 48,
           "notes": null,
           "isIncumbent": true,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Brendan Richard Whyte",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Walt Cavendish",
+          "listNumber": null,
+          "notes": "Announced, but not on final list of candidates",
+          "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
         }
@@ -5544,17 +6505,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Ashley Bettridge",
-          "listNumber": null,
-          "notes": null,
-          "isIncumbent": false,
-          "isCurrentListMp": false,
-          "isRetiringMp": false
-        },
-        {
-          "partyCode": "OTH",
-          "partyLabel": "New Conservative",
-          "name": "Steve Chick",
-          "listNumber": null,
+          "listNumber": 30,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5574,7 +6525,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Jackie Farrelly",
-          "listNumber": null,
+          "listNumber": 44,
           "notes": "Contested West Coast-Tasman in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5584,10 +6535,30 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Dan Rosewarne",
-          "listNumber": 36,
+          "listNumber": 35,
           "notes": "Also list MP 2022–2023. Contested electorate in 2020 and 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "GRN",
+          "partyLabel": "Green",
+          "name": "Richard Wesley",
+          "listNumber": 54,
+          "notes": "Contested Wigram in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Conservative",
+          "name": "Steve Chick",
+          "listNumber": null,
+          "notes": "Announced, but not on final list of candidates",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
@@ -5643,10 +6614,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Alliance",
+          "name": "Victoria Ale",
+          "listNumber": 6,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Mike Butterick",
-          "listNumber": 21,
+          "listNumber": 20,
           "notes": null,
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -5663,10 +6644,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Te Pāti Hira",
+          "name": "Jared Gardner",
+          "listNumber": null,
+          "notes": "Contested electorate as an independent in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Ron Mark",
-          "listNumber": null,
+          "listNumber": 16,
           "notes": "List MP 1996–2008, 2014–2020. Contested electorate in 2020",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5688,6 +6679,16 @@
           "name": "Matt Shepherd",
           "listNumber": 24,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Barry Young",
+          "listNumber": 3,
+          "notes": "Originally selected for Wellington North",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5724,7 +6725,7 @@
       "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 2,816 votes -- leaning NAT, not safe."
     },
     {
-      "name": "Waitakere",
+      "name": "Waitākere",
       "seatType": "general",
       "isNewFor2026": true,
       "currentMp": {
@@ -5748,8 +6749,18 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Agnes Loheni",
-          "listNumber": 58,
+          "listNumber": 57,
           "notes": "List MP 2019–2020; contested Māngere in 2020",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Bianca O'Keefe",
+          "listNumber": null,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5768,7 +6779,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Callum Sheridan",
-          "listNumber": null,
+          "listNumber": 20,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5815,7 +6826,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Miles Anderson",
-          "listNumber": 47,
+          "listNumber": 46,
           "notes": null,
           "isIncumbent": true,
           "isCurrentListMp": false,
@@ -5825,8 +6836,28 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Sean Beamish",
-          "listNumber": null,
+          "listNumber": 45,
           "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Adrian Daegal Graamans",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Bronwyn Judge",
+          "listNumber": null,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5835,7 +6866,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Michael Laws",
-          "listNumber": null,
+          "listNumber": 6,
           "notes": "MP for Hawke's Bay 1990–1996",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5849,6 +6880,16 @@
           "notes": "MP since 1993; previously represented West Coast-Tasman",
           "isIncumbent": false,
           "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Daniel Shand",
+          "listNumber": null,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
@@ -5890,7 +6931,7 @@
       ],
       "classification": "safe",
       "classificationParty": "NAT",
-      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 12,151 votes -- a safe seat."
+      "trendNote": "Based on Taxpayers' Union–Curia's 18–25 Sep 2026 electorate seat poll (n=400): National leads the electorate vote on 44%, 23pp ahead of the runner-up on 21% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Wellington Bays",
@@ -5903,6 +6944,16 @@
         "retiring": false
       },
       "candidates": [
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Money Free Party",
+          "name": "Liam Anderson",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
         {
           "partyCode": "GRN",
           "partyLabel": "Green",
@@ -5924,10 +6975,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Donald DS McDonald",
+          "listNumber": null,
+          "notes": "Contested Rongotai in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Nicole McKee",
-          "listNumber": null,
+          "listNumber": 2,
           "notes": "Contested Rongotai in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
@@ -5937,7 +6998,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Karunā Muthu",
-          "listNumber": 64,
+          "listNumber": 63,
           "notes": "Contested Rongotai in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5947,7 +7008,7 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Craig Renney",
-          "listNumber": 51,
+          "listNumber": 50,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5957,8 +7018,28 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Gerald Warner",
-          "listNumber": null,
+          "listNumber": 39,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Bruce Welsh",
+          "listNumber": null,
+          "notes": "Contested Rongotai for New Conservatives in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Alison Pavlovich",
+          "listNumber": 7,
+          "notes": "Later announced to be contesting list only",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -5967,7 +7048,7 @@
       "history": [],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "New or substantially redrawn by the boundary review finalized 8 Aug 2026, with no comparable result under these boundaries yet -- treated as a toss-up until real results exist."
+      "trendNote": "Based on Taxpayers' Union–Curia's 4–10 Sep 2026 electorate seat poll (n=400): Green leads the electorate vote on 29%, 0pp ahead of the runner-up on 29% -- too close to call, a toss-up on direct poll evidence."
     },
     {
       "name": "Wellington North",
@@ -5981,10 +7062,20 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Legalise Cannabis",
+          "name": "Michael Appleby",
+          "listNumber": 2,
+          "notes": "Contested Wellington Central in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Taylor Arneil",
-          "listNumber": null,
+          "listNumber": 40,
           "notes": "Contested Wellington Central in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -5994,7 +7085,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Matthew Hague",
-          "listNumber": null,
+          "listNumber": 33,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6014,7 +7105,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Josh Harford",
-          "listNumber": null,
+          "listNumber": 8,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6049,12 +7140,22 @@
           "isIncumbent": false,
           "isCurrentListMp": true,
           "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Barry Young",
+          "listNumber": 3,
+          "notes": "Changed candidacy to Wairarapa",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
         }
       ],
       "history": [],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "New or substantially redrawn by the boundary review finalized 8 Aug 2026, with no comparable result under these boundaries yet -- treated as a toss-up until real results exist."
+      "trendNote": "Based on Victor Consulting's 15–18 Oct 2026 electorate seat poll (n=541): Green leads the electorate vote on 35.3%, 2.7pp ahead of the runner-up on 32.6% -- too close to call, a toss-up on direct poll evidence."
     },
     {
       "name": "West Coast-Tasman",
@@ -6071,7 +7172,7 @@
           "partyCode": "GRN",
           "partyLabel": "Green",
           "name": "Andrew Beaumont",
-          "listNumber": null,
+          "listNumber": 37,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6081,7 +7182,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Jamie Cleine",
-          "listNumber": null,
+          "listNumber": 14,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6091,7 +7192,7 @@
           "partyCode": "OTH",
           "partyLabel": "Alliance",
           "name": "Sara Dyatlova–Murphy",
-          "listNumber": null,
+          "listNumber": 4,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6101,8 +7202,18 @@
           "partyCode": "OTH",
           "partyLabel": "Outdoors",
           "name": "Sue Grey",
-          "listNumber": null,
+          "listNumber": 1,
           "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Alex Hislop",
+          "listNumber": 4,
+          "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -6111,7 +7222,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Janelle Hocking",
-          "listNumber": null,
+          "listNumber": 15,
           "notes": "Contested the list only for National in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6121,8 +7232,18 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Katie Milne",
-          "listNumber": 25,
+          "listNumber": 24,
           "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Money Free Party",
+          "name": "Richard Osmaston",
+          "listNumber": null,
+          "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
           "isRetiringMp": false
@@ -6131,7 +7252,17 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Rory Paterson",
-          "listNumber": 54,
+          "listNumber": 53,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Progressive Aotearoa",
+          "name": "Kevin Rooke",
+          "listNumber": null,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6194,9 +7325,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "Based on Taxpayers' Union–Curia's 10–17 Sep 2026 electorate seat poll (n=400): National leads the electorate vote on 36%, 6pp ahead of the runner-up on 30% -- leaning National on direct poll evidence, not safe."
     },
     {
       "name": "Whanganui",
@@ -6220,10 +7351,20 @@
           "isRetiringMp": false
         },
         {
+          "partyCode": "OTH",
+          "partyLabel": "Balance New Zealand",
+          "name": "Juan Charles Coffey",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Harete Hipango-Brownlie",
-          "listNumber": null,
+          "listNumber": 7,
           "notes": "National MP for Whanganui 2017–2020",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6233,7 +7374,7 @@
           "partyCode": "OTH",
           "partyLabel": "Animal Justice",
           "name": "Sandra Kyle",
-          "listNumber": null,
+          "listNumber": 4,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6302,6 +7443,16 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Brenton Faithfull",
+          "listNumber": 3,
+          "notes": "Withdrew from Kaipara ki Mahurangi in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Mark Mitchell",
@@ -6325,7 +7476,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Helena Roza",
-          "listNumber": null,
+          "listNumber": 27,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6366,10 +7517,40 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Money Free Party",
+          "name": "Luke Beharrell",
+          "listNumber": null,
+          "notes": "Announced for but did not contest Auckland Central in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "NZ Loyal",
+          "name": "Collin Blackman",
+          "listNumber": 11,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Lloyd Budd",
-          "listNumber": 61,
+          "listNumber": 60,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Daryl Warren Clotworthy",
+          "listNumber": null,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6379,7 +7560,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Vince Cocurullo",
-          "listNumber": null,
+          "listNumber": 31,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6399,7 +7580,7 @@
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Doug Graham",
-          "listNumber": null,
+          "listNumber": 38,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6409,7 +7590,27 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Gary Payinda",
-          "listNumber": 49,
+          "listNumber": 48,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Jon Twyman",
+          "listNumber": null,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Outdoors",
+          "name": "Noah Wakelam",
+          "listNumber": 17,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6468,13 +7669,33 @@
       },
       "candidates": [
         {
+          "partyCode": "OTH",
+          "partyLabel": "Free Palestine",
+          "name": "William Donald Alexander",
+          "listNumber": 5,
+          "notes": null,
+          "isIncumbent": false,
+          "isCurrentListMp": false,
+          "isRetiringMp": false
+        },
+        {
           "partyCode": "ACT",
           "partyLabel": "ACT",
           "name": "Laura McClure",
-          "listNumber": null,
+          "listNumber": 9,
           "notes": "Contested Banks Peninsula in 2023",
           "isIncumbent": false,
           "isCurrentListMp": true,
+          "isRetiringMp": false
+        },
+        {
+          "partyCode": "OTH",
+          "partyLabel": "Independent",
+          "name": "Geoff McTague",
+          "listNumber": null,
+          "notes": "Contested electorate in 2023",
+          "isIncumbent": false,
+          "isCurrentListMp": false,
           "isRetiringMp": false
         },
         {
@@ -6491,7 +7712,7 @@
           "partyCode": "NZF",
           "partyLabel": "NZ First",
           "name": "Bryce Park",
-          "listNumber": null,
+          "listNumber": 37,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6501,7 +7722,7 @@
           "partyCode": "NAT",
           "partyLabel": "National",
           "name": "Tracy Summerfield",
-          "listNumber": 57,
+          "listNumber": 56,
           "notes": "Contested electorate in 2023",
           "isIncumbent": false,
           "isCurrentListMp": false,
@@ -6511,7 +7732,7 @@
           "partyCode": "LAB",
           "partyLabel": "Labour",
           "name": "Dominik Yanzick",
-          "listNumber": 53,
+          "listNumber": 52,
           "notes": null,
           "isIncumbent": false,
           "isCurrentListMp": false,

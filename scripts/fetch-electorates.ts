@@ -23,6 +23,7 @@
 import { writeFile } from "node:fs/promises";
 import { installDevProxyIfPresent } from "../lib/wikiPollScraper";
 import { parseElectorateCandidatesTable, type CandidateEntry } from "../lib/electorateCandidates";
+import { scrapeElectoratePolls, type ElectorateSeatPoll, type SeatPollValue } from "../lib/electoratePollScraper";
 import {
   cleanElectorateName,
   normalizeElectorateName,
@@ -30,8 +31,11 @@ import {
   type ElectorateParty,
   type ElectorateResultRow,
 } from "../lib/electorateResults";
+import { PARTY_BY_CODE } from "../lib/parties";
 
 const OUTPUT_PATH = new URL("../data/electorates.json", import.meta.url);
+const OPINION_POLLING_PAGE = "Opinion_polling_for_the_2026_New_Zealand_general_election";
+const OPINION_POLLING_URL = `https://en.wikipedia.org/wiki/${OPINION_POLLING_PAGE}`;
 
 async function fetchHtml(title: string): Promise<string> {
   const url = `https://en.wikipedia.org/api/rest_v1/page/html/${title}`;
@@ -165,20 +169,93 @@ function classify(
   };
 }
 
+// A single-electorate poll carries a much bigger margin of error than a
+// national poll of the same size (it's sampling ~1/71st the population at
+// the same n) -- 400 is the practical floor NZ's specialist seat-pollsters
+// themselves treat as usable (every poll actually on the page today clears
+// it; this isn't a no-op threshold, just one none of today's polls happen
+// to fail). National pollster-accuracy ratings (lib/reliability.ts) don't
+// apply here: electorate seat polls mostly come from pollsters who don't
+// run national polls at all (Victor Consulting, Community Engagement
+// Limited, Whakaata Maori-Curia, Mata-Horizon), so there's no 2023
+// final-poll-vs-result comparison to rate them against.
+const MIN_RELIABLE_SAMPLE = 400;
+
+function isReliableSeatPoll(poll: ElectorateSeatPoll): boolean {
+  return poll.sampleSize !== null && poll.sampleSize >= MIN_RELIABLE_SAMPLE;
+}
+
+/** The leading party by electorate-vote share, with the runner-up's share
+ * for the margin -- null if the top value belongs to an untracked column
+ * (e.g. "TTT"/"IND"), since picking the highest *tracked* party instead
+ * would misattribute an electorate whose real frontrunner isn't one we
+ * track at all. */
+function leadingParty(values: SeatPollValue[]): { code: ElectorateParty; value: number; runnerUpValue: number } | null {
+  if (values.length === 0) return null;
+  const sorted = [...values].sort((a, b) => b.value - a.value);
+  const top = sorted[0];
+  if (!top.code) return null;
+  return { code: top.code, value: top.value, runnerUpValue: sorted[1]?.value ?? 0 };
+}
+
+/** Classifies from one seat poll's electorate-vote row (the FPP vote that
+ * actually decides the seat -- party vote in a single electorate doesn't).
+ * Margin thresholds are percentage points, not the vote-count margins
+ * classify() above uses, since that's what a poll reports; chosen to read
+ * the same way in practice (a landslide vs. a real-but-comfortable lead vs.
+ * a genuine contest). */
+function classifyFromSeatPoll(
+  poll: ElectorateSeatPoll
+): { classification: "safe" | "leaning" | "tossup"; classificationParty: ElectorateParty | null; trendNote: string } | null {
+  if (!poll.electorateVote) return null;
+  const lead = leadingParty(poll.electorateVote);
+  if (!lead) return null;
+
+  const margin = Math.round((lead.value - lead.runnerUpValue) * 10) / 10;
+  const partyName = PARTY_BY_CODE[lead.code]?.name ?? lead.code;
+  const base = `Based on ${poll.pollster}'s ${poll.dateLabel} electorate seat poll (n=${poll.sampleSize}): ${partyName} leads the electorate vote on ${lead.value}%, ${margin}pp ahead of the runner-up on ${lead.runnerUpValue}%`;
+
+  if (margin >= 15) {
+    return { classification: "safe", classificationParty: lead.code, trendNote: `${base} -- a safe seat on direct poll evidence.` };
+  }
+  if (margin >= 5) {
+    return { classification: "leaning", classificationParty: lead.code, trendNote: `${base} -- leaning ${partyName} on direct poll evidence, not safe.` };
+  }
+  return { classification: "tossup", classificationParty: null, trendNote: `${base} -- too close to call, a toss-up on direct poll evidence.` };
+}
+
+/** Tries the most recent reliable seat poll first, falling back to earlier
+ * reliable polls if the most recent one's leader isn't a tracked party --
+ * returns null (keep the history-based classification) if no reliable poll
+ * yields a usable result. */
+function classifyFromSeatPolls(
+  polls: ElectorateSeatPoll[] | undefined
+): { classification: "safe" | "leaning" | "tossup"; classificationParty: ElectorateParty | null; trendNote: string } | null {
+  if (!polls) return null;
+  const mostRecentFirst = polls.filter(isReliableSeatPoll).slice().reverse();
+  for (const poll of mostRecentFirst) {
+    const result = classifyFromSeatPoll(poll);
+    if (result) return result;
+  }
+  return null;
+}
+
 async function main() {
   await installDevProxyIfPresent();
 
-  const [htmlCandidates, html2023, html2020, html2017] = await Promise.all([
+  const [htmlCandidates, html2023, html2020, html2017, htmlOpinionPolling] = await Promise.all([
     fetchHtml("Candidates_in_the_2026_New_Zealand_general_election_by_electorate"),
     fetchHtml("Results_of_the_2023_New_Zealand_general_election"),
     fetchHtml("Results_of_the_2020_New_Zealand_general_election"),
     fetchHtml("Results_of_the_2017_New_Zealand_general_election"),
+    fetchHtml(OPINION_POLLING_PAGE),
   ]);
 
   const candidateRows = parseElectorateCandidatesTable(htmlCandidates);
   const rows2023 = parseElectorateResultsTable(html2023, "Electorate_results");
   const rows2020 = parseElectorateResultsTable(html2020, "Electorate_vote");
   const rows2017 = parseElectorateResultsTable(html2017, "Electorate_results");
+  const seatPollsByElectorate = scrapeElectoratePolls(htmlOpinionPolling);
 
   const byNormalized2023 = new Map(rows2023.map((r) => [normalizeElectorateName(r.electorateName), r]));
   const byNormalized2020 = new Map(rows2020.map((r) => [normalizeElectorateName(r.electorateName), r]));
@@ -226,7 +303,13 @@ async function main() {
         }
       : null;
 
-    const { classification, classificationParty, trendNote } = classify(history, currentMp);
+    // A reliable seat poll is direct evidence of this specific race and
+    // takes priority over the history-based inference above -- e.g. a
+    // historically-safe seat can still show up as a toss-up this cycle if
+    // the polling says so (and vice versa).
+    const seatPolls = seatPollsByElectorate.get(key);
+    const seatPollResult = classifyFromSeatPolls(seatPolls);
+    const { classification, classificationParty, trendNote } = seatPollResult ?? classify(history, currentMp);
 
     return {
       name: cleanElectorateName(row.electorateName),
@@ -274,6 +357,7 @@ async function main() {
           "https://en.wikipedia.org/wiki/Results_of_the_2020_New_Zealand_general_election",
           "https://en.wikipedia.org/wiki/Results_of_the_2017_New_Zealand_general_election",
           "https://en.wikipedia.org/wiki/2024_Port_Waikato_by-election",
+          OPINION_POLLING_URL,
         ],
         electorates,
       },

@@ -5,8 +5,10 @@ import type { Poll } from "./types";
 // Header text -> party code, matched case-insensitively against each table's
 // own column headers rather than assumed by position, so column reordering
 // (or a different minor-party lineup, e.g. the 2023 page's "NCP" column)
-// doesn't silently corrupt the data.
-const HEADER_TO_CODE: Record<string, string> = Object.fromEntries(
+// doesn't silently corrupt the data. Exported for reuse by the
+// electorate-seat-poll scraper, which faces the identical header-matching
+// problem against the same page's "Electorate polling" tables.
+export const HEADER_TO_CODE: Record<string, string> = Object.fromEntries(
   PARTIES.filter((p) => p.code !== "OTH").map((p) => [p.code, p.code])
 );
 HEADER_TO_CODE["OTHERS"] = "OTH";
