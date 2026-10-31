@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import BlocChart from "@/components/BlocChart";
 import ElectorateEditor from "@/components/ElectorateEditor";
 import LatestSnapshot from "@/components/LatestSnapshot";
+import OverhangSummary from "@/components/OverhangSummary";
 import PollChart from "@/components/PollChart";
 import PollsTable from "@/components/PollsTable";
 import PollsterFilter from "@/components/PollsterFilter";
@@ -163,6 +164,9 @@ export default function Dashboard({
           <SeatsChart blocSeats={blocSeats} houseSize={house} majority={majority} />
           <div className="mt-4">
             <SeatsTable seats={seatResults} />
+          </div>
+          <div className="mt-3">
+            <OverhangSummary seats={seatResults} />
           </div>
           <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
             Modified Sainte-Laguë allocation (New Zealand&apos;s actual MMP method) over today&apos;s poll of

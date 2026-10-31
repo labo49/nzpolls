@@ -14,6 +14,11 @@ export interface SeatResult {
   listSeats: number;
   totalSeats: number;
   overhang: boolean;
+  /** Seats this party holds beyond its proportional (modified Sainte-Lague)
+   * entitlement -- 0 unless `overhang` is true. The House's total overhang
+   * (and how many seats it grows beyond the nominal 120) is the sum of
+   * this across all parties. */
+  overhangSeats: number;
 }
 
 /** Modified Sainte-Lague divisor sequence: 1.4 for a party's 1st seat, then 3, 5, 7, ... */
@@ -90,6 +95,7 @@ export function computeSeats(
         listSeats: Math.max(0, totalSeats - partyElectorateSeats),
         totalSeats,
         overhang,
+        overhangSeats: overhang ? totalSeats - baseEntitlement : 0,
       };
     })
     .sort((a, b) => b.totalSeats - a.totalSeats);
@@ -102,3 +108,8 @@ export function houseSize(results: SeatResult[]): number {
 export function majorityThreshold(results: SeatResult[]): number {
   return Math.floor(houseSize(results) / 2) + 1;
 }
+
+export function totalOverhangSeats(results: SeatResult[]): number {
+  return results.reduce((sum, r) => sum + r.overhangSeats, 0);
+}
+
