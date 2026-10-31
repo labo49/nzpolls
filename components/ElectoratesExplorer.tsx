@@ -153,19 +153,27 @@ export default function ElectoratesExplorer({ electorates }: { electorates: Elec
                     <div className="mt-1 max-w-xs text-xs text-neutral-500 dark:text-neutral-400">{e.trendNote}</div>
                   </td>
                   <td className="px-2 py-2">
-                    {e.candidates.length > 0 ? (
-                      <div className="flex max-w-xs flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-neutral-700 dark:text-neutral-300">
-                        {e.candidates.map((c, i) => (
-                          <span key={`${c.partyLabel}-${c.name}`} className="inline-flex items-center gap-1">
-                            <PartyDot color={PARTY_BY_CODE[c.partyCode].color} />
-                            {candidateLabel(c)}
-                            {i < e.candidates.length - 1 ? "," : ""}
-                          </span>
-                        ))}
-                      </div>
-                    ) : (
-                      <span className="text-xs text-neutral-500 dark:text-neutral-400">None declared yet</span>
-                    )}
+                    {(() => {
+                      // A yellow-shaded "retiring MP" row on the source page is
+                      // explicitly someone NOT standing again -- they're already
+                      // surfaced under Current MP ("not seeking re-election
+                      // here"), so listing them here too would show them as a
+                      // declared 2026 candidate when they're the opposite of one.
+                      const standing = e.candidates.filter((c) => !c.isRetiringMp);
+                      return standing.length > 0 ? (
+                        <div className="flex max-w-xs flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-neutral-700 dark:text-neutral-300">
+                          {standing.map((c, i) => (
+                            <span key={`${c.partyLabel}-${c.name}`} className="inline-flex items-center gap-1">
+                              <PartyDot color={PARTY_BY_CODE[c.partyCode].color} />
+                              {candidateLabel(c)}
+                              {i < standing.length - 1 ? "," : ""}
+                            </span>
+                          ))}
+                        </div>
+                      ) : (
+                        <span className="text-xs text-neutral-500 dark:text-neutral-400">None declared yet</span>
+                      );
+                    })()}
                   </td>
                   <td className="px-3 py-2 text-xs tabular-nums text-neutral-600 dark:text-neutral-400">
                     {historySummary(e) || (
