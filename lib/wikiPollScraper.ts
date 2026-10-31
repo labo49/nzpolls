@@ -40,7 +40,16 @@ export function parseNumber(raw: string): number | null {
   if (!cleaned || cleaned === "–" || cleaned === "-" || /^n\/a$/i.test(cleaned)) {
     return null;
   }
-  const n = Number(cleaned);
+  // Wikipedia tables commonly typeset a negative value with an en dash or a
+  // true minus sign (e.g. a net-approval rating of "–19") rather than an
+  // ASCII hyphen-minus -- Number() doesn't recognize either as "minus", so
+  // every negative value on a page using this convention silently became
+  // NaN here and got dropped as if there were no data at all. Confirmed on
+  // the Leadership approval rating table: the leading character on "–19"
+  // is U+2013 (en dash), and most leaders' net approval is negative most
+  // of the time, so most of that table was vanishing this way.
+  const normalized = cleaned.replace(/^[–—−]/, "-");
+  const n = Number(normalized);
   return Number.isFinite(n) ? n : null;
 }
 
