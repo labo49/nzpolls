@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-01T13:58:13.319Z",
+  "fetchedAt": "2026-11-01T18:50:09.918Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
@@ -1796,9 +1796,9 @@
           "notional": false
         }
       ],
-      "classification": "safe",
+      "classification": "leaning",
       "classificationParty": "LAB",
-      "trendNote": "Based on Victor Consulting's 17–19 Sep 2026 electorate seat poll (n=533): Labour leads the electorate vote on 42%, 33pp ahead of the runner-up on 9% -- a safe seat on direct poll evidence."
+      "trendNote": "Based on Victor Consulting's 17–19 Sep 2026 electorate seat poll (n=533): Labour leads the electorate vote on 42%, 12pp ahead of the runner-up on 30% -- leaning Labour on direct poll evidence, not safe."
     },
     {
       "name": "Ikaroa-Rāwhiti",

@@ -48,7 +48,13 @@ export function parseNumber(raw: string): number | null {
   // the Leadership approval rating table: the leading character on "–19"
   // is U+2013 (en dash), and most leaders' net approval is negative most
   // of the time, so most of that table was vanishing this way.
-  const normalized = cleaned.replace(/^[–—−]/, "-");
+  // A leading "~" ("approximately") shows up on electorate-seat-poll tables
+  // for a figure the pollster didn't release exactly (e.g. Hutt South's
+  // "~30" for National, where only Labour's and the margin were precise) --
+  // still the best available estimate, so it's kept rather than treated as
+  // no data; dropping it entirely silently corrupted "who's the runner-up"
+  // for that race (fell back to a distant third party instead).
+  const normalized = cleaned.replace(/^~\s*/, "").replace(/^[–—−]/, "-");
   const n = Number(normalized);
   return Number.isFinite(n) ? n : null;
 }
