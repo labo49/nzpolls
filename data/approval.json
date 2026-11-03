@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-03T01:27:33.794Z",
+  "fetchedAt": "2026-11-03T11:01:37.514Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1175,6 +1175,20 @@
           "Chlöe Swarbrick": 10.5,
           "David Seymour": 6.6,
           "Winston Peters": 11.4
+        }
+      },
+      {
+        "date": "2026-11-02",
+        "dateLabel": "29 Oct – 2 Nov 2026",
+        "pollster": "1 News–Verian",
+        "sourceUrl": "https://www.1news.co.nz/2026/11/03/final-poll-election-set-to-go-down-to-wire-as-nationals-partners-slip/",
+        "sampleSize": 1006,
+        "results": {
+          "Christopher Luxon": 23,
+          "Chris Hipkins": 19,
+          "Chlöe Swarbrick": 8,
+          "David Seymour": 5,
+          "Winston Peters": 6
         }
       }
     ],
