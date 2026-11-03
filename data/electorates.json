@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-03T01:27:36.467Z",
+  "fetchedAt": "2026-11-03T11:01:39.986Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
@@ -5364,9 +5364,9 @@
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "NAT won more of the last 3 elections, but ACT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "Based on Taxpayers' Union–Curia's 21–28 Oct 2026 electorate seat poll (n=400): National leads the electorate vote on 42%, 18pp ahead of the runner-up on 24% -- a safe seat on direct poll evidence."
     },
     {
       "name": "Tāmaki Makaurau",
