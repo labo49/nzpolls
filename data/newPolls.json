@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "date": "2026-10-25",
+    "dateLabel": "28 Sep – 25 Oct 2026",
+    "pollster": "Roy Morgan",
+    "sourceUrl": "https://www.roymorgan.com/findings/10381-nz-national-voting-intention-october-2026",
+    "sampleSize": 859,
+    "results": {
+      "NAT": 26.5,
+      "LAB": 27.5,
+      "GRN": 15.5,
+      "ACT": 11,
+      "NZF": 10,
+      "TPM": 1,
+      "TOP": 8,
+      "OTH": 0.5
+    },
+    "firstSeenAt": "2026-11-04T15:00:24.342Z"
+  },
+  {
+    "date": "2026-11-03",
+    "dateLabel": "28 Oct – 3 Nov 2026",
+    "pollster": "Taxpayers' Union–Curia",
+    "sourceUrl": "https://www.taxpayers.org.nz/2026nov_nztucur_pollhhatdst",
+    "sampleSize": 1000,
+    "results": {
+      "NAT": 28.9,
+      "LAB": 28.4,
+      "GRN": 14.4,
+      "ACT": 10.5,
+      "NZF": 9.8,
+      "TPM": 1.1,
+      "TOP": 5.8,
+      "OTH": 1.1
+    },
+    "firstSeenAt": "2026-11-04T15:00:24.342Z"
+  }
+]

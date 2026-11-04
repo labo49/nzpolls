@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-03T23:52:09.896Z",
+  "fetchedAt": "2026-11-04T15:00:25.373Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1189,6 +1189,20 @@
           "Chlöe Swarbrick": 8,
           "David Seymour": 5,
           "Winston Peters": 6
+        }
+      },
+      {
+        "date": "2026-11-03",
+        "dateLabel": "28 Oct – 3 Nov 2026",
+        "pollster": "Taxpayers' Union–Curia",
+        "sourceUrl": "https://www.taxpayers.org.nz/2026nov_nztucur_pollhhatdst",
+        "sampleSize": 1000,
+        "results": {
+          "Christopher Luxon": 23.8,
+          "Chris Hipkins": 22.6,
+          "Chlöe Swarbrick": 6,
+          "David Seymour": 5.9,
+          "Winston Peters": 10.3
         }
       }
     ],
