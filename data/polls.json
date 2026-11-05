@@ -2359,6 +2359,24 @@
   },
   {
     "date": "2026-11-03",
+    "dateLabel": "29 Oct – 3 Nov 2026",
+    "pollster": "The Post/Freshwater Strategy",
+    "sourceUrl": "https://www.thepost.co.nz/politics/361111442/election-eve-cliffhanger-one-sleep-go-labour-nudges-ahead",
+    "sampleSize": 1044,
+    "results": {
+      "NAT": 26.4,
+      "LAB": 30.7,
+      "GRN": 13,
+      "ACT": 9.8,
+      "NZF": 12,
+      "TPM": 2,
+      "TOP": 5.1,
+      "OTH": 1
+    },
+    "firstSeenAt": "2026-11-05T23:56:34.155Z"
+  },
+  {
+    "date": "2026-11-03",
     "dateLabel": "28 Oct – 3 Nov 2026",
     "pollster": "Taxpayers' Union–Curia",
     "sourceUrl": "https://www.taxpayers.org.nz/2026nov_nztucur_pollhhatdst",
