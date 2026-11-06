@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-05T23:56:35.139Z",
+  "fetchedAt": "2026-11-06T11:01:32.072Z",
   "source": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
   "preferredPm": {
     "polls": [
@@ -1189,6 +1189,17 @@
           "Chlöe Swarbrick": 8,
           "David Seymour": 5,
           "Winston Peters": 6
+        }
+      },
+      {
+        "date": "2026-11-03",
+        "dateLabel": "29 Oct – 3 Nov 2026",
+        "pollster": "The Post/Freshwater Strategy",
+        "sourceUrl": "https://www.thepost.co.nz/politics/361112439/final-poll-chris-hipkins-leads-leadership-christopher-luxon-has-improved",
+        "sampleSize": 1044,
+        "results": {
+          "Christopher Luxon": 38,
+          "Chris Hipkins": 49
         }
       },
       {
