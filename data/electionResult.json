@@ -1,0 +1,720 @@
+{
+  "fetchedAt": "2026-11-07T23:30:07.112Z",
+  "source": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
+  "preliminary": true,
+  "officialDeclarationDate": "2026-11-27",
+  "partyVote": {
+    "results": {
+      "NAT": 29.2,
+      "LAB": 29.4,
+      "GRN": 13.3,
+      "ACT": 10.9,
+      "NZF": 9.78,
+      "TOP": 5.96,
+      "TPM": 0.57
+    },
+    "othersPct": 0.9
+  },
+  "electorates": [
+    {
+      "electorateName": "Auckland Central",
+      "seatType": "general",
+      "winnerName": "Chlöe Swarbrick",
+      "winnerParty": "GRN",
+      "majority": 2831,
+      "runnerUpName": "Candace Kinser",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Banks Peninsula",
+      "seatType": "general",
+      "winnerName": "Tracey McLellan",
+      "winnerParty": "LAB",
+      "majority": 2261,
+      "runnerUpName": "Vanessa Weenink",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Botany",
+      "seatType": "general",
+      "winnerName": "Christopher Luxon",
+      "winnerParty": "NAT",
+      "majority": 13073,
+      "runnerUpName": "Anae Neru Leavasa",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Christchurch Central",
+      "seatType": "general",
+      "winnerName": "George Hampton",
+      "winnerParty": "LAB",
+      "majority": 2632,
+      "runnerUpName": "Dale Stephens",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Christchurch East",
+      "seatType": "general",
+      "winnerName": "Reuben Davidson",
+      "winnerParty": "LAB",
+      "majority": 9012,
+      "runnerUpName": "Alexandra Davids",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Coromandel",
+      "seatType": "general",
+      "winnerName": "Scott Simpson",
+      "winnerParty": "NAT",
+      "majority": 14932,
+      "runnerUpName": "Glen Bennett",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Dunedin",
+      "seatType": "general",
+      "winnerName": "Rachel Brooking",
+      "winnerParty": "LAB",
+      "majority": 8718,
+      "runnerUpName": "Francisco Hernandez",
+      "runnerUpParty": "GRN",
+      "notional": false
+    },
+    {
+      "electorateName": "East Cape",
+      "seatType": "general",
+      "winnerName": "Dana Kirkpatrick",
+      "winnerParty": "NAT",
+      "majority": 5325,
+      "runnerUpName": "Jo Luxton",
+      "runnerUpParty": "LAB",
+      "notional": true
+    },
+    {
+      "electorateName": "East Coast Bays",
+      "seatType": "general",
+      "winnerName": "Erica Stanford",
+      "winnerParty": "NAT",
+      "majority": 13819,
+      "runnerUpName": "Brendan McEnroe",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Epsom",
+      "seatType": "general",
+      "winnerName": "David Seymour",
+      "winnerParty": "ACT",
+      "majority": 2044,
+      "runnerUpName": "Paul Goldsmith",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Glendene",
+      "seatType": "general",
+      "winnerName": "Carmel Sepuloni",
+      "winnerParty": "LAB",
+      "majority": 6940,
+      "runnerUpName": "Sunil Kumar",
+      "runnerUpParty": "NAT",
+      "notional": true
+    },
+    {
+      "electorateName": "Hamilton East",
+      "seatType": "general",
+      "winnerName": "Ryan Hamilton",
+      "winnerParty": "NAT",
+      "majority": 456,
+      "runnerUpName": "Georgie Dansey",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Hamilton West",
+      "seatType": "general",
+      "winnerName": "Tama Potaka",
+      "winnerParty": "NAT",
+      "majority": 2181,
+      "runnerUpName": "Myra Williamson",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Henderson",
+      "seatType": "general",
+      "winnerName": "Phil Twyford",
+      "winnerParty": "LAB",
+      "majority": 6213,
+      "runnerUpName": "Angee Nicholas",
+      "runnerUpParty": "NAT",
+      "notional": true
+    },
+    {
+      "electorateName": "Hutt South",
+      "seatType": "general",
+      "winnerName": "Ginny Andersen",
+      "winnerParty": "LAB",
+      "majority": 889,
+      "runnerUpName": "Chris Bishop",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Ilam",
+      "seatType": "general",
+      "winnerName": "Hamish Campbell",
+      "winnerParty": "NAT",
+      "majority": 6712,
+      "runnerUpName": "Rata Jamieson",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Invercargill",
+      "seatType": "general",
+      "winnerName": "Penny Simmonds",
+      "winnerParty": "NAT",
+      "majority": 9615,
+      "runnerUpName": "Janice Lee",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Kaikōura",
+      "seatType": "general",
+      "winnerName": "Stuart Smith",
+      "winnerParty": "NAT",
+      "majority": 8018,
+      "runnerUpName": "Matthew Flight",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Kaipara ki Mahurangi",
+      "seatType": "general",
+      "winnerName": "Jessica Rowe",
+      "winnerParty": "NAT",
+      "majority": 12592,
+      "runnerUpName": "Jolyon Swinburn",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Kapiti",
+      "seatType": "general",
+      "winnerName": "Tim Costley",
+      "winnerParty": "NAT",
+      "majority": 2077,
+      "runnerUpName": "Sophie Handford",
+      "runnerUpParty": "LAB",
+      "notional": true
+    },
+    {
+      "electorateName": "Kenepuru",
+      "seatType": "general",
+      "winnerName": "Barbara Edmonds",
+      "winnerParty": "LAB",
+      "majority": 9297,
+      "runnerUpName": "Matthew Evetts",
+      "runnerUpParty": "NAT",
+      "notional": true
+    },
+    {
+      "electorateName": "Māngere",
+      "seatType": "general",
+      "winnerName": "Lemauga Lydia Sosene",
+      "winnerParty": "LAB",
+      "majority": 11970,
+      "runnerUpName": "Rosemary Burke",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Manurewa",
+      "seatType": "general",
+      "winnerName": "Arena Williams",
+      "winnerParty": "LAB",
+      "majority": 10973,
+      "runnerUpName": "Ghouse Majeed",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Maungakiekie",
+      "seatType": "general",
+      "winnerName": "Greg Fleming",
+      "winnerParty": "NAT",
+      "majority": 2952,
+      "runnerUpName": "Priyanca Radhakrishnan",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Mount Albert",
+      "seatType": "general",
+      "winnerName": "Helen White",
+      "winnerParty": "LAB",
+      "majority": 4678,
+      "runnerUpName": "Melissa Lee",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Mount Maunganui",
+      "seatType": "general",
+      "winnerName": "Tom Rutherford",
+      "winnerParty": "NAT",
+      "majority": 14059,
+      "runnerUpName": "Rhieve Grey",
+      "runnerUpParty": "LAB",
+      "notional": true
+    },
+    {
+      "electorateName": "Mount Roskill",
+      "seatType": "general",
+      "winnerName": "Michael Wood",
+      "winnerParty": "LAB",
+      "majority": 262,
+      "runnerUpName": "Carlos Cheung",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Napier",
+      "seatType": "general",
+      "winnerName": "Katie Nimon",
+      "winnerParty": "NAT",
+      "majority": 6847,
+      "runnerUpName": "Alex Hedley",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Nelson",
+      "seatType": "general",
+      "winnerName": "Blair Cameron",
+      "winnerParty": "NAT",
+      "majority": 1210,
+      "runnerUpName": "Rachel Boyack",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "New Plymouth",
+      "seatType": "general",
+      "winnerName": "David MacLeod",
+      "winnerParty": "NAT",
+      "majority": 7788,
+      "runnerUpName": "Amanda Clinton-Gohdes",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "North Shore",
+      "seatType": "general",
+      "winnerName": "Simon Watts",
+      "winnerParty": "NAT",
+      "majority": 11151,
+      "runnerUpName": "Sam Collins",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Northcote",
+      "seatType": "general",
+      "winnerName": "Dan Bidois",
+      "winnerParty": "NAT",
+      "majority": 3064,
+      "runnerUpName": "Shanan Halbert",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Northland",
+      "seatType": "general",
+      "winnerName": "Grant McCallum",
+      "winnerParty": "NAT",
+      "majority": 7942,
+      "runnerUpName": "Ashleigh Litmer",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Ōtāhuhu",
+      "seatType": "general",
+      "winnerName": "Jenny Salesa",
+      "winnerParty": "LAB",
+      "majority": 10558,
+      "runnerUpName": "Lalit Arya",
+      "runnerUpParty": "NAT",
+      "notional": true
+    },
+    {
+      "electorateName": "Pakuranga",
+      "seatType": "general",
+      "winnerName": "Simeon Brown",
+      "winnerParty": "NAT",
+      "majority": 13691,
+      "runnerUpName": "Campbell Matthews",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Palmerston North",
+      "seatType": "general",
+      "winnerName": "Tangi Utikere",
+      "winnerParty": "LAB",
+      "majority": 2933,
+      "runnerUpName": "Ankit Bansal",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Papakura",
+      "seatType": "general",
+      "winnerName": "Emma Chatterton",
+      "winnerParty": "NAT",
+      "majority": 8394,
+      "runnerUpName": "Anahila Kanongata'a-Suisuiki",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Port Waikato",
+      "seatType": "general",
+      "winnerName": "Matthew Paul",
+      "winnerParty": "NAT",
+      "majority": 10437,
+      "runnerUpName": "Matt Brachi",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Rangitata",
+      "seatType": "general",
+      "winnerName": "James Meager",
+      "winnerParty": "NAT",
+      "majority": 13917,
+      "runnerUpName": "Sange Malama",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Remutaka",
+      "seatType": "general",
+      "winnerName": "Chris Hipkins",
+      "winnerParty": "LAB",
+      "majority": 14424,
+      "runnerUpName": "Zabeen Lateef",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Rotorua",
+      "seatType": "general",
+      "winnerName": "Todd McClay",
+      "winnerParty": "NAT",
+      "majority": 5301,
+      "runnerUpName": "Fisher Wang",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Selwyn",
+      "seatType": "general",
+      "winnerName": "Nicola Grigg",
+      "winnerParty": "NAT",
+      "majority": 13941,
+      "runnerUpName": "Sunita Gautam",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Southland",
+      "seatType": "general",
+      "winnerName": "Joseph Mooney",
+      "winnerParty": "NAT",
+      "majority": 11484,
+      "runnerUpName": "Peter McDonald",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Taieri",
+      "seatType": "general",
+      "winnerName": "Ingrid Leary",
+      "winnerParty": "LAB",
+      "majority": 4798,
+      "runnerUpName": "Matthew French",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Takanini",
+      "seatType": "general",
+      "winnerName": "Rima Nakhle",
+      "winnerParty": "NAT",
+      "majority": 1487,
+      "runnerUpName": "Kharag Singh",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Tāmaki",
+      "seatType": "general",
+      "winnerName": "Mahesh Muralidhar",
+      "winnerParty": "NAT",
+      "majority": 5356,
+      "runnerUpName": "Max Harris",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Taranaki-King Country",
+      "seatType": "general",
+      "winnerName": "Barbara Kuriger",
+      "winnerParty": "NAT",
+      "majority": 12031,
+      "runnerUpName": "David Pattemore",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Taupō",
+      "seatType": "general",
+      "winnerName": "Louise Upston",
+      "winnerParty": "NAT",
+      "majority": 13052,
+      "runnerUpName": "Chris Flatt",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Tauranga",
+      "seatType": "general",
+      "winnerName": "Sam Uffindell",
+      "winnerParty": "NAT",
+      "majority": 10274,
+      "runnerUpName": "Jan Tinetti",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Tukituki",
+      "seatType": "general",
+      "winnerName": "Catherine Wedd",
+      "winnerParty": "NAT",
+      "majority": 8933,
+      "runnerUpName": "Dan Scott",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Upper Harbour",
+      "seatType": "general",
+      "winnerName": "Cameron Brewer",
+      "winnerParty": "NAT",
+      "majority": 8967,
+      "runnerUpName": "Hannah Pia Baral",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Waikato",
+      "seatType": "general",
+      "winnerName": "Tim van de Molen",
+      "winnerParty": "NAT",
+      "majority": 12576,
+      "runnerUpName": "Jamie Toko",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Waimakariri",
+      "seatType": "general",
+      "winnerName": "Matt Doocey",
+      "winnerParty": "NAT",
+      "majority": 11283,
+      "runnerUpName": "Dan Rosewarne",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Wairarapa",
+      "seatType": "general",
+      "winnerName": "Mike Butterick",
+      "winnerParty": "NAT",
+      "majority": 139,
+      "runnerUpName": "Kieran McAnulty",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Waitākere",
+      "seatType": "general",
+      "winnerName": "Vanushi Walters",
+      "winnerParty": "LAB",
+      "majority": 2675,
+      "runnerUpName": "Agnes Loheni",
+      "runnerUpParty": "NAT",
+      "notional": true
+    },
+    {
+      "electorateName": "Waitaki",
+      "seatType": "general",
+      "winnerName": "Miles Anderson",
+      "winnerParty": "NAT",
+      "majority": 8352,
+      "runnerUpName": "Damien O'Connor",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Wellington Bays",
+      "seatType": "general",
+      "winnerName": "Craig Renney",
+      "winnerParty": "LAB",
+      "majority": 140,
+      "runnerUpName": "Julie Anne Genter",
+      "runnerUpParty": "GRN",
+      "notional": true
+    },
+    {
+      "electorateName": "Wellington North",
+      "seatType": "general",
+      "winnerName": "Tamatha Paul",
+      "winnerParty": "GRN",
+      "majority": 3006,
+      "runnerUpName": "Ayesha Verrall",
+      "runnerUpParty": "LAB",
+      "notional": true
+    },
+    {
+      "electorateName": "West Coast-Tasman",
+      "seatType": "general",
+      "winnerName": "Katie Milne",
+      "winnerParty": "NAT",
+      "majority": 6601,
+      "runnerUpName": "Rory Paterson",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Whanganui",
+      "seatType": "general",
+      "winnerName": "Carl Bates",
+      "winnerParty": "NAT",
+      "majority": 6748,
+      "runnerUpName": "Angela Roberts",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Whangaparāoa",
+      "seatType": "general",
+      "winnerName": "Mark Mitchell",
+      "winnerParty": "NAT",
+      "majority": 15368,
+      "runnerUpName": "Estefania Muller Pallarès",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Whangārei",
+      "seatType": "general",
+      "winnerName": "Lloyd Budd",
+      "winnerParty": "NAT",
+      "majority": 1092,
+      "runnerUpName": "Gary Payinda",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Wigram",
+      "seatType": "general",
+      "winnerName": "Dominik Yanzick",
+      "winnerParty": "LAB",
+      "majority": 1935,
+      "runnerUpName": "Tracy Summerfield",
+      "runnerUpParty": "NAT",
+      "notional": false
+    },
+    {
+      "electorateName": "Hauraki-Waikato",
+      "seatType": "maori",
+      "winnerName": "Hana-Rawhiti Maipi-Clarke",
+      "winnerParty": "TPM",
+      "majority": 10441,
+      "runnerUpName": "Kingi Kiriona",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Ikaroa-Rāwhiti",
+      "seatType": "maori",
+      "winnerName": "Cushla Tangaere-Manuel",
+      "winnerParty": "LAB",
+      "majority": 3132,
+      "runnerUpName": "Haley Maxwell",
+      "runnerUpParty": "TPM",
+      "notional": false
+    },
+    {
+      "electorateName": "Tāmaki Makaurau",
+      "seatType": "maori",
+      "winnerName": "Oriini Kaipara",
+      "winnerParty": "TPM",
+      "majority": 7470,
+      "runnerUpName": "Kerrin Leoni",
+      "runnerUpParty": "OTH",
+      "notional": false
+    },
+    {
+      "electorateName": "Te Tai Hauāuru",
+      "seatType": "maori",
+      "winnerName": "Debbie Ngarewa-Packer",
+      "winnerParty": "TPM",
+      "majority": 3841,
+      "runnerUpName": "Te Pūoho Kātene",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Te Tai Tokerau",
+      "seatType": "maori",
+      "winnerName": "Aperahama Edwards",
+      "winnerParty": "TPM",
+      "majority": 436,
+      "runnerUpName": "Hūhana Lyndon",
+      "runnerUpParty": "GRN",
+      "notional": false
+    },
+    {
+      "electorateName": "Te Tai Tonga",
+      "seatType": "maori",
+      "winnerName": "Mananui Ramsden",
+      "winnerParty": "LAB",
+      "majority": 2773,
+      "runnerUpName": "Lisa Te Morenga",
+      "runnerUpParty": "GRN",
+      "notional": false
+    },
+    {
+      "electorateName": "Waiariki",
+      "seatType": "maori",
+      "winnerName": "Rawiri Waititi",
+      "winnerParty": "TPM",
+      "majority": 2274,
+      "runnerUpName": "Tania Waikato",
+      "runnerUpParty": "GRN",
+      "notional": false
+    }
+  ]
+}
