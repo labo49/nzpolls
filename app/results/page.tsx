@@ -3,7 +3,9 @@ import ElectorateResultsTable from "@/components/ElectorateResultsTable";
 import LatestSnapshot from "@/components/LatestSnapshot";
 import OverhangSummary from "@/components/OverhangSummary";
 import ScenarioTable from "@/components/ScenarioTable";
+import SeatsChart from "@/components/SeatsChart";
 import SeatsTable from "@/components/SeatsTable";
+import { computeBlocSeats } from "@/lib/blocs";
 import { computeElectionScenarios, findClosestRaces } from "@/lib/electionScenarios";
 import { pageMetadata } from "@/lib/site";
 import electionResultData from "@/data/electionResult.json";
@@ -12,6 +14,19 @@ import type { PartyCode } from "@/lib/parties";
 
 const TOTAL_ELECTORATES = 71;
 const CLOSE_RACE_COUNT = 5;
+
+// The outgoing Parliament's final seat allocation from the 2023 general
+// election's official declared result (123 seats, 3 of them Te Pāti Māori
+// overhang) -- a fixed historical fact, shown for comparison against the
+// new preliminary totals below, not derived from scraped data.
+const OUTGOING_PARLIAMENT_SEATS: Partial<Record<PartyCode, number>> = {
+  NAT: 49,
+  LAB: 34,
+  GRN: 15,
+  ACT: 11,
+  NZF: 8,
+  TPM: 6,
+};
 
 export const metadata = pageMetadata(
   "2026 Election Result",
@@ -29,13 +44,25 @@ export default function ResultsPage() {
     electorates: ElectorateResultRow[];
   };
 
-  const closeRaces = findClosestRaces(data.electorates, CLOSE_RACE_COUNT);
+  const closeRaces = findClosestRaces(data.electorates, CLOSE_RACE_COUNT, "NAT");
   const scenarios = computeElectionScenarios(data.partyVote.results, data.electorates, closeRaces);
   // N=0 close races reassigned -- i.e. every electorate at its real preliminary winner.
   const baseline = scenarios[scenarios.length - 1];
+  const blocSeats = computeBlocSeats(baseline.seats);
 
   const snapshotPoint = { date: data.fetchedAt, pollCount: data.electorates.length, results: data.partyVote.results };
   const closeRaceNames = new Set(closeRaces.map((r) => r.electorateName));
+
+  const missingCount = TOTAL_ELECTORATES - data.electorates.length;
+  // Rangitīkei is the one electorate Wikipedia's table hasn't added yet (an
+  // uncontested safe National seat -- see data/electorates.json) -- named
+  // explicitly below when it's the only one outstanding, since that also
+  // explains why some outlets already report 42 seats for National here
+  // rather than the 41 this page shows until that row lands.
+  const missingNote =
+    missingCount === 1 && !data.electorates.some((e) => e.electorateName === "Rangitīkei")
+      ? "Rangitīkei (an uncontested safe National seat not yet added to the source table)"
+      : null;
 
   const fetchedAt = new Date(data.fetchedAt).toLocaleString("en-NZ", {
     day: "numeric",
@@ -74,16 +101,52 @@ export default function ResultsPage() {
         <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
           Seats (current preliminary result)
         </h2>
-        <SeatsTable seats={baseline.seats} />
-        <div className="mt-3">
-          <OverhangSummary seats={baseline.seats} />
+        <div className="grid gap-6 sm:grid-cols-[1fr_280px]">
+          <div>
+            <SeatsTable seats={baseline.seats} previousSeats={OUTGOING_PARLIAMENT_SEATS} previousLabel="2023" />
+            <div className="mt-3">
+              <OverhangSummary seats={baseline.seats} />
+            </div>
+          </div>
+          <SeatsChart
+            blocSeats={blocSeats}
+            houseSize={baseline.houseSize}
+            majority={baseline.majorityThreshold}
+            footnote={
+              <>
+                Bloc seats (out of {baseline.houseSize}) from today&apos;s real preliminary result above, using New
+                Zealand&apos;s modified Sainte-Laguë MMP allocation &mdash; not a poll-based projection.
+              </>
+            }
+          />
         </div>
         <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
           Modified Sainte-Laguë allocation over the real preliminary party vote and electorate wins above &mdash; not a
-          poll-based estimate. * marks an overhang seat. {TOTAL_ELECTORATES - data.electorates.length} electorate
-          {TOTAL_ELECTORATES - data.electorates.length === 1 ? "" : "s"} not yet reported is excluded until it
-          declares.
+          poll-based estimate. * marks an overhang seat. 2023 is each party&apos;s seat count in the outgoing
+          Parliament, for comparison. {missingCount} electorate{missingCount === 1 ? "" : "s"} not yet reported
+          {missingNote ? ` (${missingNote})` : ""} is excluded until it declares.
         </p>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+          If the {CLOSE_RACE_COUNT} closest National races all break its way
+        </h2>
+        <p className="mb-3 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          The {CLOSE_RACE_COUNT} electorates where National is realistically in contention (currently 1st or 2nd)
+          decided by the smallest margins &mdash;{" "}
+          {closeRaces.map((r, i) => (
+            <span key={r.electorateName}>
+              {r.electorateName} ({r.majority.toLocaleString()} votes)
+              {i < closeRaces.length - 1 ? ", " : ""}
+            </span>
+          ))}{" "}
+          &mdash; are the ones most likely to flip once special votes are counted. Each row below is a hypothetical:
+          National winning anywhere from all {CLOSE_RACE_COUNT} down to none of them, with every other electorate and
+          the national party vote held at today&apos;s real preliminary result, to isolate exactly what these few
+          seats could change about the overall outcome.
+        </p>
+        <ScenarioTable scenarios={scenarios} />
       </section>
 
       <section className="mb-10">
@@ -95,28 +158,6 @@ export default function ResultsPage() {
           closeRaceNames={closeRaceNames}
           totalElectorates={TOTAL_ELECTORATES}
         />
-      </section>
-
-      <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          If the {CLOSE_RACE_COUNT} closest races all break National&apos;s way
-        </h2>
-        <p className="mb-3 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-          The {CLOSE_RACE_COUNT} electorates decided by the smallest margins &mdash;{" "}
-          {closeRaces.map((r, i) => (
-            <span key={r.electorateName}>
-              {r.electorateName} ({r.majority.toLocaleString()} votes)
-              {i < closeRaces.length - 1 ? ", " : ""}
-            </span>
-          ))}{" "}
-          &mdash; are the ones most likely to flip once special votes are counted. Each row below is a hypothetical:
-          National winning anywhere from all {CLOSE_RACE_COUNT} down to none of them, with every other electorate and
-          the national party vote held at today&apos;s real preliminary result, to isolate exactly what these few
-          seats could change about the overall outcome. Two of the {CLOSE_RACE_COUNT} are already National&apos;s in
-          the preliminary count, so some rows land on the same total as the one above them &mdash; winning a seat you
-          already hold doesn&apos;t change anything.
-        </p>
-        <ScenarioTable scenarios={scenarios} />
       </section>
 
       <footer className="mt-10 border-t border-black/10 pt-4 text-xs text-neutral-500 dark:border-white/10 dark:text-neutral-400">

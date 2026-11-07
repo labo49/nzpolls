@@ -12,11 +12,20 @@ export interface CloseRace {
   majority: number;
 }
 
-/** The N tightest-margin electorates -- the ones most likely to flip once
- * special votes (counted by 27 Nov) are added to the preliminary count. */
-export function findClosestRaces(electorates: ElectorateResultRow[], count: number): CloseRace[] {
+/** The N tightest-margin electorates where `involvingParty` is realistically
+ * in contention (either the current winner or the runner-up) -- the ones
+ * most likely to flip to them once special votes (counted by 27 Nov) are
+ * added to the preliminary count. A seat where that party isn't even in
+ * 1st or 2nd (e.g. a Green-vs-Labour race) isn't a realistic gain for it
+ * regardless of how close the margin is. */
+export function findClosestRaces(
+  electorates: ElectorateResultRow[],
+  count: number,
+  involvingParty: PartyCode
+): CloseRace[] {
   return electorates
     .filter((e): e is ElectorateResultRow & { majority: number } => e.majority !== null)
+    .filter((e) => e.winnerParty === involvingParty || e.runnerUpParty === involvingParty)
     .slice()
     .sort((a, b) => a.majority - b.majority)
     .slice(0, count)

@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import { useIsDark } from "@/components/ThemeProvider";
 import { BLOCS } from "@/lib/blocs";
@@ -55,10 +56,12 @@ export default function SeatsChart({
   blocSeats,
   houseSize,
   majority,
+  footnote,
 }: {
   blocSeats: Partial<Record<BlocKey, number>>;
   houseSize: number;
   majority: number;
+  footnote?: ReactNode;
 }) {
   const isDark = useIsDark();
 
@@ -122,9 +125,13 @@ export default function SeatsChart({
           : "No bloc reaches a majority alone at this snapshot."}
       </p>
       <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-        Projected seats (out of {houseSize}) from today&apos;s poll of polls, using New Zealand&apos;s modified
-        Sainte-Laguë MMP allocation. Assumes today&apos;s electorate seats are unchanged at the next election
-        &mdash; see the methodology note below.
+        {footnote ?? (
+          <>
+            Projected seats (out of {houseSize}) from today&apos;s poll of polls, using New Zealand&apos;s modified
+            Sainte-Laguë MMP allocation. Assumes today&apos;s electorate seats are unchanged at the next election
+            &mdash; see the methodology note below.
+          </>
+        )}
       </p>
     </div>
   );

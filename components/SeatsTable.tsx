@@ -2,7 +2,17 @@ import PartyDot from "@/components/PartyDot";
 import { PARTY_BY_CODE } from "@/lib/parties";
 import type { SeatResult } from "@/lib/seats";
 
-export default function SeatsTable({ seats }: { seats: SeatResult[] }) {
+export default function SeatsTable({
+  seats,
+  previousSeats,
+  previousLabel = "2023",
+}: {
+  seats: SeatResult[];
+  /** Outgoing/previous Parliament's total seats per party, shown alongside
+   * the new total for comparison. Omit to keep the table as it was. */
+  previousSeats?: Partial<Record<SeatResult["code"], number>>;
+  previousLabel?: string;
+}) {
   return (
     <div className="overflow-x-auto rounded-lg border border-black/10 dark:border-white/10">
       <table className="w-full text-sm">
@@ -13,11 +23,13 @@ export default function SeatsTable({ seats }: { seats: SeatResult[] }) {
             <th className="px-2 py-2 text-right font-medium">Electorate</th>
             <th className="px-2 py-2 text-right font-medium">List</th>
             <th className="px-2 py-2 text-right font-medium">Total</th>
+            {previousSeats && <th className="px-2 py-2 text-right font-medium">{previousLabel}</th>}
           </tr>
         </thead>
         <tbody>
           {seats.map((row) => {
             const party = PARTY_BY_CODE[row.code];
+            const previous = previousSeats?.[row.code];
             return (
               <tr key={row.code} className="border-b border-black/5 last:border-0 dark:border-white/5">
                 <td className="px-3 py-2">
@@ -40,6 +52,24 @@ export default function SeatsTable({ seats }: { seats: SeatResult[] }) {
                     </span>
                   )}
                 </td>
+                {previousSeats && (
+                  <td className="px-2 py-2 text-right tabular-nums text-neutral-500 dark:text-neutral-400">
+                    {previous !== undefined ? (
+                      <>
+                        {previous}
+                        {row.totalSeats !== previous && (
+                          <span className={row.totalSeats > previous ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}>
+                            {" "}
+                            ({row.totalSeats > previous ? "+" : ""}
+                            {row.totalSeats - previous})
+                          </span>
+                        )}
+                      </>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
+                )}
               </tr>
             );
           })}
