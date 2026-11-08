@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-08T11:01:21.711Z",
+  "fetchedAt": "2026-11-08T14:00:39.318Z",
   "source": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
   "preliminary": true,
   "officialDeclarationDate": "2026-11-27",
@@ -403,6 +403,16 @@
       "winnerParty": "NAT",
       "majority": 13917,
       "runnerUpName": "Sange Malama",
+      "runnerUpParty": "LAB",
+      "notional": false
+    },
+    {
+      "electorateName": "Rangitīkei",
+      "seatType": "general",
+      "winnerName": "Suze Redmayne",
+      "winnerParty": "NAT",
+      "majority": 5506,
+      "runnerUpName": "Karl Severinsen",
       "runnerUpParty": "LAB",
       "notional": false
     },
