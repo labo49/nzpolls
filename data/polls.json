@@ -2392,5 +2392,23 @@
       "OTH": 1.1
     },
     "firstSeenAt": "2026-11-04T15:00:24.342Z"
+  },
+  {
+    "date": "2026-11-07",
+    "dateLabel": "7 Nov 2026",
+    "pollster": "2026 preliminary election result",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
+    "sampleSize": null,
+    "results": {
+      "NAT": 29.21,
+      "LAB": 29.36,
+      "GRN": 13.3,
+      "ACT": 10.92,
+      "NZF": 9.78,
+      "TPM": 0.56,
+      "TOP": 5.96,
+      "OTH": 0.85
+    },
+    "firstSeenAt": "2026-11-08T11:01:18.266Z"
   }
 ]
