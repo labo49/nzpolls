@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-11-08T14:00:39.318Z",
+  "fetchedAt": "2026-11-08T22:39:11.476Z",
   "source": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
   "preliminary": true,
   "officialDeclarationDate": "2026-11-27",
   "partyVote": {
     "results": {
-      "NAT": 29.2,
       "LAB": 29.4,
+      "NAT": 29.2,
       "GRN": 13.3,
       "ACT": 10.9,
       "NZF": 9.78,
