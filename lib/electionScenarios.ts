@@ -226,6 +226,91 @@ function projectFinalVote(
   return finalVote;
 }
 
+/** Projects a final vote where `redirectVotes` is moved from what
+ * `fromParties` would otherwise get from the real remaining vote pool
+ * (lib/turnoutEstimates.ts's national projection, split proportionally to
+ * everyone by their current vote share) to what `toParties` get instead,
+ * with every other party's allocation unchanged. Unlike `projectFinalVote`
+ * (which splits the whole pool between one favored side and everyone
+ * else), this only touches two specific parties' shares -- for scenarios
+ * about particular parties shifting, like "ACT and NZ First both lose a
+ * seat", rather than a whole-bloc swing. */
+function redirectFinalVote(
+  partyVote: Partial<Record<PartyCode, number>>,
+  fromParties: PartyCode[],
+  toParties: PartyCode[],
+  redirectVotes: number
+): Partial<Record<PartyCode, number>> {
+  const national = nationalTurnoutEstimate();
+  const countedTotal = national.votes;
+  const remaining = national.projectedOutstanding;
+  const finalTotal = countedTotal + remaining;
+
+  const counted: Partial<Record<PartyCode, number>> = {};
+  let countedSum = 0;
+  for (const code of Object.keys(partyVote) as PartyCode[]) {
+    const v = ((partyVote[code] ?? 0) / 100) * countedTotal;
+    counted[code] = v;
+    countedSum += v;
+  }
+
+  const defaultRemaining: Partial<Record<PartyCode, number>> = {};
+  for (const code of Object.keys(partyVote) as PartyCode[]) {
+    defaultRemaining[code] = countedSum > 0 ? remaining * ((counted[code] ?? 0) / countedSum) : 0;
+  }
+  const fromDefaultTotal = fromParties.reduce((sum, p) => sum + (defaultRemaining[p] ?? 0), 0);
+  const toDefaultTotal = toParties.reduce((sum, p) => sum + (defaultRemaining[p] ?? 0), 0);
+
+  const finalVote: Partial<Record<PartyCode, number>> = {};
+  for (const code of Object.keys(partyVote) as PartyCode[]) {
+    let rem = defaultRemaining[code] ?? 0;
+    if (fromParties.includes(code) && fromDefaultTotal > 0) {
+      rem -= redirectVotes * ((defaultRemaining[code] ?? 0) / fromDefaultTotal);
+    }
+    if (toParties.includes(code) && toDefaultTotal > 0) {
+      rem += redirectVotes * ((defaultRemaining[code] ?? 0) / toDefaultTotal);
+    }
+    finalVote[code] = (((counted[code] ?? 0) + rem) / finalTotal) * 100;
+  }
+  return finalVote;
+}
+
+/** Searches for the smallest number of votes redirected from
+ * `fromParties`' default share of the remaining pool to `toParties`' share
+ * that satisfies `isSatisfied`. Returns null if redirecting the entire
+ * amount `fromParties` would otherwise get still isn't enough. */
+function findMinimumRedirect(
+  partyVote: Partial<Record<PartyCode, number>>,
+  electorateSeats: Partial<Record<PartyCode, number>>,
+  fromParties: PartyCode[],
+  toParties: PartyCode[],
+  isSatisfied: (seats: SeatResult[]) => boolean
+): number | null {
+  const national = nationalTurnoutEstimate();
+  const remaining = national.projectedOutstanding;
+  const countedTotal = national.votes;
+  let countedSum = 0;
+  const counted: Partial<Record<PartyCode, number>> = {};
+  for (const code of Object.keys(partyVote) as PartyCode[]) {
+    const v = ((partyVote[code] ?? 0) / 100) * countedTotal;
+    counted[code] = v;
+    countedSum += v;
+  }
+  const fromDefaultTotal = fromParties.reduce(
+    (sum, p) => sum + (countedSum > 0 ? remaining * ((counted[p] ?? 0) / countedSum) : 0),
+    0
+  );
+  const step = Math.max(1, Math.round(fromDefaultTotal / 500));
+  for (let redirect = 0; redirect <= fromDefaultTotal; redirect += step) {
+    const vote = redirectFinalVote(partyVote, fromParties, toParties, redirect);
+    const seats = seatsFor(vote, electorateSeats);
+    if (isSatisfied(seats)) {
+      return Math.round(redirect);
+    }
+  }
+  return null;
+}
+
 /** Searches (in 0.5% steps) for the smallest share of the *actual*
  * remaining vote pool that `favoredParties` would need to get the left
  * bloc to the majority threshold. Returns null if even 100% of the
@@ -324,42 +409,49 @@ export function computeElectionScenarios(
     });
   }
 
+  // A deliberately more left-favorable (and correspondingly less plausible)
+  // compound example than a single close race or a single party-vote slip:
+  // combines the closest National-vs-Labour flip with BOTH ACT and NZ
+  // First each losing a list seat to Labour/Green -- still grounded in the
+  // real remaining vote pool, not an abstract swing.
   let compound: ScenarioGroup | null = null;
-  if (natVulnerable.length > 0 && voteShiftSteps.length > 0) {
+  if (natVulnerable.length > 0) {
     const flippedElectorate = natVulnerable[0].electorateName;
-    const nzfShift = voteShiftStep(partyVote, baseElectorateSeats, "NZF", "GRN", () => "");
-    if (nzfShift) {
-      const electorateSeats: Partial<Record<PartyCode, number>> = {};
-      for (const e of allElectorates) {
-        const party = e.electorateName === flippedElectorate ? "LAB" : e.winnerParty;
-        if (party === "OTH") continue;
-        electorateSeats[party] = (electorateSeats[party] ?? 0) + 1;
-      }
-      let combinedVote: Partial<Record<PartyCode, number>> | null = null;
-      for (let delta = 0.01; delta <= 3; delta += 0.01) {
-        const vote = {
-          ...partyVote,
-          NZF: (partyVote.NZF ?? 0) - delta,
-          GRN: (partyVote.GRN ?? 0) + delta,
-        };
-        const seats = seatsFor(vote, electorateSeats);
-        const nzf = seats.find((s) => s.code === "NZF");
-        const baselineNzf = seatsFor(partyVote, electorateSeats).find((s) => s.code === "NZF");
-        if (nzf && baselineNzf && nzf.totalSeats !== baselineNzf.totalSeats) {
-          combinedVote = vote;
-          break;
-        }
-      }
-      if (combinedVote) {
-        compound = {
-          key: "compound-example",
-          title: `${flippedElectorate} flips to Labour, and NZ First's party vote slips to the Greens`,
-          mechanism:
-            "Any combination of the mechanisms above could happen at once -- this is one illustrative example, not a prediction, showing how a close electorate and a small party-vote shift together can move both Parliament's size and who holds a majority within it.",
-          steps: [stepFrom(`${flippedElectorate} to Labour + NZ First's vote to the Greens`, seatsFor(combinedVote, electorateSeats))],
-          electorates: [flippedElectorate],
-        };
-      }
+    const electorateSeats: Partial<Record<PartyCode, number>> = {};
+    for (const e of allElectorates) {
+      const party = e.electorateName === flippedElectorate ? "LAB" : e.winnerParty;
+      if (party === "OTH") continue;
+      electorateSeats[party] = (electorateSeats[party] ?? 0) + 1;
+    }
+    const baselineWithFlip = seatsFor(partyVote, electorateSeats);
+    const baselineAct = baselineWithFlip.find((s) => s.code === "ACT")?.totalSeats ?? 0;
+    const baselineNzf = baselineWithFlip.find((s) => s.code === "NZF")?.totalSeats ?? 0;
+
+    const fromParties: PartyCode[] = ["ACT", "NZF"];
+    const toParties: PartyCode[] = ["LAB", "GRN"];
+    const requiredRedirect = findMinimumRedirect(partyVote, electorateSeats, fromParties, toParties, (seats) => {
+      const act = seats.find((s) => s.code === "ACT")?.totalSeats ?? 0;
+      const nzf = seats.find((s) => s.code === "NZF")?.totalSeats ?? 0;
+      return act < baselineAct && nzf < baselineNzf;
+    });
+
+    if (requiredRedirect !== null) {
+      const national = nationalTurnoutEstimate();
+      const remaining = Math.round(national.projectedOutstanding);
+      const redirectSharePct = Math.round((requiredRedirect / national.projectedOutstanding) * 1000) / 10;
+
+      compound = {
+        key: "compound-example",
+        title: `${flippedElectorate} flips to Labour, and both ACT and NZ First lose a seat to Labour and the Greens`,
+        mechanism: `A more left-favorable example than the single mechanisms above, though not necessarily a plausible one: on top of ${flippedElectorate} flipping, this redirects ~${requiredRedirect.toLocaleString()} votes (${redirectSharePct}% of the ~${remaining.toLocaleString()} still outstanding) that ACT and NZ First would otherwise get from the remaining count toward Labour and the Greens instead -- enough for both to each drop a list seat. Grounded in the actual remaining vote pool (lib/turnoutEstimates.ts), like the scenario below -- any combination of the mechanisms above could happen at once; this is one illustrative example, not a prediction.`,
+        steps: [
+          stepFrom(
+            `${flippedElectorate} to Labour + ACT and NZ First each lose a seat (~${requiredRedirect.toLocaleString()} votes, ${redirectSharePct}% of the remaining pool, to Labour/Green)`,
+            seatsFor(redirectFinalVote(partyVote, fromParties, toParties, requiredRedirect), electorateSeats)
+          ),
+        ],
+        electorates: [flippedElectorate],
+      };
     }
   }
 
