@@ -146,7 +146,7 @@ export default function ResultsPage() {
       <section className="mb-10">
         <h2
           id="scenarios"
-          className="mb-3 scroll-mt-20 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400"
+          className="mb-3 scroll-mt-20 text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50"
         >
           Scenarios: how the special votes could change the outcome
         </h2>
