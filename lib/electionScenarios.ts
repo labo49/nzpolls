@@ -12,88 +12,276 @@ export interface CloseRace {
   majority: number;
 }
 
-/** The N tightest-margin electorates where `involvingParty` is realistically
- * in contention (either the current winner or the runner-up) -- the ones
- * most likely to flip to them once special votes (counted by 27 Nov) are
- * added to the preliminary count. A seat where that party isn't even in
- * 1st or 2nd (e.g. a Green-vs-Labour race) isn't a realistic gain for it
- * regardless of how close the margin is. */
-export function findClosestRaces(
+/** The closest-margin electorates currently won by `winner` with `runnerUp`
+ * in 2nd -- i.e. the realistic pool for a `winner` -> `runnerUp` flip, not
+ * just "small margin" regardless of who's actually in contention. */
+function closeRacesBetween(
   electorates: ElectorateResultRow[],
-  count: number,
-  involvingParty: PartyCode
+  winner: PartyCode,
+  runnerUp: PartyCode,
+  count: number
 ): CloseRace[] {
   return electorates
     .filter((e): e is ElectorateResultRow & { majority: number } => e.majority !== null)
-    .filter((e) => e.winnerParty === involvingParty || e.runnerUpParty === involvingParty)
+    .filter((e) => e.winnerParty === winner && e.runnerUpParty === runnerUp)
     .slice()
     .sort((a, b) => a.majority - b.majority)
     .slice(0, count)
     .map((e) => ({
       electorateName: e.electorateName,
       currentWinnerName: e.winnerName,
-      currentWinnerParty: e.winnerParty,
+      currentWinnerParty: e.winnerParty as PartyCode,
       runnerUpName: e.runnerUpName,
-      runnerUpParty: e.runnerUpParty,
+      runnerUpParty: e.runnerUpParty as PartyCode,
       majority: e.majority,
     }));
 }
 
-export interface ElectionScenario {
-  /** How many of the close races this scenario awards to National -- the
-   * closest-margin ones first (see computeElectionScenarios), regardless
-   * of who's actually in second place there: a deliberate hypothetical
-   * stress test ("if these break National's way"), not a prediction. */
-  nationalWins: number;
+export function electorateSeatMap(electorates: ElectorateResultRow[]): Partial<Record<PartyCode, number>> {
+  const map: Partial<Record<PartyCode, number>> = {};
+  for (const e of electorates) {
+    if (e.winnerParty === "OTH") continue;
+    map[e.winnerParty] = (map[e.winnerParty] ?? 0) + 1;
+  }
+  return map;
+}
+
+function seatsFor(
+  partyVote: Partial<Record<PartyCode, number>>,
+  electorateSeats: Partial<Record<PartyCode, number>>
+): SeatResult[] {
+  const point: PollOfPollsPoint = { date: "", pollCount: 0, results: partyVote };
+  return computeSeats(point, electorateSeats);
+}
+
+/** The real preliminary result's seat allocation -- every electorate at its
+ * actual current winner, real party vote, no hypothetical changes. */
+export function computeBaselineSeats(
+  partyVote: Partial<Record<PartyCode, number>>,
+  allElectorates: ElectorateResultRow[]
+): SeatResult[] {
+  return seatsFor(partyVote, electorateSeatMap(allElectorates));
+}
+
+export interface ScenarioStep {
+  /** Electorates (or party-vote shift) this step adds on top of the real
+   * preliminary result -- cumulative within a ScenarioGroup. */
+  label: string;
   seats: SeatResult[];
   houseSize: number;
   majorityThreshold: number;
   overhangSeats: number;
-  /** Which close races this scenario actually changes from their real
-   * preliminary winner, so the assumption behind each scenario is visible
-   * rather than a black box. */
-  flippedToNational: CloseRace[];
 }
 
-/**
- * Builds one scenario per possible National win-count (closeRaces.length
- * down to 0) among the given close races, each with every other electorate
- * held at its real preliminary winner and national party vote held fixed
- * at the real result -- isolating exactly what these few seats would
- * change about the overall seat allocation, overhang, and majority
- * threshold, via the same Sainte-Lague computeSeats() the rest of the site
- * uses for poll-based seat projections.
- */
-export function computeElectionScenarios(
+export interface ScenarioGroup {
+  key: string;
+  title: string;
+  /** Explains *why* Parliament's size or balance moves the way it does --
+   * the mechanism, not just the headline numbers. */
+  mechanism: string;
+  steps: ScenarioStep[];
+}
+
+function stepFrom(label: string, seats: SeatResult[]): ScenarioStep {
+  return {
+    label,
+    seats,
+    houseSize: houseSize(seats),
+    majorityThreshold: majorityThreshold(seats),
+    overhangSeats: totalOverhangSeats(seats),
+  };
+}
+
+/** Cumulative electorate-flip steps: step N reassigns the N closest races
+ * in `races` (closest first) from their current winner to `toParty`,
+ * recomputed from the real preliminary result each time. */
+function electorateFlipSteps(
   partyVote: Partial<Record<PartyCode, number>>,
   allElectorates: ElectorateResultRow[],
-  closeRaces: CloseRace[]
-): ElectionScenario[] {
-  const point: PollOfPollsPoint = { date: "", pollCount: 0, results: partyVote };
-  // Closest-margin first, so each step down from "all to National" gives up
-  // the race that was least in National's favour to begin with.
-  const orderedRaces = [...closeRaces].sort((a, b) => a.majority - b.majority);
-
-  const scenarios: ElectionScenario[] = [];
-  for (let n = orderedRaces.length; n >= 0; n--) {
-    const toNational = new Set(orderedRaces.slice(0, n).map((r) => r.electorateName));
-    const flippedToNational = orderedRaces.filter((r) => toNational.has(r.electorateName) && r.currentWinnerParty !== "NAT");
-
+  races: CloseRace[],
+  toParty: PartyCode
+): ScenarioStep[] {
+  return races.map((_, i) => {
+    const flipped = new Set(races.slice(0, i + 1).map((r) => r.electorateName));
     const electorateSeats: Partial<Record<PartyCode, number>> = {};
     for (const e of allElectorates) {
-      const party = toNational.has(e.electorateName) ? "NAT" : e.winnerParty;
+      const party = flipped.has(e.electorateName) ? toParty : e.winnerParty;
+      if (party === "OTH") continue;
       electorateSeats[party] = (electorateSeats[party] ?? 0) + 1;
     }
+    const label =
+      i === 0
+        ? races[0].electorateName
+        : `${races
+            .slice(0, i + 1)
+            .map((r) => r.electorateName)
+            .join(" and ")}`;
+    return stepFrom(label, seatsFor(partyVote, electorateSeats));
+  });
+}
 
-    const seats = computeSeats(point, electorateSeats);
-    scenarios.push({
-      nationalWins: n,
-      seats,
-      houseSize: houseSize(seats),
-      majorityThreshold: majorityThreshold(seats),
-      overhangSeats: totalOverhangSeats(seats),
-      flippedToNational,
+/** Searches for the smallest `fromParty` -> `toParty` party-vote shift
+ * (in 0.01pp steps, up to 3pp) that changes `fromParty`'s total seats or
+ * the House's total size -- i.e. the point at which a vote-share slide
+ * actually costs a party a seat, or grows/shrinks an overhang-protected
+ * party's extra seats. Returns null if no such shift is found within 3pp
+ * (the party's position is safe against a plausible special-votes swing). */
+function voteShiftStep(
+  partyVote: Partial<Record<PartyCode, number>>,
+  electorateSeats: Partial<Record<PartyCode, number>>,
+  fromParty: PartyCode,
+  toParty: PartyCode,
+  label: (deltaPct: number) => string
+): ScenarioStep | null {
+  const baseline = seatsFor(partyVote, electorateSeats);
+  const baselineHouse = houseSize(baseline);
+  const baselineFrom = baseline.find((s) => s.code === fromParty);
+  if (!baselineFrom) return null;
+
+  for (let delta = 0.01; delta <= 3; delta += 0.01) {
+    const shifted = {
+      ...partyVote,
+      [fromParty]: (partyVote[fromParty] ?? 0) - delta,
+      [toParty]: (partyVote[toParty] ?? 0) + delta,
+    };
+    const seats = seatsFor(shifted, electorateSeats);
+    const house = houseSize(seats);
+    const from = seats.find((s) => s.code === fromParty);
+    if (house !== baselineHouse || (from && from.totalSeats !== baselineFrom.totalSeats)) {
+      return stepFrom(label(Math.round(delta * 100) / 100), seats);
+    }
+  }
+  return null;
+}
+
+export interface ElectionScenarios {
+  /** Groups mirroring each distinct way the 27 Nov official count could move
+   * the seat totals -- modeled individually (holding everything else at
+   * today's real preliminary result), since each can happen independently
+   * or in any combination; see `compound` for one example of several at
+   * once. */
+  groups: ScenarioGroup[];
+  /** One illustrative example combining two of the mechanisms above, to
+   * show how easily several small shifts together can flip the numbers --
+   * a hypothetical, not a prediction. */
+  compound: ScenarioGroup | null;
+  /** Every electorate referenced by an electorate-flip group above, for
+   * badging in the full electorate results table. */
+  highlightedElectorates: string[];
+}
+
+export function computeElectionScenarios(
+  partyVote: Partial<Record<PartyCode, number>>,
+  allElectorates: ElectorateResultRow[]
+): ElectionScenarios {
+  const baseElectorateSeats = electorateSeatMap(allElectorates);
+
+  const natVulnerable = closeRacesBetween(allElectorates, "NAT", "LAB", 2);
+  const natOpportunity = closeRacesBetween(allElectorates, "LAB", "NAT", 2);
+  const grnOpportunity = closeRacesBetween(allElectorates, "TPM", "GRN", 1);
+
+  const groups: ScenarioGroup[] = [];
+
+  if (natVulnerable.length > 0) {
+    groups.push({
+      key: "nat-loses",
+      title: "If National loses close electorates to Labour",
+      mechanism:
+        "National holds more electorate seats than its party vote alone would entitle it to (an overhang). Every one of those seats it loses to Labour removes an overhang seat and shrinks Parliament by one -- Labour's total is unaffected, since it simply swaps an electorate MP for a list MP.",
+      steps: electorateFlipSteps(partyVote, allElectorates, natVulnerable, "LAB"),
     });
   }
-  return scenarios;
+
+  if (natOpportunity.length > 0) {
+    groups.push({
+      key: "nat-gains",
+      title: "If National takes close electorates from Labour",
+      mechanism:
+        "The reverse: every electorate National wins from Labour becomes an extra overhang seat, growing Parliament by one each time. Labour's total stays the same either way.",
+      steps: electorateFlipSteps(partyVote, allElectorates, natOpportunity, "NAT"),
+    });
+  }
+
+  if (grnOpportunity.length > 0) {
+    groups.push({
+      key: "grn-from-tpm",
+      title: "If the Greens win a Māori electorate from Te Pāti Māori",
+      mechanism:
+        "Te Pāti Māori also holds more electorates than its tiny party vote entitles it to. A Green win here would take a seat that's already within the Greens' proportional share, while removing one of Te Pāti Māori's overhang seats -- so Parliament shrinks even though the left bloc's combined total doesn't change.",
+      steps: electorateFlipSteps(partyVote, allElectorates, grnOpportunity, "GRN"),
+    });
+  }
+
+  const natSlip = voteShiftStep(
+    partyVote,
+    baseElectorateSeats,
+    "NAT",
+    "LAB",
+    (d) => `National's party vote ${d}pp lower`
+  );
+  if (natSlip) {
+    groups.push({
+      key: "nat-vote-slip",
+      title: "If National's party vote slips further",
+      mechanism:
+        "National could lose party-vote support without losing a single electorate MP -- its overhang simply grows, freeing up an extra list seat for whichever party gains that support (modeled here as Labour, since special votes have historically skewed left).",
+      steps: [natSlip],
+    });
+  }
+
+  const voteShiftSteps = [
+    voteShiftStep(partyVote, baseElectorateSeats, "ACT", "LAB", (d) => `ACT's party vote ${d}pp lower`),
+    voteShiftStep(partyVote, baseElectorateSeats, "NZF", "LAB", (d) => `NZ First's party vote ${d}pp lower`),
+  ].filter((s): s is ScenarioStep => s !== null);
+  if (voteShiftSteps.length > 0) {
+    groups.push({
+      key: "right-vote-slip",
+      title: "If ACT or NZ First's party vote slips",
+      mechanism:
+        "Unlike National, neither ACT nor NZ First has an overhang cushion. A list seat either loses to the left reduces the coalition's total without Parliament growing to compensate -- the most dangerous kind of shift for the coalition's majority.",
+      steps: voteShiftSteps,
+    });
+  }
+
+  let compound: ScenarioGroup | null = null;
+  if (natVulnerable.length > 0 && voteShiftSteps.length > 0) {
+    const flippedElectorate = natVulnerable[0].electorateName;
+    const nzfShift = voteShiftStep(partyVote, baseElectorateSeats, "NZF", "GRN", () => "");
+    if (nzfShift) {
+      const electorateSeats: Partial<Record<PartyCode, number>> = {};
+      for (const e of allElectorates) {
+        const party = e.electorateName === flippedElectorate ? "LAB" : e.winnerParty;
+        if (party === "OTH") continue;
+        electorateSeats[party] = (electorateSeats[party] ?? 0) + 1;
+      }
+      let combinedVote: Partial<Record<PartyCode, number>> | null = null;
+      for (let delta = 0.01; delta <= 3; delta += 0.01) {
+        const vote = {
+          ...partyVote,
+          NZF: (partyVote.NZF ?? 0) - delta,
+          GRN: (partyVote.GRN ?? 0) + delta,
+        };
+        const seats = seatsFor(vote, electorateSeats);
+        const nzf = seats.find((s) => s.code === "NZF");
+        const baselineNzf = seatsFor(partyVote, electorateSeats).find((s) => s.code === "NZF");
+        if (nzf && baselineNzf && nzf.totalSeats !== baselineNzf.totalSeats) {
+          combinedVote = vote;
+          break;
+        }
+      }
+      if (combinedVote) {
+        compound = {
+          key: "compound-example",
+          title: `${flippedElectorate} flips to Labour, and NZ First's party vote slips to the Greens`,
+          mechanism:
+            "Any combination of the mechanisms above could happen at once -- this is one illustrative example, not a prediction, showing how a close electorate and a small party-vote shift together can move both Parliament's size and who holds a majority within it.",
+          steps: [stepFrom(`${flippedElectorate} to Labour + NZ First's vote to the Greens`, seatsFor(combinedVote, electorateSeats))],
+        };
+      }
+    }
+  }
+
+  const highlightedElectorates = [...natVulnerable, ...natOpportunity, ...grnOpportunity].map((r) => r.electorateName);
+
+  return { groups, compound, highlightedElectorates };
 }

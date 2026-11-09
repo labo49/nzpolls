@@ -2,18 +2,18 @@ import CreatedByLine from "@/components/CreatedByLine";
 import ElectorateResultsTable from "@/components/ElectorateResultsTable";
 import LatestSnapshot from "@/components/LatestSnapshot";
 import OverhangSummary from "@/components/OverhangSummary";
-import ScenarioTable from "@/components/ScenarioTable";
+import ScenarioGroupSection from "@/components/ScenarioGroupSection";
 import SeatsChart from "@/components/SeatsChart";
 import SeatsTable from "@/components/SeatsTable";
 import { computeBlocSeats } from "@/lib/blocs";
-import { computeElectionScenarios, findClosestRaces } from "@/lib/electionScenarios";
+import { computeBaselineSeats, computeElectionScenarios } from "@/lib/electionScenarios";
+import { houseSize, majorityThreshold } from "@/lib/seats";
 import { pageMetadata } from "@/lib/site";
 import electionResultData from "@/data/electionResult.json";
 import type { ElectorateResultRow } from "@/lib/electorateResults";
 import type { PartyCode } from "@/lib/parties";
 
 const TOTAL_ELECTORATES = 71;
-const CLOSE_RACE_COUNT = 5;
 
 // The outgoing Parliament's final seat allocation from the 2023 general
 // election's official declared result (123 seats, 3 of them Te Pāti Māori
@@ -30,7 +30,7 @@ const OUTGOING_PARLIAMENT_SEATS: Partial<Record<PartyCode, number>> = {
 
 export const metadata = pageMetadata(
   "2026 Election Result",
-  "The preliminary 2026 general election result -- ordinary votes only, before special votes are counted -- with scenarios for how the 5 closest electorate races could swing the overall outcome.",
+  "The preliminary 2026 general election result -- ordinary votes only, before special votes are counted -- with scenarios for how close electorates and party-vote shifts could swing the overall outcome.",
   "/results"
 );
 
@@ -44,14 +44,17 @@ export default function ResultsPage() {
     electorates: ElectorateResultRow[];
   };
 
-  const closeRaces = findClosestRaces(data.electorates, CLOSE_RACE_COUNT, "NAT");
-  const scenarios = computeElectionScenarios(data.partyVote.results, data.electorates, closeRaces);
-  // N=0 close races reassigned -- i.e. every electorate at its real preliminary winner.
-  const baseline = scenarios[scenarios.length - 1];
+  const baselineSeats = computeBaselineSeats(data.partyVote.results, data.electorates);
+  const baseline = {
+    seats: baselineSeats,
+    houseSize: houseSize(baselineSeats),
+    majorityThreshold: majorityThreshold(baselineSeats),
+  };
+  const { groups, compound, highlightedElectorates } = computeElectionScenarios(data.partyVote.results, data.electorates);
   const blocSeats = computeBlocSeats(baseline.seats);
 
   const snapshotPoint = { date: data.fetchedAt, pollCount: data.electorates.length, results: data.partyVote.results };
-  const closeRaceNames = new Set(closeRaces.map((r) => r.electorateName));
+  const closeRaceNames = new Set(highlightedElectorates);
 
   const missingCount = TOTAL_ELECTORATES - data.electorates.length;
   // Rangitīkei is the one electorate Wikipedia's table hasn't added yet (an
@@ -130,23 +133,22 @@ export default function ResultsPage() {
 
       <section className="mb-10">
         <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          If the {CLOSE_RACE_COUNT} closest National races all break its way
+          How the 27 Nov official count could move these numbers
         </h2>
-        <p className="mb-3 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-          The {CLOSE_RACE_COUNT} electorates where National is realistically in contention (currently 1st or 2nd)
-          decided by the smallest margins &mdash;{" "}
-          {closeRaces.map((r, i) => (
-            <span key={r.electorateName}>
-              {r.electorateName} ({r.majority.toLocaleString()} votes)
-              {i < closeRaces.length - 1 ? ", " : ""}
-            </span>
-          ))}{" "}
-          &mdash; are the ones most likely to flip once special votes are counted. Each row below is a hypothetical:
-          National winning anywhere from all {CLOSE_RACE_COUNT} down to none of them, with every other electorate and
-          the national party vote held at today&apos;s real preliminary result, to isolate exactly what these few
-          seats could change about the overall outcome.
+        <p className="mb-5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+          Roughly 400,000 special votes are still to be counted nationally. They won&apos;t move every electorate or
+          the party vote evenly, so below are the distinct ways the final count could shift today&apos;s preliminary
+          numbers -- each modeled on its own, holding everything else at today&apos;s real result. Any combination of
+          them could happen at once; this isn&apos;t a prediction, just a map of what to watch for.
         </p>
-        <ScenarioTable scenarios={scenarios} />
+        {groups.map((group) => (
+          <ScenarioGroupSection key={group.key} group={group} />
+        ))}
+        {compound && (
+          <div className="mt-6 rounded-lg border border-dashed border-black/15 p-4 dark:border-white/15">
+            <ScenarioGroupSection group={compound} />
+          </div>
+        )}
       </section>
 
       <section className="mb-10">
