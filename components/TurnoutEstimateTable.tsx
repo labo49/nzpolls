@@ -53,10 +53,10 @@ export default function TurnoutEstimateTable({ electorateNames }: { electorateNa
         </tbody>
       </table>
       <p className="border-t border-black/10 px-3 py-2 text-[11px] text-neutral-500 dark:border-white/10 dark:text-neutral-400">
-        &quot;Est. votes still to come&quot; projects each electorate&apos;s 2026 final turnout by applying its own
-        2023 preliminary-to-final growth (how much the count grew once that election&apos;s special votes were
-        added) to today&apos;s count-so-far &mdash; a rough estimate from manually-entered enrolment figures, not an
-        official Electoral Commission projection.
+        &quot;Est. votes still to come&quot; splits the Electoral Commission&apos;s own national outstanding-votes
+        estimate across electorates using each one&apos;s 2023 preliminary-to-final growth (how much its count grew
+        once that election&apos;s special votes were added) &mdash; a rough estimate from manually-entered enrolment
+        figures, not an official per-electorate projection.
       </p>
     </div>
   );

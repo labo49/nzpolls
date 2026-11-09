@@ -375,26 +375,26 @@ export function computeElectionScenarios(
     const favoredParties: PartyCode[] = ["LAB", "GRN"];
     const requiredShare = findMinimumFavoredShare(partyVote, flippedElectorateSeats, favoredParties);
 
+    const flipLabel =
+      natVulnerable.length > 0
+        ? `${natVulnerable.map((r) => r.electorateName).join(" and ")} flip${natVulnerable.length === 1 ? "s" : ""} to Labour`
+        : "Today's real preliminary result";
+
+    const national = nationalTurnoutEstimate();
+    const remaining = Math.round(national.projectedOutstanding);
+    let voteTotal = 0;
+    for (const v of Object.values(partyVote)) voteTotal += v ?? 0;
+    voteTotal = voteTotal || 1;
+    const favoredShareSoFar = Math.round((((partyVote.LAB ?? 0) + (partyVote.GRN ?? 0)) / voteTotal) * 100);
+
     if (requiredShare !== null) {
-      const flipLabel =
-        natVulnerable.length > 0
-          ? `${natVulnerable.map((r) => r.electorateName).join(" and ")} flip${natVulnerable.length === 1 ? "s" : ""} to Labour`
-          : "Today's real preliminary result";
-
-      const national = nationalTurnoutEstimate();
-      const remaining = Math.round(national.projectedOutstanding);
-      let voteTotal = 0;
-      for (const v of Object.values(partyVote)) voteTotal += v ?? 0;
-      voteTotal = voteTotal || 1;
-      const favoredShareSoFar = Math.round((((partyVote.LAB ?? 0) + (partyVote.GRN ?? 0)) / voteTotal) * 100);
-
       const illustrativeShare = 60;
       const requiredVotes = Math.round((requiredShare / 100) * national.projectedOutstanding);
 
       leftMajorityPath = {
         key: "left-majority-path",
         title: "What would it take for the left bloc to win a majority?",
-        mechanism: `None of the single changes above get the left bloc (Labour + Green + Te Pāti Māori) to a majority on their own -- it also needs Labour and the Greens to win a large share of the ~${remaining.toLocaleString()} votes still to count, not just close electorates changing hands. These rows are grounded in that actual remaining vote count (lib/turnoutEstimates.ts), not an abstract swing -- each splits the real outstanding pool between Labour+Green and everyone else, so the share needed can be checked against how many votes are actually left, rather than assuming a shift the remaining votes couldn't physically produce. A share this lopsided (more than ${requiredShare > 50 ? "half" : "a third"} of every remaining vote, nationwide) would be far outside anything specials have historically produced.`,
+        mechanism: `None of the single changes above get the left bloc (Labour + Green + Te Pāti Māori) to a majority on their own -- it also needs Labour and the Greens to win a large share of the ~${remaining.toLocaleString()} votes still to count (the Electoral Commission's own outstanding-votes estimate), not just close electorates changing hands. These rows are grounded in that actual remaining vote count (lib/turnoutEstimates.ts), not an abstract swing -- each splits the real outstanding pool between Labour+Green and everyone else, so the share needed can be checked against how many votes are actually left, rather than assuming a shift the remaining votes couldn't physically produce. A share this lopsided (more than ${requiredShare > 50 ? "half" : "a third"} of every remaining vote, nationwide) would be far outside anything specials have historically produced.`,
         steps: [
           stepFrom(flipLabel, seatsFor(partyVote, flippedElectorateSeats)),
           stepFrom(
@@ -404,6 +404,23 @@ export function computeElectionScenarios(
           stepFrom(
             `...plus ${requiredShare}% of all remaining votes (~${requiredVotes.toLocaleString()} of ~${remaining.toLocaleString()}) going to Labour + Green -- the minimum that actually gets the left bloc to a majority`,
             seatsFor(projectFinalVote(partyVote, favoredParties, requiredShare / 100), flippedElectorateSeats)
+          ),
+        ],
+        electorates: natVulnerable.map((r) => r.electorateName),
+      };
+    } else {
+      // Not even the most extreme possible split (100% of the remaining
+      // pool to Labour+Green, 0% to everyone else) reaches a majority --
+      // worth stating plainly rather than just omitting the section.
+      leftMajorityPath = {
+        key: "left-majority-path",
+        title: "What would it take for the left bloc to win a majority?",
+        mechanism: `Not even the most extreme possible outcome gets there: this checks what happens if literally every one of the ~${remaining.toLocaleString()} still-outstanding votes (the Electoral Commission's own estimate) went to Labour and the Greens, with every other party getting none of them -- grounded in the actual remaining vote count (lib/turnoutEstimates.ts), not an abstract swing. Even that falls short, so a left-bloc majority isn't reachable from today's preliminary result no matter how the outstanding votes break.`,
+        steps: [
+          stepFrom(flipLabel, seatsFor(partyVote, flippedElectorateSeats)),
+          stepFrom(
+            `...plus every single remaining vote (100% of ~${remaining.toLocaleString()}) going to Labour + Green -- still not enough`,
+            seatsFor(projectFinalVote(partyVote, favoredParties, 1), flippedElectorateSeats)
           ),
         ],
         electorates: natVulnerable.map((r) => r.electorateName),

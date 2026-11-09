@@ -143,14 +143,14 @@ export default function ResultsPage() {
         <p className="mb-5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
           All 71 electorates&apos; ordinary votes are now in &mdash; {nationalTurnout.votes.toLocaleString()} of{" "}
           {nationalTurnout.enrolled.toLocaleString()} enrolled voters ({nationalTurnout.percSoFar.toFixed(1)}%). What&apos;s
-          still outstanding by 27 Nov is special votes. Applying 2023&apos;s own preliminary-to-final growth to
-          today&apos;s count projects roughly {Math.round(nationalTurnout.projectedOutstanding).toLocaleString()}{" "}
-          of them &mdash; close to 2023&apos;s actual national special-vote count of 582,553, and higher than the
-          ~400,000 sometimes cited for this election; treat it as a rough estimate from that growth-rate method, not
-          an official count. Those votes won&apos;t move every electorate or the party vote evenly, so below are the
-          distinct ways the final count could shift today&apos;s preliminary numbers &mdash; each modeled on its own,
-          holding everything else at today&apos;s real result. Any combination of them could happen at once; this
-          isn&apos;t a prediction, just a map of what to watch for.
+          still outstanding by 27 Nov is special votes: the Electoral Commission&apos;s own estimate is around{" "}
+          {Math.round(nationalTurnout.projectedOutstanding).toLocaleString()}. (A rough projection from 2023&apos;s own
+          preliminary-to-final growth rate alone would suggest more &mdash; roughly 587,600 &mdash; so the figure here
+          is calibrated back to the Commission&apos;s number, using 2023 only to estimate how that total is likely to
+          split between electorates.) Those votes won&apos;t move every electorate or the party vote evenly, so below
+          are the distinct ways the final count could shift today&apos;s preliminary numbers &mdash; each modeled on
+          its own, holding everything else at today&apos;s real result. Any combination of them could happen at once;
+          this isn&apos;t a prediction, just a map of what to watch for.
         </p>
         {groups.map((group) => (
           <ScenarioGroupSection key={group.key} group={group} />
