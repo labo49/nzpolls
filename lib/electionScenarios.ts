@@ -1,5 +1,6 @@
 import { computeBlocSeats } from "./blocs";
 import { computeSeats, houseSize, majorityThreshold, totalOverhangSeats, type SeatResult } from "./seats";
+import { nationalTurnoutEstimate } from "./turnoutEstimates";
 import type { PartyCode } from "./parties";
 import type { ElectorateResultRow } from "./electorateResults";
 import type { PollOfPollsPoint } from "./types";
@@ -180,43 +181,66 @@ export interface ElectionScenarios {
   leftMajorityPath: ScenarioGroup | null;
 }
 
-/** Shifts `deltaPp` of party vote from `fromParties` to `toParties`,
- * splitting the move proportionally to each side's current share -- a
- * uniform swing across a bloc, not a single-party shift. */
-function proportionalSwing(
+/**
+ * Projects a final national party vote by splitting the *actual* remaining
+ * vote pool (from lib/turnoutEstimates.ts's national projection) between
+ * `favoredParties` and everyone else, rather than moving abstract
+ * percentage points that aren't checked against how many votes are
+ * actually left to count. `favoredShare` is the fraction (0-1) of the
+ * remaining pool that goes to `favoredParties` (split between them
+ * proportionally to their current vote share); the rest splits the same
+ * way among every other party -- so this can never imply more movement
+ * than the real outstanding vote count allows.
+ */
+function projectFinalVote(
   partyVote: Partial<Record<PartyCode, number>>,
-  fromParties: PartyCode[],
-  toParties: PartyCode[],
-  deltaPp: number
+  favoredParties: PartyCode[],
+  favoredShare: number
 ): Partial<Record<PartyCode, number>> {
-  const fromTotal = fromParties.reduce((sum, p) => sum + (partyVote[p] ?? 0), 0);
-  const toTotal = toParties.reduce((sum, p) => sum + (partyVote[p] ?? 0), 0);
-  const vote = { ...partyVote };
-  for (const p of fromParties) {
-    vote[p] = (partyVote[p] ?? 0) - deltaPp * ((partyVote[p] ?? 0) / fromTotal);
+  const national = nationalTurnoutEstimate();
+  const countedTotal = national.votes;
+  const remaining = national.projectedOutstanding;
+  const finalTotal = countedTotal + remaining;
+
+  const counted: Partial<Record<PartyCode, number>> = {};
+  for (const code of Object.keys(partyVote) as PartyCode[]) {
+    counted[code] = ((partyVote[code] ?? 0) / 100) * countedTotal;
   }
-  for (const p of toParties) {
-    vote[p] = (partyVote[p] ?? 0) + deltaPp * ((partyVote[p] ?? 0) / toTotal);
+
+  const otherParties = (Object.keys(partyVote) as PartyCode[]).filter((p) => !favoredParties.includes(p));
+  const favoredCountedTotal = favoredParties.reduce((sum, p) => sum + (counted[p] ?? 0), 0);
+  const otherCountedTotal = otherParties.reduce((sum, p) => sum + (counted[p] ?? 0), 0);
+
+  const favoredRemaining = favoredShare * remaining;
+  const otherRemaining = (1 - favoredShare) * remaining;
+
+  const finalVote: Partial<Record<PartyCode, number>> = {};
+  for (const p of favoredParties) {
+    const share = favoredCountedTotal > 0 ? (counted[p] ?? 0) / favoredCountedTotal : 1 / favoredParties.length;
+    finalVote[p] = (((counted[p] ?? 0) + favoredRemaining * share) / finalTotal) * 100;
   }
-  return vote;
+  for (const p of otherParties) {
+    const share = otherCountedTotal > 0 ? (counted[p] ?? 0) / otherCountedTotal : 1 / otherParties.length;
+    finalVote[p] = (((counted[p] ?? 0) + otherRemaining * share) / finalTotal) * 100;
+  }
+  return finalVote;
 }
 
-/** Searches (in 0.05pp steps, up to 20pp) for the smallest proportional
- * swing from `fromParties` to `toParties` that gets the left bloc to the
- * majority threshold. Returns null if 20pp isn't enough (it should always
- * be, short of a near-total bloc collapse). */
-function findMinimumLeftMajoritySwing(
+/** Searches (in 0.5% steps) for the smallest share of the *actual*
+ * remaining vote pool that `favoredParties` would need to get the left
+ * bloc to the majority threshold. Returns null if even 100% of the
+ * remaining pool isn't enough. */
+function findMinimumFavoredShare(
   partyVote: Partial<Record<PartyCode, number>>,
   electorateSeats: Partial<Record<PartyCode, number>>,
-  fromParties: PartyCode[],
-  toParties: PartyCode[]
+  favoredParties: PartyCode[]
 ): number | null {
-  for (let delta = 0; delta <= 20; delta += 0.05) {
-    const vote = proportionalSwing(partyVote, fromParties, toParties, delta);
+  for (let share = 0; share <= 1.001; share += 0.005) {
+    const vote = projectFinalVote(partyVote, favoredParties, share);
     const seats = seatsFor(vote, electorateSeats);
     const left = computeBlocSeats(seats).LEFT ?? 0;
     if (left >= majorityThreshold(seats)) {
-      return Math.round(delta * 100) / 100;
+      return Math.round(Math.min(share, 1) * 1000) / 10; // one decimal place, as a %
     }
   }
   return null;
@@ -348,30 +372,38 @@ export function computeElectionScenarios(
       NAT: (baseElectorateSeats.NAT ?? 0) - natVulnerable.length,
       LAB: (baseElectorateSeats.LAB ?? 0) + natVulnerable.length,
     };
-    const fromParties: PartyCode[] = ["NAT", "ACT", "NZF"];
-    const toParties: PartyCode[] = ["LAB", "GRN"];
-    const requiredSwing = findMinimumLeftMajoritySwing(partyVote, flippedElectorateSeats, fromParties, toParties);
+    const favoredParties: PartyCode[] = ["LAB", "GRN"];
+    const requiredShare = findMinimumFavoredShare(partyVote, flippedElectorateSeats, favoredParties);
 
-    if (requiredSwing !== null) {
+    if (requiredShare !== null) {
       const flipLabel =
         natVulnerable.length > 0
           ? `${natVulnerable.map((r) => r.electorateName).join(" and ")} flip${natVulnerable.length === 1 ? "s" : ""} to Labour`
           : "Today's real preliminary result";
-      const realisticSwingPp = 1.5;
+
+      const national = nationalTurnoutEstimate();
+      const remaining = Math.round(national.projectedOutstanding);
+      let voteTotal = 0;
+      for (const v of Object.values(partyVote)) voteTotal += v ?? 0;
+      voteTotal = voteTotal || 1;
+      const favoredShareSoFar = Math.round((((partyVote.LAB ?? 0) + (partyVote.GRN ?? 0)) / voteTotal) * 100);
+
+      const illustrativeShare = 60;
+      const requiredVotes = Math.round((requiredShare / 100) * national.projectedOutstanding);
 
       leftMajorityPath = {
         key: "left-majority-path",
         title: "What would it take for the left bloc to win a majority?",
-        mechanism: `None of the single changes above get the left bloc (Labour + Green + Te Pāti Māori) to a majority on their own -- it also needs party vote to move from the right bloc to the left, not just close electorates changing hands. Below: today's closest National-vs-Labour races flipping to Labour, then a modest swing of the kind specials have historically produced, then the swing actually needed to govern -- so the gap is visible, not just asserted.`,
+        mechanism: `None of the single changes above get the left bloc (Labour + Green + Te Pāti Māori) to a majority on their own -- it also needs Labour and the Greens to win a large share of the ~${remaining.toLocaleString()} votes still to count, not just close electorates changing hands. These rows are grounded in that actual remaining vote count (lib/turnoutEstimates.ts), not an abstract swing -- each splits the real outstanding pool between Labour+Green and everyone else, so the share needed can be checked against how many votes are actually left, rather than assuming a shift the remaining votes couldn't physically produce. A share this lopsided (more than ${requiredShare > 50 ? "half" : "a third"} of every remaining vote, nationwide) would be far outside anything specials have historically produced.`,
         steps: [
           stepFrom(flipLabel, seatsFor(partyVote, flippedElectorateSeats)),
           stepFrom(
-            `...plus a modest ${realisticSwingPp}pp swing from the right bloc to the left`,
-            seatsFor(proportionalSwing(partyVote, fromParties, toParties, realisticSwingPp), flippedElectorateSeats)
+            `...plus ${illustrativeShare}% of the remaining votes going to Labour + Green (well above their ${favoredShareSoFar}% share of the vote so far)`,
+            seatsFor(projectFinalVote(partyVote, favoredParties, illustrativeShare / 100), flippedElectorateSeats)
           ),
           stepFrom(
-            `...plus a ${requiredSwing}pp swing -- the minimum that actually gets the left bloc to a majority`,
-            seatsFor(proportionalSwing(partyVote, fromParties, toParties, requiredSwing), flippedElectorateSeats)
+            `...plus ${requiredShare}% of all remaining votes (~${requiredVotes.toLocaleString()} of ~${remaining.toLocaleString()}) going to Labour + Green -- the minimum that actually gets the left bloc to a majority`,
+            seatsFor(projectFinalVote(partyVote, favoredParties, requiredShare / 100), flippedElectorateSeats)
           ),
         ],
         electorates: natVulnerable.map((r) => r.electorateName),
