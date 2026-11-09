@@ -18,7 +18,75 @@ function majorityStatus(step: ScenarioStep): { label: string; color: string } {
   return { label: "No bloc reaches a majority", color: "#737373" };
 }
 
-export default function ScenarioTable({ steps, firstColumnLabel = "Change" }: { steps: ScenarioStep[]; firstColumnLabel?: string }) {
+function ScenarioRow({ step, baseline }: { step: ScenarioStep; baseline?: boolean }) {
+  const status = majorityStatus(step);
+  const byCode = new Map(step.seats.map((r) => [r.code, r]));
+  const blocSeats = computeBlocSeats(step.seats);
+  return (
+    <tr
+      className={`border-b border-black/5 last:border-0 dark:border-white/5${
+        baseline ? " bg-black/[0.02] dark:bg-white/[0.03]" : ""
+      }`}
+    >
+      <td className={`px-3 py-2 text-neutral-900 dark:text-neutral-100 ${baseline ? "italic" : "font-medium"}`}>
+        {step.label}
+      </td>
+      {PARTY_CODES.map((code) => {
+        const seat = byCode.get(code);
+        const party = PARTY_BY_CODE[code];
+        return (
+          <td key={code} className="px-2 py-2 text-right tabular-nums">
+            {seat ? (
+              <>
+                {seat.totalSeats}
+                {seat.overhang && (
+                  <span title="Overhang" className="ml-0.5 text-xs text-neutral-400 dark:text-neutral-500">
+                    *
+                  </span>
+                )}
+              </>
+            ) : (
+              <span className="text-neutral-300 dark:text-neutral-600">—</span>
+            )}
+            <span className="sr-only">{party.name}</span>
+          </td>
+        );
+      })}
+      {BLOCS.map((bloc, i) => (
+        <td
+          key={bloc.key}
+          className={`px-2 py-2 text-right font-semibold tabular-nums text-neutral-700 dark:text-neutral-300${
+            i === 0 ? " border-l border-black/10 dark:border-white/10" : ""
+          }`}
+        >
+          {blocSeats[bloc.key] ?? 0}
+          <span className="sr-only">{bloc.label}</span>
+        </td>
+      ))}
+      <td className="px-2 py-2 text-right font-semibold tabular-nums">{step.houseSize}</td>
+      <td className="px-3 py-2">
+        <span className="flex items-center gap-1.5 text-xs font-medium" style={{ color: status.color }}>
+          <PartyDot color={{ light: status.color, dark: status.color }} />
+          {status.label}
+        </span>
+      </td>
+    </tr>
+  );
+}
+
+export default function ScenarioTable({
+  steps,
+  firstColumnLabel = "Change",
+  baseline,
+}: {
+  steps: ScenarioStep[];
+  firstColumnLabel?: string;
+  /** Today's real preliminary result, shown as a distinct first row so each
+   * scenario row's shift (including which bloc-total columns actually
+   * moved) is visible against a fixed reference instead of requiring the
+   * reader to recall the Seats section above. */
+  baseline?: ScenarioStep;
+}) {
   return (
     <div className="overflow-x-auto rounded-lg border border-black/10 dark:border-white/10">
       <table className="w-full min-w-[820px] text-sm">
@@ -43,55 +111,10 @@ export default function ScenarioTable({ steps, firstColumnLabel = "Change" }: { 
           </tr>
         </thead>
         <tbody>
-          {steps.map((step) => {
-            const status = majorityStatus(step);
-            const byCode = new Map(step.seats.map((r) => [r.code, r]));
-            const blocSeats = computeBlocSeats(step.seats);
-            return (
-              <tr key={step.label} className="border-b border-black/5 last:border-0 dark:border-white/5">
-                <td className="px-3 py-2 font-medium text-neutral-900 dark:text-neutral-100">{step.label}</td>
-                {PARTY_CODES.map((code) => {
-                  const seat = byCode.get(code);
-                  const party = PARTY_BY_CODE[code];
-                  return (
-                    <td key={code} className="px-2 py-2 text-right tabular-nums">
-                      {seat ? (
-                        <>
-                          {seat.totalSeats}
-                          {seat.overhang && (
-                            <span title="Overhang" className="ml-0.5 text-xs text-neutral-400 dark:text-neutral-500">
-                              *
-                            </span>
-                          )}
-                        </>
-                      ) : (
-                        <span className="text-neutral-300 dark:text-neutral-600">—</span>
-                      )}
-                      <span className="sr-only">{party.name}</span>
-                    </td>
-                  );
-                })}
-                {BLOCS.map((bloc, i) => (
-                  <td
-                    key={bloc.key}
-                    className={`px-2 py-2 text-right font-semibold tabular-nums text-neutral-700 dark:text-neutral-300${
-                      i === 0 ? " border-l border-black/10 dark:border-white/10" : ""
-                    }`}
-                  >
-                    {blocSeats[bloc.key] ?? 0}
-                    <span className="sr-only">{bloc.label}</span>
-                  </td>
-                ))}
-                <td className="px-2 py-2 text-right font-semibold tabular-nums">{step.houseSize}</td>
-                <td className="px-3 py-2">
-                  <span className="flex items-center gap-1.5 text-xs font-medium" style={{ color: status.color }}>
-                    <PartyDot color={{ light: status.color, dark: status.color }} />
-                    {status.label}
-                  </span>
-                </td>
-              </tr>
-            );
-          })}
+          {baseline && <ScenarioRow key={`baseline-${baseline.label}`} step={baseline} baseline />}
+          {steps.map((step) => (
+            <ScenarioRow key={step.label} step={step} />
+          ))}
         </tbody>
       </table>
     </div>

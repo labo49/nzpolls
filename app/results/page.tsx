@@ -7,7 +7,7 @@ import SeatsChart from "@/components/SeatsChart";
 import SeatsTable from "@/components/SeatsTable";
 import { computeBlocSeats } from "@/lib/blocs";
 import { computeBaselineSeats, computeElectionScenarios } from "@/lib/electionScenarios";
-import { houseSize, majorityThreshold } from "@/lib/seats";
+import { houseSize, majorityThreshold, totalOverhangSeats } from "@/lib/seats";
 import { pageMetadata } from "@/lib/site";
 import { nationalTurnoutEstimate } from "@/lib/turnoutEstimates";
 import electionResultData from "@/data/electionResult.json";
@@ -50,6 +50,13 @@ export default function ResultsPage() {
     seats: baselineSeats,
     houseSize: houseSize(baselineSeats),
     majorityThreshold: majorityThreshold(baselineSeats),
+  };
+  const baselineStep = {
+    label: "Today's real preliminary result (no change)",
+    seats: baselineSeats,
+    houseSize: baseline.houseSize,
+    majorityThreshold: baseline.majorityThreshold,
+    overhangSeats: totalOverhangSeats(baselineSeats),
   };
   const { groups, compound, highlightedElectorates, leftMajorityPath } = computeElectionScenarios(
     data.partyVote.results,
@@ -153,16 +160,16 @@ export default function ResultsPage() {
           this isn&apos;t a prediction, just a map of what to watch for.
         </p>
         {groups.map((group) => (
-          <ScenarioGroupSection key={group.key} group={group} />
+          <ScenarioGroupSection key={group.key} group={group} baseline={baselineStep} />
         ))}
         {compound && (
           <div className="mt-6 rounded-lg border border-dashed border-black/15 p-4 dark:border-white/15">
-            <ScenarioGroupSection group={compound} />
+            <ScenarioGroupSection group={compound} baseline={baselineStep} />
           </div>
         )}
         {leftMajorityPath && (
           <div className="mt-6 rounded-lg border border-dashed border-black/15 p-4 dark:border-white/15">
-            <ScenarioGroupSection group={leftMajorityPath} />
+            <ScenarioGroupSection group={leftMajorityPath} baseline={baselineStep} />
           </div>
         )}
       </section>
