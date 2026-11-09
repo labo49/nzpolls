@@ -284,41 +284,78 @@ async function postToX(message: string, chart: Chart | null): Promise<void> {
 // actual new one this run (data/newPolls.json is normally empty between
 // refreshes) -- for manually verifying credentials/formatting on demand.
 // --platform=telegram|bluesky|x restricts the run to a single platform.
-function parseArgs(argv: string[]): { test: boolean; platform: string | null } {
+// --platforms=telegram,bluesky restricts the run to several (comma-separated).
+// --message posts process.env.CUSTOM_MESSAGE verbatim instead of deriving a
+// message from poll data -- for one-off hand-written posts (e.g. about a
+// specific page or feature), not run on the automated schedule.
+function parseArgs(argv: string[]): { test: boolean; platform: string | null; platforms: string[] | null; message: boolean } {
   const test = argv.includes("--test");
+  const message = argv.includes("--message");
   const platformArg = argv.find((a) => a.startsWith("--platform="));
   const platform = platformArg ? platformArg.slice("--platform=".length) : null;
-  return { test, platform };
+  const platformsArg = argv.find((a) => a.startsWith("--platforms="));
+  const platforms = platformsArg
+    ? platformsArg
+        .slice("--platforms=".length)
+        .split(",")
+        .map((p) => p.trim())
+        .filter(Boolean)
+    : null;
+  return { test, platform, platforms, message };
 }
 
 async function main() {
   await installDevProxyIfPresent();
 
-  const { test, platform } = parseArgs(process.argv.slice(2));
+  const { test, platform, platforms: platformsArg, message: messageMode } = parseArgs(process.argv.slice(2));
 
-  const allPolls = JSON.parse(await readFile(ALL_POLLS_PATH, "utf-8")) as Poll[];
-  const chart = await buildLast5PollsChartPng(allPolls);
+  let platforms: Array<[string, () => Promise<void>]>;
 
-  let newPolls: Poll[];
-  if (test) {
-    newPolls = allPolls.slice(-1);
-    console.log(`--test: posting the most recent known poll (${newPolls[0]?.pollster}, ${newPolls[0]?.dateLabel}).`);
-  } else {
-    newPolls = JSON.parse(await readFile(NEW_POLLS_PATH, "utf-8")) as Poll[];
-    if (newPolls.length === 0) {
-      console.log("No new polls this run -- nothing to post.");
-      return;
+  if (messageMode) {
+    const text = process.env.CUSTOM_MESSAGE;
+    if (!text) {
+      throw new Error("--message requires CUSTOM_MESSAGE to be set.");
     }
+    for (const [name, limit] of [
+      ["Bluesky", BLUESKY_MAX_LENGTH],
+      ["X", X_MAX_LENGTH],
+    ] as const) {
+      if (text.length > limit) {
+        console.warn(`Warning: message is ${text.length} chars, over ${name}'s ${limit}-char limit -- that post will fail.`);
+      }
+    }
+    platforms = [
+      ["telegram", () => postToTelegram(text, null)],
+      ["bluesky", () => postToBluesky(text, null)],
+      ["x", () => postToX(text, null)],
+    ];
+  } else {
+    const allPolls = JSON.parse(await readFile(ALL_POLLS_PATH, "utf-8")) as Poll[];
+    const chart = await buildLast5PollsChartPng(allPolls);
+
+    let newPolls: Poll[];
+    if (test) {
+      newPolls = allPolls.slice(-1);
+      console.log(`--test: posting the most recent known poll (${newPolls[0]?.pollster}, ${newPolls[0]?.dateLabel}).`);
+    } else {
+      newPolls = JSON.parse(await readFile(NEW_POLLS_PATH, "utf-8")) as Poll[];
+      if (newPolls.length === 0) {
+        console.log("No new polls this run -- nothing to post.");
+        return;
+      }
+    }
+
+    platforms = [
+      ["telegram", () => postToTelegram(buildMessage(newPolls), chart)],
+      ["bluesky", () => postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH), chart)],
+      ["x", () => postToX(truncateMessage(newPolls, X_MAX_LENGTH), chart)],
+    ];
   }
 
-  const platforms: Array<[string, () => Promise<void>]> = [
-    ["telegram", () => postToTelegram(buildMessage(newPolls), chart)],
-    ["bluesky", () => postToBluesky(truncateMessage(newPolls, BLUESKY_MAX_LENGTH), chart)],
-    ["x", () => postToX(truncateMessage(newPolls, X_MAX_LENGTH), chart)],
-  ];
-  const selected = platform ? platforms.filter(([name]) => name === platform) : platforms;
-  if (platform && selected.length === 0) {
-    throw new Error(`Unknown --platform "${platform}" (expected telegram, bluesky, or x).`);
+  const selectedNames = platformsArg ?? (platform ? [platform] : null);
+  const selected = selectedNames ? platforms.filter(([name]) => selectedNames.includes(name)) : platforms;
+  if (selectedNames && selected.length === 0) {
+    throw new Error(`Unknown platform(s) "${selectedNames.join(",")}" (expected telegram, bluesky, and/or x).`);
   }
 
   // Each platform is independent -- one failing (e.g. X's API credits

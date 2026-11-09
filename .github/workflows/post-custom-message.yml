@@ -1,0 +1,46 @@
+name: Post custom message
+
+# Manual-only: posts an exact, hand-written message (not derived from poll
+# data) to one or more platforms, using the same repo secrets as the daily
+# refresh workflow. For one-off announcements about a specific page or
+# feature -- not run on the automated schedule.
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Exact message text to post, used verbatim (include the link and hashtags)"
+        required: true
+        type: string
+      platforms:
+        description: "Comma-separated platforms to post to"
+        required: true
+        default: "telegram,bluesky"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run post-social -- --message --platforms="${{ inputs.platforms }}"
+        env:
+          CUSTOM_MESSAGE: ${{ inputs.message }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
