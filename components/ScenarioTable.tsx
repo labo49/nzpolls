@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import PartyDot from "@/components/PartyDot";
 import { BLOCS, computeBlocSeats } from "@/lib/blocs";
 import type { ScenarioStep } from "@/lib/electionScenarios";
@@ -5,7 +6,7 @@ import { PARTY_BY_CODE } from "@/lib/parties";
 
 const PARTY_CODES = ["NAT", "LAB", "GRN", "ACT", "NZF", "TOP", "TPM"] as const;
 
-function majorityStatus(step: ScenarioStep): { label: string; color: string } {
+function majorityStatus(step: ScenarioStep): { label: ReactNode; color: string } {
   const blocSeats = computeBlocSeats(step.seats);
   const right = blocSeats.RIGHT ?? 0;
   const left = blocSeats.LEFT ?? 0;
@@ -15,7 +16,14 @@ function majorityStatus(step: ScenarioStep): { label: string; color: string } {
   if (left >= step.majorityThreshold) {
     return { label: `Left bloc governs (+${left - step.majorityThreshold})`, color: BLOCS[1].color.light };
   }
-  return { label: "No bloc reaches a majority", color: "#737373" };
+  return {
+    label: (
+      <>
+        No bloc reaches a majority without <strong className="font-semibold">TOP</strong>
+      </>
+    ),
+    color: "#737373",
+  };
 }
 
 function ScenarioRow({ step, baseline }: { step: ScenarioStep; baseline?: boolean }) {

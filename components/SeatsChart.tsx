@@ -120,9 +120,13 @@ export default function SeatsChart({
       </ul>
       <p className="mt-2 text-center text-xs text-neutral-500 dark:text-neutral-400">
         {majority} seats needed for a majority.{" "}
-        {leaderHasMajority
-          ? `${leader.name} would govern alone.`
-          : "No bloc reaches a majority alone at this snapshot."}
+        {leaderHasMajority ? (
+          `${leader.name} would govern alone.`
+        ) : (
+          <>
+            No bloc reaches a majority without <strong className="font-semibold">TOP</strong> at this snapshot.
+          </>
+        )}
       </p>
       <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
         {footnote ?? (
