@@ -30,6 +30,14 @@ export default function ScenarioTable({ steps, firstColumnLabel = "Change" }: { 
                 {code}
               </th>
             ))}
+            {BLOCS.map((bloc, i) => (
+              <th
+                key={bloc.key}
+                className={`px-2 py-2 text-right font-medium${i === 0 ? " border-l border-black/10 dark:border-white/10" : ""}`}
+              >
+                {bloc.key === "TOP" ? "TOP" : bloc.key === "RIGHT" ? "Right" : "Left"}
+              </th>
+            ))}
             <th className="px-2 py-2 text-right font-medium">House</th>
             <th className="px-3 py-2 font-medium">Outcome</th>
           </tr>
@@ -38,6 +46,7 @@ export default function ScenarioTable({ steps, firstColumnLabel = "Change" }: { 
           {steps.map((step) => {
             const status = majorityStatus(step);
             const byCode = new Map(step.seats.map((r) => [r.code, r]));
+            const blocSeats = computeBlocSeats(step.seats);
             return (
               <tr key={step.label} className="border-b border-black/5 last:border-0 dark:border-white/5">
                 <td className="px-3 py-2 font-medium text-neutral-900 dark:text-neutral-100">{step.label}</td>
@@ -62,6 +71,17 @@ export default function ScenarioTable({ steps, firstColumnLabel = "Change" }: { 
                     </td>
                   );
                 })}
+                {BLOCS.map((bloc, i) => (
+                  <td
+                    key={bloc.key}
+                    className={`px-2 py-2 text-right font-semibold tabular-nums text-neutral-700 dark:text-neutral-300${
+                      i === 0 ? " border-l border-black/10 dark:border-white/10" : ""
+                    }`}
+                  >
+                    {blocSeats[bloc.key] ?? 0}
+                    <span className="sr-only">{bloc.label}</span>
+                  </td>
+                ))}
                 <td className="px-2 py-2 text-right font-semibold tabular-nums">{step.houseSize}</td>
                 <td className="px-3 py-2">
                   <span className="flex items-center gap-1.5 text-xs font-medium" style={{ color: status.color }}>
