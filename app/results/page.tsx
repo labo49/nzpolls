@@ -144,8 +144,11 @@ export default function ResultsPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-          How the 27 Nov official count could move these numbers
+        <h2
+          id="scenarios"
+          className="mb-3 scroll-mt-20 text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400"
+        >
+          Scenarios: how the special votes could change the outcome
         </h2>
         <p className="mb-5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
           All 71 electorates&apos; ordinary votes are now in &mdash; {nationalTurnout.votes.toLocaleString()} of{" "}
