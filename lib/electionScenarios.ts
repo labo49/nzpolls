@@ -80,6 +80,10 @@ export interface ScenarioGroup {
    * the mechanism, not just the headline numbers. */
   mechanism: string;
   steps: ScenarioStep[];
+  /** The electorate(s) this group's steps flip, for looking up turnout/
+   * outstanding-votes context (lib/turnoutEstimates.ts). Empty for the
+   * party-vote-shift groups, which aren't tied to one electorate. */
+  electorates: string[];
 }
 
 function stepFrom(label: string, seats: SeatResult[]): ScenarioStep {
@@ -189,6 +193,7 @@ export function computeElectionScenarios(
       mechanism:
         "National holds more electorate seats than its party vote alone would entitle it to (an overhang). Every one of those seats it loses to Labour removes an overhang seat and shrinks Parliament by one -- Labour's total is unaffected, since it simply swaps an electorate MP for a list MP.",
       steps: electorateFlipSteps(partyVote, allElectorates, natVulnerable, "LAB"),
+      electorates: natVulnerable.map((r) => r.electorateName),
     });
   }
 
@@ -199,6 +204,7 @@ export function computeElectionScenarios(
       mechanism:
         "The reverse: every electorate National wins from Labour becomes an extra overhang seat, growing Parliament by one each time. Labour's total stays the same either way.",
       steps: electorateFlipSteps(partyVote, allElectorates, natOpportunity, "NAT"),
+      electorates: natOpportunity.map((r) => r.electorateName),
     });
   }
 
@@ -209,6 +215,7 @@ export function computeElectionScenarios(
       mechanism:
         "Te Pāti Māori also holds more electorates than its tiny party vote entitles it to. A Green win here would take a seat that's already within the Greens' proportional share, while removing one of Te Pāti Māori's overhang seats -- so Parliament shrinks even though the left bloc's combined total doesn't change.",
       steps: electorateFlipSteps(partyVote, allElectorates, grnOpportunity, "GRN"),
+      electorates: grnOpportunity.map((r) => r.electorateName),
     });
   }
 
@@ -226,6 +233,7 @@ export function computeElectionScenarios(
       mechanism:
         "National could lose party-vote support without losing a single electorate MP -- its overhang simply grows, freeing up an extra list seat for whichever party gains that support (modeled here as Labour, since special votes have historically skewed left).",
       steps: [natSlip],
+      electorates: [],
     });
   }
 
@@ -240,6 +248,7 @@ export function computeElectionScenarios(
       mechanism:
         "Unlike National, neither ACT nor NZ First has an overhang cushion. A list seat either loses to the left reduces the coalition's total without Parliament growing to compensate -- the most dangerous kind of shift for the coalition's majority.",
       steps: voteShiftSteps,
+      electorates: [],
     });
   }
 
@@ -276,6 +285,7 @@ export function computeElectionScenarios(
           mechanism:
             "Any combination of the mechanisms above could happen at once -- this is one illustrative example, not a prediction, showing how a close electorate and a small party-vote shift together can move both Parliament's size and who holds a majority within it.",
           steps: [stepFrom(`${flippedElectorate} to Labour + NZ First's vote to the Greens`, seatsFor(combinedVote, electorateSeats))],
+          electorates: [flippedElectorate],
         };
       }
     }

@@ -9,6 +9,7 @@ import { computeBlocSeats } from "@/lib/blocs";
 import { computeBaselineSeats, computeElectionScenarios } from "@/lib/electionScenarios";
 import { houseSize, majorityThreshold } from "@/lib/seats";
 import { pageMetadata } from "@/lib/site";
+import { nationalTurnoutEstimate } from "@/lib/turnoutEstimates";
 import electionResultData from "@/data/electionResult.json";
 import type { ElectorateResultRow } from "@/lib/electorateResults";
 import type { PartyCode } from "@/lib/parties";
@@ -51,6 +52,7 @@ export default function ResultsPage() {
     majorityThreshold: majorityThreshold(baselineSeats),
   };
   const { groups, compound, highlightedElectorates } = computeElectionScenarios(data.partyVote.results, data.electorates);
+  const nationalTurnout = nationalTurnoutEstimate();
   const blocSeats = computeBlocSeats(baseline.seats);
 
   const snapshotPoint = { date: data.fetchedAt, pollCount: data.electorates.length, results: data.partyVote.results };
@@ -136,10 +138,16 @@ export default function ResultsPage() {
           How the 27 Nov official count could move these numbers
         </h2>
         <p className="mb-5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-          Roughly 400,000 special votes are still to be counted nationally. They won&apos;t move every electorate or
-          the party vote evenly, so below are the distinct ways the final count could shift today&apos;s preliminary
-          numbers -- each modeled on its own, holding everything else at today&apos;s real result. Any combination of
-          them could happen at once; this isn&apos;t a prediction, just a map of what to watch for.
+          Nationally, {nationalTurnout.votes.toLocaleString()} of {nationalTurnout.enrolled.toLocaleString()} enrolled
+          voters ({nationalTurnout.percSoFar.toFixed(1)}%) have been counted so far. Applying 2023&apos;s own
+          preliminary-to-final growth to that pace projects roughly{" "}
+          {Math.round(nationalTurnout.projectedOutstanding).toLocaleString()} votes still to come by 27 Nov &mdash;
+          higher than the ~400,000 special votes commonly cited, likely because that figure covers specials alone
+          while this also counts ordinary votes still being processed; treat it as a rough estimate, not an official
+          count. Those votes won&apos;t move every electorate or the party vote evenly, so below are the distinct
+          ways the final count could shift today&apos;s preliminary numbers &mdash; each modeled on its own, holding
+          everything else at today&apos;s real result. Any combination of them could happen at once; this
+          isn&apos;t a prediction, just a map of what to watch for.
         </p>
         {groups.map((group) => (
           <ScenarioGroupSection key={group.key} group={group} />
