@@ -51,7 +51,10 @@ export default function ResultsPage() {
     houseSize: houseSize(baselineSeats),
     majorityThreshold: majorityThreshold(baselineSeats),
   };
-  const { groups, compound, highlightedElectorates } = computeElectionScenarios(data.partyVote.results, data.electorates);
+  const { groups, compound, highlightedElectorates, leftMajorityPath } = computeElectionScenarios(
+    data.partyVote.results,
+    data.electorates
+  );
   const nationalTurnout = nationalTurnoutEstimate();
   const blocSeats = computeBlocSeats(baseline.seats);
 
@@ -138,15 +141,15 @@ export default function ResultsPage() {
           How the 27 Nov official count could move these numbers
         </h2>
         <p className="mb-5 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-          Nationally, {nationalTurnout.votes.toLocaleString()} of {nationalTurnout.enrolled.toLocaleString()} enrolled
-          voters ({nationalTurnout.percSoFar.toFixed(1)}%) have been counted so far. Applying 2023&apos;s own
-          preliminary-to-final growth to that pace projects roughly{" "}
-          {Math.round(nationalTurnout.projectedOutstanding).toLocaleString()} votes still to come by 27 Nov &mdash;
-          higher than the ~400,000 special votes commonly cited, likely because that figure covers specials alone
-          while this also counts ordinary votes still being processed; treat it as a rough estimate, not an official
-          count. Those votes won&apos;t move every electorate or the party vote evenly, so below are the distinct
-          ways the final count could shift today&apos;s preliminary numbers &mdash; each modeled on its own, holding
-          everything else at today&apos;s real result. Any combination of them could happen at once; this
+          All 71 electorates&apos; ordinary votes are now in &mdash; {nationalTurnout.votes.toLocaleString()} of{" "}
+          {nationalTurnout.enrolled.toLocaleString()} enrolled voters ({nationalTurnout.percSoFar.toFixed(1)}%). What&apos;s
+          still outstanding by 27 Nov is special votes. Applying 2023&apos;s own preliminary-to-final growth to
+          today&apos;s count projects roughly {Math.round(nationalTurnout.projectedOutstanding).toLocaleString()}{" "}
+          of them &mdash; close to 2023&apos;s actual national special-vote count of 582,553, and higher than the
+          ~400,000 sometimes cited for this election; treat it as a rough estimate from that growth-rate method, not
+          an official count. Those votes won&apos;t move every electorate or the party vote evenly, so below are the
+          distinct ways the final count could shift today&apos;s preliminary numbers &mdash; each modeled on its own,
+          holding everything else at today&apos;s real result. Any combination of them could happen at once; this
           isn&apos;t a prediction, just a map of what to watch for.
         </p>
         {groups.map((group) => (
@@ -155,6 +158,11 @@ export default function ResultsPage() {
         {compound && (
           <div className="mt-6 rounded-lg border border-dashed border-black/15 p-4 dark:border-white/15">
             <ScenarioGroupSection group={compound} />
+          </div>
+        )}
+        {leftMajorityPath && (
+          <div className="mt-6 rounded-lg border border-dashed border-black/15 p-4 dark:border-white/15">
+            <ScenarioGroupSection group={leftMajorityPath} />
           </div>
         )}
       </section>

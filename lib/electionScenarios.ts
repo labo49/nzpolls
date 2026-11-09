@@ -1,3 +1,4 @@
+import { computeBlocSeats } from "./blocs";
 import { computeSeats, houseSize, majorityThreshold, totalOverhangSeats, type SeatResult } from "./seats";
 import type { PartyCode } from "./parties";
 import type { ElectorateResultRow } from "./electorateResults";
@@ -172,6 +173,53 @@ export interface ElectionScenarios {
   /** Every electorate referenced by an electorate-flip group above, for
    * badging in the full electorate results table. */
   highlightedElectorates: string[];
+  /** A combined, bloc-level question none of the single-mechanism groups
+   * above answer on their own: how far would the left bloc need to move
+   * to actually govern? Null if no close NAT-vs-Labour race exists to
+   * combine with a party-vote swing. */
+  leftMajorityPath: ScenarioGroup | null;
+}
+
+/** Shifts `deltaPp` of party vote from `fromParties` to `toParties`,
+ * splitting the move proportionally to each side's current share -- a
+ * uniform swing across a bloc, not a single-party shift. */
+function proportionalSwing(
+  partyVote: Partial<Record<PartyCode, number>>,
+  fromParties: PartyCode[],
+  toParties: PartyCode[],
+  deltaPp: number
+): Partial<Record<PartyCode, number>> {
+  const fromTotal = fromParties.reduce((sum, p) => sum + (partyVote[p] ?? 0), 0);
+  const toTotal = toParties.reduce((sum, p) => sum + (partyVote[p] ?? 0), 0);
+  const vote = { ...partyVote };
+  for (const p of fromParties) {
+    vote[p] = (partyVote[p] ?? 0) - deltaPp * ((partyVote[p] ?? 0) / fromTotal);
+  }
+  for (const p of toParties) {
+    vote[p] = (partyVote[p] ?? 0) + deltaPp * ((partyVote[p] ?? 0) / toTotal);
+  }
+  return vote;
+}
+
+/** Searches (in 0.05pp steps, up to 20pp) for the smallest proportional
+ * swing from `fromParties` to `toParties` that gets the left bloc to the
+ * majority threshold. Returns null if 20pp isn't enough (it should always
+ * be, short of a near-total bloc collapse). */
+function findMinimumLeftMajoritySwing(
+  partyVote: Partial<Record<PartyCode, number>>,
+  electorateSeats: Partial<Record<PartyCode, number>>,
+  fromParties: PartyCode[],
+  toParties: PartyCode[]
+): number | null {
+  for (let delta = 0; delta <= 20; delta += 0.05) {
+    const vote = proportionalSwing(partyVote, fromParties, toParties, delta);
+    const seats = seatsFor(vote, electorateSeats);
+    const left = computeBlocSeats(seats).LEFT ?? 0;
+    if (left >= majorityThreshold(seats)) {
+      return Math.round(delta * 100) / 100;
+    }
+  }
+  return null;
 }
 
 export function computeElectionScenarios(
@@ -293,5 +341,43 @@ export function computeElectionScenarios(
 
   const highlightedElectorates = [...natVulnerable, ...natOpportunity, ...grnOpportunity].map((r) => r.electorateName);
 
-  return { groups, compound, highlightedElectorates };
+  let leftMajorityPath: ScenarioGroup | null = null;
+  {
+    const flippedElectorateSeats = {
+      ...baseElectorateSeats,
+      NAT: (baseElectorateSeats.NAT ?? 0) - natVulnerable.length,
+      LAB: (baseElectorateSeats.LAB ?? 0) + natVulnerable.length,
+    };
+    const fromParties: PartyCode[] = ["NAT", "ACT", "NZF"];
+    const toParties: PartyCode[] = ["LAB", "GRN"];
+    const requiredSwing = findMinimumLeftMajoritySwing(partyVote, flippedElectorateSeats, fromParties, toParties);
+
+    if (requiredSwing !== null) {
+      const flipLabel =
+        natVulnerable.length > 0
+          ? `${natVulnerable.map((r) => r.electorateName).join(" and ")} flip${natVulnerable.length === 1 ? "s" : ""} to Labour`
+          : "Today's real preliminary result";
+      const realisticSwingPp = 1.5;
+
+      leftMajorityPath = {
+        key: "left-majority-path",
+        title: "What would it take for the left bloc to win a majority?",
+        mechanism: `None of the single changes above get the left bloc (Labour + Green + Te Pāti Māori) to a majority on their own -- it also needs party vote to move from the right bloc to the left, not just close electorates changing hands. Below: today's closest National-vs-Labour races flipping to Labour, then a modest swing of the kind specials have historically produced, then the swing actually needed to govern -- so the gap is visible, not just asserted.`,
+        steps: [
+          stepFrom(flipLabel, seatsFor(partyVote, flippedElectorateSeats)),
+          stepFrom(
+            `...plus a modest ${realisticSwingPp}pp swing from the right bloc to the left`,
+            seatsFor(proportionalSwing(partyVote, fromParties, toParties, realisticSwingPp), flippedElectorateSeats)
+          ),
+          stepFrom(
+            `...plus a ${requiredSwing}pp swing -- the minimum that actually gets the left bloc to a majority`,
+            seatsFor(proportionalSwing(partyVote, fromParties, toParties, requiredSwing), flippedElectorateSeats)
+          ),
+        ],
+        electorates: natVulnerable.map((r) => r.electorateName),
+      };
+    }
+  }
+
+  return { groups, compound, highlightedElectorates, leftMajorityPath };
 }
