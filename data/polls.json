@@ -2398,7 +2398,7 @@
     "dateLabel": "7 Nov 2026",
     "pollster": "2026 preliminary election result",
     "sourceUrl": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
-    "sampleSize": null,
+    "sampleSize": 2418565,
     "results": {
       "NAT": 29.21,
       "LAB": 29.36,
