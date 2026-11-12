@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-11T14:52:01.834Z",
+  "fetchedAt": "2026-11-12T01:16:35.454Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
@@ -107,7 +107,7 @@
           "winnerName": "Chlöe Swarbrick",
           "winnerParty": "GRN",
           "majority": 3896,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -121,7 +121,7 @@
         {
           "year": 2017,
           "winnerName": "Nikki Kaye",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1581,
           "runnerUpParty": "LAB",
           "notional": false
@@ -247,7 +247,7 @@
         {
           "year": 2023,
           "winnerName": "Vanessa Weenink",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 396,
           "runnerUpParty": "LAB",
           "notional": false
@@ -257,13 +257,13 @@
           "winnerName": "Tracey McLellan",
           "winnerParty": "LAB",
           "majority": 13156,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": true
         }
       ],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "trendNote": "No party has won a majority of the 2 elections on record (most recently NAT, majority 396)."
     },
     {
       "name": "Botany",
@@ -321,7 +321,7 @@
         {
           "year": 2023,
           "winnerName": "Christopher Luxon",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 16337,
           "runnerUpParty": "LAB",
           "notional": false
@@ -329,7 +329,7 @@
         {
           "year": 2020,
           "winnerName": "Christopher Luxon",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 3999,
           "runnerUpParty": "LAB",
           "notional": false
@@ -337,15 +337,15 @@
         {
           "year": 2017,
           "winnerName": "Jami-Lee Ross",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 12839,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 16,337 votes -- a safe seat."
     },
     {
       "name": "Christchurch Central",
@@ -475,7 +475,7 @@
           "winnerName": "Duncan Webb",
           "winnerParty": "LAB",
           "majority": 1981,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -483,7 +483,7 @@
           "winnerName": "Duncan Webb",
           "winnerParty": "LAB",
           "majority": 14098,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -491,7 +491,7 @@
           "winnerName": "Duncan Webb",
           "winnerParty": "LAB",
           "majority": 2871,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -627,7 +627,7 @@
           "winnerName": "Reuben Davidson",
           "winnerParty": "LAB",
           "majority": 2397,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -635,7 +635,7 @@
           "winnerName": "Poto Williams",
           "winnerParty": "LAB",
           "majority": 17336,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -643,7 +643,7 @@
           "winnerName": "Poto Williams",
           "winnerParty": "LAB",
           "majority": 7480,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -737,7 +737,7 @@
         {
           "year": 2023,
           "winnerName": "Scott Simpson",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 17014,
           "runnerUpParty": "LAB",
           "notional": false
@@ -745,7 +745,7 @@
         {
           "year": 2020,
           "winnerName": "Scott Simpson",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 3505,
           "runnerUpParty": "LAB",
           "notional": false
@@ -753,15 +753,15 @@
         {
           "year": 2017,
           "winnerName": "Scott Simpson",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 14326,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 17,014 votes -- a safe seat."
     },
     {
       "name": "Dunedin",
@@ -861,7 +861,7 @@
           "winnerName": "Rachel Brooking",
           "winnerParty": "LAB",
           "majority": 7980,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -869,7 +869,7 @@
           "winnerName": "David Clark",
           "winnerParty": "LAB",
           "majority": 15521,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": true
         }
       ],
@@ -1040,7 +1040,7 @@
         {
           "year": 2023,
           "winnerName": "Erica Stanford",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 20353,
           "runnerUpParty": "LAB",
           "notional": false
@@ -1048,7 +1048,7 @@
         {
           "year": 2020,
           "winnerName": "Erica Stanford",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 8764,
           "runnerUpParty": "LAB",
           "notional": false
@@ -1056,15 +1056,15 @@
         {
           "year": 2017,
           "winnerName": "Erica Stanford",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 16290,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 20,353 votes -- a safe seat."
     },
     {
       "name": "Epsom",
@@ -1154,7 +1154,7 @@
           "winnerName": "David Seymour",
           "winnerParty": "ACT",
           "majority": 8142,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -1170,7 +1170,7 @@
           "winnerName": "David Seymour",
           "winnerParty": "ACT",
           "majority": 5519,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -1341,7 +1341,7 @@
         {
           "year": 2023,
           "winnerName": "Ryan Hamilton",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5060,
           "runnerUpParty": "LAB",
           "notional": false
@@ -1351,21 +1351,21 @@
           "winnerName": "Jamie Strange",
           "winnerParty": "LAB",
           "majority": 2973,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "David Bennett",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5810,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 5,060 votes -- leaning NAT, not safe."
     },
     {
       "name": "Hamilton West",
@@ -1473,7 +1473,7 @@
         {
           "year": 2023,
           "winnerName": "Tama Potaka",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 6488,
           "runnerUpParty": "LAB",
           "notional": false
@@ -1483,21 +1483,21 @@
           "winnerName": "Gaurav Sharma",
           "winnerParty": "LAB",
           "majority": 6267,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Tim Macindoe",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 7731,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,488 votes -- leaning NAT, not safe."
     },
     {
       "name": "Hauraki-Waikato",
@@ -1774,7 +1774,7 @@
         {
           "year": 2023,
           "winnerName": "Chris Bishop",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1332,
           "runnerUpParty": "LAB",
           "notional": false
@@ -1784,13 +1784,13 @@
           "winnerName": "Ginny Andersen",
           "winnerParty": "LAB",
           "majority": 3777,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Chris Bishop",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1530,
           "runnerUpParty": "LAB",
           "notional": false
@@ -1948,7 +1948,7 @@
         {
           "year": 2023,
           "winnerName": "Hamish Campbell",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 7830,
           "runnerUpParty": "TOP",
           "notional": false
@@ -1958,21 +1958,21 @@
           "winnerName": "Sarah Pallett",
           "winnerParty": "LAB",
           "majority": 3463,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Gerry Brownlee",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 8256,
           "runnerUpParty": "OTH",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 7,830 votes -- leaning NAT, not safe."
     },
     {
       "name": "Invercargill",
@@ -2040,7 +2040,7 @@
         {
           "year": 2023,
           "winnerName": "Penny Simmonds",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 9874,
           "runnerUpParty": "LAB",
           "notional": false
@@ -2048,7 +2048,7 @@
         {
           "year": 2020,
           "winnerName": "Penny Simmonds",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 224,
           "runnerUpParty": "LAB",
           "notional": false
@@ -2056,15 +2056,15 @@
         {
           "year": 2017,
           "winnerName": "Sarah Dowie",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5579,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 9,874 votes -- a safe seat."
     },
     {
       "name": "Kaikōura",
@@ -2152,7 +2152,7 @@
         {
           "year": 2023,
           "winnerName": "Stuart Smith",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 11412,
           "runnerUpParty": "LAB",
           "notional": false
@@ -2160,7 +2160,7 @@
         {
           "year": 2020,
           "winnerName": "Stuart Smith",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 2295,
           "runnerUpParty": "LAB",
           "notional": false
@@ -2168,15 +2168,15 @@
         {
           "year": 2017,
           "winnerName": "Stuart Smith",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10553,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 11,412 votes -- a safe seat."
     },
     {
       "name": "Kaipara ki Mahurangi",
@@ -2304,7 +2304,7 @@
         {
           "year": 2023,
           "winnerName": "Chris Penk",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 19459,
           "runnerUpParty": "LAB",
           "notional": false
@@ -2312,15 +2312,15 @@
         {
           "year": 2020,
           "winnerName": "Chris Penk",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 4435,
           "runnerUpParty": "LAB",
           "notional": true
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 2 elections, most recently by 19,459 votes -- a safe seat."
     },
     {
       "name": "Kapiti",
@@ -2624,7 +2624,7 @@
           "winnerName": "Lemauga Lydia Sosene",
           "winnerParty": "LAB",
           "majority": 11700,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -2632,7 +2632,7 @@
           "winnerName": "William Sio",
           "winnerParty": "LAB",
           "majority": 19396,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -2640,7 +2640,7 @@
           "winnerName": "William Sio",
           "winnerParty": "LAB",
           "majority": 14597,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -2706,7 +2706,7 @@
           "winnerName": "Arena Williams",
           "winnerParty": "LAB",
           "majority": 7113,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -2714,7 +2714,7 @@
           "winnerName": "Arena Williams",
           "winnerParty": "LAB",
           "majority": 17179,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -2722,7 +2722,7 @@
           "winnerName": "Louisa Wall",
           "winnerParty": "LAB",
           "majority": 8374,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -2806,7 +2806,7 @@
         {
           "year": 2023,
           "winnerName": "Greg Fleming",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 4617,
           "runnerUpParty": "LAB",
           "notional": false
@@ -2816,21 +2816,21 @@
           "winnerName": "Priyanca Radhakrishnan",
           "winnerParty": "LAB",
           "majority": 635,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Denise Lee",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 2157,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 4,617 votes -- leaning NAT, not safe."
     },
     {
       "name": "Mount Albert",
@@ -2920,7 +2920,7 @@
           "winnerName": "Helen White",
           "winnerParty": "LAB",
           "majority": 18,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -2928,7 +2928,7 @@
           "winnerName": "Jacinda Ardern",
           "winnerParty": "LAB",
           "majority": 21246,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -2936,7 +2936,7 @@
           "winnerName": "Jacinda Ardern",
           "winnerParty": "LAB",
           "majority": 15264,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -3107,7 +3107,7 @@
         {
           "year": 2023,
           "winnerName": "Carlos Cheung",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1565,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3117,7 +3117,7 @@
           "winnerName": "Michael Wood",
           "winnerParty": "LAB",
           "majority": 13853,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -3125,7 +3125,7 @@
           "winnerName": "Michael Wood",
           "winnerParty": "LAB",
           "majority": 6898,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -3219,7 +3219,7 @@
         {
           "year": 2023,
           "winnerName": "Katie Nimon",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 8870,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3229,7 +3229,7 @@
           "winnerName": "Stuart Nash",
           "winnerParty": "LAB",
           "majority": 5856,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -3237,13 +3237,13 @@
           "winnerName": "Stuart Nash",
           "winnerParty": "LAB",
           "majority": 5220,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "trendNote": "LAB won more of the last 3 elections, but NAT won the most recent one (2023) -- a genuine recent shift, treated as a toss-up."
     },
     {
       "name": "Nelson",
@@ -3333,7 +3333,7 @@
           "winnerName": "Rachel Boyack",
           "winnerParty": "LAB",
           "majority": 26,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -3341,13 +3341,13 @@
           "winnerName": "Rachel Boyack",
           "winnerParty": "LAB",
           "majority": 4525,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Nick Smith",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 4283,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3413,7 +3413,7 @@
         {
           "year": 2023,
           "winnerName": "David MacLeod",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 6991,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3423,21 +3423,21 @@
           "winnerName": "Glen Bennett",
           "winnerParty": "LAB",
           "majority": 2555,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Jonathan Young",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 7733,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,991 votes -- leaning NAT, not safe."
     },
     {
       "name": "North Shore",
@@ -3515,7 +3515,7 @@
         {
           "year": 2023,
           "winnerName": "Simon Watts",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 16330,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3523,7 +3523,7 @@
         {
           "year": 2020,
           "winnerName": "Simon Watts",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 3734,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3531,15 +3531,15 @@
         {
           "year": 2017,
           "winnerName": "Maggie Barry",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 12716,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 16,330 votes -- a safe seat."
     },
     {
       "name": "Northcote",
@@ -3647,7 +3647,7 @@
         {
           "year": 2023,
           "winnerName": "Dan Bidois",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 9270,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3657,21 +3657,21 @@
           "winnerName": "Shanan Halbert",
           "winnerParty": "LAB",
           "majority": 2534,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Jonathan Coleman",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 6210,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 9,270 votes -- leaning NAT, not safe."
     },
     {
       "name": "Northland",
@@ -3809,7 +3809,7 @@
         {
           "year": 2023,
           "winnerName": "Grant McCallum",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 6087,
           "runnerUpParty": "LAB",
           "notional": false
@@ -3819,21 +3819,21 @@
           "winnerName": "Willow-Jean Prime",
           "winnerParty": "LAB",
           "majority": 163,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Matt King",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1389,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NZF",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 6,087 votes -- leaning NAT, not safe."
     },
     {
       "name": "Ōtāhuhu",
@@ -4018,7 +4018,7 @@
         {
           "year": 2023,
           "winnerName": "Simeon Brown",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 18710,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4026,7 +4026,7 @@
         {
           "year": 2020,
           "winnerName": "Simeon Brown",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10050,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4034,15 +4034,15 @@
         {
           "year": 2017,
           "winnerName": "Simeon Brown",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 14886,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 18,710 votes -- a safe seat."
     },
     {
       "name": "Palmerston North",
@@ -4142,7 +4142,7 @@
           "winnerName": "Tangi Utikere",
           "winnerParty": "LAB",
           "majority": 3087,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -4150,7 +4150,7 @@
           "winnerName": "Tangi Utikere",
           "winnerParty": "LAB",
           "majority": 12508,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -4158,7 +4158,7 @@
           "winnerName": "Iain Lees-Galloway",
           "winnerParty": "LAB",
           "majority": 6392,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -4252,7 +4252,7 @@
         {
           "year": 2023,
           "winnerName": "Judith Collins",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 13459,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4260,7 +4260,7 @@
         {
           "year": 2020,
           "winnerName": "Judith Collins",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5583,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4268,15 +4268,15 @@
         {
           "year": 2017,
           "winnerName": "Judith Collins",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 7486,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 13,459 votes -- a safe seat."
     },
     {
       "name": "Port Waikato",
@@ -4372,15 +4372,15 @@
         {
           "year": 2020,
           "winnerName": "Andrew Bayly",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 4313,
           "runnerUpParty": "LAB",
           "notional": true
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "No party has won a majority of the 2 elections on record (most recently NAT, majority 11,432)."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 2 elections, most recently by 11,432 votes -- a safe seat."
     },
     {
       "name": "Rangitata",
@@ -4478,7 +4478,7 @@
         {
           "year": 2023,
           "winnerName": "James Meager",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10846,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4488,21 +4488,21 @@
           "winnerName": "Jo Luxton",
           "winnerParty": "LAB",
           "majority": 4408,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Andrew Falloon",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 6331,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 10,846 votes -- leaning NAT, not safe."
     },
     {
       "name": "Rangitīkei",
@@ -4600,7 +4600,7 @@
         {
           "year": 2023,
           "winnerName": "Suze Redmayne",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 9785,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4608,7 +4608,7 @@
         {
           "year": 2020,
           "winnerName": "Ian McKelvie",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 2961,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4616,15 +4616,15 @@
         {
           "year": 2017,
           "winnerName": "Ian McKelvie",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10290,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 9,785 votes -- a safe seat."
     },
     {
       "name": "Remutaka",
@@ -4714,7 +4714,7 @@
           "winnerName": "Chris Hipkins",
           "winnerParty": "LAB",
           "majority": 8859,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -4722,7 +4722,7 @@
           "winnerName": "Chris Hipkins",
           "winnerParty": "LAB",
           "majority": 20497,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -4786,7 +4786,7 @@
         {
           "year": 2023,
           "winnerName": "Todd McClay",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 8923,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4794,7 +4794,7 @@
         {
           "year": 2020,
           "winnerName": "Todd McClay",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 825,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4802,15 +4802,15 @@
         {
           "year": 2017,
           "winnerName": "Todd McClay",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 7901,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 8,923 votes -- a safe seat."
     },
     {
       "name": "Selwyn",
@@ -4918,7 +4918,7 @@
         {
           "year": 2023,
           "winnerName": "Nicola Grigg",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 19782,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4926,7 +4926,7 @@
         {
           "year": 2020,
           "winnerName": "Nicola Grigg",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 4968,
           "runnerUpParty": "LAB",
           "notional": false
@@ -4934,15 +4934,15 @@
         {
           "year": 2017,
           "winnerName": "Amy Adams",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 19639,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 19,782 votes -- a safe seat."
     },
     {
       "name": "Southland",
@@ -5020,7 +5020,7 @@
         {
           "year": 2023,
           "winnerName": "Joseph Mooney",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 17211,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5028,15 +5028,15 @@
         {
           "year": 2020,
           "winnerName": "Joseph Mooney",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5645,
           "runnerUpParty": "LAB",
           "notional": true
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 2 elections, most recently by 17,211 votes -- a safe seat."
     },
     {
       "name": "Taieri",
@@ -5126,7 +5126,7 @@
           "winnerName": "Ingrid Leary",
           "winnerParty": "LAB",
           "majority": 1443,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -5134,7 +5134,7 @@
           "winnerName": "Ingrid Leary",
           "winnerParty": "LAB",
           "majority": 12398,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": true
         }
       ],
@@ -5208,7 +5208,7 @@
         {
           "year": 2023,
           "winnerName": "Rima Nakhle",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 8775,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5218,13 +5218,13 @@
           "winnerName": "Neru Leavasa",
           "winnerParty": "LAB",
           "majority": 7724,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": true
         }
       ],
       "classification": "tossup",
       "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "trendNote": "No party has won a majority of the 2 elections on record (most recently NAT, majority 8,775)."
     },
     {
       "name": "Tāmaki",
@@ -5344,13 +5344,13 @@
           "winnerName": "Brooke van Velden",
           "winnerParty": "ACT",
           "majority": 4158,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2020,
           "winnerName": "Simon O'Connor",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 8068,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5358,7 +5358,7 @@
         {
           "year": 2017,
           "winnerName": "Simon O'Connor",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 15402,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5506,7 +5506,7 @@
         {
           "year": 2023,
           "winnerName": "Barbara Kuriger",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 14355,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5514,7 +5514,7 @@
         {
           "year": 2020,
           "winnerName": "Barbara Kuriger",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 3134,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5522,15 +5522,15 @@
         {
           "year": 2017,
           "winnerName": "Barbara Kuriger",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 15259,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 14,355 votes -- a safe seat."
     },
     {
       "name": "Taupō",
@@ -5608,7 +5608,7 @@
         {
           "year": 2023,
           "winnerName": "Louise Upston",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 16505,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5616,7 +5616,7 @@
         {
           "year": 2020,
           "winnerName": "Louise Upston",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5119,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5624,15 +5624,15 @@
         {
           "year": 2017,
           "winnerName": "Louise Upston",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 14335,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 16,505 votes -- a safe seat."
     },
     {
       "name": "Tauranga",
@@ -5740,7 +5740,7 @@
         {
           "year": 2023,
           "winnerName": "Sam Uffindell",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 9370,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5748,7 +5748,7 @@
         {
           "year": 2020,
           "winnerName": "Simon Bridges",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1856,
           "runnerUpParty": "LAB",
           "notional": false
@@ -5756,15 +5756,15 @@
         {
           "year": 2017,
           "winnerName": "Simon Bridges",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 11252,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 9,370 votes -- a safe seat."
     },
     {
       "name": "Te Tai Hauāuru",
@@ -6158,7 +6158,7 @@
         {
           "year": 2023,
           "winnerName": "Catherine Wedd",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10118,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6168,21 +6168,21 @@
           "winnerName": "Anna Lorck",
           "winnerParty": "LAB",
           "majority": 1590,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Lawrence Yule",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 2813,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 10,118 votes -- leaning NAT, not safe."
     },
     {
       "name": "Upper Harbour",
@@ -6270,7 +6270,7 @@
         {
           "year": 2023,
           "winnerName": "Cameron Brewer",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 11192,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6280,21 +6280,21 @@
           "winnerName": "Vanushi Walters",
           "winnerParty": "LAB",
           "majority": 2392,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Paula Bennett",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 9556,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 11,192 votes -- leaning NAT, not safe."
     },
     {
       "name": "Waiariki",
@@ -6464,7 +6464,7 @@
         {
           "year": 2023,
           "winnerName": "Tim van de Molen",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 18046,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6472,7 +6472,7 @@
         {
           "year": 2020,
           "winnerName": "Tim van de Molen",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5216,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6480,15 +6480,15 @@
         {
           "year": 2017,
           "winnerName": "Tim van de Molen",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 15452,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 18,046 votes -- a safe seat."
     },
     {
       "name": "Waimakariri",
@@ -6576,7 +6576,7 @@
         {
           "year": 2023,
           "winnerName": "Matt Doocey",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 13010,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6584,7 +6584,7 @@
         {
           "year": 2020,
           "winnerName": "Matt Doocey",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1507,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6592,15 +6592,15 @@
         {
           "year": 2017,
           "winnerName": "Matt Doocey",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10766,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 3 of the last 3 elections, most recently by 13,010 votes -- a safe seat."
     },
     {
       "name": "Wairarapa",
@@ -6698,7 +6698,7 @@
         {
           "year": 2023,
           "winnerName": "Mike Butterick",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 2816,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6708,21 +6708,21 @@
           "winnerName": "Kieran McAnulty",
           "winnerParty": "LAB",
           "majority": 6545,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Alastair Scott",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 2872,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 2,816 votes -- leaning NAT, not safe."
     },
     {
       "name": "Waitākere",
@@ -6907,7 +6907,7 @@
         {
           "year": 2023,
           "winnerName": "Miles Anderson",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 12151,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6915,7 +6915,7 @@
         {
           "year": 2020,
           "winnerName": "Jacqui Dean",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 3281,
           "runnerUpParty": "LAB",
           "notional": false
@@ -6923,7 +6923,7 @@
         {
           "year": 2017,
           "winnerName": "Jacqui Dean",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 12816,
           "runnerUpParty": "LAB",
           "notional": false
@@ -7303,7 +7303,7 @@
         {
           "year": 2023,
           "winnerName": "Maureen Pugh",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1017,
           "runnerUpParty": "LAB",
           "notional": false
@@ -7313,7 +7313,7 @@
           "winnerName": "Damien O'Connor",
           "winnerParty": "LAB",
           "majority": 6208,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -7321,7 +7321,7 @@
           "winnerName": "Damien O'Connor",
           "winnerParty": "LAB",
           "majority": 5593,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
@@ -7405,7 +7405,7 @@
         {
           "year": 2023,
           "winnerName": "Carl Bates",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 5417,
           "runnerUpParty": "LAB",
           "notional": false
@@ -7415,21 +7415,21 @@
           "winnerName": "Steph Lewis",
           "winnerParty": "LAB",
           "majority": 8191,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Harete Hipango",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 1706,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 5,417 votes -- leaning NAT, not safe."
     },
     {
       "name": "Whangaparāoa",
@@ -7487,7 +7487,7 @@
         {
           "year": 2023,
           "winnerName": "Mark Mitchell",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 23376,
           "runnerUpParty": "LAB",
           "notional": false
@@ -7495,15 +7495,15 @@
         {
           "year": 2020,
           "winnerName": "Mark Mitchell",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 7823,
           "runnerUpParty": "LAB",
           "notional": true
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "safe",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 2 elections, most recently by 23,376 votes -- a safe seat."
     },
     {
       "name": "Whangārei",
@@ -7631,7 +7631,7 @@
         {
           "year": 2023,
           "winnerName": "Shane Reti",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 11424,
           "runnerUpParty": "LAB",
           "notional": false
@@ -7641,21 +7641,21 @@
           "winnerName": "Emily Henderson",
           "winnerParty": "LAB",
           "majority": 431,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
           "year": 2017,
           "winnerName": "Shane Reti",
-          "winnerParty": "OTH",
+          "winnerParty": "NAT",
           "majority": 10967,
           "runnerUpParty": "LAB",
           "notional": false
         }
       ],
-      "classification": "tossup",
-      "classificationParty": null,
-      "trendNote": "Changed hands since the 2023 general election (won by OTH, now held by NAT) -- treated as a toss-up regardless of prior margins."
+      "classification": "leaning",
+      "classificationParty": "NAT",
+      "trendNote": "NAT has won 2 of the last 3 elections (the exception was the 2020 landslide, an outlier election nationwide), most recently by 11,424 votes -- leaning NAT, not safe."
     },
     {
       "name": "Wigram",
@@ -7765,7 +7765,7 @@
           "winnerName": "Megan Woods",
           "winnerParty": "LAB",
           "majority": 1187,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -7773,7 +7773,7 @@
           "winnerName": "Megan Woods",
           "winnerParty": "LAB",
           "majority": 14770,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         },
         {
@@ -7781,7 +7781,7 @@
           "winnerName": "Megan Woods",
           "winnerParty": "LAB",
           "majority": 4594,
-          "runnerUpParty": "OTH",
+          "runnerUpParty": "NAT",
           "notional": false
         }
       ],
