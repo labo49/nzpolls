@@ -1,1 +1,150 @@
-[]
+[
+  {
+    "date": "2023-12-05",
+    "dateLabel": "3–5 Dec 2023",
+    "pollster": "Curia (subscription required) Archived 2023–12–12 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/honeymoon-over-christopher-luxon-takes-a-dive-nz-first-overtakes-act-in-new-poll/NTXYYSEQBNCN7MJD3THKJXGRVA/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 36.5,
+      "LAB": 28.8,
+      "GRN": 10.8,
+      "ACT": 6.2,
+      "NZF": 8.1,
+      "TPM": 5,
+      "OTH": 4.6
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2024-01-10",
+    "dateLabel": "8–10 Jan 2024",
+    "pollster": "Curia (subscription required) Archived 2024–01–16 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/national-soars-in-new-poll-as-voters-agree-country-is-on-track-chris-hipkins-crashes-record-low/TNS4GGJHIFDTZNGMKPQLNJOGJA/",
+    "sampleSize": 1000,
+    "results": {
+      "NAT": 41,
+      "LAB": 28.4,
+      "GRN": 9.5,
+      "ACT": 7.8,
+      "NZF": 5.6,
+      "TPM": 3.6
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2024-02-10",
+    "dateLabel": "1–10 Feb 2024",
+    "pollster": "Talbot Mills (subscription required) Archived 2024–02–15 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/national-extends-lead-in-latest-poll-chris-hipkins-falls/FEFRB553ZZC37PSDUO7HQQB7EA/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 38,
+      "LAB": 29,
+      "GRN": 12,
+      "ACT": 7,
+      "NZF": 6.2,
+      "TPM": 4.9,
+      "TOP": 1.4
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2024-04-30",
+    "dateLabel": "30 Apr 2024",
+    "pollster": "Labour–Talbot Mills (subscription required) Archived 2024–05–01 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/political-roundup-discontent-and-gloom-dominate-nzs-political-mood/BJONTIXBCJHT7M4XLWZAWWUY7U/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 34,
+      "LAB": 33,
+      "GRN": 12,
+      "ACT": 7,
+      "NZF": 6,
+      "TPM": 4
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2024-09-10",
+    "dateLabel": "1–10 Sep 2024",
+    "pollster": "Talbot Mills (subscription required) Archived 2024–09–18 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/new-poll-results-show-closer-fight-between-chris-hipkins-christopher-luxon-for-preferred-prime-minister/NSG6OIVZWFBORAPPGLXAVHY2DE/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 37,
+      "LAB": 32,
+      "GRN": 10,
+      "ACT": 8,
+      "NZF": 6.1,
+      "TPM": 3.9
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2024-11-10",
+    "dateLabel": "1–10 Nov 2024",
+    "pollster": "Talbot Mills (subscription required) Archived 2024–11–23 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/hikois-influence-will-be-felt-for-years-but-treaty-bill-still-popular-thomas-couglan/ZGRV4ECOE5CJJAUZNHRDFFM4YA/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 34,
+      "LAB": 33,
+      "GRN": 10,
+      "ACT": 10,
+      "NZF": 7,
+      "TPM": 3.3
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2026-05-10",
+    "dateLabel": "1–10 May 2026",
+    "pollster": "Talbot Mills (subscription required) Archived 2026–05–14 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/new-poll-keeps-national-in-the-20s-labour-retains-biggest-share-of-support/ECSCZV3ZQZETTDDOIRAEEW476A/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 29,
+      "LAB": 36,
+      "GRN": 9,
+      "ACT": 7,
+      "NZF": 14,
+      "TPM": 2
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2026-08-11",
+    "dateLabel": "1–11 Aug 2026",
+    "pollster": "Talbot Mills (subscription required) Archived 2026–08–14 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/poll-national-down-and-out-of-government-in-new-talbot-mills-poll/XXSSJVLG35GP7C4NZTSALVAPGE/",
+    "sampleSize": null,
+    "results": {
+      "NAT": 29,
+      "LAB": 34,
+      "GRN": 8,
+      "ACT": 7,
+      "NZF": 13,
+      "TPM": 3,
+      "TOP": 5.2
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  },
+  {
+    "date": "2026-09-10",
+    "dateLabel": "4–10 Sep 2026",
+    "pollster": "Anacta (subscription required) Archived 2026–09–15 at the Wayback Machine",
+    "sourceUrl": "https://www.nzherald.co.nz/nz/politics/labour-slumps-in-another-poll-but-still-ahead-of-national/HDUVF4SBJJHK3LYLGXLVLG3F7U/",
+    "sampleSize": 1701,
+    "results": {
+      "NAT": 30,
+      "LAB": 31,
+      "GRN": 12,
+      "ACT": 8,
+      "NZF": 10,
+      "TPM": 2,
+      "TOP": 7
+    },
+    "firstSeenAt": "2026-11-25T11:01:28.731Z"
+  }
+]
