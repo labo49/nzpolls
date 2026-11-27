@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-27T02:02:02.739Z",
+  "fetchedAt": "2026-11-27T11:01:35.137Z",
   "source": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
   "preliminary": true,
   "officialDeclarationDate": "2026-11-27",
@@ -21,7 +21,7 @@
       "seatType": "general",
       "winnerName": "Chlöe Swarbrick",
       "winnerParty": "GRN",
-      "majority": 2831,
+      "majority": 4723,
       "runnerUpName": "Candace Kinser",
       "runnerUpParty": "NAT",
       "notional": false
@@ -31,7 +31,7 @@
       "seatType": "general",
       "winnerName": "Tracey McLellan",
       "winnerParty": "LAB",
-      "majority": 2261,
+      "majority": 3020,
       "runnerUpName": "Vanessa Weenink",
       "runnerUpParty": "NAT",
       "notional": false
@@ -41,7 +41,7 @@
       "seatType": "general",
       "winnerName": "Christopher Luxon",
       "winnerParty": "NAT",
-      "majority": 13073,
+      "majority": 13984,
       "runnerUpName": "Neru Leavasa",
       "runnerUpParty": "LAB",
       "notional": false
@@ -51,7 +51,7 @@
       "seatType": "general",
       "winnerName": "George Hampton",
       "winnerParty": "LAB",
-      "majority": 2632,
+      "majority": 3346,
       "runnerUpName": "Dale Stephens",
       "runnerUpParty": "NAT",
       "notional": false
@@ -61,7 +61,7 @@
       "seatType": "general",
       "winnerName": "Reuben Davidson",
       "winnerParty": "LAB",
-      "majority": 9012,
+      "majority": 10336,
       "runnerUpName": "Alexandra Davids",
       "runnerUpParty": "NAT",
       "notional": false
@@ -71,7 +71,7 @@
       "seatType": "general",
       "winnerName": "Scott Simpson",
       "winnerParty": "NAT",
-      "majority": 14932,
+      "majority": 16213,
       "runnerUpName": "Glen Bennett",
       "runnerUpParty": "LAB",
       "notional": false
@@ -81,7 +81,7 @@
       "seatType": "general",
       "winnerName": "Rachel Brooking",
       "winnerParty": "LAB",
-      "majority": 8718,
+      "majority": 9524,
       "runnerUpName": "Francisco Hernandez",
       "runnerUpParty": "GRN",
       "notional": false
@@ -91,7 +91,7 @@
       "seatType": "general",
       "winnerName": "Dana Kirkpatrick",
       "winnerParty": "NAT",
-      "majority": 5325,
+      "majority": 5573,
       "runnerUpName": "Jo Luxton",
       "runnerUpParty": "LAB",
       "notional": true
@@ -101,7 +101,7 @@
       "seatType": "general",
       "winnerName": "Erica Stanford",
       "winnerParty": "NAT",
-      "majority": 13819,
+      "majority": 15321,
       "runnerUpName": "Brendan McEnroe",
       "runnerUpParty": "LAB",
       "notional": false
@@ -111,7 +111,7 @@
       "seatType": "general",
       "winnerName": "David Seymour",
       "winnerParty": "ACT",
-      "majority": 2044,
+      "majority": 2592,
       "runnerUpName": "Paul Goldsmith",
       "runnerUpParty": "NAT",
       "notional": false
@@ -121,7 +121,7 @@
       "seatType": "general",
       "winnerName": "Carmel Sepuloni",
       "winnerParty": "LAB",
-      "majority": 6940,
+      "majority": 8555,
       "runnerUpName": "Sunil Kumar",
       "runnerUpParty": "NAT",
       "notional": true
@@ -129,11 +129,11 @@
     {
       "electorateName": "Hamilton East",
       "seatType": "general",
-      "winnerName": "Ryan Hamilton",
-      "winnerParty": "NAT",
-      "majority": 456,
-      "runnerUpName": "Georgie Dansey",
-      "runnerUpParty": "LAB",
+      "winnerName": "Georgie Dansey",
+      "winnerParty": "LAB",
+      "majority": 173,
+      "runnerUpName": "Ryan Hamilton",
+      "runnerUpParty": "NAT",
       "notional": false
     },
     {
@@ -141,7 +141,7 @@
       "seatType": "general",
       "winnerName": "Tama Potaka",
       "winnerParty": "NAT",
-      "majority": 2181,
+      "majority": 2270,
       "runnerUpName": "Myra Williamson",
       "runnerUpParty": "LAB",
       "notional": false
@@ -151,7 +151,7 @@
       "seatType": "general",
       "winnerName": "Phil Twyford",
       "winnerParty": "LAB",
-      "majority": 6213,
+      "majority": 7638,
       "runnerUpName": "Angee Nicholas",
       "runnerUpParty": "NAT",
       "notional": true
@@ -161,7 +161,7 @@
       "seatType": "general",
       "winnerName": "Ginny Andersen",
       "winnerParty": "LAB",
-      "majority": 889,
+      "majority": 1485,
       "runnerUpName": "Chris Bishop",
       "runnerUpParty": "NAT",
       "notional": false
@@ -171,7 +171,7 @@
       "seatType": "general",
       "winnerName": "Hamish Campbell",
       "winnerParty": "NAT",
-      "majority": 6712,
+      "majority": 7220,
       "runnerUpName": "Rata Jamieson",
       "runnerUpParty": "LAB",
       "notional": false
@@ -181,7 +181,7 @@
       "seatType": "general",
       "winnerName": "Penny Simmonds",
       "winnerParty": "NAT",
-      "majority": 9615,
+      "majority": 10365,
       "runnerUpName": "Janice Lee",
       "runnerUpParty": "LAB",
       "notional": false
@@ -191,7 +191,7 @@
       "seatType": "general",
       "winnerName": "Stuart Smith",
       "winnerParty": "NAT",
-      "majority": 8018,
+      "majority": 8629,
       "runnerUpName": "Matthew Flight",
       "runnerUpParty": "LAB",
       "notional": false
@@ -201,7 +201,7 @@
       "seatType": "general",
       "winnerName": "Jessica Rowe",
       "winnerParty": "NAT",
-      "majority": 12592,
+      "majority": 13903,
       "runnerUpName": "Jolyon Swinburn",
       "runnerUpParty": "LAB",
       "notional": false
@@ -211,7 +211,7 @@
       "seatType": "general",
       "winnerName": "Tim Costley",
       "winnerParty": "NAT",
-      "majority": 2077,
+      "majority": 1701,
       "runnerUpName": "Sophie Handford",
       "runnerUpParty": "LAB",
       "notional": true
@@ -221,7 +221,7 @@
       "seatType": "general",
       "winnerName": "Barbara Edmonds",
       "winnerParty": "LAB",
-      "majority": 9297,
+      "majority": 13410,
       "runnerUpName": "Matthew Evetts",
       "runnerUpParty": "NAT",
       "notional": true
@@ -231,8 +231,8 @@
       "seatType": "general",
       "winnerName": "Lemauga Lydia Sosene",
       "winnerParty": "LAB",
-      "majority": 11970,
-      "runnerUpName": "Rosemary Burke",
+      "majority": 15010,
+      "runnerUpName": "Rosemary Bourke",
       "runnerUpParty": "NAT",
       "notional": false
     },
@@ -241,7 +241,7 @@
       "seatType": "general",
       "winnerName": "Arena Williams",
       "winnerParty": "LAB",
-      "majority": 10973,
+      "majority": 15143,
       "runnerUpName": "Ghouse Majeed",
       "runnerUpParty": "NAT",
       "notional": false
@@ -251,7 +251,7 @@
       "seatType": "general",
       "winnerName": "Greg Fleming",
       "winnerParty": "NAT",
-      "majority": 2952,
+      "majority": 2626,
       "runnerUpName": "Priyanca Radhakrishnan",
       "runnerUpParty": "LAB",
       "notional": false
@@ -261,7 +261,7 @@
       "seatType": "general",
       "winnerName": "Helen White",
       "winnerParty": "LAB",
-      "majority": 4678,
+      "majority": 6018,
       "runnerUpName": "Melissa Lee",
       "runnerUpParty": "NAT",
       "notional": false
@@ -271,7 +271,7 @@
       "seatType": "general",
       "winnerName": "Tom Rutherford",
       "winnerParty": "NAT",
-      "majority": 14059,
+      "majority": 15393,
       "runnerUpName": "Rhieve Grey",
       "runnerUpParty": "LAB",
       "notional": true
@@ -281,7 +281,7 @@
       "seatType": "general",
       "winnerName": "Michael Wood",
       "winnerParty": "LAB",
-      "majority": 262,
+      "majority": 1128,
       "runnerUpName": "Carlos Cheung",
       "runnerUpParty": "NAT",
       "notional": false
@@ -291,7 +291,7 @@
       "seatType": "general",
       "winnerName": "Katie Nimon",
       "winnerParty": "NAT",
-      "majority": 6847,
+      "majority": 7378,
       "runnerUpName": "Alex Hedley",
       "runnerUpParty": "LAB",
       "notional": false
@@ -301,7 +301,7 @@
       "seatType": "general",
       "winnerName": "Blair Cameron",
       "winnerParty": "NAT",
-      "majority": 1210,
+      "majority": 1083,
       "runnerUpName": "Rachel Boyack",
       "runnerUpParty": "LAB",
       "notional": false
@@ -311,7 +311,7 @@
       "seatType": "general",
       "winnerName": "David MacLeod",
       "winnerParty": "NAT",
-      "majority": 7788,
+      "majority": 8107,
       "runnerUpName": "Amanda Clinton-Gohdes",
       "runnerUpParty": "LAB",
       "notional": false
@@ -321,7 +321,7 @@
       "seatType": "general",
       "winnerName": "Simon Watts",
       "winnerParty": "NAT",
-      "majority": 11151,
+      "majority": 12571,
       "runnerUpName": "Sam Collins",
       "runnerUpParty": "LAB",
       "notional": false
@@ -331,7 +331,7 @@
       "seatType": "general",
       "winnerName": "Dan Bidois",
       "winnerParty": "NAT",
-      "majority": 3064,
+      "majority": 3205,
       "runnerUpName": "Shanan Halbert",
       "runnerUpParty": "LAB",
       "notional": false
@@ -341,8 +341,8 @@
       "seatType": "general",
       "winnerName": "Grant McCallum",
       "winnerParty": "NAT",
-      "majority": 7942,
-      "runnerUpName": "Ashleigh Litmer",
+      "majority": 8685,
+      "runnerUpName": "Ashleigh Latimer",
       "runnerUpParty": "LAB",
       "notional": false
     },
@@ -351,7 +351,7 @@
       "seatType": "general",
       "winnerName": "Jenny Salesa",
       "winnerParty": "LAB",
-      "majority": 10558,
+      "majority": 13262,
       "runnerUpName": "Lalit Arya",
       "runnerUpParty": "NAT",
       "notional": true
@@ -361,7 +361,7 @@
       "seatType": "general",
       "winnerName": "Simeon Brown",
       "winnerParty": "NAT",
-      "majority": 13691,
+      "majority": 14765,
       "runnerUpName": "Campbell Matthews",
       "runnerUpParty": "LAB",
       "notional": false
@@ -371,7 +371,7 @@
       "seatType": "general",
       "winnerName": "Tangi Utikere",
       "winnerParty": "LAB",
-      "majority": 2933,
+      "majority": 3500,
       "runnerUpName": "Ankit Bansal",
       "runnerUpParty": "NAT",
       "notional": false
@@ -381,7 +381,7 @@
       "seatType": "general",
       "winnerName": "Emma Chatterton",
       "winnerParty": "NAT",
-      "majority": 8394,
+      "majority": 9022,
       "runnerUpName": "Anahila Kanongata'a",
       "runnerUpParty": "LAB",
       "notional": false
@@ -391,7 +391,7 @@
       "seatType": "general",
       "winnerName": "Matthew Paul",
       "winnerParty": "NAT",
-      "majority": 10437,
+      "majority": 11535,
       "runnerUpName": "Matt Brachi",
       "runnerUpParty": "LAB",
       "notional": false
@@ -401,7 +401,7 @@
       "seatType": "general",
       "winnerName": "James Meager",
       "winnerParty": "NAT",
-      "majority": 13917,
+      "majority": 14909,
       "runnerUpName": "Sange Malama",
       "runnerUpParty": "LAB",
       "notional": false
@@ -411,7 +411,7 @@
       "seatType": "general",
       "winnerName": "Suze Redmayne",
       "winnerParty": "NAT",
-      "majority": 5506,
+      "majority": 6393,
       "runnerUpName": "Karl Severinsen",
       "runnerUpParty": "LAB",
       "notional": false
@@ -421,7 +421,7 @@
       "seatType": "general",
       "winnerName": "Chris Hipkins",
       "winnerParty": "LAB",
-      "majority": 14424,
+      "majority": 16582,
       "runnerUpName": "Zabeen Lateef",
       "runnerUpParty": "NAT",
       "notional": false
@@ -431,7 +431,7 @@
       "seatType": "general",
       "winnerName": "Todd McClay",
       "winnerParty": "NAT",
-      "majority": 5301,
+      "majority": 5531,
       "runnerUpName": "Fisher Wang",
       "runnerUpParty": "LAB",
       "notional": false
@@ -441,7 +441,7 @@
       "seatType": "general",
       "winnerName": "Nicola Grigg",
       "winnerParty": "NAT",
-      "majority": 13941,
+      "majority": 15330,
       "runnerUpName": "Sunita Gautam",
       "runnerUpParty": "LAB",
       "notional": false
@@ -451,7 +451,7 @@
       "seatType": "general",
       "winnerName": "Joseph Mooney",
       "winnerParty": "NAT",
-      "majority": 11484,
+      "majority": 12421,
       "runnerUpName": "Peter McDonald",
       "runnerUpParty": "LAB",
       "notional": false
@@ -461,7 +461,7 @@
       "seatType": "general",
       "winnerName": "Ingrid Leary",
       "winnerParty": "LAB",
-      "majority": 4798,
+      "majority": 5189,
       "runnerUpName": "Matthew French",
       "runnerUpParty": "NAT",
       "notional": false
@@ -471,7 +471,7 @@
       "seatType": "general",
       "winnerName": "Rima Nakhle",
       "winnerParty": "NAT",
-      "majority": 1487,
+      "majority": 459,
       "runnerUpName": "Kharag Singh",
       "runnerUpParty": "LAB",
       "notional": false
@@ -481,7 +481,7 @@
       "seatType": "general",
       "winnerName": "Mahesh Muralidhar",
       "winnerParty": "NAT",
-      "majority": 5356,
+      "majority": 5924,
       "runnerUpName": "Max Harris",
       "runnerUpParty": "LAB",
       "notional": false
@@ -491,7 +491,7 @@
       "seatType": "general",
       "winnerName": "Barbara Kuriger",
       "winnerParty": "NAT",
-      "majority": 12031,
+      "majority": 13386,
       "runnerUpName": "David Pattemore",
       "runnerUpParty": "LAB",
       "notional": false
@@ -501,7 +501,7 @@
       "seatType": "general",
       "winnerName": "Louise Upston",
       "winnerParty": "NAT",
-      "majority": 13052,
+      "majority": 14309,
       "runnerUpName": "Chris Flatt",
       "runnerUpParty": "LAB",
       "notional": false
@@ -511,7 +511,7 @@
       "seatType": "general",
       "winnerName": "Sam Uffindell",
       "winnerParty": "NAT",
-      "majority": 10274,
+      "majority": 11735,
       "runnerUpName": "Jan Tinetti",
       "runnerUpParty": "LAB",
       "notional": false
@@ -521,7 +521,7 @@
       "seatType": "general",
       "winnerName": "Catherine Wedd",
       "winnerParty": "NAT",
-      "majority": 8933,
+      "majority": 9596,
       "runnerUpName": "Dan Scott",
       "runnerUpParty": "LAB",
       "notional": false
@@ -531,7 +531,7 @@
       "seatType": "general",
       "winnerName": "Cameron Brewer",
       "winnerParty": "NAT",
-      "majority": 8967,
+      "majority": 10050,
       "runnerUpName": "Hannah Pia Baral",
       "runnerUpParty": "LAB",
       "notional": false
@@ -541,7 +541,7 @@
       "seatType": "general",
       "winnerName": "Tim van de Molen",
       "winnerParty": "NAT",
-      "majority": 12576,
+      "majority": 13501,
       "runnerUpName": "Jamie Toko",
       "runnerUpParty": "LAB",
       "notional": false
@@ -551,7 +551,7 @@
       "seatType": "general",
       "winnerName": "Matt Doocey",
       "winnerParty": "NAT",
-      "majority": 11283,
+      "majority": 12391,
       "runnerUpName": "Dan Rosewarne",
       "runnerUpParty": "LAB",
       "notional": false
@@ -559,11 +559,11 @@
     {
       "electorateName": "Wairarapa",
       "seatType": "general",
-      "winnerName": "Mike Butterick",
-      "winnerParty": "NAT",
-      "majority": 139,
-      "runnerUpName": "Kieran McAnulty",
-      "runnerUpParty": "LAB",
+      "winnerName": "Kieran McAnulty",
+      "winnerParty": "LAB",
+      "majority": 81,
+      "runnerUpName": "Mike Butterick",
+      "runnerUpParty": "NAT",
       "notional": false
     },
     {
@@ -571,7 +571,7 @@
       "seatType": "general",
       "winnerName": "Vanushi Walters",
       "winnerParty": "LAB",
-      "majority": 2675,
+      "majority": 3350,
       "runnerUpName": "Agnes Loheni",
       "runnerUpParty": "NAT",
       "notional": true
@@ -581,7 +581,7 @@
       "seatType": "general",
       "winnerName": "Miles Anderson",
       "winnerParty": "NAT",
-      "majority": 8352,
+      "majority": 9000,
       "runnerUpName": "Damien O'Connor",
       "runnerUpParty": "LAB",
       "notional": false
@@ -589,11 +589,11 @@
     {
       "electorateName": "Wellington Bays",
       "seatType": "general",
-      "winnerName": "Craig Renney",
-      "winnerParty": "LAB",
-      "majority": 140,
-      "runnerUpName": "Julie Anne Genter",
-      "runnerUpParty": "GRN",
+      "winnerName": "Julie Anne Genter",
+      "winnerParty": "GRN",
+      "majority": 1610,
+      "runnerUpName": "Craig Renney",
+      "runnerUpParty": "LAB",
       "notional": true
     },
     {
@@ -601,7 +601,7 @@
       "seatType": "general",
       "winnerName": "Tamatha Paul",
       "winnerParty": "GRN",
-      "majority": 3006,
+      "majority": 5589,
       "runnerUpName": "Ayesha Verrall",
       "runnerUpParty": "LAB",
       "notional": true
@@ -611,7 +611,7 @@
       "seatType": "general",
       "winnerName": "Katie Milne",
       "winnerParty": "NAT",
-      "majority": 6601,
+      "majority": 7218,
       "runnerUpName": "Rory Paterson",
       "runnerUpParty": "LAB",
       "notional": false
@@ -621,7 +621,7 @@
       "seatType": "general",
       "winnerName": "Carl Bates",
       "winnerParty": "NAT",
-      "majority": 6748,
+      "majority": 7084,
       "runnerUpName": "Angela Roberts",
       "runnerUpParty": "LAB",
       "notional": false
@@ -631,7 +631,7 @@
       "seatType": "general",
       "winnerName": "Mark Mitchell",
       "winnerParty": "NAT",
-      "majority": 15368,
+      "majority": 16709,
       "runnerUpName": "Estefania Muller Pallarès",
       "runnerUpParty": "LAB",
       "notional": false
@@ -641,7 +641,7 @@
       "seatType": "general",
       "winnerName": "Lloyd Budd",
       "winnerParty": "NAT",
-      "majority": 1092,
+      "majority": 685,
       "runnerUpName": "Gary Payinda",
       "runnerUpParty": "LAB",
       "notional": false
@@ -651,7 +651,7 @@
       "seatType": "general",
       "winnerName": "Dominik Yanzick",
       "winnerParty": "LAB",
-      "majority": 1935,
+      "majority": 2823,
       "runnerUpName": "Tracy Summerfield",
       "runnerUpParty": "NAT",
       "notional": false
@@ -661,7 +661,7 @@
       "seatType": "maori",
       "winnerName": "Hana-Rawhiti Maipi-Clarke",
       "winnerParty": "TPM",
-      "majority": 10441,
+      "majority": 13425,
       "runnerUpName": "Kingi Kiriona",
       "runnerUpParty": "LAB",
       "notional": false
@@ -671,7 +671,7 @@
       "seatType": "maori",
       "winnerName": "Cushla Tangaere-Manuel",
       "winnerParty": "LAB",
-      "majority": 3132,
+      "majority": 3117,
       "runnerUpName": "Haley Maxwell",
       "runnerUpParty": "TPM",
       "notional": false
@@ -681,9 +681,9 @@
       "seatType": "maori",
       "winnerName": "Oriini Kaipara",
       "winnerParty": "TPM",
-      "majority": 7470,
+      "majority": 9350,
       "runnerUpName": "Kerrin Leoni",
-      "runnerUpParty": "OTH",
+      "runnerUpParty": "LAB",
       "notional": false
     },
     {
@@ -691,7 +691,7 @@
       "seatType": "maori",
       "winnerName": "Debbie Ngarewa-Packer",
       "winnerParty": "TPM",
-      "majority": 3841,
+      "majority": 4798,
       "runnerUpName": "Te Pūoho Kātene",
       "runnerUpParty": "LAB",
       "notional": false
@@ -701,7 +701,7 @@
       "seatType": "maori",
       "winnerName": "Aperahama Edwards",
       "winnerParty": "TPM",
-      "majority": 436,
+      "majority": 583,
       "runnerUpName": "Hūhana Lyndon",
       "runnerUpParty": "GRN",
       "notional": false
@@ -721,7 +721,7 @@
       "seatType": "maori",
       "winnerName": "Rawiri Waititi",
       "winnerParty": "TPM",
-      "majority": 2274,
+      "majority": 2636,
       "runnerUpName": "Tania Waikato",
       "runnerUpParty": "GRN",
       "notional": false
