@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-27T02:02:02.004Z",
+  "fetchedAt": "2026-11-27T11:01:34.328Z",
   "sources": [
     "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
     "https://en.wikipedia.org/wiki/Results_of_the_2023_New_Zealand_general_election",
@@ -2271,7 +2271,7 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Ivan Wagstaff",
           "listNumber": null,
           "notes": null,
@@ -2609,7 +2609,7 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Timoti Te Moke",
           "listNumber": null,
           "notes": "Withdrew from Green Party selection",
@@ -4895,7 +4895,7 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Zoran Rakovic",
           "listNumber": null,
           "notes": null,
@@ -5391,7 +5391,7 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Kerrin Leoni",
           "listNumber": 42,
           "notes": "Contested Waikato in 2020. Resigned from Labour after 2026 nominations closed. Has promised to sit as an independent MP if elected, but remains on the ballot as a Labour candidate and on the Labour list.",
@@ -5667,7 +5667,7 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Tim Maltby",
           "listNumber": null,
           "notes": null,
@@ -5953,7 +5953,7 @@
       "candidates": [
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Tākuta Ferris",
           "listNumber": null,
           "notes": "Elected as Te Pāti Māori MP in 2023",
@@ -6145,7 +6145,7 @@
         },
         {
           "partyCode": "OTH",
-          "partyLabel": "Independent",
+          "partyLabel": "IND",
           "name": "Kaleb Hawkins",
           "listNumber": null,
           "notes": null,
