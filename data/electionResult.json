@@ -1,19 +1,19 @@
 {
-  "fetchedAt": "2026-11-26T17:28:31.296Z",
+  "fetchedAt": "2026-11-27T02:02:02.739Z",
   "source": "https://en.wikipedia.org/wiki/Results_of_the_2026_New_Zealand_general_election",
   "preliminary": true,
   "officialDeclarationDate": "2026-11-27",
   "partyVote": {
     "results": {
-      "LAB": 29.4,
-      "NAT": 29.2,
-      "GRN": 13.3,
-      "ACT": 10.9,
-      "NZF": 9.78,
-      "TOP": 5.96,
-      "TPM": 0.57
+      "LAB": 29.9,
+      "NAT": 28.4,
+      "GRN": 14.1,
+      "ACT": 10.5,
+      "NZF": 9.6,
+      "TOP": 6.06,
+      "TPM": 0.63
     },
-    "othersPct": 0.9
+    "othersPct": 0.88
   },
   "electorates": [
     {
